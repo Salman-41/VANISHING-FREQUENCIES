@@ -1,0 +1,1669 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "VANISHING FREQUENCIES",
+  "lastVerified": "2026-10-08",
+  "species": [
+    {
+      "id": "snow-leopard",
+      "commonName": "Snow leopard",
+      "scientificName": "Panthera uncia",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "rank": "species",
+        "treatmentNote": "Species-level record. Preserve the cited authority's rank treatment; do not merge species or subspecies.",
+        "references": [
+          {
+            "sourceId": "itis-snow",
+            "locator": "Scientific classification / taxonomic hierarchy"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "conservation": {
+        "system": "IUCN-global",
+        "category": "VU",
+        "verification": "public-summary",
+        "assessmentYear": null,
+        "assessmentDate": null,
+        "assessmentYearGap": "Exact formal assessment date/year and latest-assessment metadata remain unverified under approved data access. A public status summary is not an authorized assessment record.",
+        "statusPublicationYear": null,
+        "latestAssessmentConfirmed": false,
+        "assessmentAuthorizationReference": null,
+        "references": [
+          {
+            "sourceId": "wwf-snow",
+            "locator": "Public species conservation category"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "descriptions": {
+        "habitat": {
+          "text": "Rocky high mountains.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-snow",
+              "locator": "Habitat"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "distribution": {
+          "text": "Mountain ranges across Central and South Asia.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-snow",
+              "locator": "Distribution"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "threats": [
+          {
+            "text": "Illegal killing, depleted prey, livestock conflict, habitat fragmentation and climate change.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-snow",
+                "locator": "Threats"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ],
+        "ecologicalRole": {
+          "text": "Mountain predator that feeds on wild ungulates.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-snow",
+              "locator": "Ecological role"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "conservationEfforts": [
+          {
+            "text": "Protect prey and support coexistence with herding communities.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-snow",
+                "locator": "Conservation efforts"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ]
+      },
+      "measurements": [
+        {
+          "id": "snow-india-spai",
+          "metric": "population-estimate",
+          "unit": "individuals",
+          "value": {
+            "kind": "point",
+            "value": 718
+          },
+          "scope": "country",
+          "geography": "India: surveyed trans-Himalayan range",
+          "population": "National snow leopard estimate, not a complete census",
+          "measurementPeriod": {
+            "startYear": 2019,
+            "endYear": 2023,
+            "basis": "survey-window"
+          },
+          "periodGap": null,
+          "method": "Two-stage occupancy mapping and stratified camera-trap abundance estimation, as described by MoEFCC.",
+          "methodVerification": "verified",
+          "uncertainty": {
+            "kind": "not-reported",
+            "explanation": "No quantitative uncertainty definition or interval supplied in the inspected source; this is not zero uncertainty."
+          },
+          "sourcePublicationYear": 2024,
+          "sourceEdition": "SPAI first national assessment, released 30 January 2024",
+          "references": [
+            {
+              "sourceId": "india-snow-spai",
+              "locator": "Opening estimate; survey period; two-step framework"
+            }
+          ],
+          "lastVerified": "2026-10-08",
+          "display": {
+            "eligibility": "dated-context-only",
+            "requiredContext": "718 estimated snow leopards in India, based on the 2019–2023 assessment, announced 2024. Not a global estimate; uncertainty not quantified in release.",
+            "holdReason": null
+          },
+          "caveats": [
+            "718 estimated snow leopards in India, based on the 2019–2023 assessment, announced 2024. Not a global estimate; uncertainty not quantified in release.",
+            "No source estimate is converted to a current global total or a fabricated annual time series."
+          ]
+        }
+      ],
+      "populationEstimateGap": "No global abundance estimate with verified data period, demographic unit and uncertainty imported; undated WWF global range omitted.",
+      "trends": [
+        {
+          "direction": "decreasing",
+          "scope": "global",
+          "geography": "Global monitored/inferred range",
+          "period": null,
+          "interpretation": {
+            "text": "WWF considers the population very likely to be declining.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-snow",
+                "locator": "Population discussion"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "limitations": "Qualitative and qualified statement; no global trend magnitude or common measurement period verified."
+        }
+      ],
+      "interventions": [
+        {
+          "id": "snow-corrals",
+          "kind": "documented-intervention",
+          "title": "Fencing night-time livestock corrals",
+          "geography": "Tost Mountains, southern Mongolia",
+          "description": {
+            "text": "Researchers tested fencing around corrals to reduce livestock losses to predators.",
+            "evidence": "primary-study",
+            "references": [
+              {
+                "sourceId": "snow-corrals-study",
+                "locator": "Intervention description"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "outcome": {
+            "text": "Fenced corrals reduced night-time depredation in the study.",
+            "evidence": "primary-study",
+            "references": [
+              {
+                "sourceId": "snow-corrals-study",
+                "locator": "Documented outcome"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "inferenceLimit": "Livestock protection outcome involving snow leopards and wolves; not proof of increasing snow leopard abundance.",
+          "measurementIds": []
+        }
+      ],
+      "sound": {
+        "knowledge": "documented-vocalization",
+        "information": {
+          "text": "Snow leopards chuff and make mews, growls and other calls; they do not roar.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "snow-behavior",
+              "locator": "Vocalization bullet"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "frequencyHz": null,
+        "frequencyGap": "No calibrated species/recording frequency measurement imported.",
+        "designConstraint": "Do not substitute a tiger roar. Obtain a verified recording and label captive context if applicable."
+      },
+      "assets": {
+        "images": [
+          {
+            "id": "image-snow-leopard",
+            "kind": "image",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Snow_Leopard_13.jpg",
+            "creator": "Ltshears",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "credit": "Ltshears — Snow Leopard 13.jpg — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Snow_Leopard_13.jpg",
+            "commercialUse": "permitted-with-conditions",
+            "verification": "item-license-verified",
+            "setting": "captive",
+            "notes": "Louisville Zoo portrait. Capture date metadata is inconsistent; do not use it as a dated wild encounter.",
+            "playbackRate": null,
+            "references": [
+              {
+                "sourceId": "image-snow-leopard",
+                "locator": "Summary; Licensing"
+              }
+            ],
+            "lastVerified": "2026-10-08",
+            "acquired": false,
+            "clearedForUse": false
+          }
+        ],
+        "audio": [],
+        "imageLicensingNote": "The item page lists a license compatible with commercial reuse subject to its conditions. Candidate metadata only; acquisition, original provenance and final credits still require review. WWF media is not licensed by this inventory.",
+        "audioLicensingNote": "No licensed species recording acquired. Playback access is not permission to reuse; confirm recordist, species, context and item license before use."
+      },
+      "editorial": {
+        "kind": "editorial-not-scientific-evidence",
+        "workingTitle": "The mountain's hidden voice",
+        "premise": "Follow an elusive predator and the people sharing its mountain habitat.",
+        "scientificClaimIds": [
+          "habitat",
+          "ecologicalRole"
+        ]
+      },
+      "lastVerified": "2026-10-08",
+      "evidenceGaps": [
+        "Exact assessment date/year and latest-assessment confirmation unresolved.",
+        "No complete standardized annual population series imported.",
+        "Candidate media has not been acquired or cleared for final use."
+      ]
+    },
+    {
+      "id": "blue-whale",
+      "commonName": "Blue whale",
+      "scientificName": "Balaenoptera musculus",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae",
+        "genus": "Balaenoptera",
+        "rank": "species",
+        "treatmentNote": "ITIS order Cetacea retained. Other classifications nest whales within Artiodactyla/Cetartiodactyla. ENP estimate refers to a stock of the northern subspecies, not the species globally.",
+        "references": [
+          {
+            "sourceId": "itis-blue",
+            "locator": "Scientific classification / taxonomic hierarchy"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "conservation": {
+        "system": "IUCN-global",
+        "category": "EN",
+        "verification": "public-summary",
+        "assessmentYear": null,
+        "assessmentDate": null,
+        "assessmentYearGap": "Exact formal assessment date/year and latest-assessment metadata remain unverified under approved data access. A public status summary is not an authorized assessment record.",
+        "statusPublicationYear": null,
+        "latestAssessmentConfirmed": false,
+        "assessmentAuthorizationReference": null,
+        "references": [
+          {
+            "sourceId": "wwf-blue",
+            "locator": "Public species conservation category"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "descriptions": {
+        "habitat": {
+          "text": "Open oceans and productive feeding waters.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-blue",
+              "locator": "Habitat"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "distribution": {
+          "text": "Ocean basins worldwide.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-blue",
+              "locator": "Distribution"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "threats": [
+          {
+            "text": "Ship strikes, fishing-gear entanglement, pollution and changing prey availability.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-blue",
+                "locator": "Threats"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ],
+        "ecologicalRole": {
+          "text": "Large krill consumer in marine food webs.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "adw-blue",
+              "locator": "Food habits"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "conservationEfforts": [
+          {
+            "text": "Protect feeding and migration areas and reduce vessel and fishing interactions.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-blue",
+                "locator": "Conservation efforts"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ]
+      },
+      "measurements": [
+        {
+          "id": "blue-enp-2018",
+          "metric": "population-estimate",
+          "unit": "individuals",
+          "value": {
+            "kind": "point",
+            "value": 1898
+          },
+          "scope": "stock",
+          "geography": "Eastern North Pacific; U.S. West Coast photo-identification data",
+          "population": "Eastern North Pacific stock, not all blue whales",
+          "measurementPeriod": {
+            "startYear": 2015,
+            "endYear": 2018,
+            "basis": "survey-window"
+          },
+          "periodGap": null,
+          "method": "Photographic mark-recapture, Chao model accounting for heterogeneous capture probabilities.",
+          "methodVerification": "verified",
+          "uncertainty": {
+            "kind": "coefficient-of-variation",
+            "value": 0.085,
+            "explanation": "NOAA-reported coefficient of variation, dimensionless; not a confidence interval or decline rate."
+          },
+          "sourcePublicationYear": 2024,
+          "sourceEdition": "2023 stock assessment; revised 14 May 2024",
+          "references": [
+            {
+              "sourceId": "noaa-blue-stock",
+              "locator": "PDF p.2 / printed p.205, Population Size"
+            }
+          ],
+          "lastVerified": "2026-10-08",
+          "display": {
+            "eligibility": "dated-context-only",
+            "requiredContext": "1,898 whales for the Eastern North Pacific stock from 2015–2018 data; CV 0.085. Historical stock estimate, not a current global headcount.",
+            "holdReason": null
+          },
+          "caveats": [
+            "1,898 whales for the Eastern North Pacific stock from 2015–2018 data; CV 0.085. Historical stock estimate, not a current global headcount.",
+            "No source estimate is converted to a current global total or a fabricated annual time series."
+          ]
+        }
+      ],
+      "populationEstimateGap": "No current global abundance with verified measurement period/uncertainty imported; undated global range excluded.",
+      "trends": [
+        {
+          "direction": "unknown",
+          "scope": "stock",
+          "geography": "Eastern North Pacific",
+          "period": null,
+          "interpretation": {
+            "text": "NOAA states that the current stock trend is unknown because a formal trend analysis is lacking.",
+            "evidence": "documented-unknown",
+            "references": [
+              {
+                "sourceId": "noaa-blue-stock",
+                "locator": "PDF p.2 / printed p.205, Current Population Trend"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "limitations": "Historic mark-recapture patterns and distribution shifts do not establish a current directional trend."
+        },
+        {
+          "direction": "unknown",
+          "scope": "global",
+          "geography": "Global oceans",
+          "period": null,
+          "interpretation": {
+            "text": "No current global trend has been verified for this record.",
+            "evidence": "documented-unknown",
+            "references": [
+              {
+                "sourceId": "wwf-blue",
+                "locator": "Global species overview"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "limitations": "The inspected global profile does not provide a dated, method-defined global trend."
+        }
+      ],
+      "interventions": [
+        {
+          "id": "blue-whalewatch",
+          "kind": "documented-intervention",
+          "title": "WhaleWatch collision-risk information",
+          "geography": "U.S. West Coast",
+          "description": {
+            "text": "NOAA's WhaleWatch uses habitat models and tracking to identify whale occurrence and risk areas.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "noaa-whalewatch",
+                "locator": "Intervention description"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "outcome": {
+            "text": "The tool supplies information for avoiding whale hot spots.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "noaa-whalewatch",
+                "locator": "Documented outcome"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "inferenceLimit": "Documented management intervention, not a measured population recovery or demonstrated collision reduction.",
+          "measurementIds": []
+        }
+      ],
+      "sound": {
+        "knowledge": "documented-vocalization",
+        "information": {
+          "text": "Blue whales produce low-frequency calls. NOAA's listening example is accelerated.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "noaa-ocean-sounds",
+              "locator": "Blue whale section"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "frequencyHz": null,
+        "frequencyGap": "No calibrated species/recording frequency measurement imported.",
+        "designConstraint": "Preserve playback-rate metadata. Label any acceleration; never present a transformed clip as its natural pitch."
+      },
+      "assets": {
+        "images": [
+          {
+            "id": "image-blue-whale",
+            "kind": "image",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue-whale.jpg",
+            "creator": "NOAA Fisheries / Lisa Conger",
+            "license": "Public domain: U.S. federal work",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-USGov-NOAA",
+            "credit": "NOAA Fisheries / Lisa Conger — Blue-whale.jpg — Public domain: U.S. federal work — https://commons.wikimedia.org/wiki/File:Blue-whale.jpg",
+            "commercialUse": "permitted-with-conditions",
+            "verification": "item-license-verified",
+            "setting": "wild",
+            "notes": "NOAA-attributed photograph; verify original agency provenance when acquiring. Not evidence of the featured stock or population size.",
+            "playbackRate": null,
+            "references": [
+              {
+                "sourceId": "image-blue-whale",
+                "locator": "Summary; Licensing"
+              }
+            ],
+            "lastVerified": "2026-10-08",
+            "acquired": false,
+            "clearedForUse": false
+          }
+        ],
+        "audio": [
+          {
+            "id": "audio-blue-commons",
+            "kind": "audio",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_whale_atlantic3_1x.oga",
+            "creator": "Recorded by NOAA",
+            "license": "CC0 1.0 (as listed by Commons)",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "credit": "Recorded by NOAA — Blue whale atlantic3 1x.oga — Wikimedia Commons — listed CC0 1.0",
+            "commercialUse": "permitted-with-conditions",
+            "verification": "item-license-verified",
+            "setting": "wild",
+            "notes": "File page describes normal-speed Atlantic audio and links a NOAA original. Recording capture date and original provenance must be reconfirmed; uploader date is not capture date.",
+            "playbackRate": 1,
+            "references": [
+              {
+                "sourceId": "audio-blue-commons",
+                "locator": "Summary; Licensing"
+              }
+            ],
+            "lastVerified": "2026-10-08",
+            "acquired": false,
+            "clearedForUse": false
+          },
+          {
+            "id": "audio-blue-noaa-example",
+            "kind": "audio",
+            "sourceUrl": "https://www.fisheries.noaa.gov/national/science-data/sounds-ocean-mammals",
+            "creator": null,
+            "license": null,
+            "licenseUrl": null,
+            "credit": null,
+            "commercialUse": "unverified",
+            "verification": "unverified",
+            "setting": "unknown",
+            "notes": "NOAA example is accelerated eightfold. Review linked citations and original recording rights before reuse.",
+            "playbackRate": 8,
+            "references": [
+              {
+                "sourceId": "noaa-ocean-sounds",
+                "locator": "Blue whale audio section"
+              }
+            ],
+            "lastVerified": "2026-10-08",
+            "acquired": false,
+            "clearedForUse": false
+          }
+        ],
+        "imageLicensingNote": "The item page lists a license compatible with commercial reuse subject to its conditions. Candidate metadata only; acquisition, original provenance and final credits still require review. WWF media is not licensed by this inventory.",
+        "audioLicensingNote": "No licensed species recording acquired. Playback access is not permission to reuse; confirm recordist, species, context and item license before use."
+      },
+      "editorial": {
+        "kind": "editorial-not-scientific-evidence",
+        "workingTitle": "An ocean full of signals",
+        "premise": "Explore a voice that needs careful listening and an ocean crossed by shipping.",
+        "scientificClaimIds": [
+          "habitat",
+          "ecologicalRole"
+        ]
+      },
+      "lastVerified": "2026-10-08",
+      "evidenceGaps": [
+        "Exact assessment date/year and latest-assessment confirmation unresolved.",
+        "No complete standardized annual population series imported.",
+        "Candidate media has not been acquired or cleared for final use."
+      ]
+    },
+    {
+      "id": "tiger",
+      "commonName": "Tiger",
+      "scientificName": "Panthera tigris",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "rank": "species",
+        "treatmentNote": "Species-level record. Preserve the cited authority's rank treatment; do not merge species or subspecies.",
+        "references": [
+          {
+            "sourceId": "adw-tiger",
+            "locator": "Scientific classification / taxonomic hierarchy"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "conservation": {
+        "system": "IUCN-global",
+        "category": "EN",
+        "verification": "public-summary",
+        "assessmentYear": null,
+        "assessmentDate": null,
+        "assessmentYearGap": "Exact formal assessment date/year and latest-assessment metadata remain unverified under approved data access. A public status summary is not an authorized assessment record.",
+        "statusPublicationYear": 2022,
+        "latestAssessmentConfirmed": false,
+        "assessmentAuthorizationReference": null,
+        "references": [
+          {
+            "sourceId": "iucn-tiger-update",
+            "locator": "Public species conservation category"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "descriptions": {
+        "habitat": {
+          "text": "Forests and grasslands with cover and sufficient prey.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-tiger",
+              "locator": "Habitat"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "distribution": {
+          "text": "Surviving populations across parts of Asia.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-tiger",
+              "locator": "Distribution"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "threats": [
+          {
+            "text": "Poaching, prey depletion, habitat loss and fragmentation, and conflict with people.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-tiger",
+                "locator": "Threats"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ],
+        "ecologicalRole": {
+          "text": "Large predator of herbivores.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "adw-tiger",
+              "locator": "Food habits; Ecosystem Roles"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "conservationEfforts": [
+          {
+            "text": "Protect connected habitat, prey and coexistence with neighboring communities.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-tiger",
+                "locator": "Conservation efforts"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ]
+      },
+      "measurements": [
+        {
+          "id": "tiger-global-2022",
+          "metric": "population-estimate",
+          "unit": "individuals",
+          "value": {
+            "kind": "range",
+            "lower": 3726,
+            "upper": 5578
+          },
+          "scope": "global",
+          "geography": "Global wild tiger range",
+          "population": "Wild tiger estimate in public reassessment announcement",
+          "measurementPeriod": null,
+          "periodGap": "Public announcement gives a result/release year but not the underlying measurement window.",
+          "method": "IUCN reassessment synthesis; data window and demographic comparability not supplied in announcement.",
+          "methodVerification": "unverified",
+          "uncertainty": {
+            "kind": "not-reported",
+            "explanation": "No quantitative uncertainty definition or interval supplied in the inspected source; this is not zero uncertainty."
+          },
+          "sourcePublicationYear": 2022,
+          "sourceEdition": "July 2022 public reassessment announcement",
+          "references": [
+            {
+              "sourceId": "iucn-tiger-update",
+              "locator": "Tiger reassessment paragraphs"
+            }
+          ],
+          "lastVerified": "2026-10-08",
+          "display": {
+            "eligibility": "hold",
+            "requiredContext": "Historical public estimate range; not a confidence interval, current headcount or directly comparable growth baseline.",
+            "holdReason": "Underlying data period and method comparability not verified."
+          },
+          "caveats": [
+            "Historical public estimate range; not a confidence interval, current headcount or directly comparable growth baseline.",
+            "No source estimate is converted to a current global total or a fabricated annual time series."
+          ]
+        },
+        {
+          "id": "tiger-nepal-2022",
+          "metric": "population-estimate",
+          "unit": "individuals",
+          "value": {
+            "kind": "point",
+            "value": 355
+          },
+          "scope": "country",
+          "geography": "Nepal",
+          "population": "Publicly reported national wild tiger estimate",
+          "measurementPeriod": {
+            "startYear": 2022,
+            "endYear": 2022,
+            "basis": "estimate-reference-year"
+          },
+          "periodGap": null,
+          "method": "Government survey result reported by IUCN; original methods and collection dates not verified.",
+          "methodVerification": "unverified",
+          "uncertainty": {
+            "kind": "not-reported",
+            "explanation": "No quantitative uncertainty definition or interval supplied in the inspected source; this is not zero uncertainty."
+          },
+          "sourcePublicationYear": 2022,
+          "sourceEdition": "National survey announcement 2022",
+          "references": [
+            {
+              "sourceId": "iucn-nepal-2022",
+              "locator": "National total and census summary"
+            }
+          ],
+          "lastVerified": "2026-10-08",
+          "display": {
+            "eligibility": "hold",
+            "requiredContext": "Nepal result reported for 2022; historical and national. Does not establish global recovery.",
+            "holdReason": "Original government report inaccessible; model/uncertainty and actual survey window require verification."
+          },
+          "caveats": [
+            "Nepal result reported for 2022; historical and national. Does not establish global recovery.",
+            "No source estimate is converted to a current global total or a fabricated annual time series."
+          ]
+        },
+        {
+          "id": "tiger-nepal-2026",
+          "metric": "population-estimate",
+          "unit": "individuals",
+          "value": {
+            "kind": "point",
+            "value": 429
+          },
+          "scope": "country",
+          "geography": "Nepal",
+          "population": "National tiger census result reported by IUCN",
+          "measurementPeriod": null,
+          "periodGap": "Public announcement gives a result/release year but not the underlying measurement window.",
+          "method": "Government census result reported by IUCN; original 2026 methods not inspected.",
+          "methodVerification": "unverified",
+          "uncertainty": {
+            "kind": "not-reported",
+            "explanation": "No quantitative uncertainty definition or interval supplied in the inspected source; this is not zero uncertainty."
+          },
+          "sourcePublicationYear": 2026,
+          "sourceEdition": "National census announcement 29 July 2026",
+          "references": [
+            {
+              "sourceId": "iucn-nepal-2026",
+              "locator": "Opening national total"
+            }
+          ],
+          "lastVerified": "2026-10-08",
+          "display": {
+            "eligibility": "hold",
+            "requiredContext": "Nepal result announced July 2026. Regional, not global; method and uncertainty awaiting original report.",
+            "holdReason": "Announced result is verified, but original survey window, method and uncertainty remain unverified."
+          },
+          "caveats": [
+            "Nepal result announced July 2026. Regional, not global; method and uncertainty awaiting original report.",
+            "No source estimate is converted to a current global total or a fabricated annual time series."
+          ]
+        }
+      ],
+      "populationEstimateGap": "Current global abundance/standardized series not verified; public historical range and national reports retained as held research measurements.",
+      "trends": [
+        {
+          "direction": "mixed",
+          "scope": "global",
+          "geography": "Asia",
+          "period": null,
+          "interpretation": {
+            "text": "WWF reports improvement in some range countries and continued declines in parts of Southeast Asia.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-tiger",
+                "locator": "Opening population overview"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "limitations": "Mixed summarizes regional contrast; it is not a formal numeric global trend or an imported IUCN trend category."
+        },
+        {
+          "direction": "increasing",
+          "scope": "country",
+          "geography": "Nepal",
+          "period": null,
+          "interpretation": {
+            "text": "IUCN reports national growth across successive surveys, with declines still occurring in some parks.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "iucn-nepal-2026",
+                "locator": "National sequence and park contrasts"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "limitations": "Reported country-level direction. Census estimates await method comparability review; no derived percent change."
+        }
+      ],
+      "interventions": [
+        {
+          "id": "tiger-nepal-programme",
+          "kind": "documented-recovery",
+          "title": "Habitat protection and community conservation in Nepal",
+          "geography": "Nepal Terai Arc Landscape",
+          "description": {
+            "text": "Habitat management, community cooperation and tiger protection underpin Nepal's recovery programme.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "iucn-nepal-2022",
+                "locator": "Intervention description"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "outcome": {
+            "text": "Public national survey announcements report recovery alongside continuing coexistence needs.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "iucn-nepal-2022",
+                "locator": "Documented outcome"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "inferenceLimit": "Multi-party intervention; no single action is assigned causal credit. National recovery does not imply uniform park or global recovery.",
+          "measurementIds": [
+            "tiger-nepal-2022",
+            "tiger-nepal-2026"
+          ]
+        }
+      ],
+      "sound": {
+        "knowledge": "documented-vocalization",
+        "information": {
+          "text": "Tigers communicate with roars, growls and other vocalizations.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "adw-tiger",
+              "locator": "Communication and Perception"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "frequencyHz": null,
+        "frequencyGap": "No calibrated species/recording frequency measurement imported.",
+        "designConstraint": "Use a species-verified recording with provenance; do not use a generic stock roar without identification and rights."
+      },
+      "assets": {
+        "images": [
+          {
+            "id": "image-tiger",
+            "kind": "image",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panthera_tigris_(TIGER).jpg",
+            "creator": "V sai harshita",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "credit": "V sai harshita — Panthera tigris (TIGER).jpg — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Panthera_tigris_(TIGER).jpg",
+            "commercialUse": "permitted-with-conditions",
+            "verification": "item-license-verified",
+            "setting": "captive",
+            "notes": "Bannerghatta zoo/safari portrait; not a Nepal field image. Listed as watermarked; retain attribution and disclose edits.",
+            "playbackRate": null,
+            "references": [
+              {
+                "sourceId": "image-tiger",
+                "locator": "Summary; Licensing"
+              }
+            ],
+            "lastVerified": "2026-10-08",
+            "acquired": false,
+            "clearedForUse": false
+          }
+        ],
+        "audio": [],
+        "imageLicensingNote": "The item page lists a license compatible with commercial reuse subject to its conditions. Candidate metadata only; acquisition, original provenance and final credits still require review. WWF media is not licensed by this inventory.",
+        "audioLicensingNote": "No licensed species recording acquired. Playback access is not permission to reuse; confirm recordist, species, context and item license before use."
+      },
+      "editorial": {
+        "kind": "editorial-not-scientific-evidence",
+        "workingTitle": "Recovery has an address",
+        "premise": "Show what national conservation can achieve while other tiger landscapes remain under pressure.",
+        "scientificClaimIds": [
+          "habitat",
+          "ecologicalRole"
+        ]
+      },
+      "lastVerified": "2026-10-08",
+      "evidenceGaps": [
+        "Exact assessment date/year and latest-assessment confirmation unresolved.",
+        "No complete standardized annual population series imported.",
+        "Candidate media has not been acquired or cleared for final use."
+      ]
+    },
+    {
+      "id": "bornean-orangutan",
+      "commonName": "Bornean orangutan",
+      "scientificName": "Pongo pygmaeus",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Primates",
+        "family": "Hominidae",
+        "genus": "Pongo",
+        "rank": "species",
+        "treatmentNote": "Bornean species only. Do not merge Pongo pygmaeus with Sumatran Pongo abelii or Tapanuli Pongo tapanuliensis.",
+        "references": [
+          {
+            "sourceId": "adw-orangutan",
+            "locator": "Scientific classification / taxonomic hierarchy"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "conservation": {
+        "system": "IUCN-global",
+        "category": "CR",
+        "verification": "public-summary",
+        "assessmentYear": null,
+        "assessmentDate": null,
+        "assessmentYearGap": "Exact formal assessment date/year and latest-assessment metadata remain unverified under approved data access. A public status summary is not an authorized assessment record.",
+        "statusPublicationYear": null,
+        "latestAssessmentConfirmed": false,
+        "assessmentAuthorizationReference": null,
+        "references": [
+          {
+            "sourceId": "wwf-orangutan",
+            "locator": "Public species conservation category"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "descriptions": {
+        "habitat": {
+          "text": "Lowland rainforest, swamp forest and other tropical forests.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-orangutan",
+              "locator": "Habitat"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "distribution": {
+          "text": "Borneo.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-orangutan",
+              "locator": "Distribution"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "threats": [
+          {
+            "text": "Forest conversion, logging, hunting, fires and illegal pet trade.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-orangutan",
+                "locator": "Threats"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ],
+        "ecologicalRole": {
+          "text": "Fruit eater and forest seed disperser.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-orangutan",
+              "locator": "Ecological role"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "conservationEfforts": [
+          {
+            "text": "Protect and restore habitat, curb killing and trade, and reduce conflict.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-orangutan",
+                "locator": "Conservation efforts"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ]
+      },
+      "measurements": [
+        {
+          "id": "orangutan-borneo-2012",
+          "metric": "population-estimate",
+          "unit": "individuals",
+          "value": {
+            "kind": "point",
+            "value": 104700
+          },
+          "scope": "global",
+          "geography": "Borneo",
+          "population": "Historical estimate for Bornean orangutans",
+          "measurementPeriod": {
+            "startYear": 2012,
+            "endYear": 2012,
+            "basis": "estimate-reference-year"
+          },
+          "periodGap": null,
+          "method": "Historical synthesis reported by WWF; original estimation model not inspected.",
+          "methodVerification": "unverified",
+          "uncertainty": {
+            "kind": "not-reported",
+            "explanation": "No quantitative uncertainty definition or interval supplied in the inspected source; this is not zero uncertainty."
+          },
+          "sourcePublicationYear": 2020,
+          "sourceEdition": "WWF restoration story, August 2020",
+          "references": [
+            {
+              "sourceId": "orangutan-restoration",
+              "locator": "Historical population paragraph"
+            }
+          ],
+          "lastVerified": "2026-10-08",
+          "display": {
+            "eligibility": "hold",
+            "requiredContext": "Approximately 104,700 for 2012, not a 2026 count. Underlying model and uncertainty remain unverified.",
+            "holdReason": "Historical estimate may only support research until original method and uncertainty are checked."
+          },
+          "caveats": [
+            "Approximately 104,700 for 2012, not a 2026 count. Underlying model and uncertainty remain unverified.",
+            "No source estimate is converted to a current global total or a fabricated annual time series."
+          ]
+        }
+      ],
+      "populationEstimateGap": "No current global species estimate verified. A forecast quoted in older reporting must not be presented as an observed endpoint.",
+      "trends": [
+        {
+          "direction": "decreasing",
+          "scope": "global",
+          "geography": "Borneo",
+          "period": null,
+          "interpretation": {
+            "text": "WWF documents a long-term decline in Bornean orangutan populations.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-orangutan",
+                "locator": "Opening overview; threats"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "limitations": "Current numeric rate/endpoint not verified; no annual series derived."
+        }
+      ],
+      "interventions": [
+        {
+          "id": "orangutan-bukit-piton",
+          "kind": "documented-intervention",
+          "title": "Forest restoration at Bukit Piton",
+          "geography": "Sabah, Malaysian Borneo",
+          "description": {
+            "text": "Partners restored degraded forest with native food and canopy trees.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "orangutan-restoration",
+                "locator": "Intervention description"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "outcome": {
+            "text": "WWF reports orangutans feeding, traveling and nesting in restored areas.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "orangutan-restoration",
+                "locator": "Documented outcome"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "inferenceLimit": "Habitat-use observations are evidence of an intervention. More sightings or infants do not prove a standardized abundance increase.",
+          "measurementIds": []
+        }
+      ],
+      "sound": {
+        "knowledge": "documented-vocalization",
+        "information": {
+          "text": "Flanged male Bornean orangutans make long calls used in communication.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "adw-orangutan",
+              "locator": "Communication and Perception"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "frequencyHz": null,
+        "frequencyGap": "No calibrated species/recording frequency measurement imported.",
+        "designConstraint": "Do not merge calls from different orangutan species. Verify recordist, identity and wild/captive setting."
+      },
+      "assets": {
+        "images": [
+          {
+            "id": "image-bornean-orangutan",
+            "kind": "image",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pongo_pygmaeus_01_Pengo.jpg",
+            "creator": "Peter Halasz",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "credit": "Peter Halasz — Pongo pygmaeus 01 Pengo.jpg — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Pongo_pygmaeus_01_Pengo.jpg",
+            "commercialUse": "permitted-with-conditions",
+            "verification": "item-license-verified",
+            "setting": "captive",
+            "notes": "Tennoji Zoo portrait; label captive. Select the offered CC BY-SA 3.0 license rather than combining its alternative licenses.",
+            "playbackRate": null,
+            "references": [
+              {
+                "sourceId": "image-bornean-orangutan",
+                "locator": "Summary; Licensing"
+              }
+            ],
+            "lastVerified": "2026-10-08",
+            "acquired": false,
+            "clearedForUse": false
+          }
+        ],
+        "audio": [],
+        "imageLicensingNote": "The item page lists a license compatible with commercial reuse subject to its conditions. Candidate metadata only; acquisition, original provenance and final credits still require review. WWF media is not licensed by this inventory.",
+        "audioLicensingNote": "No licensed species recording acquired. Playback access is not permission to reuse; confirm recordist, species, context and item license before use."
+      },
+      "editorial": {
+        "kind": "editorial-not-scientific-evidence",
+        "workingTitle": "A canopy can be rebuilt",
+        "premise": "Follow forest restoration while preserving the distinction between renewed habitat and population recovery.",
+        "scientificClaimIds": [
+          "habitat",
+          "ecologicalRole"
+        ]
+      },
+      "lastVerified": "2026-10-08",
+      "evidenceGaps": [
+        "Exact assessment date/year and latest-assessment confirmation unresolved.",
+        "No complete standardized annual population series imported.",
+        "Candidate media has not been acquired or cleared for final use."
+      ]
+    },
+    {
+      "id": "hawksbill-turtle",
+      "commonName": "Hawksbill sea turtle",
+      "scientificName": "Eretmochelys imbricata",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Reptilia",
+        "order": "Testudines",
+        "family": "Cheloniidae",
+        "genus": "Eretmochelys",
+        "rank": "species",
+        "treatmentNote": "Species-level record. Preserve the cited authority's rank treatment; do not merge species or subspecies.",
+        "references": [
+          {
+            "sourceId": "adw-hawksbill",
+            "locator": "Scientific classification / taxonomic hierarchy"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "conservation": {
+        "system": "IUCN-global",
+        "category": "CR",
+        "verification": "public-summary",
+        "assessmentYear": null,
+        "assessmentDate": null,
+        "assessmentYearGap": "Exact formal assessment date/year and latest-assessment metadata remain unverified under approved data access. A public status summary is not an authorized assessment record.",
+        "statusPublicationYear": null,
+        "latestAssessmentConfirmed": false,
+        "assessmentAuthorizationReference": null,
+        "references": [
+          {
+            "sourceId": "wwf-hawksbill",
+            "locator": "Public species conservation category"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "descriptions": {
+        "habitat": {
+          "text": "Coral reefs, rocky shallows, mangroves and nesting beaches.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "noaa-hawksbill",
+              "locator": "Where They Live"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "distribution": {
+          "text": "Tropical and subtropical waters of major oceans.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "noaa-hawksbill",
+              "locator": "About the Species; Where They Live"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "threats": [
+          {
+            "text": "Illegal shell trade, fisheries bycatch, habitat degradation and climate change.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-hawksbill",
+                "locator": "Threats"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ],
+        "ecologicalRole": {
+          "text": "Sponge consumer influencing reef communities.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-hawksbill",
+              "locator": "Ecological role"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "conservationEfforts": [
+          {
+            "text": "Protect nesting and feeding habitat and reduce bycatch and illegal trade.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-hawksbill",
+                "locator": "Conservation efforts"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ]
+      },
+      "measurements": [],
+      "populationEstimateGap": "No global estimate with verified period and uncertainty found. Undated nesting totals and annual nesting females are not total abundance and are excluded.",
+      "trends": [
+        {
+          "direction": "unknown",
+          "scope": "global",
+          "geography": "Global tropical oceans",
+          "period": null,
+          "interpretation": {
+            "text": "A current quantitative global population trend has not been verified in the inspected sources.",
+            "evidence": "documented-unknown",
+            "references": [
+              {
+                "sourceId": "noaa-hawksbill",
+                "locator": "Population Status"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "limitations": "Status and local nesting evidence cannot establish one current global abundance trend."
+        }
+      ],
+      "interventions": [
+        {
+          "id": "hawksbill-arnavon",
+          "kind": "documented-recovery",
+          "title": "Protected nesting and monitoring at Arnavon",
+          "geography": "Arnavon Islands, Solomon Islands",
+          "description": {
+            "text": "Conservation and monitoring have protected a nesting population formerly exploited for shell.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "noaa-hawksbill",
+                "locator": "Intervention description"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "outcome": {
+            "text": "NOAA reports encouraging local recovery signs.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "noaa-hawksbill",
+                "locator": "Documented outcome"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "inferenceLimit": "Qualitative nesting-population evidence; neither a global trend nor a total abundance estimate. No numerical growth magnitude imported.",
+          "measurementIds": []
+        }
+      ],
+      "sound": {
+        "knowledge": "unverified",
+        "information": {
+          "text": "No species-specific vocalization or licensed hawksbill call has been verified in this review.",
+          "evidence": "documented-unknown",
+          "references": [
+            {
+              "sourceId": "noaa-hawksbill",
+              "locator": "Behavior and Diet; source scope"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "frequencyHz": null,
+        "frequencyGap": "No calibrated species/recording frequency measurement imported.",
+        "designConstraint": "Do not label the species silent or invent a call. Use separately licensed habitat ambience clearly labeled as ambience."
+      },
+      "assets": {
+        "images": [
+          {
+            "id": "image-hawksbill-turtle",
+            "kind": "image",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hawksbill_sea_turtle.jpg",
+            "creator": "Colin Johnson / Cmjohns6",
+            "license": "Public domain: author dedication",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-user-en",
+            "credit": "Colin Johnson / Cmjohns6 — Hawksbill sea turtle.jpg — Public domain: author dedication — https://commons.wikimedia.org/wiki/File:Hawksbill_sea_turtle.jpg",
+            "commercialUse": "permitted-with-conditions",
+            "verification": "item-license-verified",
+            "setting": "wild",
+            "notes": "British Virgin Islands reef image; Commons history records a color adjustment. It does not depict the Arnavon intervention.",
+            "playbackRate": null,
+            "references": [
+              {
+                "sourceId": "image-hawksbill-turtle",
+                "locator": "Summary; Licensing"
+              }
+            ],
+            "lastVerified": "2026-10-08",
+            "acquired": false,
+            "clearedForUse": false
+          }
+        ],
+        "audio": [],
+        "imageLicensingNote": "The item page lists a license compatible with commercial reuse subject to its conditions. Candidate metadata only; acquisition, original provenance and final credits still require review. WWF media is not licensed by this inventory.",
+        "audioLicensingNote": "No licensed species recording acquired. Playback access is not permission to reuse; confirm recordist, species, context and item license before use."
+      },
+      "editorial": {
+        "kind": "editorial-not-scientific-evidence",
+        "workingTitle": "The reef beyond the call",
+        "premise": "Use a reef story whose scientific content does not depend on a presumed animal voice.",
+        "scientificClaimIds": [
+          "habitat",
+          "ecologicalRole"
+        ]
+      },
+      "lastVerified": "2026-10-08",
+      "evidenceGaps": [
+        "Exact assessment date/year and latest-assessment confirmation unresolved.",
+        "No complete standardized annual population series imported.",
+        "Candidate media has not been acquired or cleared for final use."
+      ]
+    },
+    {
+      "id": "african-forest-elephant",
+      "commonName": "African forest elephant",
+      "scientificName": "Loxodonta cyclotis",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Proboscidea",
+        "family": "Elephantidae",
+        "genus": "Loxodonta",
+        "rank": "species",
+        "treatmentNote": "Species-level record. Preserve the cited authority's rank treatment; do not merge species or subspecies.",
+        "references": [
+          {
+            "sourceId": "adw-forest-taxonomy",
+            "locator": "Scientific classification / taxonomic hierarchy"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "conservation": {
+        "system": "IUCN-global",
+        "category": "CR",
+        "verification": "public-summary",
+        "assessmentYear": null,
+        "assessmentDate": null,
+        "assessmentYearGap": "Exact formal assessment date/year and latest-assessment metadata remain unverified under approved data access. A public status summary is not an authorized assessment record.",
+        "statusPublicationYear": null,
+        "latestAssessmentConfirmed": false,
+        "assessmentAuthorizationReference": null,
+        "references": [
+          {
+            "sourceId": "wwf-forest",
+            "locator": "Public species conservation category"
+          }
+        ],
+        "lastVerified": "2026-10-08"
+      },
+      "descriptions": {
+        "habitat": {
+          "text": "Dense tropical forest and mineral-rich forest clearings.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-forest",
+              "locator": "Habitat"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "distribution": {
+          "text": "West and Central Africa.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-forest",
+              "locator": "Distribution"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "threats": [
+          {
+            "text": "Ivory poaching, habitat loss and fragmentation, and conflict with people.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-forest",
+                "locator": "Threats"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ],
+        "ecologicalRole": {
+          "text": "Disperses seeds, including those of large forest trees.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "wwf-forest",
+              "locator": "Ecological role"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "conservationEfforts": [
+          {
+            "text": "Protect connected forest habitat and reduce illegal killing and ivory trade.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "wwf-forest",
+                "locator": "Conservation efforts"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          }
+        ]
+      },
+      "measurements": [],
+      "populationEstimateGap": "No current forest-species-only abundance with verified period and uncertainty imported. Combined African elephant figures and savanna estimates are excluded; newer forest status report awaits inspection.",
+      "trends": [
+        {
+          "direction": "decreasing",
+          "scope": "global",
+          "geography": "West and Central Africa",
+          "period": null,
+          "interpretation": {
+            "text": "WWF and IUCN public reporting document a broad decline in forest elephants.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "iucn-forest-public",
+                "locator": "Broadscale decline; threats"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "limitations": "Historical evidence from the public announcement; do not label a historical decline percentage as a current annual rate."
+        }
+      ],
+      "interventions": [
+        {
+          "id": "forest-managed-areas",
+          "kind": "documented-recovery",
+          "title": "Protection in managed forest conservation areas",
+          "geography": "Selected conservation areas in Gabon and Republic of Congo",
+          "description": {
+            "text": "Anti-poaching, supportive legislation and land-use planning support elephant protection.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "iucn-forest-public",
+                "locator": "Intervention description"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "outcome": {
+            "text": "IUCN reports that some protected forest elephant populations have stabilized.",
+            "evidence": "institutional-summary",
+            "references": [
+              {
+                "sourceId": "iucn-forest-public",
+                "locator": "Documented outcome"
+              }
+            ],
+            "lastVerified": "2026-10-08"
+          },
+          "inferenceLimit": "Site-level stabilization reported in a historical announcement; no global recovery or quantified current growth inferred.",
+          "measurementIds": []
+        }
+      ],
+      "sound": {
+        "knowledge": "documented-vocalization",
+        "information": {
+          "text": "Forest elephants communicate with low-frequency rumbles that can include infrasonic components.",
+          "evidence": "institutional-summary",
+          "references": [
+            {
+              "sourceId": "cornell-elephant-sound",
+              "locator": "Rumble and forest sound propagation"
+            }
+          ],
+          "lastVerified": "2026-10-08"
+        },
+        "frequencyHz": null,
+        "frequencyGap": "No calibrated species/recording frequency measurement imported.",
+        "designConstraint": "Use confirmed forest elephant recordings; disclose pitch or speed changes. Do not turn uncalibrated call counts into population abundance."
+      },
+      "assets": {
+        "images": [
+          {
+            "id": "image-african-forest-elephant",
+            "kind": "image",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Loxodontacyclotis.jpg",
+            "creator": "Thomas Breuer",
+            "license": "CC BY 2.5",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
+            "credit": "Thomas Breuer — Loxodontacyclotis.jpg — CC BY 2.5 — https://commons.wikimedia.org/wiki/File:Loxodontacyclotis.jpg",
+            "commercialUse": "permitted-with-conditions",
+            "verification": "item-license-verified",
+            "setting": "wild",
+            "notes": "Mbeli Bai, Nouabale-Ndoki National Park, Republic of Congo; source is a PLOS Biology article. Credit photographer and original article; do not claim exact source date is capture date.",
+            "playbackRate": null,
+            "references": [
+              {
+                "sourceId": "image-african-forest-elephant",
+                "locator": "Summary; Licensing"
+              }
+            ],
+            "lastVerified": "2026-10-08",
+            "acquired": false,
+            "clearedForUse": false
+          }
+        ],
+        "audio": [
+          {
+            "id": "audio-forest-cornell",
+            "kind": "audio",
+            "sourceUrl": "https://www.birds.cornell.edu/ccb/elephant-listening-project/sound/",
+            "creator": "Cornell Elephant Listening Project; item recordist must be confirmed",
+            "license": null,
+            "licenseUrl": null,
+            "credit": null,
+            "commercialUse": "permission-required",
+            "verification": "permission-required",
+            "setting": "unknown",
+            "notes": "Institutional listening example only. Confirm forest versus savanna context and obtain reuse permission and exact credit before acquisition.",
+            "playbackRate": null,
+            "references": [
+              {
+                "sourceId": "cornell-elephant-sound",
+                "locator": "Listening examples"
+              }
+            ],
+            "lastVerified": "2026-10-08",
+            "acquired": false,
+            "clearedForUse": false
+          }
+        ],
+        "imageLicensingNote": "The item page lists a license compatible with commercial reuse subject to its conditions. Candidate metadata only; acquisition, original provenance and final credits still require review. WWF media is not licensed by this inventory.",
+        "audioLicensingNote": "No licensed species recording acquired. Playback access is not permission to reuse; confirm recordist, species, context and item license before use."
+      },
+      "editorial": {
+        "kind": "editorial-not-scientific-evidence",
+        "workingTitle": "Listening through the trees",
+        "premise": "Connect forest elephant communication with the work of researchers protecting a hidden population.",
+        "scientificClaimIds": [
+          "habitat",
+          "ecologicalRole"
+        ]
+      },
+      "lastVerified": "2026-10-08",
+      "evidenceGaps": [
+        "Exact assessment date/year and latest-assessment confirmation unresolved.",
+        "No complete standardized annual population series imported.",
+        "Candidate media has not been acquired or cleared for final use."
+      ]
+    }
+  ]
+}

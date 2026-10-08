@@ -1,0 +1,16 @@
+{
+  "name": "vanishing-frequencies",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Research and data foundation; no frontend or deployment yet.",
+  "scripts": {
+    "data:build": "tsx scripts/prepare-data.ts",
+    "data:validate-species": "node --import tsx scripts/validate-species.ts",
+    "test:species": "node --import tsx --test tests/species-foundation.test.ts",
+    "test": "tsx --test tests/data.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {"zod": "^4.0.0"},
+  "devDependencies": {"@types/node": "^22.0.0", "tsx": "^4.0.0", "typescript": "^5.0.0"}
+}

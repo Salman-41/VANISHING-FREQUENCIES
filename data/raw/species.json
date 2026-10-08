@@ -1,0 +1,620 @@
+[
+  {
+    "id": "snow-leopard",
+    "commonName": "Snow leopard",
+    "scientificName": "Panthera uncia",
+    "family": null,
+    "taxonomyNotes": "Family and current taxonomic authority require verification.",
+    "group": "mammal",
+    "conservation": {
+      "category": "VU",
+      "system": "IUCN-global",
+      "assessmentDate": null,
+      "assessmentUrl": null,
+      "verification": "organization-summary",
+      "sourceIds": [
+        "wwf-snow-leopard"
+      ]
+    },
+    "habitat": {
+      "text": "High Asian mountains",
+      "sourceIds": [
+        "wwf-snow-leopard"
+      ]
+    },
+    "distribution": {
+      "text": "Central and South Asian mountain ranges",
+      "sourceIds": [
+        "wwf-snow-leopard"
+      ]
+    },
+    "ecosystems": [
+      "mountain"
+    ],
+    "regions": [
+      "Asia"
+    ],
+    "populationEstimate": null,
+    "estimateUnavailableReason": "No estimate with a verified measurement period and uncertainty definition imported.",
+    "populationTrend": "unknown",
+    "trendSourceIds": [],
+    "measurementPeriod": null,
+    "threats": [
+      {
+        "text": "Poaching, prey depletion and conflict with livestock keepers.",
+        "sourceIds": [
+          "wwf-snow-leopard"
+        ]
+      }
+    ],
+    "ecologicalRole": {
+      "text": "Top predator.",
+      "sourceIds": [
+        "wwf-snow-leopard"
+      ]
+    },
+    "interventions": [
+      {
+        "text": "Protect prey and support coexistence with herders.",
+        "sourceIds": [
+          "wwf-snow-leopard"
+        ]
+      }
+    ],
+    "successes": [],
+    "featuredChapter": 1,
+    "coordinates": null,
+    "audio": null,
+    "image": null,
+    "model": null,
+    "sourceIds": [
+      "wwf-snow-leopard"
+    ],
+    "lastVerified": "2026-10-08",
+    "gaps": [
+      "Direct assessment, date, taxonomic family and trend not yet verified.",
+      "Images and audio not licensed or acquired."
+    ]
+  },
+  {
+    "id": "blue-whale",
+    "commonName": "Blue whale",
+    "scientificName": "Balaenoptera musculus",
+    "family": null,
+    "taxonomyNotes": "Family and current taxonomic authority require verification.",
+    "group": "mammal",
+    "conservation": {
+      "category": "EN",
+      "system": "IUCN-global",
+      "assessmentDate": null,
+      "assessmentUrl": null,
+      "verification": "organization-summary",
+      "sourceIds": [
+        "wwf-blue-whale"
+      ]
+    },
+    "habitat": {
+      "text": "Open ocean",
+      "sourceIds": [
+        "wwf-blue-whale"
+      ]
+    },
+    "distribution": {
+      "text": "Oceans worldwide",
+      "sourceIds": [
+        "wwf-blue-whale"
+      ]
+    },
+    "ecosystems": [
+      "marine"
+    ],
+    "regions": [
+      "Global oceans"
+    ],
+    "populationEstimate": null,
+    "estimateUnavailableReason": "No estimate with a verified measurement period and uncertainty definition imported.",
+    "populationTrend": "unknown",
+    "trendSourceIds": [],
+    "measurementPeriod": null,
+    "threats": [
+      {
+        "text": "Vessel strikes and entanglement.",
+        "sourceIds": [
+          "wwf-blue-whale"
+        ]
+      }
+    ],
+    "ecologicalRole": {
+      "text": "Krill predator.",
+      "sourceIds": [
+        "wwf-blue-whale"
+      ]
+    },
+    "interventions": [
+      {
+        "text": "Reduce ship strikes and fishing-gear entanglement.",
+        "sourceIds": [
+          "wwf-blue-whale"
+        ]
+      }
+    ],
+    "successes": [],
+    "featuredChapter": 2,
+    "coordinates": null,
+    "audio": null,
+    "image": null,
+    "model": null,
+    "sourceIds": [
+      "wwf-blue-whale",
+      "noaa-whale"
+    ],
+    "lastVerified": "2026-10-08",
+    "gaps": [
+      "Direct assessment, date, taxonomic family and trend not yet verified.",
+      "Images and audio not licensed or acquired."
+    ]
+  },
+  {
+    "id": "asian-elephant",
+    "commonName": "Asian elephant",
+    "scientificName": "Elephas maximus",
+    "family": null,
+    "taxonomyNotes": "Family and current taxonomic authority require verification. WWF page labels Elephas maximus indicus; use IUCN species-level name, not subspecies counts.",
+    "group": "mammal",
+    "conservation": {
+      "category": "EN",
+      "system": "IUCN-global",
+      "assessmentDate": null,
+      "assessmentUrl": null,
+      "verification": "organization-summary",
+      "sourceIds": [
+        "iucn-asian-elephant"
+      ]
+    },
+    "habitat": {
+      "text": "Forests",
+      "sourceIds": [
+        "wwf-asian-elephant"
+      ]
+    },
+    "distribution": {
+      "text": "South and Southeast Asia",
+      "sourceIds": [
+        "wwf-asian-elephant"
+      ]
+    },
+    "ecosystems": [
+      "forest"
+    ],
+    "regions": [
+      "Asia"
+    ],
+    "populationEstimate": null,
+    "estimateUnavailableReason": "No estimate with a verified measurement period and uncertainty definition imported.",
+    "populationTrend": "unknown",
+    "trendSourceIds": [],
+    "measurementPeriod": null,
+    "threats": [
+      {
+        "text": "Habitat fragmentation and human–elephant conflict.",
+        "sourceIds": [
+          "wwf-asian-elephant"
+        ]
+      }
+    ],
+    "ecologicalRole": {
+      "text": "Seed disperser.",
+      "sourceIds": [
+        "wwf-asian-elephant"
+      ]
+    },
+    "interventions": [
+      {
+        "text": "Protect habitat connectivity and support coexistence.",
+        "sourceIds": [
+          "wwf-asian-elephant"
+        ]
+      }
+    ],
+    "successes": [],
+    "featuredChapter": null,
+    "coordinates": null,
+    "audio": null,
+    "image": null,
+    "model": null,
+    "sourceIds": [
+      "wwf-asian-elephant",
+      "iucn-asian-elephant"
+    ],
+    "lastVerified": "2026-10-08",
+    "gaps": [
+      "Direct assessment, date, taxonomic family and trend not yet verified.",
+      "Images and audio not licensed or acquired."
+    ]
+  },
+  {
+    "id": "tiger",
+    "commonName": "Tiger",
+    "scientificName": "Panthera tigris",
+    "family": null,
+    "taxonomyNotes": "Family and current taxonomic authority require verification.",
+    "group": "mammal",
+    "conservation": {
+      "category": "EN",
+      "system": "IUCN-global",
+      "assessmentDate": null,
+      "assessmentUrl": null,
+      "verification": "organization-summary",
+      "sourceIds": [
+        "wwf-tiger"
+      ]
+    },
+    "habitat": {
+      "text": "Forests and grasslands",
+      "sourceIds": [
+        "wwf-tiger"
+      ]
+    },
+    "distribution": {
+      "text": "Asia",
+      "sourceIds": [
+        "wwf-tiger"
+      ]
+    },
+    "ecosystems": [
+      "forest"
+    ],
+    "regions": [
+      "Asia"
+    ],
+    "populationEstimate": null,
+    "estimateUnavailableReason": "No estimate with a verified measurement period and uncertainty definition imported.",
+    "populationTrend": "unknown",
+    "trendSourceIds": [],
+    "measurementPeriod": null,
+    "threats": [
+      {
+        "text": "Poaching and habitat loss.",
+        "sourceIds": [
+          "wwf-tiger"
+        ]
+      }
+    ],
+    "ecologicalRole": {
+      "text": "Large predator.",
+      "sourceIds": [
+        "wwf-tiger"
+      ]
+    },
+    "interventions": [
+      {
+        "text": "Protect connected habitat and prevent illegal killing.",
+        "sourceIds": [
+          "wwf-tiger"
+        ]
+      }
+    ],
+    "successes": [],
+    "featuredChapter": 5,
+    "coordinates": null,
+    "audio": null,
+    "image": null,
+    "model": null,
+    "sourceIds": [
+      "wwf-tiger"
+    ],
+    "lastVerified": "2026-10-08",
+    "gaps": [
+      "Direct assessment, date, taxonomic family and trend not yet verified.",
+      "Images and audio not licensed or acquired."
+    ]
+  },
+  {
+    "id": "bornean-orangutan",
+    "commonName": "Bornean orangutan",
+    "scientificName": "Pongo pygmaeus",
+    "family": null,
+    "taxonomyNotes": "Family and current taxonomic authority require verification. Common name is narrowed to Bornean orangutan; no genus-wide estimate.",
+    "group": "mammal",
+    "conservation": {
+      "category": "CR",
+      "system": "IUCN-global",
+      "assessmentDate": null,
+      "assessmentUrl": null,
+      "verification": "organization-summary",
+      "sourceIds": [
+        "wwf-bornean-orangutan"
+      ]
+    },
+    "habitat": {
+      "text": "Tropical forests",
+      "sourceIds": [
+        "wwf-bornean-orangutan"
+      ]
+    },
+    "distribution": {
+      "text": "Borneo",
+      "sourceIds": [
+        "wwf-bornean-orangutan"
+      ]
+    },
+    "ecosystems": [
+      "forest"
+    ],
+    "regions": [
+      "Asia"
+    ],
+    "populationEstimate": null,
+    "estimateUnavailableReason": "No estimate with a verified measurement period and uncertainty definition imported.",
+    "populationTrend": "unknown",
+    "trendSourceIds": [],
+    "measurementPeriod": null,
+    "threats": [
+      {
+        "text": "Forest conversion and hunting.",
+        "sourceIds": [
+          "wwf-bornean-orangutan"
+        ]
+      }
+    ],
+    "ecologicalRole": {
+      "text": "Seed disperser.",
+      "sourceIds": [
+        "wwf-bornean-orangutan"
+      ]
+    },
+    "interventions": [
+      {
+        "text": "Protect and restore forests.",
+        "sourceIds": [
+          "wwf-bornean-orangutan"
+        ]
+      }
+    ],
+    "successes": [],
+    "featuredChapter": 5,
+    "coordinates": null,
+    "audio": null,
+    "image": null,
+    "model": null,
+    "sourceIds": [
+      "wwf-bornean-orangutan"
+    ],
+    "lastVerified": "2026-10-08",
+    "gaps": [
+      "Direct assessment, date, taxonomic family and trend not yet verified.",
+      "Images and audio not licensed or acquired."
+    ]
+  },
+  {
+    "id": "african-forest-elephant",
+    "commonName": "African forest elephant",
+    "scientificName": "Loxodonta cyclotis",
+    "family": null,
+    "taxonomyNotes": "Family and current taxonomic authority require verification.",
+    "group": "mammal",
+    "conservation": {
+      "category": "CR",
+      "system": "IUCN-global",
+      "assessmentDate": null,
+      "assessmentUrl": null,
+      "verification": "organization-summary",
+      "sourceIds": [
+        "wwf-african-forest-elephant"
+      ]
+    },
+    "habitat": {
+      "text": "Tropical forests",
+      "sourceIds": [
+        "wwf-african-forest-elephant"
+      ]
+    },
+    "distribution": {
+      "text": "Central and West Africa",
+      "sourceIds": [
+        "wwf-african-forest-elephant"
+      ]
+    },
+    "ecosystems": [
+      "forest"
+    ],
+    "regions": [
+      "Africa"
+    ],
+    "populationEstimate": null,
+    "estimateUnavailableReason": "No estimate with a verified measurement period and uncertainty definition imported.",
+    "populationTrend": "unknown",
+    "trendSourceIds": [],
+    "measurementPeriod": null,
+    "threats": [
+      {
+        "text": "Ivory poaching and habitat loss.",
+        "sourceIds": [
+          "wwf-african-forest-elephant"
+        ]
+      }
+    ],
+    "ecologicalRole": {
+      "text": "Seed disperser.",
+      "sourceIds": [
+        "wwf-african-forest-elephant"
+      ]
+    },
+    "interventions": [
+      {
+        "text": "Protect forests and combat illegal ivory trade.",
+        "sourceIds": [
+          "wwf-african-forest-elephant"
+        ]
+      }
+    ],
+    "successes": [],
+    "featuredChapter": 5,
+    "coordinates": null,
+    "audio": null,
+    "image": null,
+    "model": null,
+    "sourceIds": [
+      "wwf-african-forest-elephant"
+    ],
+    "lastVerified": "2026-10-08",
+    "gaps": [
+      "Direct assessment, date, taxonomic family and trend not yet verified.",
+      "Images and audio not licensed or acquired."
+    ]
+  },
+  {
+    "id": "hawksbill-turtle",
+    "commonName": "Hawksbill sea turtle",
+    "scientificName": "Eretmochelys imbricata",
+    "family": null,
+    "taxonomyNotes": "Family and current taxonomic authority require verification.",
+    "group": "reptile",
+    "conservation": {
+      "category": "CR",
+      "system": "IUCN-global",
+      "assessmentDate": null,
+      "assessmentUrl": null,
+      "verification": "organization-summary",
+      "sourceIds": [
+        "wwf-hawksbill-turtle"
+      ]
+    },
+    "habitat": {
+      "text": "Tropical marine habitats",
+      "sourceIds": [
+        "wwf-hawksbill-turtle"
+      ]
+    },
+    "distribution": {
+      "text": "Tropical oceans",
+      "sourceIds": [
+        "wwf-hawksbill-turtle"
+      ]
+    },
+    "ecosystems": [
+      "marine"
+    ],
+    "regions": [
+      "Tropics"
+    ],
+    "populationEstimate": null,
+    "estimateUnavailableReason": "No estimate with a verified measurement period and uncertainty definition imported.",
+    "populationTrend": "unknown",
+    "trendSourceIds": [],
+    "measurementPeriod": null,
+    "threats": [
+      {
+        "text": "Shell trade and fisheries bycatch.",
+        "sourceIds": [
+          "wwf-hawksbill-turtle"
+        ]
+      }
+    ],
+    "ecologicalRole": {
+      "text": "Reef sponge consumer.",
+      "sourceIds": [
+        "wwf-hawksbill-turtle"
+      ]
+    },
+    "interventions": [
+      {
+        "text": "Prevent illegal trade and reduce bycatch.",
+        "sourceIds": [
+          "wwf-hawksbill-turtle"
+        ]
+      }
+    ],
+    "successes": [],
+    "featuredChapter": null,
+    "coordinates": null,
+    "audio": null,
+    "image": null,
+    "model": null,
+    "sourceIds": [
+      "wwf-hawksbill-turtle"
+    ],
+    "lastVerified": "2026-10-08",
+    "gaps": [
+      "Direct assessment, date, taxonomic family and trend not yet verified.",
+      "Images and audio not licensed or acquired."
+    ]
+  },
+  {
+    "id": "red-panda",
+    "commonName": "Red panda",
+    "scientificName": "Ailurus fulgens",
+    "family": null,
+    "taxonomyNotes": "Family and current taxonomic authority require verification. Resolve species-split treatment before adding other red panda taxa.",
+    "group": "mammal",
+    "conservation": {
+      "category": "EN",
+      "system": "IUCN-global",
+      "assessmentDate": null,
+      "assessmentUrl": null,
+      "verification": "organization-summary",
+      "sourceIds": [
+        "wwf-red-panda"
+      ]
+    },
+    "habitat": {
+      "text": "Temperate forests",
+      "sourceIds": [
+        "wwf-red-panda"
+      ]
+    },
+    "distribution": {
+      "text": "Eastern Himalayas and southwestern China",
+      "sourceIds": [
+        "wwf-red-panda"
+      ]
+    },
+    "ecosystems": [
+      "forest"
+    ],
+    "regions": [
+      "Asia"
+    ],
+    "populationEstimate": null,
+    "estimateUnavailableReason": "No estimate with a verified measurement period and uncertainty definition imported.",
+    "populationTrend": "unknown",
+    "trendSourceIds": [],
+    "measurementPeriod": null,
+    "threats": [
+      {
+        "text": "Forest loss and fragmentation.",
+        "sourceIds": [
+          "wwf-red-panda"
+        ]
+      }
+    ],
+    "ecologicalRole": {
+      "text": "Forest herbivore.",
+      "sourceIds": [
+        "wwf-red-panda"
+      ]
+    },
+    "interventions": [
+      {
+        "text": "Protect forest habitat.",
+        "sourceIds": [
+          "wwf-red-panda"
+        ]
+      }
+    ],
+    "successes": [],
+    "featuredChapter": null,
+    "coordinates": null,
+    "audio": null,
+    "image": null,
+    "model": null,
+    "sourceIds": [
+      "wwf-red-panda"
+    ],
+    "lastVerified": "2026-10-08",
+    "gaps": [
+      "Direct assessment, date, taxonomic family and trend not yet verified.",
+      "Images and audio not licensed or acquired."
+    ]
+  }
+]

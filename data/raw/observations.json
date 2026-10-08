@@ -1,0 +1,209 @@
+[
+  {
+    "id": "lpi-2026-global",
+    "seriesId": "lpi-2026-global",
+    "measure": "index-percent-change",
+    "value": -73,
+    "unit": "percent",
+    "period": {
+      "startYear": 1970,
+      "endYear": 2022
+    },
+    "geography": "Global",
+    "ecosystem": "All",
+    "taxon": "Monitored vertebrates",
+    "edition": "LPR 2026",
+    "uncertainty": null,
+    "sourceIds": [
+      "wwf-lpr-2026"
+    ],
+    "sourceLocator": "Notes to editors: regional and ecosystem results",
+    "method": "Published rounded endpoint change; not an annual observation or animal count.",
+    "lastVerified": "2026-10-08",
+    "redistribution": "review-required"
+  },
+  {
+    "id": "lpi-2026-latin-america-caribbean",
+    "seriesId": "lpi-2026-latin-america-caribbean",
+    "measure": "index-percent-change",
+    "value": -95,
+    "unit": "percent",
+    "period": {
+      "startYear": 1970,
+      "endYear": 2022
+    },
+    "geography": "Latin America and Caribbean",
+    "ecosystem": "All",
+    "taxon": "Monitored vertebrates",
+    "edition": "LPR 2026",
+    "uncertainty": null,
+    "sourceIds": [
+      "wwf-lpr-2026"
+    ],
+    "sourceLocator": "Notes to editors: regional and ecosystem results",
+    "method": "Published rounded endpoint change; not an annual observation or animal count.",
+    "lastVerified": "2026-10-08",
+    "redistribution": "review-required"
+  },
+  {
+    "id": "lpi-2026-africa",
+    "seriesId": "lpi-2026-africa",
+    "measure": "index-percent-change",
+    "value": -80,
+    "unit": "percent",
+    "period": {
+      "startYear": 1970,
+      "endYear": 2022
+    },
+    "geography": "Africa",
+    "ecosystem": "All",
+    "taxon": "Monitored vertebrates",
+    "edition": "LPR 2026",
+    "uncertainty": null,
+    "sourceIds": [
+      "wwf-lpr-2026"
+    ],
+    "sourceLocator": "Notes to editors: regional and ecosystem results",
+    "method": "Published rounded endpoint change; not an annual observation or animal count.",
+    "lastVerified": "2026-10-08",
+    "redistribution": "review-required"
+  },
+  {
+    "id": "lpi-2026-asia-pacific",
+    "seriesId": "lpi-2026-asia-pacific",
+    "measure": "index-percent-change",
+    "value": -49,
+    "unit": "percent",
+    "period": {
+      "startYear": 1970,
+      "endYear": 2022
+    },
+    "geography": "Asia–Pacific",
+    "ecosystem": "All",
+    "taxon": "Monitored vertebrates",
+    "edition": "LPR 2026",
+    "uncertainty": null,
+    "sourceIds": [
+      "wwf-lpr-2026"
+    ],
+    "sourceLocator": "Notes to editors: regional and ecosystem results",
+    "method": "Published rounded endpoint change; not an annual observation or animal count.",
+    "lastVerified": "2026-10-08",
+    "redistribution": "review-required"
+  },
+  {
+    "id": "lpi-2026-north-america",
+    "seriesId": "lpi-2026-north-america",
+    "measure": "index-percent-change",
+    "value": -28,
+    "unit": "percent",
+    "period": {
+      "startYear": 1970,
+      "endYear": 2022
+    },
+    "geography": "North America",
+    "ecosystem": "All",
+    "taxon": "Monitored vertebrates",
+    "edition": "LPR 2026",
+    "uncertainty": null,
+    "sourceIds": [
+      "wwf-lpr-2026"
+    ],
+    "sourceLocator": "Notes to editors: regional and ecosystem results",
+    "method": "Published rounded endpoint change; not an annual observation or animal count.",
+    "lastVerified": "2026-10-08",
+    "redistribution": "review-required"
+  },
+  {
+    "id": "lpi-2026-europe-central-asia",
+    "seriesId": "lpi-2026-europe-central-asia",
+    "measure": "index-percent-change",
+    "value": -23,
+    "unit": "percent",
+    "period": {
+      "startYear": 1970,
+      "endYear": 2022
+    },
+    "geography": "Europe and Central Asia",
+    "ecosystem": "All",
+    "taxon": "Monitored vertebrates",
+    "edition": "LPR 2026",
+    "uncertainty": null,
+    "sourceIds": [
+      "wwf-lpr-2026"
+    ],
+    "sourceLocator": "Notes to editors: regional and ecosystem results",
+    "method": "Published rounded endpoint change; not an annual observation or animal count.",
+    "lastVerified": "2026-10-08",
+    "redistribution": "review-required"
+  },
+  {
+    "id": "lpi-2026-freshwater",
+    "seriesId": "lpi-2026-freshwater",
+    "measure": "index-percent-change",
+    "value": -85,
+    "unit": "percent",
+    "period": {
+      "startYear": 1970,
+      "endYear": 2022
+    },
+    "geography": "Global",
+    "ecosystem": "Freshwater",
+    "taxon": "Monitored vertebrates",
+    "edition": "LPR 2026",
+    "uncertainty": null,
+    "sourceIds": [
+      "wwf-lpr-2026"
+    ],
+    "sourceLocator": "Notes to editors: regional and ecosystem results",
+    "method": "Published rounded endpoint change; not an annual observation or animal count.",
+    "lastVerified": "2026-10-08",
+    "redistribution": "review-required"
+  },
+  {
+    "id": "lpi-2026-terrestrial",
+    "seriesId": "lpi-2026-terrestrial",
+    "measure": "index-percent-change",
+    "value": -69,
+    "unit": "percent",
+    "period": {
+      "startYear": 1970,
+      "endYear": 2022
+    },
+    "geography": "Global",
+    "ecosystem": "Terrestrial",
+    "taxon": "Monitored vertebrates",
+    "edition": "LPR 2026",
+    "uncertainty": null,
+    "sourceIds": [
+      "wwf-lpr-2026"
+    ],
+    "sourceLocator": "Notes to editors: regional and ecosystem results",
+    "method": "Published rounded endpoint change; not an annual observation or animal count.",
+    "lastVerified": "2026-10-08",
+    "redistribution": "review-required"
+  },
+  {
+    "id": "lpi-2026-marine",
+    "seriesId": "lpi-2026-marine",
+    "measure": "index-percent-change",
+    "value": -59,
+    "unit": "percent",
+    "period": {
+      "startYear": 1970,
+      "endYear": 2022
+    },
+    "geography": "Global",
+    "ecosystem": "Marine",
+    "taxon": "Monitored vertebrates",
+    "edition": "LPR 2026",
+    "uncertainty": null,
+    "sourceIds": [
+      "wwf-lpr-2026"
+    ],
+    "sourceLocator": "Notes to editors: regional and ecosystem results",
+    "method": "Published rounded endpoint change; not an annual observation or animal count.",
+    "lastVerified": "2026-10-08",
+    "redistribution": "review-required"
+  }
+]

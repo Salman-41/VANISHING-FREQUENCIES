@@ -1,0 +1,82 @@
+[
+  {
+    "speciesId": "snow-leopard",
+    "palette": [
+      "#0B0D0D",
+      "#ECEAE4",
+      "#24372D"
+    ],
+    "scene": "mountain",
+    "representation": "artistic"
+  },
+  {
+    "speciesId": "blue-whale",
+    "palette": [
+      "#0B0D0D",
+      "#ECEAE4",
+      "#24372D"
+    ],
+    "scene": "ocean",
+    "representation": "artistic"
+  },
+  {
+    "speciesId": "asian-elephant",
+    "palette": [
+      "#0B0D0D",
+      "#ECEAE4",
+      "#24372D"
+    ],
+    "scene": "forest",
+    "representation": "artistic"
+  },
+  {
+    "speciesId": "tiger",
+    "palette": [
+      "#0B0D0D",
+      "#ECEAE4",
+      "#24372D"
+    ],
+    "scene": "forest",
+    "representation": "artistic"
+  },
+  {
+    "speciesId": "bornean-orangutan",
+    "palette": [
+      "#0B0D0D",
+      "#ECEAE4",
+      "#24372D"
+    ],
+    "scene": "forest",
+    "representation": "artistic"
+  },
+  {
+    "speciesId": "african-forest-elephant",
+    "palette": [
+      "#0B0D0D",
+      "#ECEAE4",
+      "#24372D"
+    ],
+    "scene": "forest",
+    "representation": "artistic"
+  },
+  {
+    "speciesId": "hawksbill-turtle",
+    "palette": [
+      "#0B0D0D",
+      "#ECEAE4",
+      "#24372D"
+    ],
+    "scene": "ocean",
+    "representation": "artistic"
+  },
+  {
+    "speciesId": "red-panda",
+    "palette": [
+      "#0B0D0D",
+      "#ECEAE4",
+      "#24372D"
+    ],
+    "scene": "forest",
+    "representation": "artistic"
+  }
+]

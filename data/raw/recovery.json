@@ -1,0 +1,12 @@
+[
+  {
+    "id": "green-turtle-recovery",
+    "taxon": "Chelonia mydas",
+    "sourceIds": [
+      "iucn-green-recovery"
+    ],
+    "text": "IUCN announced a global move from Endangered to Least Concern in October 2025. Nest protection and bycatch reduction are among the interventions described. Some subpopulations remain threatened; global improvement does not remove the need for protection.",
+    "measurement": null,
+    "lastVerified": "2026-10-08"
+  }
+]

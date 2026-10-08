@@ -1,0 +1,26 @@
+[
+  {
+    "path": "data/raw/public/owid-lpi-2024.csv",
+    "url": "https://ourworldindata.org/grapher/global-living-planet-index.csv?csvType=full&useColumnShortNames=true",
+    "retrievedOn": "2026-10-08",
+    "sha256": "9764f5f4f9c9ff855090a34ba218b02d7878922eec485e7b42d497ce5b8b3f25",
+    "bytes": 21873,
+    "status": "acquired"
+  },
+  {
+    "path": "data/raw/public/owid-lpi-2024.metadata.json",
+    "url": "https://ourworldindata.org/grapher/global-living-planet-index.metadata.json?csvType=full&useColumnShortNames=true",
+    "retrievedOn": "2026-10-08",
+    "sha256": "6461fbf651db381af42a9b02b5a953b4804f302b4d23f4210551329d5910fb91",
+    "bytes": 2917,
+    "status": "acquired"
+  },
+  {
+    "path": "data/raw/public/LPI_Data_Use_Policy_2026.pdf",
+    "url": "https://www.livingplanetindex.org/documents/LPI_Data_Use_Policy_2026.pdf",
+    "retrievedOn": "2026-10-08",
+    "sha256": "96d94abc8138569735ba60db9ec1732c69854712ad6a5c440e7c3605e0d10ea8",
+    "bytes": 508402,
+    "status": "acquired"
+  }
+]

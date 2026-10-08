@@ -1,0 +1,786 @@
+{
+  "schemaVersion": "1.0.0",
+  "lastVerified": "2026-10-08",
+  "citations": [
+    {
+      "id": "wwf-snow",
+      "title": "Snow leopards",
+      "publisher": "WWF",
+      "authors": [
+        "WWF"
+      ],
+      "url": "https://www.worldwildlife.org/species/snow-leopard/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Species facts; habitat; threats; conservation"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Institutional summary; exact assessment dates, methods and data periods are not supplied for every claim."
+    },
+    {
+      "id": "wwf-blue",
+      "title": "Blue whales",
+      "publisher": "WWF",
+      "authors": [
+        "WWF"
+      ],
+      "url": "https://www.worldwildlife.org/species/whale/blue-whale/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Species facts; habitat; threats; conservation"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Institutional summary; exact assessment dates, methods and data periods are not supplied for every claim."
+    },
+    {
+      "id": "wwf-tiger",
+      "title": "Tigers",
+      "publisher": "WWF",
+      "authors": [
+        "WWF"
+      ],
+      "url": "https://www.worldwildlife.org/species/tiger/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Species facts; habitat; threats; conservation"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Institutional summary; exact assessment dates, methods and data periods are not supplied for every claim."
+    },
+    {
+      "id": "wwf-orangutan",
+      "title": "Bornean orangutans",
+      "publisher": "WWF",
+      "authors": [
+        "WWF"
+      ],
+      "url": "https://www.worldwildlife.org/species/orangutan/bornean-orangutan/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Species facts; habitat; threats; conservation"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Institutional summary; exact assessment dates, methods and data periods are not supplied for every claim."
+    },
+    {
+      "id": "wwf-hawksbill",
+      "title": "Hawksbill turtles",
+      "publisher": "WWF",
+      "authors": [
+        "WWF"
+      ],
+      "url": "https://www.worldwildlife.org/species/sea-turtle/hawksbill-turtle/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Species facts; habitat; threats; conservation"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Institutional summary; exact assessment dates, methods and data periods are not supplied for every claim."
+    },
+    {
+      "id": "wwf-forest",
+      "title": "African forest elephants",
+      "publisher": "WWF",
+      "authors": [
+        "WWF"
+      ],
+      "url": "https://www.worldwildlife.org/species/elephant/african-elephant/african-forest-elephant/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Species facts; habitat; threats; conservation"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Institutional summary; exact assessment dates, methods and data periods are not supplied for every claim."
+    },
+    {
+      "id": "wwf-red-panda",
+      "title": "Red pandas",
+      "publisher": "WWF",
+      "authors": [
+        "WWF"
+      ],
+      "url": "https://www.worldwildlife.org/species/red-panda/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Species facts; habitat; threats; conservation"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Reserve candidate. Broad red panda name/population statements may require harmonization with proposed species splits; no numerical estimate imported."
+    },
+    {
+      "id": "wwf-asian",
+      "title": "Asian elephants",
+      "publisher": "WWF",
+      "authors": [
+        "WWF"
+      ],
+      "url": "https://www.worldwildlife.org/species/elephant/asian-elephant/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Species facts; habitat; threats; conservation"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Reserve candidate. Fact box uses Elephas maximus indicus while broader page discusses Asian elephants. Do not attach species-wide counts to a subspecies."
+    },
+    {
+      "id": "iucn-asian-public",
+      "title": "Elephant range States review CITES MIKE implementation",
+      "publisher": "IUCN",
+      "authors": [
+        "IUCN"
+      ],
+      "url": "https://iucn.org/story/202402/elephant-range-states-southeast-asia-review-implementation-cites-mike-programme-0",
+      "publicationDate": "2024-02-13",
+      "publicationYear": 2024,
+      "accessedDate": "2026-10-08",
+      "type": "public-news",
+      "verification": "search-result-only",
+      "locators": [
+        "Species facts; habitat; threats; conservation"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Institutional summary; exact assessment dates, methods and data periods are not supplied for every claim."
+    },
+    {
+      "id": "red-panda-genomics",
+      "title": "Genomic evidence for two phylogenetic species and long-term population bottlenecks in red pandas",
+      "publisher": "Science Advances / AAAS",
+      "authors": [
+        "Science Advances / AAAS"
+      ],
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7043915/",
+      "publicationDate": "2020-02-26",
+      "publicationYear": 2020,
+      "accessedDate": "2026-10-08",
+      "type": "primary-study",
+      "verification": "search-result-only",
+      "locators": [
+        "Abstract; DOI 10.1126/sciadv.aax5751"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Primary paper indexed abstract read; full text not independently inspected in this pass. Taxonomic lead for reserve candidate, not population abundance evidence."
+    },
+    {
+      "id": "india-snow-spai",
+      "title": "Status Report of Snow Leopards in India: official release",
+      "publisher": "Government of India, MoEFCC / Press Information Bureau",
+      "authors": [
+        "Government of India, MoEFCC / Press Information Bureau"
+      ],
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2000545&lang=2&reg=48",
+      "publicationDate": "2024-01-30",
+      "publicationYear": 2024,
+      "accessedDate": "2026-10-08",
+      "type": "public-news",
+      "verification": "page-read",
+      "locators": [
+        "Opening estimate; survey coverage and 2019–2023 period; two-step occupancy/camera-trap framework"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Government announcement summarizes a scientific survey. No confidence interval is supplied; national estimate is not a global census."
+    },
+    {
+      "id": "noaa-blue-stock",
+      "title": "Blue whale: Eastern North Pacific stock, 2023 stock assessment, revised 14 May 2024",
+      "publisher": "NOAA Fisheries",
+      "authors": [
+        "NOAA Fisheries"
+      ],
+      "url": "https://www.fisheries.noaa.gov/s3/2024-12/2023-sar-blue-whale-enp.pdf",
+      "publicationDate": "2024-05-14",
+      "publicationYear": 2024,
+      "accessedDate": "2026-10-08",
+      "type": "government-report",
+      "verification": "page-read",
+      "locators": [
+        "PDF p.2 / printed p.205: Population Size and Current Population Trend; Fig.2 notes"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Stock-specific historical estimate from 2015–2018 photo identification. Current stock trend explicitly unknown. Revision year differs from assessment edition."
+    },
+    {
+      "id": "noaa-blue",
+      "title": "Blue whale",
+      "publisher": "NOAA Fisheries",
+      "authors": [
+        "NOAA Fisheries"
+      ],
+      "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "search-result-only",
+      "locators": [
+        "Behavior and diet; conservation efforts; science overview; WhaleWatch"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Species page was initially a cache miss; subsequent official indexed content verified its intervention summary. Numeric population content is taken from the separately read stock report."
+    },
+    {
+      "id": "noaa-whalewatch",
+      "title": "WhaleWatch",
+      "publisher": "NOAA Fisheries",
+      "authors": [
+        "NOAA Fisheries"
+      ],
+      "url": "https://www.fisheries.noaa.gov/west-coast/marine-mammal-protection/whalewatch",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "WhaleWatch overview and model description"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "A management/risk prediction tool; its existence does not itself prove a measured reduction in ship strikes."
+    },
+    {
+      "id": "noaa-hawksbill",
+      "title": "Hawksbill turtle",
+      "publisher": "NOAA Fisheries",
+      "authors": [
+        "NOAA Fisheries"
+      ],
+      "url": "https://www.fisheries.noaa.gov/species/hawksbill-turtle",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Population Status: Arnavon recovery; Behavior and Diet; Where They Live; Threats; Conservation & Management"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Nesting counts/females are not total population abundance. ESA Endangered is a separate legal system from IUCN Critically Endangered. No undated nesting numbers imported."
+    },
+    {
+      "id": "iucn-tiger-update",
+      "title": "Migratory monarch butterfly now Endangered: tiger reassessment section",
+      "publisher": "IUCN",
+      "authors": [
+        "IUCN"
+      ],
+      "url": "https://iucn.org/press-release/202207/migratory-monarch-butterfly-now-endangered-iucn-red-list",
+      "publicationDate": "2022-07-21",
+      "publicationYear": 2022,
+      "accessedDate": "2026-10-08",
+      "type": "public-news",
+      "verification": "page-read",
+      "locators": [
+        "Tiger paragraphs: wild estimate range, improved monitoring, threats"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Public press summary, not an authorized Red List dataset. Its assessment publication year is not the date assessed; an upward estimate revision is partly due to monitoring changes."
+    },
+    {
+      "id": "iucn-nepal-2022",
+      "title": "Nepal achieves a global commitment to double the tiger",
+      "publisher": "IUCN",
+      "authors": [
+        "IUCN"
+      ],
+      "url": "https://iucn.org/news/202207/nepal-achieves-global-commitment-double-tiger-1",
+      "publicationDate": "2022-07-29",
+      "publicationYear": 2022,
+      "accessedDate": "2026-10-08",
+      "type": "public-news",
+      "verification": "page-read",
+      "locators": [
+        "National survey results; habitat management and coexistence; ITHCP"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Public announcement, not the survey method/report. Numerical result is held until government report and survey dates/methods are read."
+    },
+    {
+      "id": "iucn-nepal-2026",
+      "title": "Tiger census: Nepal's tiger number increases to 429",
+      "publisher": "IUCN",
+      "authors": [
+        "IUCN"
+      ],
+      "url": "https://iucn.org/story/202607/tiger-census-nepals-tiger-number-increases-429",
+      "publicationDate": "2026-07-29",
+      "publicationYear": 2026,
+      "accessedDate": "2026-10-08",
+      "type": "public-news",
+      "verification": "page-read",
+      "locators": [
+        "National total; park-specific differences; census and ITHCP summary"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Current public report of government census; original census methods/uncertainty not acquired. Aggregate increase does not establish uniform recovery across parks or global range."
+    },
+    {
+      "id": "nepal-tiger-report-lead",
+      "title": "Status of Tigers and Prey in Nepal 2022",
+      "publisher": "Government of Nepal, DNPWC / DFSC",
+      "authors": [
+        "Government of Nepal, DNPWC / DFSC"
+      ],
+      "url": "https://dnpwc.gov.np/media/files/Status_of_Tigers_Ic2ylSC.pdf",
+      "publicationDate": null,
+      "publicationYear": 2022,
+      "accessedDate": "2026-10-08",
+      "type": "government-report",
+      "verification": "inaccessible",
+      "locators": [
+        "Indexed Table 4; total estimate and site-level confidence intervals"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Primary PDF timed out. Alternate official PDF was 404; indexed snippets are reading leads only. Do not treat snippets as full survey verification."
+    },
+    {
+      "id": "snow-corrals-study",
+      "title": "Keeping predators out: testing fences to reduce livestock depredation at night-time corrals",
+      "publisher": "Oryx / Cambridge University Press",
+      "authors": [
+        "Samelius, G., et al."
+      ],
+      "url": "https://doi.org/10.1017/S0030605319000565",
+      "publicationDate": "2020-02-10",
+      "publicationYear": 2020,
+      "accessedDate": "2026-10-08",
+      "type": "primary-study",
+      "verification": "page-read",
+      "locators": [
+        "Abstract; results and discussion: fenced night-time corrals in southern Mongolia"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Local intervention study involving snow leopard and wolf depredation, not a snow leopard abundance or global recovery study."
+    },
+    {
+      "id": "snow-behavior",
+      "title": "Snow Leopard Facts: Behavior",
+      "publisher": "Snow Leopard Trust",
+      "authors": [
+        "Snow Leopard Trust"
+      ],
+      "url": "https://snowleopard.org/snow-leopard-facts/behavior/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Behavior: vocalizations and chuffing"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Species behavior description, not an audio reuse license or calibrated frequency measurement."
+    },
+    {
+      "id": "orangutan-restoration",
+      "title": "Restoring orangutan habitat in Malaysia",
+      "publisher": "WWF",
+      "authors": [
+        "WWF"
+      ],
+      "url": "https://www.worldwildlife.org/news/stories/restoring-orangutan-habitat-in-malaysia/",
+      "publicationDate": "2020-08-19",
+      "publicationYear": 2020,
+      "accessedDate": "2026-10-08",
+      "type": "public-news",
+      "verification": "page-read",
+      "locators": [
+        "Historical population in 2012; Bukit Piton restoration and habitat-use observations"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Historical estimate and project narrative; methodology/uncertainty not supplied. Project sightings are not a standardized abundance trend; projected future number is excluded."
+    },
+    {
+      "id": "iucn-forest-public",
+      "title": "African elephant species now Endangered and Critically Endangered",
+      "publisher": "IUCN",
+      "authors": [
+        "IUCN"
+      ],
+      "url": "https://iucn.org/news/species/202103/african-elephant-species-now-endangered-and-critically-endangered-iucn-red-list",
+      "publicationDate": "2021-03-25",
+      "publicationYear": 2021,
+      "accessedDate": "2026-10-08",
+      "type": "public-news",
+      "verification": "page-read",
+      "locators": [
+        "Forest elephant category; threats; local stabilization in Gabon and Republic of Congo"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Public historical announcement; combined forest/savanna counts must not be relabeled as forest elephant abundance. Exact assessment date and latest reassessment are not verified."
+    },
+    {
+      "id": "forest-report-lead",
+      "title": "African forest elephant (Loxodonta cyclotis) status report 2024",
+      "publisher": "IUCN SSC African Elephant Specialist Group",
+      "authors": [
+        "IUCN SSC African Elephant Specialist Group"
+      ],
+      "url": "https://iucn.org/resources/publication/african-forest-elephant-loxodonta-cyclotis-status-report-2024",
+      "publicationDate": null,
+      "publicationYear": 2025,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-report",
+      "verification": "search-result-only",
+      "locators": [
+        "Publication abstract; separate forest and savanna reports"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Report title year differs from publication year. Full report and rights not inspected; no numbers extracted."
+    },
+    {
+      "id": "cornell-elephant-sound",
+      "title": "Elephant Sound",
+      "publisher": "Cornell Lab, K. Lisa Yang Center for Conservation Bioacoustics",
+      "authors": [
+        "Cornell Lab, K. Lisa Yang Center for Conservation Bioacoustics"
+      ],
+      "url": "https://www.birds.cornell.edu/ccb/elephant-listening-project/sound/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Male rumble; forest sound propagation; vocalizations"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Rumble information and listening examples. No commercial license confirmed; some explanatory examples concern savanna elephants, so do not transpose ranges to forest elephants."
+    },
+    {
+      "id": "noaa-ocean-sounds",
+      "title": "Mammals: Sounds in the Ocean",
+      "publisher": "NOAA Fisheries",
+      "authors": [
+        "NOAA Fisheries"
+      ],
+      "url": "https://www.fisheries.noaa.gov/national/science-data/sounds-ocean-mammals",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Blue whale section: low-frequency sound and accelerated playback"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Blue whale example plays at eight times normal speed. Recording/image contributors may differ; credit does not establish permission."
+    },
+    {
+      "id": "itis-snow",
+      "title": "Panthera uncia: taxonomic report",
+      "publisher": "Integrated Taxonomic Information System",
+      "authors": [
+        "Integrated Taxonomic Information System"
+      ],
+      "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=933420",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "taxonomy",
+      "verification": "page-read",
+      "locators": [
+        "Valid name; taxonomic hierarchy; Uncia synonym"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Taxonomic backbone treatment; taxonomic concepts may differ between authorities."
+    },
+    {
+      "id": "itis-blue",
+      "title": "Balaenoptera musculus: taxonomic report",
+      "publisher": "Integrated Taxonomic Information System",
+      "authors": [
+        "Integrated Taxonomic Information System"
+      ],
+      "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180528",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "taxonomy",
+      "verification": "page-read",
+      "locators": [
+        "Species and taxonomic hierarchy"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "ITIS uses order Cetacea here. Other mammal classifications nest cetaceans within Artiodactyla/Cetartiodactyla; this record preserves its named treatment."
+    },
+    {
+      "id": "adw-tiger",
+      "title": "Panthera tigris",
+      "publisher": "Animal Diversity Web, University of Michigan",
+      "authors": [
+        "Kevin Dacres"
+      ],
+      "url": "https://animaldiversity.org/accounts/Panthera_tigris/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "taxonomy",
+      "verification": "page-read",
+      "locators": [
+        "Scientific Classification; Communication and Perception; Ecosystem Roles"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Educational species account with older taxonomy/range statements. Used only for higher ranks, broad predator role and qualitative vocalization; obsolete subspecies/current population descriptions excluded."
+    },
+    {
+      "id": "adw-orangutan",
+      "title": "Pongo pygmaeus",
+      "publisher": "Animal Diversity Web, University of Michigan",
+      "authors": [
+        "Benjamin Strobel"
+      ],
+      "url": "https://animaldiversity.org/accounts/Pongo_pygmaeus/",
+      "publicationDate": "2013-01-02",
+      "publicationYear": 2013,
+      "accessedDate": "2026-10-08",
+      "type": "taxonomy",
+      "verification": "page-read",
+      "locators": [
+        "Scientific Classification; Communication and Perception"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Older educational account. Used for ranks and qualitative male long-call information, not current status/population."
+    },
+    {
+      "id": "adw-hawksbill",
+      "title": "Eretmochelys imbricata",
+      "publisher": "Animal Diversity Web, University of Michigan",
+      "authors": [
+        "Michael Edelman"
+      ],
+      "url": "https://animaldiversity.org/accounts/Eretmochelys_imbricata/",
+      "publicationDate": "2004-11-05",
+      "publicationYear": 2004,
+      "accessedDate": "2026-10-08",
+      "type": "taxonomy",
+      "verification": "page-read",
+      "locators": [
+        "Scientific Classification"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Older educational account used only for higher taxonomic ranks. Sound tab is not proof of an available recording or silence."
+    },
+    {
+      "id": "adw-forest-taxonomy",
+      "title": "Loxodonta: classification",
+      "publisher": "Animal Diversity Web, University of Michigan",
+      "authors": [
+        "Animal Diversity Web, University of Michigan"
+      ],
+      "url": "https://animaldiversity.org/accounts/Loxodonta/classification/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "taxonomy",
+      "verification": "page-read",
+      "locators": [
+        "Hierarchy: Proboscidea, Elephantidae, Loxodonta and cyclotis"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Taxonomy only; full ITIS forest elephant page was inaccessible, so ADW classification is the accessible higher-rank reference."
+    },
+    {
+      "id": "commons-rights",
+      "title": "Reusing content outside Wikimedia",
+      "publisher": "Wikimedia Commons",
+      "authors": [
+        "Wikimedia Commons"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "rights-guidance",
+      "verification": "search-result-only",
+      "locators": [
+        "License compliance; verify facts and rights; no warranty"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Commons file licenses vary. Hosted metadata is not a guarantee of provenance or scientific identification."
+    },
+    {
+      "id": "image-snow-leopard",
+      "title": "Snow Leopard 13.jpg",
+      "publisher": "Wikimedia Commons / Ltshears",
+      "authors": [
+        "Wikimedia Commons / Ltshears"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Snow_Leopard_13.jpg",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "media-file",
+      "verification": "page-read",
+      "locators": [
+        "Summary; creator; licensing; file history and setting"
+      ],
+      "reuse": "CC BY-SA 3.0 as listed on the specific file page. Follow attribution and share-alike conditions where applicable; verify original provenance when acquiring.",
+      "limitations": "Louisville Zoo portrait. Capture date metadata is inconsistent; do not use it as a dated wild encounter."
+    },
+    {
+      "id": "image-blue-whale",
+      "title": "Blue-whale.jpg",
+      "publisher": "Wikimedia Commons / NOAA Fisheries / Lisa Conger",
+      "authors": [
+        "Wikimedia Commons / NOAA Fisheries / Lisa Conger"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Blue-whale.jpg",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "media-file",
+      "verification": "page-read",
+      "locators": [
+        "Summary; creator; licensing; file history and setting"
+      ],
+      "reuse": "Public domain: U.S. federal work as listed on the specific file page. Follow attribution and share-alike conditions where applicable; verify original provenance when acquiring.",
+      "limitations": "NOAA-attributed photograph; verify original agency provenance when acquiring. Not evidence of the featured stock or population size."
+    },
+    {
+      "id": "image-tiger",
+      "title": "Panthera tigris (TIGER).jpg",
+      "publisher": "Wikimedia Commons / V sai harshita",
+      "authors": [
+        "Wikimedia Commons / V sai harshita"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Panthera_tigris_(TIGER).jpg",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "media-file",
+      "verification": "page-read",
+      "locators": [
+        "Summary; creator; licensing; file history and setting"
+      ],
+      "reuse": "CC BY-SA 4.0 as listed on the specific file page. Follow attribution and share-alike conditions where applicable; verify original provenance when acquiring.",
+      "limitations": "Bannerghatta zoo/safari portrait; not a Nepal field image. Listed as watermarked; retain attribution and disclose edits."
+    },
+    {
+      "id": "image-bornean-orangutan",
+      "title": "Pongo pygmaeus 01 Pengo.jpg",
+      "publisher": "Wikimedia Commons / Peter Halasz",
+      "authors": [
+        "Wikimedia Commons / Peter Halasz"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Pongo_pygmaeus_01_Pengo.jpg",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "media-file",
+      "verification": "page-read",
+      "locators": [
+        "Summary; creator; licensing; file history and setting"
+      ],
+      "reuse": "CC BY-SA 3.0 as listed on the specific file page. Follow attribution and share-alike conditions where applicable; verify original provenance when acquiring.",
+      "limitations": "Tennoji Zoo portrait; label captive. Select the offered CC BY-SA 3.0 license rather than combining its alternative licenses."
+    },
+    {
+      "id": "image-hawksbill-turtle",
+      "title": "Hawksbill sea turtle.jpg",
+      "publisher": "Wikimedia Commons / Colin Johnson / Cmjohns6",
+      "authors": [
+        "Wikimedia Commons / Colin Johnson / Cmjohns6"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Hawksbill_sea_turtle.jpg",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "media-file",
+      "verification": "page-read",
+      "locators": [
+        "Summary; creator; licensing; file history and setting"
+      ],
+      "reuse": "Public domain: author dedication as listed on the specific file page. Follow attribution and share-alike conditions where applicable; verify original provenance when acquiring.",
+      "limitations": "British Virgin Islands reef image; Commons history records a color adjustment. It does not depict the Arnavon intervention."
+    },
+    {
+      "id": "image-african-forest-elephant",
+      "title": "Loxodontacyclotis.jpg",
+      "publisher": "Wikimedia Commons / Thomas Breuer",
+      "authors": [
+        "Wikimedia Commons / Thomas Breuer"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Loxodontacyclotis.jpg",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "media-file",
+      "verification": "page-read",
+      "locators": [
+        "Summary; creator; licensing; file history and setting"
+      ],
+      "reuse": "CC BY 2.5 as listed on the specific file page. Follow attribution and share-alike conditions where applicable; verify original provenance when acquiring.",
+      "limitations": "Mbeli Bai, Nouabale-Ndoki National Park, Republic of Congo; source is a PLOS Biology article. Credit photographer and original article; do not claim exact source date is capture date."
+    },
+    {
+      "id": "audio-blue-commons",
+      "title": "Blue whale atlantic3 1x.oga",
+      "publisher": "Wikimedia Commons / NOAA",
+      "authors": [
+        "Wikimedia Commons / NOAA"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Blue_whale_atlantic3_1x.oga",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "media-file",
+      "verification": "page-read",
+      "locators": [
+        "Summary: NOAA source, normal-speed description; CC0 license"
+      ],
+      "reuse": "CC0 1.0 is listed on this file page; candidate only until provenance and species identity are reconfirmed.",
+      "limitations": "Commons license read, but original NOAA page/source lineage and recording capture date not reconfirmed. Uploader page date is not presumed recording date."
+    },
+    {
+      "id": "adw-blue",
+      "title": "Balaenoptera musculus",
+      "publisher": "Animal Diversity Web, University of Michigan",
+      "authors": [
+        "Tanya Dewey",
+        "David L. Fox"
+      ],
+      "url": "https://animaldiversity.org/accounts/Balaenoptera_musculus/",
+      "publicationDate": null,
+      "publicationYear": null,
+      "accessedDate": "2026-10-08",
+      "type": "taxonomy",
+      "verification": "page-read",
+      "locators": [
+        "Food habits; taxonomic classification"
+      ],
+      "reuse": "Short original factual paraphrases and source pointers only. No permission to copy report text, figures, databases or media is inferred; review reuse terms before public distribution.",
+      "limitations": "Older educational account used for broad feeding ecology only, not its outdated global abundance."
+    }
+  ]
+}
