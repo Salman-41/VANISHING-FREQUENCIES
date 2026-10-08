@@ -1,7 +1,28 @@
 # Project status
 
-**Stage:** Creative blueprint complete — ready for local implementation planning  
+**Stage:** Design system and page implementation plan complete
+
 **Updated:** 2026-10-08
+
+## Completed: design system and page planning stage
+
+- Read the existing creative direction, art direction, storyboard, signatures, asset briefs, project rules/status, species selection, scientific review/limitations and data specifications. Continued the existing workspace without generating an application.
+- Created [design tokens](design/design-tokens.md), [component system](design/component-system.md), [responsive specifications](design/responsive-specifications.md), [page blueprints](design/page-blueprints.md), [accessibility design](design/accessibility-design.md), and [motion tokens](design/motion-tokens.md).
+- Defined Archivo families/weights/fallbacks, fluid `clamp()` typography, palette primitives and semantic surface modes, grid/spacing/dimension/layer tokens, control states and focus treatments. Rechecked the official font metadata/OFL license and current W3C accessibility/dialog guidance on 2026-10-08. No font binary was acquired.
+- Specified buttons/navigation, native form controls, editorial species cards, evidence/measurement modules, charts/tables, recording player, tooltips/popovers, dialogs/fullscreen navigation, and loading/empty/unavailable/error states. Essential scientific context is visible within reusable modules; sources and media clearance travel with content.
+- Planned eight page types: Homepage, Species Explorer, Species detail, Soundscapes, Data Observatory, About, Sources and Credits. The homepage retains all eight documentary chapters; the detail template covers the six reviewed species. Each major page section has desktop/mobile behavior, route/content bindings, interactions and meaningful fallback states.
+- Planned Figma-compatible `VF/` component/style names, exact variant properties and primitive/semantic/responsive/motion variable collections, with a mapping to future CSS and TypeScript names. Figma modes represent reference frames; they do not execute `clamp()`. No Figma file or plugin setup was performed.
+- Preserved the strongest Listening Aperture signature, separate 2024 annual/2026 endpoint LPI views, dated country/stock estimates, local conservation inference limits and explicit unknown formal assessment dates. No held statistic, observation-derived abundance, restricted dataset or unverified media was promoted for display.
+- Document checks passed: **six requested files**, **eight page blueprints**, **zero broken local links** in the new documents; **10/10 fluid endpoint calculations** within 0.02 px at 390/1440 px with a 16 px root; **6/6 reference grid calculations**; **9/9 solid-palette contrast pair calculations**. These are specification checks, not browser/accessibility/performance results. Existing pipeline verification was not rerun or altered.
+
+### Remaining implementation and production needs
+
+- All wildlife media remains unacquired/uncleared. Follow the existing asset briefs and rights ledger before populating image/player components. Captive-image, Atlantic/ENP and recording-rate distinctions remain requirements. Current page plans include complete text alternatives.
+- Font acquisition/revision/subsets, real responsive crops, recording descriptions/waveforms, actual contributor credits and any optional media exports await production review. No names, permissions, clips or asset use were fabricated.
+- Browser/keyboard/screen-reader/forced-colors/reflow testing and actual device performance measurements require later implementation; budgets and accessibility specifications are targets. Source/version/rights review remains necessary for content used publicly.
+- Existing scientific blockers continue: formal IUCN metadata/appropriate authorization, held original species methods, full 2026 annual data/methodology and permissioned source products. The page plan implements explicit unavailability rather than inventing content.
+
+**Stop:** This design-system stage is complete. Only documentation was created/updated; no React components, Next.js scaffold, package installation, hosting, deployment, domains or cloud work was performed.
 
 ## Completed: creative direction stage
 
@@ -117,4 +138,4 @@ Build fingerprint: `23585475d87da7054520dacc7a12083a4adf60f204fbae387292dc8b97bf
 
 ## Handoff
 
-Read the project rules, species research, `docs/data/` specifications and all five `docs/design/` blueprints together. Use `data/processed/biodiversity.json` as the validated pipeline bundle; the earlier species JSON remains complete research with held values. Unresolved facts stay unknown and held values are excluded from the frontend export. Follow the documented mobile, reduced-motion, silent and unavailable-media alternatives. Evidence/rights clearance remains necessary for any affected public content. The creative stage stops here; frontend development requires a subsequent task.
+Read the project rules, species research, `docs/data/` specifications and all eleven `docs/design/` documents together. Use `data/processed/biodiversity.json` as the validated pipeline bundle; the earlier species JSON remains complete research with held values. Unresolved facts stay unknown and held values are excluded from the frontend export. The reusable design system and eight-page plan translate the creative blueprint into named modules and tokens. Follow documented mobile, reduced-motion, silent and unavailable-media alternatives. Evidence/rights clearance remains necessary for affected public content. This stage stops here; frontend development requires a subsequent task.
