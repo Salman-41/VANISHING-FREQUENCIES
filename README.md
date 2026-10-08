@@ -20,4 +20,9 @@ npm run test:browser
 npm run build
 ```
 
-Research remains in `data/` and `docs/research/`. Application code is under `src/`. Wildlife media is not cleared; the routes show factual text and evidence gaps. No hosting or deployment is configured.
+Research remains in `data/` and `docs/research/`. Application code is under `src/`.
+The complete static homepage includes eight editorial chapters, seven individually
+licensed photographs, a sourced index figure and conservation field notes.
+Read the [static homepage handoff](docs/development/static-homepage.md) for media
+credits, integration hooks and verification. Audio remains unavailable.
+No hosting or deployment is configured.
