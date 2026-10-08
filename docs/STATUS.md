@@ -1,7 +1,28 @@
 # Project status
 
-**Stage:** Offline biodiversity pipeline verified — stage complete  
+**Stage:** Creative blueprint complete — ready for local implementation planning  
 **Updated:** 2026-10-08
+
+## Completed: creative direction stage
+
+- Read the project rules, source/species research, scientific limitations, licensing notes, pipeline specifications, current status and validated data contract before designing. Continued the existing workspace in place.
+- Established **The Listening Margin**: a dark editorial documentary organized around a horizontal landscape aperture and a visible margin for recording context and scientific evidence. Retained the requested palette and “The World Is Getting Quieter.” tagline as an editorial premise, not a measured global acoustic trend.
+- Created [creative direction](design/creative-direction.md), [art direction](design/art-direction.md), [narrative storyboard](design/narrative-storyboard.md), [signature interactions](design/signature-interactions.md), and [asset requirements](design/asset-requirements.md).
+- Specified all eight chapters (00–07), each with narrative objective, screen composition, typography, colors, real information, art direction, scroll behavior, interaction, motion, assets, audio, mobile alternative and performance considerations. Desktop/mobile dimensions, data bindings, source references and unavailable states are included.
+- Designed three signatures: **Listening Aperture** (strongest; chapters 02/04), **Read the Bounds** (03), and **Follow the Field Note** (06). Each has keyboard, reduced-motion, silent/mobile and failure behavior. Ocean direction uses passive listening and playback context; no invented sonar localization or acoustic abundance metric.
+- Defined an implementable grid, typography scale, motion timings, contrast usage, media/loading budgets and accessibility requirements. Selected Archivo as the type direction; inspected its official publisher, Google Fonts metadata and OFL 1.1 license on 2026-10-08. No font binary or wildlife media was acquired.
+- Bound quantitative presentation to the validated bundle: separate 2024 annual LPI curves and 2026 endpoint summaries; two historical country/stock estimates with adjacent dates, scope and uncertainty; no held population values. Recovery notes retain local scope and intervention limits. Public category summaries retain unknown formal assessment dates.
+- Prepared acquisition briefs for ten image slots, eight audio slots, original graphics, fonts and data/credits. Identified captive-image mismatches, Atlantic-audio/ENP-stock separation, unresolved Cornell permissions, absent hawksbill call evidence, and text-first alternatives.
+- Document checks: five requested design documents present; eight chapters with **104/104 required fields**; **zero broken local document links**. Calculated solid-palette contrast ratios and documented allowed uses. Frontend implementation, visual prototypes, browser/accessibility/performance tests and new pipeline runs are outside this stage; existing pipeline verification results below remain unchanged.
+
+### Remaining creative production gaps
+
+- All wildlife images/audio remain unacquired and uncleared. The full visual/audio treatment depends on source provenance, compatible rights, exact credits, crop/context review and accessible descriptions. No candidate is promoted to cleared status by this blueprint.
+- Priority assets: a verified mountain landscape and wild snow leopard frame, blue whale imagery, and the candidate normal-speed Atlantic recording. Wild tiger/Bornean replacements and actual Tost/Nepal/Arnavon intervention imagery still need sourcing. Each slot has a specified fallback.
+- Font delivery, responsive crop proofing, waveform derivation, screen-reader/keyboard review, device performance profiling and user evaluation belong to later authorized production/implementation stages. Design budgets are targets, not measured results.
+- Existing scientific/access gaps remain: formal IUCN metadata/authorization, held species methods, full 2026 annual results/methodology and restricted products. The design accommodates those gaps without fabricating inputs.
+
+**Stop:** Creative blueprint complete. No React components, frontend code, new scientific data, media downloads, hosting, deployment, domain or cloud work was performed.
 
 ## Completed: processing stage
 
@@ -96,4 +117,4 @@ Build fingerprint: `23585475d87da7054520dacc7a12083a4adf60f204fbae387292dc8b97bf
 
 ## Handoff
 
-Read the species research and `docs/data/` specifications together. Use `data/processed/biodiversity.json` as the validated pipeline bundle; the earlier species JSON remains complete research with held values. Unresolved facts stay unknown and held values are excluded from the frontend export. Evidence/rights clearance remains necessary for any affected public content.
+Read the project rules, species research, `docs/data/` specifications and all five `docs/design/` blueprints together. Use `data/processed/biodiversity.json` as the validated pipeline bundle; the earlier species JSON remains complete research with held values. Unresolved facts stay unknown and held values are excluded from the frontend export. Follow the documented mobile, reduced-motion, silent and unavailable-media alternatives. Evidence/rights clearance remains necessary for any affected public content. The creative stage stops here; frontend development requires a subsequent task.
