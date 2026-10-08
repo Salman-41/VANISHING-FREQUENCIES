@@ -1,8 +1,49 @@
 # Project status
 
-**Stage:** Local Next.js foundation complete and verified
+**Stage:** Complete static homepage implemented and verified
 
 **Updated:** 2026-10-08
+
+## Completed: complete static homepage
+
+- Implemented all eight chapters in the existing Next.js app: opening/editorial waveform, Himalayan landscape and snow leopard, ocean/blue whale, biodiversity index story, sound knowledge, six species, conservation field notes, and closing/exploration links. Oversized Archivo typography, natural-color photography, quiet reading margins and differentiated desktop/mobile compositions follow The Listening Margin blueprint. Native scrolling remains the complete experience.
+- Added reusable server components under `src/features/homepage/` and scoped `src/styles/homepage.css`: chapters, apertures/credits, cited descriptions, evidence disclosure, historical measurement margins, annual index SVG/table, species register and conservation notes. Stable scene/chapter/audio hooks prepare later enhancement without starting those systems.
+- Acquired seven individually reviewed photographs. Preserved actual JPEG acquisition bytes under `data/raw/media/`, generated responsive-ready WebP masters under `public/media/`, and added a separate Zod-validated `data/sources/homepage-assets.json` ledger. All original 28 data files match their pre-stage hashes; verified scientific data, reports, citations and old candidate flags were not overwritten.
+- Photograph credits, license links, context and modification notes appear in figure captions, `/credits` and `public/media/README.md`. Wild Ladakh/Ranthambore images replace captive research candidates in this homepage. Camp Leakey's rehabilitation-site context and unknown individual history remain explicit; no portrait is represented as intervention-site evidence. Source-date/capture-date distinctions and conflicting exact dates remain documented.
+- Rendered only the two permitted historical population measurements with complete geography, measurement periods, methods, uncertainty/gaps, source editions and dated references. Displayed the 2024 global LPI annual estimates and source bounds in a static chart with distinct visible bound outlines and a native table. Confidence level remains unknown; the 2026 report endpoints are a separate dataset. No occurrence-to-abundance conversion, interpolated species populations, mixed-edition curve or acoustic inference was added.
+- Kept unavailable audio explicit. The waveform is labeled an original editorial motif. No audio/video/canvas, autoplay, active GSAP/Lenis/ScrollTrigger/Three.js integration, new backend or hosting work was added.
+- Polished responsive navigation, including compact branding and desktop exploration links. JavaScript-free navigation remains native; inactive menu/preferences are hidden in that mode. Moved the automatic root loading boundary to reusable `src/components/page-loading.tsx` after verification found it could leave completed server content hidden without JavaScript. The whole documentary now arrives visibly; image frames reserve loading space.
+- Created [static homepage handoff](development/static-homepage.md), offline media preparation script, three receipt/rights tests, seven homepage browser tests and production visual review screenshots in `docs/development/review/`. Updated README and About/Credits media statements. Browser artifacts now use separate development/production directories.
+
+### Exact local results
+
+Commands ran with the repository's compatible Node 24.21.0/npm 11 runtime prepended to PATH. Browser development checks reused the existing local server on `127.0.0.1:3000`; the production suite launched and stopped its own local server on port 3001. No external hosting or cloud services were used.
+
+| Check | Result |
+| --- | --- |
+| `npm run typecheck` | Passed, no TypeScript errors |
+| `npm run test:local` | 77 passed: 43 Python, 12 export contracts, 11 species, 11 foundation/preferences/media |
+| `npm run test:browser` | 13 passed; all route/menu/reduced-motion checks plus complete static homepage coverage |
+| `npm run test:browser:production` | Production build passed; 13 browser checks passed |
+| Production build | All 15 framework pages generated; homepage prerendered |
+| Homepage widths | 1440, 1024, 768, 390 and 320px; no document horizontal overflow; mobile-specific SVG and scrollable data table |
+| Photographs | All 12 displayed instances loaded locally; seven asset credits present; no remote browser requests in the checked flows |
+| JavaScript disabled | Begin anchor and native annual table work; all eight chapter sections visible; first image loaded; dead menu hidden |
+| Media reproducibility | Reran offline conversion: all seven derivative hashes identical |
+| Scientific preservation | All 28 pre-existing data files unchanged; export SHA-256 remains `36b87bf96cf579f6bcf5e9b97157573e897de62e65c7829bb9b3b460017d670c` |
+
+The first JavaScript-free browser run exposed the loading-boundary issue, which was fixed and rechecked. A development trace teardown failed while suites shared the same output directory; separate artifact directories and a clean sequential development rerun passed. Intermediate interrupted runs are not counted as successful suites. The environment's `NO_COLOR`/`FORCE_COLOR` notice is a runner warning, not an application error.
+
+### Remaining gaps and next-stage limits
+
+- No wildlife recording is acquired/cleared; sound descriptions and unavailable states are intentional. Acquire exact recordings, permissions, identity, setting, capture metadata and playback-rate information before adding playback or recorded waveforms.
+- Formal IUCN assessment dates/latest-assessment confirmation remain unverified. Held tiger/orangutan numerical estimates and unknown global hawksbill/forest-elephant totals remain excluded. Use authorization and original methods before expanding affected content.
+- Four photographs use official Wikimedia thumbnail representations because original downloads were rate limited. Actual dimensions and bytes are recorded; small archive sources constrain large/retina scenes. Direct turtle/elephant Commons rereads returned 503; retain the existing item review, current licensing extracts and original elephant publication verification as described in the handoff.
+- Photographs with exact capture-date conflicts display only the agreed year; unknown dates/locations and rehabilitation/tourism context stay explicit. No photograph proves an abundance, a soundscape or the outcome of a conservation project.
+- Browser verification uses Chromium viewport emulation. Physical devices, Safari/Firefox, screen-reader certification and a full WCAG audit remain outside these checks. Existing lighter-media preference is an integration hook; bounded responsive images are the current default, without a preference-controlled download manager.
+- Advanced scroll motion, audio and 3D are future tasks. Preserve native reading, visible limits, local assets and citations when adding them. Do not reintroduce a loading boundary that gates essential content on JavaScript.
+
+**Stop:** The complete static homepage is ready. This stage is finished; no advanced interactive systems or deployment tasks were started.
 
 ## Completed: local frontend foundation
 
@@ -202,4 +243,4 @@ Build fingerprint: `23585475d87da7054520dacc7a12083a4adf60f204fbae387292dc8b97bf
 
 ## Handoff
 
-Read the project rules, species research, `docs/data/`, all eleven `docs/design/` documents and [local foundation handoff](development/foundation.md) together. Use the implemented server-only access to `data/processed/biodiversity.json`; earlier species JSON is complete research with held values and must not provide UI numbers. Inspect existing files before future changes and update this status at every stage. Preserve dated evidence, independent report editions, mobile/reduced-motion reading and explicit unknown/media-unavailable states. The Next.js foundation is now implemented and verified; cinematic features, richer page interactions and cleared media require a subsequent task. Evidence/rights review remains necessary for affected content.
+Read the project rules, species research, `docs/data/`, all eleven `docs/design/` documents and [local foundation handoff](development/foundation.md) together. Use the implemented server-only access to `data/processed/biodiversity.json`; earlier species JSON is complete research with held values and must not provide UI numbers. Inspect existing files before future changes and update this status at every stage. Preserve dated evidence, independent report editions, mobile/reduced-motion reading and explicit unknown/media-unavailable states. The Next.js foundation and complete static homepage are implemented and verified. Read [the static homepage handoff](development/static-homepage.md) and the new media ledger before changes. Advanced motion, audio, 3D and richer subpage interactions require a subsequent task. Evidence/rights review remains necessary for affected content.
