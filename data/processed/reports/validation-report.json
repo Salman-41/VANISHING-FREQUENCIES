@@ -1,0 +1,726 @@
+{
+  "blockedSources": [
+    {
+      "id": "lpd-population-series",
+      "importAdapter": "canonical-index",
+      "reason": "Underlying LPD requires purpose/agreement and prohibits financial-gain use and original data redistribution. No form submitted or underlying dataset acquired.",
+      "requirements": [
+        "Eligible declared use and accepted current agreement",
+        "Written appropriate permission/license if proposed use falls outside permitted terms",
+        "A release-specific adapter/method review; no automatic frontend export of underlying data"
+      ],
+      "sourceUrl": "https://www.livingplanetindex.org/data_portal"
+    },
+    {
+      "id": "lpi-2026-annual",
+      "importAdapter": "canonical-index",
+      "reason": "2026 annual results with bounds not acquired; dynamic export unavailable in text access. Published endpoints do not supply intermediate years.",
+      "requirements": [
+        "Acquire official published annual results under published-trend license",
+        "Pin 2026 edition, release, methods, bounds and original units separately"
+      ],
+      "sourceUrl": "https://www.livingplanetindex.org/latest_results"
+    },
+    {
+      "id": "iucn-assessments",
+      "importAdapter": "species-foundation",
+      "reason": "Restricted assessment/API use needs appropriate authorization; no token or dataset imported.",
+      "requirements": [
+        "Appropriate commercial authorization/license and permitted redistribution",
+        "Exact assessment date/version/ID and approved record snapshot"
+      ],
+      "sourceUrl": "https://api.iucnredlist.org/"
+    },
+    {
+      "id": "birdlife-products",
+      "importAdapter": "species-foundation",
+      "reason": "No authorized bulk BirdLife product acquired; product-specific rights unresolved.",
+      "requirements": [
+        "Product-specific license/permission and allowed redistribution",
+        "Versioned taxonomy, scope, original units and methods"
+      ],
+      "sourceUrl": "https://datazone.birdlife.org/"
+    },
+    {
+      "id": "held-species-estimates",
+      "importAdapter": "species-foundation",
+      "reason": "Original Nepal census and historical Bornean model methods/period/uncertainty remain unresolved; public announcements are held.",
+      "requirements": [
+        "Inspect original methods and survey window",
+        "Verify units, uncertainty and comparability; obtain permitted source rights",
+        "Re-review species foundation and regenerate immutable snapshot under a new version"
+      ],
+      "sourceUrl": "https://dnpwc.gov.np/"
+    }
+  ],
+  "buildFingerprint": "23585475d87da7054520dacc7a12083a4adf60f204fbae387292dc8b97bf13f4",
+  "code": [
+    {
+      "path": "data/schemas/biodiversity.schema.ts",
+      "sha256": "260f3e8c4f30406cade4b9fee07611c9554d5ab74a4c0c27fab05465df78c1d9"
+    },
+    {
+      "path": "data/schemas/species.schema.ts",
+      "sha256": "c0bb845aa0e008adaaf855afa5d6bc27a2ef646ca17a92c61746a2dcf592437b"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "7762cfb5e19e35f0807988f71ae3f2a89bde7fbb918f12556edbcf9f4427613a"
+    },
+    {
+      "path": "scripts/data/__init__.py",
+      "sha256": "e4e9b12feabdc14686c116ff2cfb85be321b014c8c1186449fb918402866aa8d"
+    },
+    {
+      "path": "scripts/data/acquire_public.py",
+      "sha256": "ad96b33f1973f9a9799a59aa107f641ede2b06229cf1cc4719ec1e5cd010e544"
+    },
+    {
+      "path": "scripts/data/export_schemas.py",
+      "sha256": "597f44e045da1cd34ba15779621df428879c246a1f5bf6b514a989e6a32e5a13"
+    },
+    {
+      "path": "scripts/data/models.py",
+      "sha256": "4125a56eabcbc6ed5e8120c5594aab951941375cb9637022f832bfb5e8fc7bcf"
+    },
+    {
+      "path": "scripts/data/pipeline.py",
+      "sha256": "326e0511725948be116f64a4d587c7871727034e4467c2644389f985600a6319"
+    },
+    {
+      "path": "scripts/data/processing.py",
+      "sha256": "19bcb40bd203b9b4099a5b3cfd4d5a854018b9eecafb759c034aec9d2981e11a"
+    },
+    {
+      "path": "scripts/data/requirements.lock.txt",
+      "sha256": "228e6e81294eef57561fc88a0f353ab34b7fe881b44e93ac156d0fbdb72446da"
+    },
+    {
+      "path": "scripts/data/requirements.txt",
+      "sha256": "0d6426378d6a169d6e19dc8e31b517580d227e9b7789e984e9a4ab01e2b8b69f"
+    },
+    {
+      "path": "scripts/data/validate-export.ts",
+      "sha256": "2e57881d4972aac43b34f69663ce9f927555c846a0194a674b25b0a8a35857d2"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "88c726fd2f78cba3b2229a33c003606ce2d07b1ef4c4c747146c47281adcd891"
+    }
+  ],
+  "counts": {
+    "heldPopulationRecords": 4,
+    "indexMissingValues": 0,
+    "indexObservations": 366,
+    "populationRecords": 2,
+    "series": 16,
+    "species": 6,
+    "successStories": 6
+  },
+  "coverage": [
+    {
+      "datasetId": "lpi-2024-owid",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2024-owid-africa",
+      "years": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    },
+    {
+      "datasetId": "lpi-2024-owid",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2024-owid-asia-and-pacific",
+      "years": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    },
+    {
+      "datasetId": "lpi-2024-owid",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2024-owid-europe-and-central-asia",
+      "years": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    },
+    {
+      "datasetId": "lpi-2024-owid",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2024-owid-freshwater",
+      "years": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    },
+    {
+      "datasetId": "lpi-2024-owid",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2024-owid-latin-america-and-the-caribbean",
+      "years": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    },
+    {
+      "datasetId": "lpi-2024-owid",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2024-owid-north-america",
+      "years": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    },
+    {
+      "datasetId": "lpi-2024-owid",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2024-owid-world",
+      "years": [
+        1970,
+        1971,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    },
+    {
+      "datasetId": "lpi-2026-endpoints",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2026-africa",
+      "years": [
+        2022
+      ]
+    },
+    {
+      "datasetId": "lpi-2026-endpoints",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2026-asia-pacific",
+      "years": [
+        2022
+      ]
+    },
+    {
+      "datasetId": "lpi-2026-endpoints",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2026-europe-central-asia",
+      "years": [
+        2022
+      ]
+    },
+    {
+      "datasetId": "lpi-2026-endpoints",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2026-freshwater",
+      "years": [
+        2022
+      ]
+    },
+    {
+      "datasetId": "lpi-2026-endpoints",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2026-global",
+      "years": [
+        2022
+      ]
+    },
+    {
+      "datasetId": "lpi-2026-endpoints",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2026-latin-america-caribbean",
+      "years": [
+        2022
+      ]
+    },
+    {
+      "datasetId": "lpi-2026-endpoints",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2026-marine",
+      "years": [
+        2022
+      ]
+    },
+    {
+      "datasetId": "lpi-2026-endpoints",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2026-north-america",
+      "years": [
+        2022
+      ]
+    },
+    {
+      "datasetId": "lpi-2026-endpoints",
+      "meaning": "published values only; no new interpolation",
+      "seriesId": "lpi-2026-terrestrial",
+      "years": [
+        2022
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "edition": "LPR 2024",
+      "id": "lpi-2024-owid",
+      "indexRecords": 357,
+      "inputRecords": 357,
+      "inputSha256": "9764f5f4f9c9ff855090a34ba218b02d7878922eec485e7b42d497ce5b8b3f25",
+      "version": "OWID indicator 990513; updated 2024-09-30; snapshot 2026-10-08"
+    },
+    {
+      "edition": "LPR 2026",
+      "id": "lpi-2026-endpoints",
+      "indexRecords": 9,
+      "inputRecords": 9,
+      "inputSha256": "46f1d9c5c74c3384191c5d0a056f651a95bb6eb620c0389782582fd377b4dfb4",
+      "version": "WWF-UK release 2026-10-08; rounded endpoint summary"
+    },
+    {
+      "edition": "Species foundation 1.0.0",
+      "id": "species-foundation-1",
+      "indexRecords": 0,
+      "inputRecords": 6,
+      "inputSha256": "4015e18ad426ed5fd70154e7823a6d2971fc54ca335a849c3ae7782b67cef3f0",
+      "version": "species foundation schema 1.0.0; verified 2026-10-08"
+    }
+  ],
+  "duplicates": {
+    "conflicts": 0,
+    "exactDuplicates": 0
+  },
+  "environment": {
+    "node": "v20.19.2",
+    "numpy": "2.5.3",
+    "pandas": "2.2.3",
+    "pydantic": "2.11.7",
+    "python": "3.13.5",
+    "zod": "4.6.5"
+  },
+  "errors": [],
+  "heldMeasurements": [
+    {
+      "measurementId": "orangutan-borneo-2012",
+      "reason": "Historical estimate may only support research until original method and uncertainty are checked.",
+      "speciesId": "bornean-orangutan"
+    },
+    {
+      "measurementId": "tiger-global-2022",
+      "reason": "Underlying data period and method comparability not verified.",
+      "speciesId": "tiger"
+    },
+    {
+      "measurementId": "tiger-nepal-2022",
+      "reason": "Original government report inaccessible; model/uncertainty and actual survey window require verification.",
+      "speciesId": "tiger"
+    },
+    {
+      "measurementId": "tiger-nepal-2026",
+      "reason": "Announced result is verified, but original survey window, method and uncertainty remain unverified.",
+      "speciesId": "tiger"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "data/sources/species-citations.json",
+      "sha256": "167d4421ccf1671a69ef0a3c8d392916012164d7e7901aba8ab40fbc8c605144"
+    },
+    {
+      "path": "data/sources/pipeline-citations.json",
+      "sha256": "50fc5a3427a6a06d637427224717771d124ecfcf7ca056dbc744f0e6b42f9cd2"
+    },
+    {
+      "path": "data/sources/taxonomic-registry.json",
+      "sha256": "9ae9a683b0442cb0e9ecbcf61743c0a86e5bc63b774ad1c8f7be2d5219eabea2"
+    },
+    {
+      "path": "data/raw/public/LPI_Data_Use_Policy_2026.pdf",
+      "sha256": "96d94abc8138569735ba60db9ec1732c69854712ad6a5c440e7c3605e0d10ea8"
+    },
+    {
+      "path": "data/raw/public/acquisition-receipts.json",
+      "sha256": "42efeb80d6518b43f31b3bb90c46631dc242f42cb06eb935fa6320309562fb5b"
+    },
+    {
+      "path": "data/raw/public/owid-lpi-2024.csv",
+      "sha256": "9764f5f4f9c9ff855090a34ba218b02d7878922eec485e7b42d497ce5b8b3f25"
+    },
+    {
+      "path": "data/raw/public/owid-lpi-2024.metadata.json",
+      "sha256": "6461fbf651db381af42a9b02b5a953b4804f302b4d23f4210551329d5910fb91"
+    },
+    {
+      "path": "data/raw/observations.csv",
+      "sha256": "46f1d9c5c74c3384191c5d0a056f651a95bb6eb620c0389782582fd377b4dfb4"
+    },
+    {
+      "path": "data/raw/species-foundation.json",
+      "sha256": "4015e18ad426ed5fd70154e7823a6d2971fc54ca335a849c3ae7782b67cef3f0"
+    }
+  ],
+  "outputs": {
+    "biodiversity.json": {
+      "bytes": 966276,
+      "sha256": "36b87bf96cf579f6bcf5e9b97157573e897de62e65c7829bb9b3b460017d670c"
+    }
+  },
+  "pipelineVersion": "1.0.0",
+  "status": "passed",
+  "validation": {
+    "zod": "Zod passed: 366 index records; 6 species; 2 population records; 6 stories."
+  },
+  "verifiedOn": "2026-10-08",
+  "warnings": [
+    "LPI measures average relative change in monitored populations, not individual animals lost.",
+    "2024 annual index and 2026 endpoint summaries are separate editions and must not be spliced.",
+    "Unverified bound confidence levels remain null; source bounds are preserved.",
+    "Formal IUCN assessment metadata and media clearance remain unresolved.",
+    "No uncertainty supplied: lpi-2026-africa-1970-2022",
+    "No uncertainty supplied: lpi-2026-asia-pacific-1970-2022",
+    "No uncertainty supplied: lpi-2026-europe-central-asia-1970-2022",
+    "No uncertainty supplied: lpi-2026-freshwater-1970-2022",
+    "No uncertainty supplied: lpi-2026-global-1970-2022",
+    "No uncertainty supplied: lpi-2026-latin-america-caribbean-1970-2022",
+    "No uncertainty supplied: lpi-2026-marine-1970-2022",
+    "No uncertainty supplied: lpi-2026-north-america-1970-2022",
+    "No uncertainty supplied: lpi-2026-terrestrial-1970-2022"
+  ]
+}

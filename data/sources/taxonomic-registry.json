@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "Selected taxa reviewed 2026-10-08",
+  "verifiedOn": "2026-10-08",
+  "species": {
+    "snow-leopard": {
+      "scientificName": "Panthera uncia",
+      "genus": "Panthera",
+      "acceptedSynonyms": {
+        "Uncia uncia": "Panthera uncia"
+      },
+      "references": [
+        {
+          "sourceId": "itis-snow",
+          "locator": "Scientific classification / taxonomic hierarchy"
+        }
+      ]
+    },
+    "blue-whale": {
+      "scientificName": "Balaenoptera musculus",
+      "genus": "Balaenoptera",
+      "acceptedSynonyms": {},
+      "references": [
+        {
+          "sourceId": "itis-blue",
+          "locator": "Scientific classification / taxonomic hierarchy"
+        }
+      ]
+    },
+    "tiger": {
+      "scientificName": "Panthera tigris",
+      "genus": "Panthera",
+      "acceptedSynonyms": {},
+      "references": [
+        {
+          "sourceId": "adw-tiger",
+          "locator": "Scientific classification / taxonomic hierarchy"
+        }
+      ]
+    },
+    "bornean-orangutan": {
+      "scientificName": "Pongo pygmaeus",
+      "genus": "Pongo",
+      "acceptedSynonyms": {},
+      "references": [
+        {
+          "sourceId": "adw-orangutan",
+          "locator": "Scientific classification / taxonomic hierarchy"
+        }
+      ]
+    },
+    "hawksbill-turtle": {
+      "scientificName": "Eretmochelys imbricata",
+      "genus": "Eretmochelys",
+      "acceptedSynonyms": {},
+      "references": [
+        {
+          "sourceId": "adw-hawksbill",
+          "locator": "Scientific classification / taxonomic hierarchy"
+        }
+      ]
+    },
+    "african-forest-elephant": {
+      "scientificName": "Loxodonta cyclotis",
+      "genus": "Loxodonta",
+      "acceptedSynonyms": {},
+      "references": [
+        {
+          "sourceId": "adw-forest-taxonomy",
+          "locator": "Scientific classification / taxonomic hierarchy"
+        }
+      ]
+    }
+  }
+}

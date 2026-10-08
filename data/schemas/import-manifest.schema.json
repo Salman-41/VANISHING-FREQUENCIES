@@ -1,0 +1,347 @@
+{
+  "$defs": {
+    "Blocker": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "importAdapter": {
+          "enum": [
+            "canonical-index",
+            "species-foundation"
+          ],
+          "title": "Importadapter",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "requirements": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Requirements",
+          "type": "array"
+        },
+        "sourceUrl": {
+          "pattern": "^https://",
+          "title": "Sourceurl",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "sourceUrl",
+        "reason",
+        "requirements",
+        "importAdapter"
+      ],
+      "title": "Blocker",
+      "type": "object"
+    },
+    "Dataset": {
+      "additionalProperties": false,
+      "properties": {
+        "accessedDate": {
+          "format": "date",
+          "title": "Accesseddate",
+          "type": "string"
+        },
+        "adapter": {
+          "enum": [
+            "owid-index",
+            "endpoint",
+            "species-foundation",
+            "canonical-index"
+          ],
+          "title": "Adapter",
+          "type": "string"
+        },
+        "columnMap": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Columnmap",
+          "type": "object"
+        },
+        "coveragePeriod": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Period"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "dateFormat": {
+          "default": "%Y-%m-%d",
+          "title": "Dateformat",
+          "type": "string"
+        },
+        "edition": {
+          "title": "Edition",
+          "type": "string"
+        },
+        "format": {
+          "enum": [
+            "csv",
+            "json"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "input": {
+          "$ref": "#/$defs/InputFile"
+        },
+        "metadata": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/InputFile"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "missingTokens": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missingtokens",
+          "type": "array"
+        },
+        "options": {
+          "additionalProperties": true,
+          "title": "Options",
+          "type": "object"
+        },
+        "recordPath": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recordpath"
+        },
+        "rights": {
+          "$ref": "#/$defs/Rights"
+        },
+        "sourceDate": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Sourcedate"
+        },
+        "sourceId": {
+          "title": "Sourceid",
+          "type": "string"
+        },
+        "sourceUrl": {
+          "pattern": "^(https://|urn:vanishing-frequencies:)",
+          "title": "Sourceurl",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "adapter",
+        "input",
+        "format",
+        "version",
+        "edition",
+        "sourceId",
+        "sourceUrl",
+        "sourceDate",
+        "accessedDate",
+        "rights"
+      ],
+      "title": "Dataset",
+      "type": "object"
+    },
+    "InputFile": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "title": "InputFile",
+      "type": "object"
+    },
+    "Period": {
+      "additionalProperties": false,
+      "properties": {
+        "endYear": {
+          "maximum": 2100,
+          "minimum": 1500,
+          "title": "Endyear",
+          "type": "integer"
+        },
+        "startYear": {
+          "maximum": 2100,
+          "minimum": 1500,
+          "title": "Startyear",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "startYear",
+        "endYear"
+      ],
+      "title": "Period",
+      "type": "object"
+    },
+    "Rights": {
+      "additionalProperties": false,
+      "properties": {
+        "attribution": {
+          "minLength": 1,
+          "title": "Attribution",
+          "type": "string"
+        },
+        "authorizationReference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Authorizationreference"
+        },
+        "commercialUse": {
+          "enum": [
+            "allowed",
+            "permission-required",
+            "unverified"
+          ],
+          "title": "Commercialuse",
+          "type": "string"
+        },
+        "evidenceUrl": {
+          "pattern": "^(https://|urn:vanishing-frequencies:)",
+          "title": "Evidenceurl",
+          "type": "string"
+        },
+        "licenseId": {
+          "minLength": 1,
+          "title": "Licenseid",
+          "type": "string"
+        },
+        "licenseUrl": {
+          "pattern": "^(https://|urn:vanishing-frequencies:)",
+          "title": "Licenseurl",
+          "type": "string"
+        },
+        "notes": {
+          "minLength": 1,
+          "title": "Notes",
+          "type": "string"
+        },
+        "redistribution": {
+          "title": "Redistribution",
+          "type": "boolean"
+        },
+        "verifiedOn": {
+          "format": "date",
+          "title": "Verifiedon",
+          "type": "string"
+        }
+      },
+      "required": [
+        "licenseId",
+        "licenseUrl",
+        "evidenceUrl",
+        "verifiedOn",
+        "commercialUse",
+        "redistribution",
+        "attribution",
+        "notes"
+      ],
+      "title": "Rights",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "blockedSources": {
+      "items": {
+        "$ref": "#/$defs/Blocker"
+      },
+      "title": "Blockedsources",
+      "type": "array"
+    },
+    "datasets": {
+      "items": {
+        "$ref": "#/$defs/Dataset"
+      },
+      "minItems": 1,
+      "title": "Datasets",
+      "type": "array"
+    },
+    "schemaVersion": {
+      "const": "1.0.0",
+      "title": "Schemaversion",
+      "type": "string"
+    },
+    "supportingFiles": {
+      "items": {
+        "$ref": "#/$defs/InputFile"
+      },
+      "title": "Supportingfiles",
+      "type": "array"
+    },
+    "verifiedOn": {
+      "format": "date",
+      "title": "Verifiedon",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "verifiedOn",
+    "datasets",
+    "supportingFiles",
+    "blockedSources"
+  ],
+  "title": "Manifest",
+  "type": "object"
+}

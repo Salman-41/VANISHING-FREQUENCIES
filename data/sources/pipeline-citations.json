@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "lastVerified": "2026-10-08",
+  "citations": [
+    {
+      "id": "owid-lpi-2024",
+      "title": "Living Planet Index: global and selected region/system series",
+      "publisher": "WWF/ZSL; processed by Our World in Data",
+      "authors": [
+        "WWF/ZSL; processed by Our World in Data"
+      ],
+      "url": "https://ourworldindata.org/grapher/global-living-planet-index",
+      "publicationDate": "2024-09-30",
+      "publicationYear": 2024,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "CSV lpi_final, ci_low, ci_high; metadata conversionFactor=100; 1970–2020"
+      ],
+      "reuse": "Published LPI trends under CC BY-SA 4.0 per current ZSL policy; credit OWID processing and WWF/ZSL.",
+      "limitations": "2024 edition only; source bounds level unverified in chart metadata. Annual published index estimates, not unprocessed animal observations."
+    },
+    {
+      "id": "wwf-lpr-2026",
+      "title": "Living Planet Report 2026: official endpoint summaries",
+      "publisher": "WWF-UK",
+      "authors": [
+        "WWF-UK"
+      ],
+      "url": "https://www.wwf.org.uk/press-release/living-planet-report-2026",
+      "publicationDate": "2026-10-08",
+      "publicationYear": 2026,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "Paragraph on 1970–2022 coverage; Notes to editors: global, regional and system results"
+      ],
+      "reuse": "Published LPI trends under CC BY-SA 4.0 per ZSL policy. No press-release prose/media license inferred.",
+      "limitations": "Rounded endpoint percent change only; no annual 2026 time series or confidence interval supplied."
+    },
+    {
+      "id": "project-species-foundation",
+      "title": "VANISHING FREQUENCIES curated species foundation",
+      "publisher": "VANISHING FREQUENCIES",
+      "authors": [
+        "VANISHING FREQUENCIES"
+      ],
+      "url": "urn:vanishing-frequencies:species-foundation:1.0.0",
+      "publicationDate": "2026-10-08",
+      "publicationYear": 2026,
+      "accessedDate": "2026-10-08",
+      "type": "institutional-profile",
+      "verification": "page-read",
+      "locators": [
+        "data/raw/species-foundation.json; field-level citations"
+      ],
+      "reuse": "Original short project-authored factual paraphrases with source citations. Population sources have separate rights; no restricted assessment or media license inferred.",
+      "limitations": "Formal assessment dates unverified; held measurement values removed from frontend export. Other facts remain scoped institutional summaries."
+    }
+  ]
+}

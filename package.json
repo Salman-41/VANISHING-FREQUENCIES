@@ -5,10 +5,13 @@
   "type": "module",
   "description": "Research and data foundation; no frontend or deployment yet.",
   "scripts": {
-    "data:build": "tsx scripts/prepare-data.ts",
+    "data:build": ".venv/bin/python -m scripts.data.pipeline",
+    "data:validate": "node --import tsx scripts/data/validate-export.ts data/processed/biodiversity.json",
+    "test:data": ".venv/bin/python -m pytest tests/data -q",
+    "test:contracts": "node --import tsx tests/data/contracts.test.ts",
     "data:validate-species": "node --import tsx scripts/validate-species.ts",
     "test:species": "node --import tsx --test tests/species-foundation.test.ts",
-    "test": "tsx --test tests/data.test.ts",
+    "test": "npm run test:data && npm run test:contracts && npm run test:species",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {"zod": "^4.0.0"},

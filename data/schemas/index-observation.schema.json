@@ -1,0 +1,338 @@
+{
+  "$defs": {
+    "Bounds": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "source-bounds",
+            "confidence-interval",
+            "credible-interval"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "level": {
+          "anyOf": [
+            {
+              "exclusiveMaximum": 1,
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Level"
+        },
+        "lower": {
+          "title": "Lower",
+          "type": "number"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "number"
+        }
+      },
+      "required": [
+        "kind",
+        "lower",
+        "upper"
+      ],
+      "title": "Bounds",
+      "type": "object"
+    },
+    "Period": {
+      "additionalProperties": false,
+      "properties": {
+        "endYear": {
+          "maximum": 2100,
+          "minimum": 1500,
+          "title": "Endyear",
+          "type": "integer"
+        },
+        "startYear": {
+          "maximum": 2100,
+          "minimum": 1500,
+          "title": "Startyear",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "startYear",
+        "endYear"
+      ],
+      "title": "Period",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "accessedDate": {
+          "format": "date",
+          "title": "Accesseddate",
+          "type": "string"
+        },
+        "datasetId": {
+          "title": "Datasetid",
+          "type": "string"
+        },
+        "datasetVersion": {
+          "title": "Datasetversion",
+          "type": "string"
+        },
+        "inputPath": {
+          "title": "Inputpath",
+          "type": "string"
+        },
+        "inputSha256": {
+          "title": "Inputsha256",
+          "type": "string"
+        },
+        "jsonPointer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Jsonpointer"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "originalUncertainty": {
+          "title": "Originaluncertainty"
+        },
+        "originalUnit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Originalunit"
+        },
+        "originalValue": {
+          "title": "Originalvalue"
+        },
+        "rawRecord": {
+          "additionalProperties": true,
+          "title": "Rawrecord",
+          "type": "object"
+        },
+        "rowNumber": {
+          "minimum": 1,
+          "title": "Rownumber",
+          "type": "integer"
+        },
+        "sourceDate": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Sourcedate"
+        },
+        "sourceEdition": {
+          "title": "Sourceedition",
+          "type": "string"
+        },
+        "sourceId": {
+          "title": "Sourceid",
+          "type": "string"
+        },
+        "sourceUrl": {
+          "title": "Sourceurl",
+          "type": "string"
+        },
+        "transformations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Transformations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "datasetId",
+        "datasetVersion",
+        "sourceId",
+        "sourceUrl",
+        "sourceDate",
+        "sourceEdition",
+        "accessedDate",
+        "inputPath",
+        "inputSha256",
+        "rowNumber",
+        "jsonPointer",
+        "locator",
+        "originalUnit",
+        "originalValue",
+        "originalUncertainty",
+        "rawRecord",
+        "transformations"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "baselineYear": {
+      "const": 1970,
+      "title": "Baselineyear",
+      "type": "integer"
+    },
+    "datasetId": {
+      "title": "Datasetid",
+      "type": "string"
+    },
+    "ecosystem": {
+      "minLength": 1,
+      "title": "Ecosystem",
+      "type": "string"
+    },
+    "edition": {
+      "title": "Edition",
+      "type": "string"
+    },
+    "geography": {
+      "minLength": 1,
+      "title": "Geography",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "metric": {
+      "enum": [
+        "relative-index",
+        "index-percent-change"
+      ],
+      "title": "Metric",
+      "type": "string"
+    },
+    "missingReason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Missingreason"
+    },
+    "period": {
+      "$ref": "#/$defs/Period"
+    },
+    "provenance": {
+      "items": {
+        "$ref": "#/$defs/Provenance"
+      },
+      "minItems": 1,
+      "title": "Provenance",
+      "type": "array"
+    },
+    "scope": {
+      "enum": [
+        "global",
+        "region",
+        "ecosystem"
+      ],
+      "title": "Scope",
+      "type": "string"
+    },
+    "seriesId": {
+      "title": "Seriesid",
+      "type": "string"
+    },
+    "taxon": {
+      "minLength": 1,
+      "title": "Taxon",
+      "type": "string"
+    },
+    "temporalMeaning": {
+      "enum": [
+        "published-annual-index",
+        "published-endpoint-change"
+      ],
+      "title": "Temporalmeaning",
+      "type": "string"
+    },
+    "uncertainty": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Bounds"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "uncertaintyGap": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Uncertaintygap"
+    },
+    "unit": {
+      "enum": [
+        "index-1970-1",
+        "percent"
+      ],
+      "title": "Unit",
+      "type": "string"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Value"
+    }
+  },
+  "required": [
+    "id",
+    "datasetId",
+    "seriesId",
+    "metric",
+    "value",
+    "unit",
+    "period",
+    "geography",
+    "ecosystem",
+    "scope",
+    "taxon",
+    "edition",
+    "baselineYear",
+    "uncertainty",
+    "missingReason",
+    "uncertaintyGap",
+    "temporalMeaning",
+    "provenance"
+  ],
+  "title": "IndexObservation",
+  "type": "object"
+}

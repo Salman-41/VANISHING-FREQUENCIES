@@ -2,11 +2,13 @@
 
 Research checked **2026-10-08**. “Not verified” means the relevant page or terms could not be confirmed in this pass; it is not a claim that access is unavailable. Source page dates and dataset coverage differ. Always pin a version/retrieval date when acquiring data.
 
+**Processing-stage update, 2026-10-08:** Rechecked the official WWF-UK 2026 announcement, acquired the OWID 2024 annual index CSV/metadata, and acquired/read the current ZSL 2026 policy. Published LPI trends are permitted under CC BY-SA 4.0; underlying LPD rights remain restricted. See [processing methodology](../data/methodology.md) and the pinned pipeline manifest for the exact inputs and rights. The older source manifest is an inventory-stage snapshot, not the active acquisition ledger.
+
 ## WWF Living Planet Report 2026
 
 - **Publisher / URL:** WWF; [WWF Living Planet Report hub](https://livingplanet.panda.org/) and [WWF-UK 2026 announcement](https://www.wwf.org.uk/press-release/living-planet-report-2026). The announcement is a regional publisher page, not a substitute for the report.
-- **Data:** Report findings, methods, graphics, and potentially supplementary tables. 2026 report contents and downloadable data were **not independently verified** here; do not import figures based on an announcement alone.
-- **Date / coverage:** 2026 edition is announced for 2026-10-08 in the existing project catalog. Its population monitoring period, taxa, geography, and sample size remain unverified until the actual report and supplement are inspected.
+- **Data:** The official announcement now supports nine rounded endpoint summaries as published LPI results. They are exported only as announcement-derived endpoint facts under the verified published-trend license, with no annual reconstruction. Full report/supplement methodology and official 2026 annual result files remain unverified/unacquired.
+- **Date / coverage:** Announcement verified as published 2026-10-08; endpoint monitoring period 1970–2022. The processing manifest pins this separately from OWID's 2024 edition and 1970–2020 annual series.
 - **Acquisition:** Start at the official report hub; download the report and any cited technical supplement/data files. Record edition, file checksum, access date, page/table, and source data. No confirmed API.
 - **Rights / citation:** WWF report text, figures, and data are not assumed open just because they are downloadable. Check the report's copyright and any data-specific terms. Cite WWF, report title, year, publisher/place, page or figure, and underlying data sources as directed by the report.
 - **Reliability / limits:** Primary institutional synthesis. Interpret only within its methods and coverage; an index is not a census of all wildlife.

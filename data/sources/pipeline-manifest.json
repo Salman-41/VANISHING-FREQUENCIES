@@ -1,0 +1,268 @@
+{
+  "schemaVersion": "1.0.0",
+  "verifiedOn": "2026-10-08",
+  "datasets": [
+    {
+      "id": "lpi-2024-owid",
+      "adapter": "owid-index",
+      "input": {
+        "path": "data/raw/public/owid-lpi-2024.csv",
+        "sha256": "9764f5f4f9c9ff855090a34ba218b02d7878922eec485e7b42d497ce5b8b3f25"
+      },
+      "format": "csv",
+      "version": "OWID indicator 990513; updated 2024-09-30; snapshot 2026-10-08",
+      "edition": "LPR 2024",
+      "sourceId": "owid-lpi-2024",
+      "sourceUrl": "https://ourworldindata.org/grapher/global-living-planet-index",
+      "sourceDate": "2024-09-30",
+      "accessedDate": "2026-10-08",
+      "rights": {
+        "licenseId": "CC-BY-SA-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "evidenceUrl": "https://www.livingplanetindex.org/documents/LPI_Data_Use_Policy_2026.pdf",
+        "verifiedOn": "2026-10-08",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "attribution": "ZSL/WWF, Living Planet Index; source edition and retrieval date; Our World in Data processing where applicable.",
+        "notes": "Current policy clause 3 permits reproduction of published LPI trends, including global, regional and system results. This does not license the restricted underlying Living Planet Database. Attribute and apply share-alike to adaptations of this data; no endorsement or logos.",
+        "authorizationReference": null
+      },
+      "metadata": {
+        "path": "data/raw/public/owid-lpi-2024.metadata.json",
+        "sha256": "6461fbf651db381af42a9b02b5a953b4804f302b4d23f4210551329d5910fb91"
+      },
+      "recordPath": null,
+      "dateFormat": "%Y-%m-%d",
+      "missingTokens": [
+        "",
+        "null",
+        "NA",
+        "N/A"
+      ],
+      "columnMap": {},
+      "options": {
+        "entities": {
+          "World": {
+            "geography": "Global",
+            "ecosystem": "All",
+            "scope": "global"
+          },
+          "Africa": {
+            "geography": "Africa",
+            "ecosystem": "All",
+            "scope": "region"
+          },
+          "Asia and Pacific": {
+            "geography": "Asia–Pacific",
+            "ecosystem": "All",
+            "scope": "region"
+          },
+          "Europe and Central Asia": {
+            "geography": "Europe and Central Asia",
+            "ecosystem": "All",
+            "scope": "region"
+          },
+          "Latin America and the Caribbean": {
+            "geography": "Latin America and Caribbean",
+            "ecosystem": "All",
+            "scope": "region"
+          },
+          "North America": {
+            "geography": "North America",
+            "ecosystem": "All",
+            "scope": "region"
+          },
+          "Freshwater": {
+            "geography": "Global",
+            "ecosystem": "Freshwater",
+            "scope": "ecosystem"
+          }
+        }
+      },
+      "coveragePeriod": {
+        "startYear": 1970,
+        "endYear": 2020
+      }
+    },
+    {
+      "id": "lpi-2026-endpoints",
+      "adapter": "endpoint",
+      "input": {
+        "path": "data/raw/observations.csv",
+        "sha256": "46f1d9c5c74c3384191c5d0a056f651a95bb6eb620c0389782582fd377b4dfb4"
+      },
+      "format": "csv",
+      "version": "WWF-UK release 2026-10-08; rounded endpoint summary",
+      "edition": "LPR 2026",
+      "sourceId": "wwf-lpr-2026",
+      "sourceUrl": "https://www.wwf.org.uk/press-release/living-planet-report-2026",
+      "sourceDate": "2026-10-08",
+      "accessedDate": "2026-10-08",
+      "rights": {
+        "licenseId": "CC-BY-SA-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "evidenceUrl": "https://www.livingplanetindex.org/documents/LPI_Data_Use_Policy_2026.pdf",
+        "verifiedOn": "2026-10-08",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "attribution": "ZSL/WWF, Living Planet Index; source edition and retrieval date; Our World in Data processing where applicable.",
+        "notes": "Current policy clause 3 permits reproduction of published LPI trends, including global, regional and system results. This does not license the restricted underlying Living Planet Database. Attribute and apply share-alike to adaptations of this data; no endorsement or logos.",
+        "authorizationReference": null
+      },
+      "metadata": null,
+      "recordPath": null,
+      "dateFormat": "%Y-%m-%d",
+      "missingTokens": [
+        "",
+        "null",
+        "NA",
+        "N/A"
+      ],
+      "columnMap": {},
+      "options": {},
+      "coveragePeriod": {
+        "startYear": 1970,
+        "endYear": 2022
+      }
+    },
+    {
+      "id": "species-foundation-1",
+      "adapter": "species-foundation",
+      "input": {
+        "path": "data/raw/species-foundation.json",
+        "sha256": "4015e18ad426ed5fd70154e7823a6d2971fc54ca335a849c3ae7782b67cef3f0"
+      },
+      "format": "json",
+      "version": "species foundation schema 1.0.0; verified 2026-10-08",
+      "edition": "Species foundation 1.0.0",
+      "sourceId": "project-species-foundation",
+      "sourceUrl": "urn:vanishing-frequencies:species-foundation:1.0.0",
+      "sourceDate": "2026-10-08",
+      "accessedDate": "2026-10-08",
+      "rights": {
+        "licenseId": "LicenseRef-ProjectAuthored-FactualSummaries",
+        "licenseUrl": "urn:vanishing-frequencies:rights:original-factual-paraphrases",
+        "evidenceUrl": "urn:vanishing-frequencies:docs:research:scientific-review",
+        "verifiedOn": "2026-10-08",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "attribution": "VANISHING FREQUENCIES original curated factual summaries; retain all cited scientific sources.",
+        "notes": "Only this project-authored factual curation is reused. No license to third-party prose, figures, restricted assessments or media is inferred. Held measurements are not exported; population statistics have separate source rights.",
+        "authorizationReference": null
+      },
+      "metadata": null,
+      "recordPath": "species",
+      "dateFormat": "%Y-%m-%d",
+      "missingTokens": [
+        "",
+        "null",
+        "NA",
+        "N/A"
+      ],
+      "columnMap": {},
+      "options": {
+        "populationSourceRights": {
+          "noaa-blue-stock": {
+            "licenseId": "LicenseRef-USGovernment-PublicDomain",
+            "licenseUrl": "https://www.noaa.gov/organization/administration/nao-205-17a-information-access-dissemination",
+            "evidenceUrl": "https://www.noaa.gov/organization/administration/nao-205-17a-information-access-dissemination",
+            "verifiedOn": "2026-10-08",
+            "commercialUse": "allowed",
+            "redistribution": true,
+            "attribution": "NOAA Fisheries, Eastern North Pacific blue whale stock assessment, 2023 edition revised 2024; underlying study Calambokidis and Barlow (2020).",
+            "notes": "NOAA-authored technical report scientific result, not partner media. Federal report policy Section 2; preserve stock, data years, method and CV. No endorsement.",
+            "authorizationReference": null
+          },
+          "india-snow-spai": {
+            "licenseId": "LicenseRef-PIB-ReproductionPolicy",
+            "licenseUrl": "https://www.pib.gov.in/content/186_2_Copyright-Policy.aspx?lang=1&reg=5",
+            "evidenceUrl": "https://www.pib.gov.in/content/186_2_Copyright-Policy.aspx?lang=1&reg=5",
+            "verifiedOn": "2026-10-08",
+            "commercialUse": "allowed",
+            "redistribution": true,
+            "attribution": "Government of India, MoEFCC / PIB, Status Report of Snow Leopards in India release, 30 January 2024.",
+            "notes": "PIB policy permits free accurate reproduction with prominent source acknowledgment; third-party material excluded. Only government-published result and method summary used; no media.",
+            "authorizationReference": null
+          }
+        }
+      },
+      "coveragePeriod": null
+    }
+  ],
+  "supportingFiles": [
+    {
+      "path": "data/sources/species-citations.json",
+      "sha256": "167d4421ccf1671a69ef0a3c8d392916012164d7e7901aba8ab40fbc8c605144"
+    },
+    {
+      "path": "data/sources/pipeline-citations.json",
+      "sha256": "50fc5a3427a6a06d637427224717771d124ecfcf7ca056dbc744f0e6b42f9cd2"
+    },
+    {
+      "path": "data/sources/taxonomic-registry.json",
+      "sha256": "9ae9a683b0442cb0e9ecbcf61743c0a86e5bc63b774ad1c8f7be2d5219eabea2"
+    },
+    {
+      "path": "data/raw/public/LPI_Data_Use_Policy_2026.pdf",
+      "sha256": "96d94abc8138569735ba60db9ec1732c69854712ad6a5c440e7c3605e0d10ea8"
+    },
+    {
+      "path": "data/raw/public/acquisition-receipts.json",
+      "sha256": "42efeb80d6518b43f31b3bb90c46631dc242f42cb06eb935fa6320309562fb5b"
+    }
+  ],
+  "blockedSources": [
+    {
+      "id": "lpd-population-series",
+      "sourceUrl": "https://www.livingplanetindex.org/data_portal",
+      "reason": "Underlying LPD requires purpose/agreement and prohibits financial-gain use and original data redistribution. No form submitted or underlying dataset acquired.",
+      "requirements": [
+        "Eligible declared use and accepted current agreement",
+        "Written appropriate permission/license if proposed use falls outside permitted terms",
+        "A release-specific adapter/method review; no automatic frontend export of underlying data"
+      ],
+      "importAdapter": "canonical-index"
+    },
+    {
+      "id": "lpi-2026-annual",
+      "sourceUrl": "https://www.livingplanetindex.org/latest_results",
+      "reason": "2026 annual results with bounds not acquired; dynamic export unavailable in text access. Published endpoints do not supply intermediate years.",
+      "requirements": [
+        "Acquire official published annual results under published-trend license",
+        "Pin 2026 edition, release, methods, bounds and original units separately"
+      ],
+      "importAdapter": "canonical-index"
+    },
+    {
+      "id": "iucn-assessments",
+      "sourceUrl": "https://api.iucnredlist.org/",
+      "reason": "Restricted assessment/API use needs appropriate authorization; no token or dataset imported.",
+      "requirements": [
+        "Appropriate commercial authorization/license and permitted redistribution",
+        "Exact assessment date/version/ID and approved record snapshot"
+      ],
+      "importAdapter": "species-foundation"
+    },
+    {
+      "id": "birdlife-products",
+      "sourceUrl": "https://datazone.birdlife.org/",
+      "reason": "No authorized bulk BirdLife product acquired; product-specific rights unresolved.",
+      "requirements": [
+        "Product-specific license/permission and allowed redistribution",
+        "Versioned taxonomy, scope, original units and methods"
+      ],
+      "importAdapter": "species-foundation"
+    },
+    {
+      "id": "held-species-estimates",
+      "sourceUrl": "https://dnpwc.gov.np/",
+      "reason": "Original Nepal census and historical Bornean model methods/period/uncertainty remain unresolved; public announcements are held.",
+      "requirements": [
+        "Inspect original methods and survey window",
+        "Verify units, uncertainty and comparability; obtain permitted source rights",
+        "Re-review species foundation and regenerate immutable snapshot under a new version"
+      ],
+      "importAdapter": "species-foundation"
+    }
+  ]
+}

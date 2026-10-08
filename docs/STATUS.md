@@ -1,7 +1,50 @@
 # Project status
 
-**Stage:** Species scientific foundation complete for local development with explicit evidence gaps  
+**Stage:** Offline biodiversity pipeline verified — stage complete  
 **Updated:** 2026-10-08
+
+## Completed: processing stage
+
+- Implemented `scripts/data/` offline preparation with Python, pandas and Pydantic, plus independent TypeScript/Zod frontend contracts. CSV/JSON import, mappings, normalization, ISO dates, approved units, duplicate/conflict detection, missing values, name/status/numeric checks, provenance and rights gates are implemented.
+- Acquired and pinned public OWID 2024 LPI CSV/metadata and the current ZSL 2026 policy, with URL/date/checksum receipts. Rechecked WWF-UK's nine 2026 endpoint summaries and recorded published-trend CC BY-SA 4.0 permission. No underlying LPD or restricted IUCN/BirdLife dataset was acquired.
+- Preserved complete species research in `data/raw/species-foundation.json`. The frontend bundle excludes four held numerical records and retains six species, two eligible historical estimates and six cited intervention/recovery stories.
+- Created the three `docs/data/` specifications, Python import/observation JSON Schemas, `data/schemas/biodiversity.schema.ts`, pinned manifest/rights/citations/taxonomic registry, dependency pins/lock and automated tests under `tests/data/`.
+- The atomic frontend output is `data/processed/biodiversity.json`; machine/human reports are under `data/processed/reports/`. Failed builds report errors and retain the previous valid artifact. File existence alone does not prove current validation.
+- No interpolation, extrapolation, invented values, observation-to-abundance conversion or edition splicing. Source bounds, original units/representations, CV, periods, source editions/dates and hashes remain traceable.
+
+### Exact verification results
+
+| Check / output | Result |
+| --- | --- |
+| `npm run data:build` | Passed; zero errors |
+| `npm run data:validate` | Zod passed: 366 index records; six species; two population records; six stories |
+| Active inputs | Three: 357 annual LPI rows, nine endpoint summaries, six species records |
+| Index series | 16: seven annual 2024 series and nine endpoint 2026 series |
+| Real index missing values | Zero; missing behavior tested with deliberate mutations |
+| Real duplicates/conflicts | Zero exact duplicates; zero conflicts; both behaviors tested |
+| Population export | Two dated historical estimates; four held research figures excluded |
+| Stories | Six: three documented interventions; three scoped/local recovery stories |
+| Export citations | 36 referenced page-read entries |
+| Python tests | 43 passed |
+| TypeScript export tests | 12 passed |
+| Existing species checks | Eleven passed in direct execution; aggregate `npm test` also passed |
+| `npm run typecheck` | Passed |
+| Reproducibility | Two independent builds produced identical bytes/hashes in the automated test |
+| Export size | 966,276 bytes; human-readable JSON, no embedded media |
+| Runtime | Python 3.13.5; pandas 2.2.3; Pydantic 2.11.7; NumPy 2.5.3; Node v20.19.2; Zod 4.6.5 |
+
+Build fingerprint: `23585475d87da7054520dacc7a12083a4adf60f204fbae387292dc8b97bf13f4`. Export SHA-256: `36b87bf96cf579f6bcf5e9b97157573e897de62e65c7829bb9b3b460017d670c`. These identify this checked build; later legitimate input/code changes produce new hashes.
+
+### Remaining processing gaps and access
+
+- Five explicit manifest blockers: underlying LPD, official 2026 annual LPI results, IUCN assessments, BirdLife products and held species original-method evidence. Each has a source URL, requirements and candidate import interface; no dummy observations. External tables may need further reviewed adapters before reaching the canonical contracts.
+- Current ZSL policy restricts underlying LPD financial-gain use and original redistribution. The published-trend exception applies only to aggregate results. No form was submitted or underlying-data agreement accepted.
+- Acquired annual 2024 data contains freshwater but no terrestrial/marine series. Three-system comparisons use separate 2026 endpoint summaries. Annual 2026 data and full methodology review remain outstanding.
+- Source upper/lower bounds are retained; confidence level remains null where the acquired metadata does not verify it. No endpoint uncertainty intervals were reconstructed.
+- Formal species assessment dates remain unknown. Original Nepal/Bornean estimate evidence remains insufficient for display; no forest-only or hawksbill global count was filled in. Media remains unacquired/uncleared.
+- The bundle is a provenance artifact, not an optimized website payload. Future development must select/limit data while preserving dates, units, geography, citations and rights.
+
+**Stop:** This processing stage is complete and verified. No frontend, website, hosting or deployment implementation was performed.
 
 ## Completed: species stage
 
@@ -35,8 +78,8 @@
 
 ## Continuing source inventory limitations and access
 
-- WWF Living Planet Report 2026 publication details and 2026 dataset/methodology were not independently verified from an accessible primary report page in this research pass. Treat 2026-specific metrics and downloads as unverified until the report and its technical supplement are checked.
-- The LPI public database download requires a use description and acceptance of its data-use agreement. The available portal describes time series covering 1970–2020; verify the exact release and terms at acquisition.
+- The processing stage verified the official WWF-UK 2026 announcement and its nine endpoint summaries, with a 1970–2022 period. The full report/technical supplement and official annual 2026 export remain unacquired; endpoints cannot supply intermediate years or interval estimates.
+- The LPI underlying database download requires a use description and acceptance of its current agreement. The acquired/read 2026 policy refers to LPD 2026.1 and restricts financial-gain use and original redistribution. No underlying data was acquired; verify exact release/coverage and obtain appropriate permitted use before acquisition. The published-trend CC BY-SA 4.0 exception is used only for the aggregate results in this pipeline.
 - IUCN API use requires a token and is forbidden for commercial purposes under the API terms. This project's commercial status/use needs resolution; obtain written authorization or an appropriate commercial license before relying on Red List data.
 - BirdLife species datasets may have restricted/paid terms; no bulk data was acquired. Request access and confirm permitted use.
 - NOAA and sound archive asset rights can vary by recording, creator, or page. Check each recording and image's item-level license/credit before reuse.
@@ -44,7 +87,7 @@
 
 ## Next data acquisition steps
 
-1. Inspect WWF's 2026 report, downloadable tables, and technical notes; capture exact edition, period, caveats, citations, and rights.
+1. Inspect WWF's full 2026 report, official annual results and technical notes; capture exact edition, periods, caveats, citations and rights. Its announcement endpoint summaries have been verified separately.
 2. Request and archive the LPI public dataset plus applicable agreement; retain release/version and original citations.
 3. Decide the intended commercial status and obtain IUCN authorization before any Red List API requests.
 4. Species selection is complete. Request BirdLife access only if later scope needs its bird datasets; prefer open species-level datasets where rights permit.
@@ -53,4 +96,4 @@
 
 ## Handoff
 
-Read the species selection, fact sheets and scientific review together. Development may model known, unknown and held states using the validated contract; unresolved facts must stay unknown and held figures must remain undisplayed. Evidence/rights clearance remains necessary for any affected public content. This task ends here.
+Read the species research and `docs/data/` specifications together. Use `data/processed/biodiversity.json` as the validated pipeline bundle; the earlier species JSON remains complete research with held values. Unresolved facts stay unknown and held values are excluded from the frontend export. Evidence/rights clearance remains necessary for any affected public content.
