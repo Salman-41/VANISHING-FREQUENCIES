@@ -52,7 +52,8 @@ export default async function About() {
             <dt>Recordings</dt>
             <dd>
               Situated recordings with provenance and explicit permission. No
-              wildlife media is cleared yet.
+              wildlife audio is cleared yet. Homepage photographs have
+              individual attribution and licensing records in Credits.
             </dd>
           </div>
         </dl>

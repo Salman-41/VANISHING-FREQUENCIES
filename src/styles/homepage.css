@@ -1,0 +1,916 @@
+/* The Listening Margin. Future enhancements must preserve this visible static flow. */
+.documentary {
+  --doc-rule: #51544e;
+}
+.documentary h1,
+.documentary h2,
+.documentary h3 {
+  font-stretch: 90%;
+}
+.documentary h2 {
+  font-size: var(--text-chapter);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin: 0;
+  max-width: 22ch;
+}
+.documentary h2 span {
+  color: var(--color-stone);
+}
+.documentary h3 {
+  font-size: var(--text-section);
+}
+.documentary .eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.11em;
+}
+.doc-opening {
+  padding-top: clamp(2.5rem, 5vw, 5rem);
+  padding-bottom: 5rem;
+}
+.opening-register,
+.chapter-register {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.opening-register p {
+  margin: 0;
+}
+.documentary h1 {
+  font-size: var(--text-opening);
+  font-stretch: 85%;
+  letter-spacing: -0.055em;
+  line-height: 0.96;
+  max-width: none;
+  margin: 2.5rem 0 3rem;
+}
+.media-figure {
+  margin: 0;
+  min-width: 0;
+}
+.media-aperture {
+  position: relative;
+  overflow: hidden;
+  background: #17201e;
+}
+.media-aperture img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.media-figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem 2rem;
+  padding-top: 0.75rem;
+  font-size: var(--text-meta);
+  line-height: 1.55;
+  color: var(--color-stone);
+}
+.media-figure figcaption a {
+  text-decoration-color: var(--doc-rule);
+}
+.opening-aperture .media-aperture {
+  height: clamp(7rem, 12vw, 12rem);
+}
+.opening-aperture img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 42%;
+}
+.waveform-motif {
+  margin: 1.5rem 0 2.5rem;
+}
+.waveform-motif svg {
+  display: block;
+  width: 100%;
+  height: 72px;
+  stroke: var(--color-stone);
+  stroke-width: 1;
+}
+.waveform-motif .motif-axis {
+  stroke: var(--doc-rule);
+}
+.waveform-motif figcaption {
+  color: var(--color-stone);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+.opening-bottom,
+.closing-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.opening-bottom .lead {
+  margin-bottom: 1rem;
+}
+.opening-bottom .meta {
+  max-width: 48ch;
+}
+.opening-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.doc-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  gap: 2.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-stone);
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+.doc-link span {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.doc-link:hover {
+  border-color: var(--color-ivory);
+  color: var(--color-ivory);
+}
+.doc-link-primary {
+  color: var(--color-obsidian);
+  background: var(--color-rust);
+  padding: 1rem 1.5rem;
+  border: 0;
+}
+.doc-link-primary:hover {
+  background: var(--color-ivory);
+  color: var(--color-obsidian);
+}
+.chapter-index {
+  padding-top: 3rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--doc-rule);
+}
+.chapter-index ol {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.25rem 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.chapter-index a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  min-height: 48px;
+  padding-block: 0.5rem;
+}
+.chapter-index a span:first-child {
+  color: var(--color-rust);
+  font-variant-numeric: tabular-nums;
+}
+.chapter-index a span:last-child {
+  margin-left: auto;
+  color: var(--color-stone);
+}
+.chapter-index a:hover {
+  text-decoration: underline;
+}
+.doc-chapter {
+  border-top: 1px solid var(--doc-rule);
+  padding-block: clamp(4.5rem, 10vw, 9rem);
+  scroll-margin-top: 2rem;
+}
+.chapter-register {
+  border-bottom: 1px solid var(--doc-rule);
+  padding-bottom: 1.25rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  color: var(--color-stone);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.chapter-register p {
+  margin: 0;
+}
+.chapter-register p span {
+  color: var(--color-rust);
+  margin-right: 1rem;
+}
+.chapter-register a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.chapter-title-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  gap: 8%;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+.title-margin {
+  padding-top: 0.5rem;
+}
+.title-margin em {
+  font-size: 1.25rem;
+}
+.doc-claim > p {
+  margin-bottom: 0.5rem;
+}
+.doc-evidence {
+  font-size: var(--text-meta);
+  line-height: 1.55;
+  color: var(--color-stone);
+  margin: 0.75rem 0 1.5rem;
+  max-width: 64ch;
+}
+.doc-evidence p {
+  margin: 0;
+}
+.doc-evidence summary {
+  min-height: 44px;
+  width: fit-content;
+}
+.doc-evidence ul {
+  padding-left: 1rem;
+  margin-top: 0;
+}
+.doc-evidence li {
+  margin-bottom: 0.75rem;
+}
+.doc-evidence a {
+  overflow-wrap: anywhere;
+}
+.mountain-landscape {
+  margin-bottom: 3rem;
+}
+.mountain-landscape .media-aperture {
+  aspect-ratio: 2.26;
+}
+.mountain-landscape img {
+  height: 100%;
+  object-fit: cover;
+}
+.mountain-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  gap: 8%;
+}
+.snow-portrait .media-aperture {
+  aspect-ratio: 1.3;
+}
+.snow-portrait img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 40% 50%;
+}
+.encounter-copy {
+  padding: 2.5rem 0 0 15%;
+}
+.estimate-margin {
+  padding: 2rem 0 0;
+  border-top: 1px solid var(--color-stone);
+  align-self: start;
+}
+.doc-estimate {
+  font-size: clamp(4rem, 6vw, 6rem);
+  letter-spacing: -0.055em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 1.5rem;
+}
+.doc-estimate span {
+  display: block;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  color: var(--color-stone);
+  margin-top: 1rem;
+}
+.estimate-margin > p:not(.doc-estimate):not(.eyebrow) {
+  font-size: 1rem;
+}
+.estimate-margin dl {
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
+}
+.estimate-margin dl div {
+  border-top: 1px solid var(--doc-rule);
+  padding: 0.75rem 0;
+}
+.estimate-margin dt {
+  color: var(--color-stone);
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+.estimate-margin dd {
+  margin: 0;
+}
+.scene-footnote {
+  max-width: 80ch;
+  color: var(--color-stone);
+  font-size: var(--text-meta);
+  border-top: 1px solid var(--doc-rule);
+  padding-top: 1.5rem;
+  margin: 3rem 0 0;
+}
+.ocean-heading {
+  margin-bottom: 3rem;
+}
+.ocean-heading h2 {
+  font-size: clamp(4rem, 8vw, 8rem);
+  max-width: none;
+}
+.ocean-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 8fr) minmax(0, 3fr);
+  gap: 6%;
+  align-items: center;
+}
+.ocean-portrait .media-aperture {
+  aspect-ratio: 1.5;
+}
+.ocean-portrait img {
+  object-fit: contain;
+  height: 100%;
+}
+.ocean-evidence {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 4fr);
+  gap: 24%;
+  margin-top: 5rem;
+}
+.ocean-evidence > div {
+  padding-top: 2rem;
+}
+.ocean-evidence h3 {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+.index-figure {
+  margin-top: 4rem;
+  border-top: 1px solid var(--color-stone);
+  padding-top: 1.5rem;
+}
+.index-figure figure {
+  margin: 0;
+}
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 1rem;
+}
+.chart-header span:last-child {
+  color: var(--color-stone);
+  font-size: 0.875rem;
+}
+.chart-unit {
+  font-size: 0.75rem;
+  color: var(--color-stone);
+  margin-block: 1rem 0;
+}
+.index-figure svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  margin-block: 1rem;
+}
+.index-figure svg text {
+  fill: var(--color-stone);
+  font-size: 14px;
+  font-family: inherit;
+}
+.index-figure .index-plot-mobile {
+  display: none;
+}
+.chart-grid {
+  stroke: var(--doc-rule);
+  stroke-width: 1;
+}
+.chart-bounds {
+  fill: var(--color-stone);
+  opacity: 0.17;
+}
+.chart-estimate {
+  fill: none;
+  stroke: var(--color-ivory);
+  stroke-width: 2.5;
+}
+.chart-point {
+  fill: var(--color-ivory);
+}
+.chart-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  margin-block: 1rem;
+  font-size: 0.875rem;
+}
+.chart-key span {
+  display: inline-flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.chart-key i {
+  display: inline-block;
+  width: 24px;
+}
+.key-line {
+  border-top: 2px solid var(--color-ivory);
+}
+.key-bounds {
+  height: 12px;
+  background: #383a36;
+  border: 1px solid var(--color-stone);
+}
+.chart-data {
+  border-block: 1px solid var(--doc-rule);
+  margin-bottom: 1rem;
+  padding-block: 0.5rem;
+}
+.chart-data table {
+  font-size: 0.875rem;
+}
+.chart-data tbody th {
+  min-width: 0;
+}
+.edition-margin {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  border-top: 1px solid var(--doc-rule);
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+.sound-heading {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+.sound-heading .lead {
+  max-width: 22ch;
+}
+.sound-spread {
+  display: grid;
+  grid-template-columns: 7fr 4fr;
+  gap: 8%;
+}
+.sound-landscape .media-aperture {
+  aspect-ratio: 1.5;
+}
+.sound-landscape img {
+  height: 100%;
+  object-fit: contain;
+}
+.sound-margin {
+  padding-top: 2rem;
+}
+.audio-availability {
+  border-block: 1px solid var(--doc-rule);
+  padding-block: 1.5rem;
+  margin-bottom: 1rem;
+}
+.availability-mark {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border: 1px solid var(--color-stone);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.availability-mark::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background: var(--color-stone);
+  left: 6px;
+  top: 11px;
+}
+.audio-availability p {
+  margin-bottom: 0.5rem;
+}
+.sound-notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  border-top: 1px solid var(--doc-rule);
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+.sound-notes p {
+  font-size: 0.9375rem;
+}
+.species-register {
+  margin-top: 4rem;
+}
+.species-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 3fr);
+  gap: 4%;
+  border-top: 1px solid var(--doc-rule);
+  padding-block: 3rem;
+}
+.species-identity h3 {
+  font-size: var(--text-species-row);
+  margin-block: 1.5rem 0.75rem;
+  max-width: 14ch;
+}
+.species-identity h3 a {
+  text-decoration: none;
+}
+.species-identity h3 a:hover {
+  text-decoration: underline;
+}
+.species-identity > em {
+  display: block;
+  color: var(--color-stone);
+  margin-bottom: 2rem;
+}
+.species-category {
+  font-size: 0.9375rem;
+  margin-bottom: 0.5rem;
+}
+.species-portrait .media-aperture {
+  aspect-ratio: 4/3;
+}
+.species-portrait img {
+  height: 100%;
+  object-fit: cover;
+}
+.species-entry-1 .species-portrait img,
+.species-entry-5 .species-portrait img {
+  object-fit: contain;
+}
+.species-entry-0 .species-portrait img {
+  object-position: 35% center;
+}
+.species-context {
+  padding-top: 0.5rem;
+}
+.species-context .doc-claim > p {
+  font-size: 0.9375rem;
+}
+.species-context .eyebrow {
+  margin-bottom: 0.75rem;
+}
+.species-context .doc-evidence {
+  margin-bottom: 1rem;
+}
+.chapter-conservation {
+  background: var(--color-forest);
+  padding-inline: clamp(1.25rem, 4vw, 4rem);
+  margin-inline: calc(-1 * var(--page-margin));
+  border: none;
+}
+.chapter-conservation h2 {
+  font-size: clamp(2.75rem, 5.5vw, 5.5rem);
+}
+.chapter-conservation .chapter-register p span {
+  color: var(--color-ivory);
+}
+.conservation-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 3fr) minmax(0, 4fr);
+  gap: 5%;
+  border-top: 1px solid var(--color-stone);
+  padding-block: 3rem;
+}
+.conservation-heading h3 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  max-width: 13ch;
+  margin-top: 2rem;
+}
+.story-place {
+  margin-bottom: 0.5rem;
+}
+.conservation-heading em {
+  font-size: 0.875rem;
+  color: var(--color-stone);
+}
+.inference-limit {
+  border-top: 1px solid var(--doc-rule);
+  padding-top: 1.25rem;
+  font-size: 0.9375rem;
+}
+.conservation-next {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-stone);
+  padding-top: 2rem;
+}
+.conservation-next p {
+  max-width: 44ch;
+  margin: 0;
+}
+.chapter-closing {
+  border-top: 0;
+  padding-bottom: 2rem;
+}
+.chapter-closing h2 {
+  font-size: var(--text-opening);
+  letter-spacing: -0.055em;
+  margin-bottom: 3rem;
+}
+.closing-aperture .media-aperture {
+  height: clamp(8rem, 15vw, 15rem);
+}
+.closing-aperture img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+.closing-bottom {
+  margin-top: 3rem;
+}
+.exploration-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+.exploration-links .doc-link {
+  font-size: 0.875rem;
+  gap: 1rem;
+}
+.closing-colophon {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5rem;
+  border-top: 1px solid var(--doc-rule);
+  padding-top: 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+.closing-colophon p {
+  margin-bottom: 0;
+}
+.closing-colophon a {
+  min-height: 44px;
+}
+@media (max-width: 1023px) {
+  .chapter-index ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .chapter-title-spread,
+  .mountain-spread,
+  .ocean-spread,
+  .sound-spread {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .chapter-title-spread h2 {
+    grid-column: 1/-1;
+  }
+  .title-margin {
+    grid-column: 2;
+  }
+  .ocean-evidence {
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .species-entry {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .species-context {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.5rem 2rem;
+  }
+  .species-context .doc-link {
+    grid-column: 2;
+    justify-self: start;
+  }
+  .conservation-entry {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .conservation-heading {
+    grid-column: 1/-1;
+  }
+  .conservation-heading h3 {
+    max-width: none;
+  }
+  .sound-heading {
+    display: block;
+  }
+  .sound-heading .lead {
+    margin-top: 2rem;
+    max-width: none;
+  }
+  .sound-notes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sound-notes > .eyebrow {
+    grid-column: 1/-1;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .opening-register p:last-child {
+    display: none;
+  }
+  .documentary h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: clamp(3.1rem, 11.8vw, 5.5rem);
+    letter-spacing: -0.045em;
+  }
+  .documentary h2 {
+    font-size: clamp(2.6rem, 9vw, 4.5rem);
+  }
+  .opening-aperture .media-aperture {
+    height: 8rem;
+  }
+  .opening-aperture img {
+    object-position: 60% 40%;
+  }
+  .waveform-motif svg {
+    height: 48px;
+  }
+  .opening-bottom,
+  .closing-bottom {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .opening-actions {
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .opening-actions .doc-link:not(.doc-link-primary) {
+    align-self: start;
+  }
+  .desktop-break {
+    display: none;
+  }
+  .chapter-index {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-index ol {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .chapter-index li {
+    border-bottom: 1px solid var(--doc-rule);
+  }
+  .chapter-register {
+    font-size: 0.6875rem;
+    gap: 0.5rem;
+  }
+  .chapter-register p span {
+    margin-right: 0.35rem;
+  }
+  .chapter-register a {
+    font-size: 0.6875rem;
+    letter-spacing: 0;
+    gap: 0.5rem;
+  }
+  .chapter-title-spread,
+  .mountain-spread,
+  .ocean-spread,
+  .ocean-evidence,
+  .sound-spread {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .chapter-title-spread h2,
+  .title-margin {
+    grid-column: auto;
+  }
+  .title-margin {
+    padding-top: 0.5rem;
+  }
+  .mountain-landscape .media-aperture {
+    aspect-ratio: 1.4;
+  }
+  .mountain-landscape img {
+    object-position: 60% center;
+  }
+  .mountain-landscape {
+    margin-bottom: 2rem;
+  }
+  .encounter-copy {
+    padding: 2rem 0 0;
+  }
+  .estimate-margin {
+    padding-top: 1.5rem;
+  }
+  .doc-estimate {
+    font-size: 4rem;
+  }
+  .ocean-heading h2 {
+    font-size: clamp(3.5rem, 13vw, 6rem);
+  }
+  .ocean-evidence {
+    margin-top: 2.5rem;
+  }
+  .ocean-evidence > div {
+    padding-top: 0;
+  }
+  .index-figure {
+    margin-top: 2rem;
+  }
+  .index-figure .index-plot-desktop {
+    display: none;
+  }
+  .index-figure .index-plot-mobile {
+    display: block;
+  }
+  .index-figure svg text {
+    font-size: 12px;
+  }
+  .chart-key {
+    font-size: 0.75rem;
+    gap: 0.75rem;
+  }
+  .edition-margin {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .sound-margin {
+    padding-top: 0;
+  }
+  .sound-notes {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .sound-notes > div {
+    border-top: 1px solid var(--doc-rule);
+    padding-top: 1.5rem;
+  }
+  .sound-notes h3 {
+    font-size: 1.5rem;
+  }
+  .species-register {
+    margin-top: 2rem;
+  }
+  .species-entry {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-block: 2.5rem;
+  }
+  .species-identity h3 {
+    font-size: clamp(2.25rem, 9vw, 3rem);
+    margin-top: 0.75rem;
+  }
+  .species-identity > em {
+    margin-bottom: 1rem;
+  }
+  .species-context {
+    grid-column: auto;
+    display: block;
+    padding: 0;
+  }
+  .species-context .doc-link {
+    width: 100%;
+  }
+  .species-entry .doc-evidence {
+    margin-bottom: 1rem;
+  }
+  .conservation-entry {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding-block: 2.5rem;
+  }
+  .conservation-heading {
+    grid-column: auto;
+    margin-bottom: 1.5rem;
+  }
+  .conservation-heading h3 {
+    margin-top: 1.25rem;
+  }
+  .conservation-next {
+    gap: 1rem;
+  }
+  .conservation-next .doc-link {
+    width: 100%;
+    gap: 1rem;
+  }
+  .chapter-closing h2 {
+    font-size: clamp(3rem, 11vw, 5rem);
+  }
+  .exploration-links {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .closing-colophon {
+    margin-top: 3rem;
+  }
+}

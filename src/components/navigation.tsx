@@ -32,7 +32,7 @@ export function Navigation() {
     <>
       <button
         ref={opener}
-        className="control"
+        className="control menu-opener"
         type="button"
         aria-haspopup="dialog"
         aria-controls="site-navigation"
@@ -43,6 +43,9 @@ export function Navigation() {
         }}
       >
         Menu
+        <svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true">
+          <path d="M0 3h18M0 11h18" fill="none" stroke="currentColor" />
+        </svg>
       </button>
       <dialog
         ref={dialog}

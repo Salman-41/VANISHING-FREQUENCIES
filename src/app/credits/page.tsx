@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro, Note } from "@/components/editorial";
 import { getResearch } from "@/features/research/server";
+import { homepageAssets } from "@/features/homepage/media";
 export const metadata: Metadata = { title: "Credits" };
 export default async function Credits() {
   const data = await getResearch();
@@ -10,12 +11,53 @@ export default async function Credits() {
       <PageIntro eyebrow="Credits" title="The work behind each frame.">
         <p>Credit follows the work actually used by the documentary.</p>
       </PageIntro>
-      <Note title="Wildlife media">
+      <Note title="Wildlife audio">
         <p>
-          No wildlife image or audio has been acquired or cleared for use.
-          Research candidates are not credited as displayed assets.
+          No wildlife audio has been acquired or cleared for use. The opening
+          sound motif is an original editorial drawing, not a recorded waveform.
         </p>
       </Note>
+      <section className="section">
+        <h2>Homepage photography</h2>
+        <p>
+          These are the seven photographs actually used. Each local derivative
+          retains its source license. No contributor endorsement is implied.
+        </p>
+        <ul className="citation-list">
+          {homepageAssets.map((asset) => (
+            <li id={`image-${asset.id}`} key={asset.id}>
+              <h3>{asset.title}</h3>
+              <p>
+                {asset.creator} · {asset.location} ·{" "}
+                {asset.setting.replaceAll("-", " ")}.
+              </p>
+              <p>
+                Capture date: {asset.captureDate ?? "unverified"}. {asset.notes}
+              </p>
+              <p>{asset.changes}</p>
+              <p>
+                <a href={asset.sourceUrl}>Source item and attribution</a> ·{" "}
+                <a href={asset.licenseUrl}>{asset.license}</a> ·{" "}
+                <a href={asset.localPath}>Local licensed derivative</a>
+              </p>
+              {asset.originalPublication ? (
+                <p>
+                  Original publication:{" "}
+                  <a href={asset.originalPublication}>
+                    Gross (2007), PLOS Biology, e115; photograph by Thomas
+                    Breuer
+                  </a>
+                  .
+                </p>
+              ) : null}
+              <p className="meta">
+                Acquired and reviewed {asset.verifiedOn}.{" "}
+                {asset.acquiredRepresentation}. {asset.rightsEvidence}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
       <section className="section">
         <h2>Typography</h2>
         <p>
