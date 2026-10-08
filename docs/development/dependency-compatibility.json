@@ -1,0 +1,331 @@
+{
+  "verifiedOn": "2026-10-08",
+  "method": "Official npm registry latest metadata plus installed package declarations; strict peer and engine installation, no force/legacy-peer-deps",
+  "runtime": {
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "reason": "Drei transitive camera-controls 3.1.2 needs Node >=22 and npm >=10.5.1; project standardizes on Node 24 LTS"
+  },
+  "packages": {
+    "zod": {
+      "version": "4.6.5",
+      "registryUrl": "https://registry.npmjs.org/zod",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "runtime"
+    },
+    "next": {
+      "version": "16.4.0",
+      "registryUrl": "https://registry.npmjs.org/next",
+      "peerDependencies": {
+        "@opentelemetry/api": "^1.1.0",
+        "@playwright/test": "^1.51.1",
+        "babel-plugin-react-compiler": "*",
+        "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
+        "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
+        "sass": "^1.3.0"
+      },
+      "peerDependenciesMeta": {
+        "babel-plugin-react-compiler": {
+          "optional": true
+        },
+        "sass": {
+          "optional": true
+        },
+        "@opentelemetry/api": {
+          "optional": true
+        },
+        "@playwright/test": {
+          "optional": true
+        }
+      },
+      "engines": {
+        "node": ">=20.9.0"
+      },
+      "installationRole": "runtime"
+    },
+    "react": {
+      "version": "19.3.0",
+      "registryUrl": "https://registry.npmjs.org/react",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {
+        "node": ">=0.10.0"
+      },
+      "installationRole": "runtime"
+    },
+    "react-dom": {
+      "version": "19.3.0",
+      "registryUrl": "https://registry.npmjs.org/react-dom",
+      "peerDependencies": {
+        "react": "^19.3.0"
+      },
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "runtime"
+    },
+    "gsap": {
+      "version": "3.15.0",
+      "registryUrl": "https://registry.npmjs.org/gsap",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "runtime"
+    },
+    "@gsap/react": {
+      "version": "2.1.2",
+      "registryUrl": "https://registry.npmjs.org/@gsap%2freact",
+      "peerDependencies": {
+        "gsap": "^3.12.5",
+        "react": ">=17"
+      },
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "runtime"
+    },
+    "lenis": {
+      "version": "1.3.26",
+      "registryUrl": "https://registry.npmjs.org/lenis",
+      "peerDependencies": {
+        "@nuxt/kit": ">=3.0.0",
+        "react": ">=17.0.0",
+        "vue": ">=3.0.0"
+      },
+      "peerDependenciesMeta": {
+        "react": {
+          "optional": true
+        },
+        "vue": {
+          "optional": true
+        },
+        "@nuxt/kit": {
+          "optional": true
+        }
+      },
+      "engines": {},
+      "installationRole": "runtime"
+    },
+    "three": {
+      "version": "0.186.1",
+      "registryUrl": "https://registry.npmjs.org/three",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "runtime"
+    },
+    "@react-three/fiber": {
+      "version": "9.8.1",
+      "registryUrl": "https://registry.npmjs.org/@react-three%2ffiber",
+      "peerDependencies": {
+        "expo": ">=43.0",
+        "expo-asset": ">=8.4",
+        "expo-file-system": ">=11.0",
+        "expo-gl": ">=11.0",
+        "react": ">=19 <19.4",
+        "react-dom": ">=19 <19.4",
+        "react-native": ">=0.78",
+        "three": ">=0.156"
+      },
+      "peerDependenciesMeta": {
+        "react-dom": {
+          "optional": true
+        },
+        "react-native": {
+          "optional": true
+        },
+        "expo": {
+          "optional": true
+        },
+        "expo-asset": {
+          "optional": true
+        },
+        "expo-file-system": {
+          "optional": true
+        },
+        "expo-gl": {
+          "optional": true
+        }
+      },
+      "engines": {},
+      "installationRole": "runtime"
+    },
+    "@react-three/drei": {
+      "version": "10.7.9",
+      "registryUrl": "https://registry.npmjs.org/@react-three%2fdrei",
+      "peerDependencies": {
+        "@react-three/fiber": "^9.0.0",
+        "react": "^19",
+        "react-dom": "^19",
+        "three": ">=0.159"
+      },
+      "peerDependenciesMeta": {
+        "react-dom": {
+          "optional": true
+        }
+      },
+      "engines": {},
+      "installationRole": "runtime"
+    },
+    "zustand": {
+      "version": "5.0.15",
+      "registryUrl": "https://registry.npmjs.org/zustand",
+      "peerDependencies": {
+        "@types/react": ">=18.0.0",
+        "immer": ">=9.0.6",
+        "react": ">=18.0.0",
+        "use-sync-external-store": ">=1.2.0"
+      },
+      "peerDependenciesMeta": {
+        "@types/react": {
+          "optional": true
+        },
+        "immer": {
+          "optional": true
+        },
+        "react": {
+          "optional": true
+        },
+        "use-sync-external-store": {
+          "optional": true
+        }
+      },
+      "engines": {
+        "node": ">=12.20.0"
+      },
+      "installationRole": "runtime"
+    },
+    "d3-scale": {
+      "version": "4.0.2",
+      "registryUrl": "https://registry.npmjs.org/d3-scale",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {
+        "node": ">=12"
+      },
+      "installationRole": "runtime"
+    },
+    "d3-array": {
+      "version": "3.2.4",
+      "registryUrl": "https://registry.npmjs.org/d3-array",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {
+        "node": ">=12"
+      },
+      "installationRole": "runtime"
+    },
+    "server-only": {
+      "version": "0.0.1",
+      "registryUrl": "https://registry.npmjs.org/server-only",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "runtime"
+    },
+    "@types/node": {
+      "version": "24.19.1",
+      "registryUrl": "https://registry.npmjs.org/@types%2fnode",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "development"
+    },
+    "tsx": {
+      "version": "4.23.15",
+      "registryUrl": "https://registry.npmjs.org/tsx",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "installationRole": "development"
+    },
+    "typescript": {
+      "version": "7.0.2",
+      "registryUrl": "https://registry.npmjs.org/typescript",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {
+        "node": ">=16.20.0"
+      },
+      "installationRole": "development"
+    },
+    "tailwindcss": {
+      "version": "4.3.3",
+      "registryUrl": "https://registry.npmjs.org/tailwindcss",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "development"
+    },
+    "@tailwindcss/postcss": {
+      "version": "4.3.3",
+      "registryUrl": "https://registry.npmjs.org/@tailwindcss%2fpostcss",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "development"
+    },
+    "@types/react": {
+      "version": "19.3.0",
+      "registryUrl": "https://registry.npmjs.org/@types%2freact",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "development"
+    },
+    "@types/react-dom": {
+      "version": "19.3.0",
+      "registryUrl": "https://registry.npmjs.org/@types%2freact-dom",
+      "peerDependencies": {
+        "@types/react": "^19.3.0"
+      },
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "development"
+    },
+    "@types/three": {
+      "version": "0.186.0",
+      "registryUrl": "https://registry.npmjs.org/@types%2fthree",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "development"
+    },
+    "@types/d3-scale": {
+      "version": "4.0.9",
+      "registryUrl": "https://registry.npmjs.org/@types%2fd3-scale",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "development"
+    },
+    "@types/d3-array": {
+      "version": "3.2.2",
+      "registryUrl": "https://registry.npmjs.org/@types%2fd3-array",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {},
+      "installationRole": "development"
+    },
+    "@playwright/test": {
+      "version": "1.64.0",
+      "registryUrl": "https://registry.npmjs.org/@playwright%2ftest",
+      "peerDependencies": {},
+      "peerDependenciesMeta": {},
+      "engines": {
+        "node": ">=20"
+      },
+      "installationRole": "development"
+    }
+  },
+  "transitiveRuntimeRequirement": {
+    "name": "camera-controls",
+    "version": "3.1.2",
+    "engines": {
+      "node": ">=22.0.0",
+      "npm": ">=10.5.1"
+    }
+  }
+}
