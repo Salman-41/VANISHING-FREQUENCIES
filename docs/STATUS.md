@@ -1,8 +1,72 @@
 # Project status
 
-**Stage:** Design system and page implementation plan complete
+**Stage:** Local Next.js foundation complete and verified
 
 **Updated:** 2026-10-08
+
+## Completed: local frontend foundation
+
+- Inspected the existing repository, project rules, status, all research/data/design documents and validated contracts before implementation. Continued in this workspace; no nested replacement project was generated. The framework-generated `AGENTS.md` was inspected and its relevant installed Next documentation read.
+- Installed exact stable versions after official npm registry peer/engine inspection: **Next 16.4.0, React/React DOM 19.3.0, TypeScript 7.0.2, Tailwind/PostCSS 4.3.3, GSAP 3.15.0, @gsap/react 2.1.2, Lenis 1.3.26, Three 0.186.1, Fiber 9.8.1, Drei 10.7.9, Zustand 5.0.15, Zod 4.6.5, d3-scale 4.0.2 and d3-array 3.2.4**. Playwright 1.64.0 and relevant typings support local checks. Pinned lockfile and [compatibility receipt](development/dependency-compatibility.json) preserve the declarations.
+- Runtime: **Node 24.21.0 LTS / npm 11.19.0**. The machine's default Node 20 installation reported a transitive camera-controls engine warning. Reinstalled with `npm install --strict-peer-deps --engine-strict` under the official local Node 24 toolchain; no force/legacy-peer flags. `.nvmrc`, package engines and developer instructions record the requirement. The downloaded Node archive matched the official SHA-256 list. No global runtime/PATH setting was changed.
+- Created App Router foundations for `/`, `/species`, `/species/[slug]`, `/soundscapes`, `/data`, `/about`, `/sources` and `/credits`. Six reviewed slugs prerender through one detail template; unknown slugs return 404. Added root layout/metadata, loading/error/global-error/404, shared header/footer, editorial/action/note/evidence components, responsive tokens and normal-flow chapter anchors.
+- Bundled actual Archivo Latin variable upright and real italic WOFF2 files, original OFL license and acquisition hashes. Upright is preloaded; italic is loaded on use. Credits state the actual copyright/license. No wildlife photo or recording was acquired, hotlinked or promoted to cleared.
+- Implemented a native fullscreen navigation dialog with explicit Tab/Shift-Tab wrapping, Escape/Close, background inertness, opener restoration, route focus and JavaScript-free page links. Per-tree Zustand preferences use a strict versioned Zod contract; OS reduced motion wins, lighter-media and motion choices remain independent, and storage failures are safe.
+- Server-only research access validates the saved JSON and its matching successful report/fingerprint/hash/byte size, deduplicated through React request caching. The large research bundle never crosses a client provider boundary. Dates, geography, measurement method/uncertainty, public-summary status limitations and citations remain adjacent to evidence. A Turbopack alias resolves the original research schema's `.js` specifier without editing that schema.
+- Data page provides a semantic 2024 global annual table and a separate 2026 endpoint table, source dates/version/attribution and licensed-use limits. No interpolated species populations, cross-edition splice, occurrence abundance, inferred confidence level or sonification was added. Other licensed annual series remain available for future controls.
+- Added opt-in GSAP/ScrollTrigger/Lenis loading, pure observed-record D3 scales and a lazy, clearance-gated Web Audio session interface. No global Lenis instance, animation ticker, autoplay, synthetic sound, WebGL canvas or unnecessary backend starts in the foundation. Three/Fiber/Drei are installed for later features and excluded from the initial feature graph.
+- Added [local development handoff](development/foundation.md), root README, `tests/foundation/`, `tests/browser/`, development and production Playwright configurations and local npm commands. Native reading and unavailable-media states are implemented; the cinematic signatures, player, search/filter and interactive charts remain later features.
+
+### Installation and exact local verification
+
+Commands were run from the repository root with `/tmp/vf-node24/node-v24.21.0-linux-x64/bin` prepended to the command environment's PATH. For future sessions, select Node from `.nvmrc` with an existing runtime manager; the temporary extraction is not a permanent system installation.
+
+```bash
+export PATH="/tmp/vf-node24/node-v24.21.0-linux-x64/bin:$PATH"
+npm install --strict-peer-deps --engine-strict
+npx playwright install chromium
+npm run test:local
+npm run data:validate
+npm run check:dependencies
+npm run dev
+npm run test:browser
+npm run test:browser:production
+```
+
+| Final check | Exact result |
+| --- | --- |
+| Strict peer/engine installation | Passed under Node 24; npm reported zero audit vulnerabilities at installation |
+| `npm run check:dependencies` | Passed, exit 0; no missing/invalid required peers |
+| `npm run typecheck` | Passed, zero TypeScript errors; strict mode and unchecked-index checks retained |
+| Existing Python pipeline tests | **43 passed**; builds isolated temporary outputs |
+| Existing TypeScript export tests | **12 passed** |
+| Existing species validation tests | **11 passed** |
+| New foundation unit tests | **8 passed**: checked loader, exact slugs/order, references, edition-safe scales, media clearance and isolated/versioned preferences |
+| `npm run test:local` total | **74 passed**, zero failures |
+| `npm run data:validate` | Passed: **366 index records, six species, two population records, six stories** |
+| Local development server | Started successfully at **http://127.0.0.1:3000** |
+| Development Chromium suite | **6 passed**; latest full run **1.2 minutes** |
+| `npm run build` | Passed: compiled, built-in TypeScript check, generated **15/15 framework pages**; seven fixed public URLs + six species detail URLs |
+| `npm run test:browser:production` | Final build passed + **6 Chromium checks passed in 18.2 seconds** against local production on **127.0.0.1:3001**; test server stops after the suite |
+| Browser route coverage | **13 populated URLs** returned 200 and one meaningful H1; unknown species and unmatched path returned 404 |
+| Browser evidence checks | Historical whale value/stock/period/CV/publication/check date + source link; tiger missing-estimate state; **51 annual world rows** / **nine separate endpoint rows**; citation date retained |
+| Browser accessibility checks | Menu containment/Escape/focus restoration/route focus; **320 px** reflow on all populated URLs; OS motion precedence; persisted lighter media; essential evidence/navigation without JavaScript |
+| Browser error/network checks | Zero page errors or hydration warnings in final production route check; no remote page/media/font requests; no audio/video/canvas in the foundation |
+| Visual inspection | Desktop **1440×900** opening and mobile **390×844** whale detail inspected; computed obsidian/ivory colors and local font loading confirmed; no mobile horizontal page overflow |
+| Original artifact preservation | **50 original data/docs files** hashed before work; all unchanged before status update. **49/49 other original files** remain unchanged after this required status update |
+
+Initial build resolution, focus-wrap and streamed-404 issues were corrected and rerun. A first browser run was interrupted during server setup; the final development and production runs above passed. Temporary hot-refresh warnings during source/font editing are not claimed as clean-run results. Browser audits above are scoped checks, not WCAG certification or an assistive-technology/device-performance audit.
+
+Original saved export SHA-256 remains `36b87bf96cf579f6bcf5e9b97157573e897de62e65c7829bb9b3b460017d670c`; build fingerprint remains `23585475d87da7054520dacc7a12083a4adf60f204fbae387292dc8b97bf13f4`. No original `data/` file or preceding research/design/data specification changed. Future legitimate pipeline regeneration will use the new dependency lock in its fingerprint; this stage did not replace the verified saved artifact.
+
+### Remaining foundation and evidence limits
+
+- Wildlife media remains unacquired/uncleared. Complete item-level provenance, compatible permission, wild/captive/geographic context, final credits and accessible descriptions before enabling image/audio modules. The Web Audio interface is not a completed recording player; live decoding, volume/pause controls and reviewed file-ledger binding await cleared assets.
+- Formal IUCN dates/appropriate authorization, held Nepal/Bornean original methods, full 2026 annual LPI/methodology, underlying LPD and any BirdLife bulk product permissions remain unresolved. Unknown/held values remain unavailable; no API token or restricted data was requested.
+- Full cinematic interactions, richer exploration/filter controls, SVG charts, actual media crop review and optional WebGL are outside this foundation. Screen-reader, forced-colors/text-zoom and representative mobile performance review remain necessary for later implementation. Core content is readable without these enhancements.
+- No hosting provider, deployment script, cloud infrastructure, domain, paid service, database or API backend was added. Server file access reads local versioned JSON. Only local development/production processes were used.
+
+**Stop:** Local project foundation complete and verified. Continue only on a subsequent implementation task, with the existing scientific/media limits intact.
 
 ## Completed: design system and page planning stage
 
@@ -138,4 +202,4 @@ Build fingerprint: `23585475d87da7054520dacc7a12083a4adf60f204fbae387292dc8b97bf
 
 ## Handoff
 
-Read the project rules, species research, `docs/data/` specifications and all eleven `docs/design/` documents together. Use `data/processed/biodiversity.json` as the validated pipeline bundle; the earlier species JSON remains complete research with held values. Unresolved facts stay unknown and held values are excluded from the frontend export. The reusable design system and eight-page plan translate the creative blueprint into named modules and tokens. Follow documented mobile, reduced-motion, silent and unavailable-media alternatives. Evidence/rights clearance remains necessary for affected public content. This stage stops here; frontend development requires a subsequent task.
+Read the project rules, species research, `docs/data/`, all eleven `docs/design/` documents and [local foundation handoff](development/foundation.md) together. Use the implemented server-only access to `data/processed/biodiversity.json`; earlier species JSON is complete research with held values and must not provide UI numbers. Inspect existing files before future changes and update this status at every stage. Preserve dated evidence, independent report editions, mobile/reduced-motion reading and explicit unknown/media-unavailable states. The Next.js foundation is now implemented and verified; cinematic features, richer page interactions and cleared media require a subsequent task. Evidence/rights review remains necessary for affected content.

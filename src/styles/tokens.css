@@ -9,7 +9,7 @@
   --color-text: var(--color-ivory);
   --color-muted: var(--color-stone);
   --color-accent: var(--color-rust);
-  --color-surface: #131817;
+  --color-surface: var(--color-obsidian);
   --color-border: var(--color-stone);
   --color-focus: var(--color-ivory);
   --font-sans: var(--font-archivo), Arial, Helvetica, sans-serif;
@@ -17,30 +17,91 @@
   --text-chapter: clamp(2.75rem, 1.5429rem + 4.9524vw, 6rem);
   --text-page: clamp(2.5rem, 1.5714rem + 3.8095vw, 5rem);
   --text-species: clamp(2.25rem, 1.6rem + 2.6667vw, 4rem);
-  --text-section: clamp(1.75rem, 1.6571rem + .381vw, 2rem);
+  --text-species-row: clamp(2.25rem, 1.9714rem + 1.1429vw, 3rem);
+  --text-section: clamp(1.75rem, 1.6571rem + 0.381vw, 2rem);
   --text-estimate: clamp(3rem, 2.6286rem + 1.5238vw, 4rem);
-  --text-lead: clamp(1.25rem, 1.1571rem + .381vw, 1.5rem);
-  --text-body: clamp(1.0625rem, 1.0393rem + .0952vw, 1.125rem);
-  --text-meta: .875rem;
-  --space-0: 0; --space-1: .25rem; --space-2: .5rem; --space-3: .75rem;
-  --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem;
-  --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
-  --space-24: 6rem; --space-36: 9rem;
-  --page-margin: 1rem; --grid-columns: 4; --grid-gap: .75rem;
-  --content-max: 97.5rem; --reading-max: 44rem;
-  --motion-fast: 160ms; --motion-standard: 240ms; --motion-slow: 480ms;
-  --ease-editorial: cubic-bezier(.22, 1, .36, 1);
+  --text-lead: clamp(1.25rem, 1.1571rem + 0.381vw, 1.5rem);
+  --text-body: clamp(1.0625rem, 1.0393rem + 0.0952vw, 1.125rem);
+  --text-meta: 0.875rem;
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-36: 9rem;
+  --page-margin: 1rem;
+  --grid-columns: 4;
+  --grid-gap: 0.75rem;
+  --content-max: 97.5rem;
+  --reading-max: 62ch;
+  --motion-fast: 160ms;
+  --motion-standard: 240ms;
+  --motion-slow: 600ms;
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
   --vf-motion-duration-instant: 0ms;
   --vf-motion-duration-state: 160ms;
   --vf-motion-duration-panel: 240ms;
   --vf-motion-duration-content: 320ms;
   --vf-motion-duration-scene: 600ms;
   --vf-motion-duration-audio-stop: 150ms;
-  --vf-motion-ease-state: cubic-bezier(0, 0, .2, 1);
-  --vf-motion-ease-editorial: cubic-bezier(.22, 1, .36, 1);
+  --vf-motion-ease-state: cubic-bezier(0, 0, 0.2, 1);
+  --vf-motion-ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
   --vf-motion-distance-entry: 12px;
+  /* Canonical design-document names, with short aliases for foundation CSS. */
+  --vf-color-surface-page: var(--color-background);
+  --vf-color-surface-inset: var(--color-surface);
+  --vf-color-text-primary: var(--color-text);
+  --vf-color-text-secondary: var(--color-muted);
+  --vf-color-border-control: var(--color-border);
+  --vf-color-focus-ring: var(--color-focus);
+  --vf-color-focus-gap: var(--color-background);
+  --vf-color-action-primary-background: var(--color-rust);
+  --vf-color-action-primary-foreground: var(--color-obsidian);
+  --vf-type-size-opening: var(--text-opening);
+  --vf-type-size-chapter: var(--text-chapter);
+  --vf-type-size-page: var(--text-page);
+  --vf-type-size-species: var(--text-species);
+  --vf-type-size-species-row: var(--text-species-row);
+  --vf-type-size-section: var(--text-section);
+  --vf-type-size-estimate: var(--text-estimate);
+  --vf-type-size-lead: var(--text-lead);
+  --vf-type-size-body: var(--text-body);
+  --vf-type-size-meta: var(--text-meta);
+  --vf-layout-reading-max: var(--reading-max);
+  --vf-layout-content-max: var(--content-max);
+  --vf-layout-grid-columns: var(--grid-columns);
+  --vf-layout-grid-gutter: var(--grid-gap);
+  --vf-layout-page-margin: var(--page-margin);
 }
-@media (min-width: 360px) { :root { --page-margin: 1.25rem; } }
-@media (min-width: 768px) { :root { --page-margin: 2rem; --grid-columns: 8; --grid-gap: 1.25rem; } }
-@media (min-width: 1024px) { :root { --page-margin: 2.5rem; --grid-columns: 12; } }
-@media (min-width: 1280px) { :root { --page-margin: 3.75rem; --grid-gap: 1.5rem; } }
+@media (min-width: 360px) {
+  :root {
+    --page-margin: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --page-margin: 2rem;
+    --grid-columns: 8;
+    --grid-gap: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --page-margin: 2.5rem;
+    --grid-columns: 12;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --page-margin: 3.75rem;
+    --grid-gap: 1.5rem;
+  }
+}

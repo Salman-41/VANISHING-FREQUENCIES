@@ -7,7 +7,7 @@ const config: NextConfig = {
     // The preserved research contract uses Node-style .js specifiers for TS sources.
     resolveAlias: { "./species.schema.js": "./data/schemas/species.schema.ts" },
   },
-  // Separate dev/build output allows local development to remain running during a build.
+  // Separate local output directories keep development and production artifacts distinct.
   distDir: process.env.NODE_ENV === "development" ? ".next-dev" : ".next",
 };
 
