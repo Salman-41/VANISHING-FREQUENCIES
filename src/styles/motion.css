@@ -19,57 +19,73 @@
   margin-top: 1rem;
 }
 .aperture-control[hidden],
-.reading-margin[hidden] {
+.reading-margin[hidden],
+.reading-line[hidden] {
   display: none;
 }
+/* The 60px page gutter begins at 1280px. Controls occupy 44px + 8px, outside the reading area. */
 .reading-margin {
   position: fixed;
-  inset: auto 1.5rem 1rem auto;
+  inset: 30vh 0.5rem auto auto;
   z-index: 20;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #51544e;
-  background: #0b0d0d;
-  max-width: calc(100vw - 2rem);
+  width: 44px;
+  padding: 0;
 }
 .reading-label {
-  display: block;
-  font-size: 0.6875rem;
-  color: #a4a197;
-  letter-spacing: 0.08em;
+  display: none;
 }
 .reading-margin ol {
   display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 .reading-margin a {
   display: flex;
-  min-width: 44px;
+  width: 44px;
   min-height: 44px;
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
+  color: #a4a197;
   text-decoration: none;
 }
 .reading-margin a[aria-current] {
   color: #eceae4;
-  box-shadow: inset 0 -2px #cf5a3d;
+  box-shadow: inset -2px 0 #cf5a3d;
 }
 .reading-track {
+  position: absolute;
+  inset: 0 -2px 0 auto;
   display: block;
-  height: 1px;
+  width: 1px;
   background: #51544e;
   overflow: hidden;
 }
 .reading-fill {
   display: block;
-  height: 1px;
+  width: 100%;
+  height: 100%;
   background: #eceae4;
-  transform: scaleX(0);
+  transform: scaleY(var(--reading-progress, 0));
+  transform-origin: top;
+}
+.reading-line {
+  display: none;
+  position: fixed;
+  inset: 0 0 auto;
+  height: 1px;
+  z-index: 20;
+  background: #51544e;
+  pointer-events: none;
+}
+.reading-line .reading-fill {
+  transform: scaleX(var(--reading-progress, 0));
   transform-origin: left;
 }
-body:has(dialog[open]) .reading-margin {
+body:has(dialog[open]) .reading-margin,
+body:has(dialog[open]) .reading-line {
   visibility: hidden;
 }
 html.lenis,
@@ -87,27 +103,25 @@ html.lenis body {
     height: 224px;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
   .reading-margin {
-    inset: auto 0.75rem 0.75rem auto;
-    padding: 0.25rem 0.5rem;
-  }
-  .reading-label {
     display: none;
   }
-  .reading-margin a {
-    min-width: 32px;
+  .reading-line:not([hidden]) {
+    display: block;
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .scene-mask,
   .reading-margin,
+  .reading-line,
   .aperture-control {
     display: none !important;
   }
 }
 html[data-motion="reduced"] .scene-mask,
 html[data-motion="reduced"] .reading-margin,
+html[data-motion="reduced"] .reading-line,
 html[data-motion="reduced"] .aperture-control {
   display: none !important;
 }

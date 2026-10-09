@@ -73,6 +73,9 @@ export function HomepageMotion({ children }: { children: ReactNode }) {
           <span className="reading-fill" />
         </span>
       </nav>
+      <span className="reading-line" hidden aria-hidden="true">
+        <span className="reading-fill" />
+      </span>
       {enabled && Controller ? <Controller root={root} /> : null}
     </div>
   );

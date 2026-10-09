@@ -198,7 +198,8 @@ test("touch swipe preserves native scrolling without a smooth-scroll owner", asy
         requestAnimationFrame(frame);
       }),
   );
-  await page.locator('.reading-margin a[href="#trends"]').tap();
+  await page.getByRole("button", { name: "Menu", exact: true }).tap();
+  await page.getByRole("dialog").locator('a[href="/#trends"]').tap();
   await expect(page).toHaveURL(/#trends$/);
   await context.close();
 });
@@ -339,4 +340,24 @@ test("native evidence expansion refreshes chapter geometry without animating cha
       .locator(".index-plot-desktop .chart-estimate")
       .getAttribute("points"),
   ).toBe(path);
+});
+
+test("chapter controls stay in the desktop gutter and compact progress does not cover copy", async ({
+  page,
+}) => {
+  await desktop(page);
+  const main = await page.locator("main").boundingBox();
+  const margin = await page.locator(".reading-margin").boundingBox();
+  expect(margin!.x).toBeGreaterThanOrEqual(main!.x + main!.width);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(page.locator(".reading-margin")).toBeHidden();
+  await expect(page.locator(".reading-line")).toBeVisible();
+  expect((await page.locator(".reading-line").boundingBox())!.height).toBe(1);
+  expect(
+    await page
+      .locator(".reading-line")
+      .evaluate((node) => getComputedStyle(node).pointerEvents),
+  ).toBe("none");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await expect(page.locator(".reading-line")).toBeHidden();
 });

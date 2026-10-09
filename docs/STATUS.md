@@ -1,10 +1,48 @@
 # Project status
 
-**Stage:** Complete static homepage implemented and verified
+**Stage:** Homepage motion system implemented and verified
 
-**Updated:** 2026-10-08
+**Updated:** 2026-10-09
 
-## Completed: complete static homepage
+## Completed: homepage motion system
+
+- Added a preference-aware client enhancement boundary around the complete server-rendered documentary. Scientific content stays visible before hydration, if the motion import fails, with JavaScript disabled, and in reduced-motion mode. All existing research contracts, source dates, captions and citations remain intact.
+- Implemented GSAP / `@gsap/react` / ScrollTrigger with scoped `useGSAP`, `gsap.matchMedia`, context-safe event callbacks, reversible timelines and explicit cleanup. Resize rebuilding reverts the prior scope; image/font completion and native disclosure expansion refresh cached geometry. No React state updates occur during scrolling.
+- Integrated one Lenis controller for fitting fine-pointer desktop viewports, driven by one GSAP ticker callback using a real millisecond clock. Scroll events synchronize ScrollTrigger; no second RAF controller, transformed root, scroller proxy, normalization, scroll snapping or forced horizontal travel was introduced. Touch/compact/short viewports keep native scrolling.
+- Added opaque typography entrances, chapter rule entrance/exit timelines, opening landscape masking, restrained landscape parallax, and an explicit reversible whale listening aperture. The whale photograph's scale/crop stays fixed. All measurements, chart paths/points/bounds, body text and citations remain static; no numerical count-up, invented trajectory, acoustic inference or animated editorial waveform was added.
+- Added one optional snow-leopard **image-panel-only** pin. It requires ≥1024×800, fine pointer, image fit and real adjacent evidence travel, capped at one viewport. Captions, credit links, controls, estimates and headings remain outside the pin; the spacer protects following copy. Unsuitable layouts omit it entirely.
+- Added chapter location/progress with desktop controls in the ≥1280px outer gutter. Compact screens use a noninteractive 1px top-edge line and native chapter index/menu links. This avoids covering scientific descriptions, uncertainty, credits or footer controls. Native cursor link feedback has an equivalent keyboard state; no cursor replacement or pointer-coordinate tracking was added.
+- Animated the fullscreen native dialog surface as one 160ms group; links, focus and background inertness remain immediately available. Escape/Close/navigation release focus immediately. A stationary header rule acknowledges route commits without a main-content overlay or delayed navigation. Modal observation suspends Lenis; hidden documents detach its owned ticker. Route exits destroy the controller and remove its pin spacers/classes.
+- OS reduced motion or the user's reading preference immediately reverts optional work; reduced-data/lighter-media choices also disable the motion scope. Native keyboard/focus/hash/history actions cancel pending wheel motion and synchronize the current page bounds. Preference changes, resize and unmount remove listeners, observers, ticker callbacks, triggers, pending frames and obsolete async callbacks; unavailable enhancement controls restore chapter focus.
+- Added [motion handoff](development/motion-system.md), two fit/token unit checks, eleven motion browser checks, six production review screenshots and a limited [frame observation](development/review/motion-frame-observation.json). README points to the new handoff. No new dependency versions, audio, 3D, backend, hosting or deployment were added.
+
+### Exact final local results
+
+All final commands used Node **24.21.0 / npm 11.19.0**, with the compatible local runtime prepended to PATH. The temporary official Node archive was recreated and checked against the publisher's SHA-256 list. No global runtime setting was changed. Development used `127.0.0.1:3000`; production browser tests owned port 3001. A separate temporary production server on port 3002 supplied review screenshots/profile and was stopped after review.
+
+| Check | Final result |
+| --- | --- |
+| `npm run test:local` | **79 passed:** 43 Python + 12 export contracts + 11 species + 13 foundation/preferences/media/motion; TypeScript passed |
+| `npm run test:browser` | **24 passed**, Chromium development; 2.2 minutes |
+| `npm run test:browser:production` | **Build and all 24 browser checks passed**; browser suite 1.1 minutes |
+| Production generation | All 15 framework pages generated; homepage remains prerendered |
+| Inputs / lifecycle | Mouse wheel, Page Down during wheel momentum, Tab/Shift-Tab/Escape, anchor target focus, CDP native touch swipe, repeated OS preferences, live user preference, modal suspension, resize, route exit and Back/history restoration passed |
+| Responsive reading | 1440, 1024, 768, 390 and 320px; no document horizontal overflow; gutter/non-obstruction check passed |
+| Native fallback | All eight homepage chapters, photographs, citations, native table and chapter jump remain available without JavaScript; reduced mode removes masks, pins, Lenis and optional controls |
+| Scientific preservation | All **45 pre-stage scientific data/media files unchanged byte-for-byte**; export SHA-256 remains `36b87bf96cf579f6bcf5e9b97157573e897de62e65c7829bb9b3b460017d670c` |
+| Local performance observation | Warm production Chromium 156.0.8078.4, 1440×900, no CPU throttling: **55 active-scroll frame intervals**, median/p95/max approximately **16.7ms**, **0 intervals >33.3ms**, **0 observed long tasks**, no page errors in the review flow |
+
+Intermediate checks exposed and fixed a reused whale-control ID, reduced-motion listener-order race, App Router history state for chapter links, restoration offsets from enhancement geometry, stale Lenis bounds during native focus, and an uncancelled wheel tween overriding Page Down. Visual review also moved the floating chapter bar out of scientific copy. One added chart test initially used the wrong selector and was corrected. A touch test now waits for native momentum to settle before tapping. Only the final complete passing suites above count as completion evidence. The runner's `NO_COLOR`/`FORCE_COLOR` notice is not an application failure.
+
+### Remaining qualifications and source gaps
+
+- Browser checks use Chromium viewport/input emulation. Physical touch devices, Safari/Firefox, screen-reader certification and a full accessibility audit are not verified here. The single host frame-cadence sample is not isolated JavaScript work, a sustained benchmark or a guarantee on mobile hardware; representative-device performance review remains appropriate.
+- No cleared wildlife recording is available. Sound remains descriptive and silent; audio/3D implementation is outside this stage.
+- Existing IUCN assessment-date/authorization gaps, held population estimates, unknown global totals, asset capture/context gaps and unavailable additional datasets remain as documented in research and prior-stage records. This stage acquired or inferred no new scientific data.
+
+**Stop:** The homepage motion system is ready. This stage is complete; continue only with the next explicitly requested stage.
+
+## Previous stage (2026-10-08): complete static homepage
 
 - Implemented all eight chapters in the existing Next.js app: opening/editorial waveform, Himalayan landscape and snow leopard, ocean/blue whale, biodiversity index story, sound knowledge, six species, conservation field notes, and closing/exploration links. Oversized Archivo typography, natural-color photography, quiet reading margins and differentiated desktop/mobile compositions follow The Listening Margin blueprint. Native scrolling remains the complete experience.
 - Added reusable server components under `src/features/homepage/` and scoped `src/styles/homepage.css`: chapters, apertures/credits, cited descriptions, evidence disclosure, historical measurement margins, annual index SVG/table, species register and conservation notes. Stable scene/chapter/audio hooks prepare later enhancement without starting those systems.

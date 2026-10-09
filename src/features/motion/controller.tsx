@@ -78,10 +78,16 @@ export function MotionController({
           const preserveReading = window.scrollY > 0;
           const margin = el.querySelector<HTMLElement>(".reading-margin")!;
           const links = Array.from(
-            margin.querySelectorAll<HTMLAnchorElement>("a"),
+            el.querySelectorAll<HTMLAnchorElement>(
+              ".reading-margin a, .chapter-index a",
+            ),
           );
-          const fill = margin.querySelector<HTMLElement>(".reading-fill")!;
+          const fills = Array.from(
+            el.querySelectorAll<HTMLElement>(".reading-fill"),
+          );
+          const readingLine = el.querySelector<HTMLElement>(".reading-line")!;
           margin.hidden = false;
+          readingLine.hidden = false;
           el.dataset.motionRuntime = "active";
           let current = -1;
           let chapterTops: number[] = [];
@@ -103,13 +109,24 @@ export function MotionController({
             });
             if (index !== current) {
               current = index;
-              links.forEach((link, i) => {
-                if (i === index) link.setAttribute("aria-current", "location");
+              links.forEach((link) => {
+                if (link.hash === `#${chapters[index]!.id}`)
+                  link.setAttribute("aria-current", "location");
                 else link.removeAttribute("aria-current");
               });
             }
             const length = Math.max(1, documentHeight - window.innerHeight);
-            fill.style.transform = `scaleX(${Math.max(0, Math.min(1, (window.scrollY - documentTop) / length))})`;
+            fills.forEach((fill) =>
+              fill.style.setProperty(
+                "--reading-progress",
+                String(
+                  Math.max(
+                    0,
+                    Math.min(1, (window.scrollY - documentTop) / length),
+                  ),
+                ),
+              ),
+            );
             margin.style.visibility =
               documentTop + documentHeight - window.scrollY < innerHeight - 128
                 ? "hidden"
@@ -458,8 +475,11 @@ export function MotionController({
                 document.getElementById(target)?.focus({ preventScroll: true });
             }
             margin.hidden = true;
+            readingLine.hidden = true;
             links.forEach((link) => link.removeAttribute("aria-current"));
-            fill.style.removeProperty("transform");
+            fills.forEach((fill) =>
+              fill.style.removeProperty("--reading-progress"),
+            );
             margin.style.removeProperty("visibility");
             delete el.dataset.motionRuntime;
             delete el.dataset.scrollController;
