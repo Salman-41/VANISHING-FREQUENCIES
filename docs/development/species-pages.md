@@ -46,7 +46,7 @@ The portrait module reserves original image proportions and fits the full source
 - Conservation category provenance is a verified public summary, not an authorized formal assessment. All six formal assessment dates remain unknown. The record verification date is clearly distinguished; future authorized precise dates have a separate date field.
 - Threats, habitat, distribution, ecological role, trend interpretation, conservation actions and outcomes retain source links and check dates. Each species has a consolidated source register with primary links and exact locations, plus taxonomy and evidence gaps.
 - No recording of any selected species is cleared. The sound section retains its cited knowledge and explicit missing-recording state, with a link to the existing independent NPS habitat listening room. Humpback audio is never represented as blue whale audio.
-- Metadata includes common/scientific names, concise descriptions, relative canonical paths, and Open Graph article descriptions. Filter URLs use noindex/follow to avoid indexing many subsets of the same collection. No public domain or deployment configuration is added.
+- Metadata includes common/scientific names, concise descriptions, relative canonical paths, and Open Graph article descriptions. Filter URLs use noindex/follow to avoid indexing many subsets of the same collection. No domain, hosting, or deployment configuration is added.
 
 ## Reused asset rights review
 

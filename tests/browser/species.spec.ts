@@ -132,6 +132,10 @@ test("photograph load failure preserves identity, credits and scientific evidenc
   await expect(page.locator(".species-photo-hero .species-photo-error")).toContainText("Photograph unavailable");
   await expect(page.locator(".species-photo-hero figcaption")).toContainText("T. R. Shankar Raman");
   await expect(page.locator("#snow-india-spai")).toContainText("718 individuals");
+  await page.locator(".species-previous-next").getByRole("link", { name: /Blue whale/ }).click();
+  await expect(page.locator("main h1")).toHaveText("Blue whale");
+  await expect(page.locator(".species-photo-hero img")).toBeVisible();
+  await expect(page.locator(".species-photo-hero .species-photo-error")).toHaveCount(0);
 });
 
 test("pending filter navigation retains usable results and announces loading", async ({ page }) => {

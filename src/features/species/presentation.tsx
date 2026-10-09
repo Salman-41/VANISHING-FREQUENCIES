@@ -15,7 +15,7 @@ export function SpeciesPortrait({ species, variant = "card", preload = false }: 
   if (!image) return <div className="species-photo-missing"><p className="eyebrow">Image unavailable</p><p>No cleared photograph is available for this record.</p></div>;
   return <figure className={`species-photo species-photo-${variant}`} data-media={image.id}>
     <div className="species-photo-frame" style={{ aspectRatio: `${image.width} / ${image.height}` }}>
-      <PortraitImage src={image.localPath} alt={image.alt} width={image.width} height={image.height} preload={preload}
+      <PortraitImage key={image.id} src={image.localPath} alt={image.alt} width={image.width} height={image.height} preload={preload}
         sizes={variant === "hero" ? "(min-width: 900px) 55vw, 100vw" : variant === "related" ? "(min-width: 768px) 35vw, 100vw" : "(min-width: 1100px) 32vw, (min-width: 700px) 45vw, 100vw"} />
     </div>
     <figcaption>

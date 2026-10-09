@@ -1,8 +1,45 @@
 # Project status
 
-**Stage:** Immersive soundscapes implemented and locally verified
+**Stage:** Species Explorer and static detail pages implemented and locally verified
 
 **Updated:** 2026-10-09
+
+## Completed: Species Explorer and species detail pages
+
+- Implemented `/species` with literal common/scientific-name search, repeated-value conservation/animal-group/habitat/region filters, four sorting modes, URL queries, explicit Apply/Clear, result announcements, pending and no-results states, and visible correction of invalid URL values. OR applies within a group; groups and name search use AND. All current records and global option counts remain available; missing media never excludes a record. The normal GET form also filters without JavaScript.
+- Bound categories to `conservation.category`, groups to cited taxonomy classes, and broad habitat/region navigation tags to the reviewed habitat/distribution descriptions. The mapping and source IDs are in [species page handoff](development/species-pages.md). No occurrence-to-abundance conversion, range polygons, population ranking or interpolated history is used. Unclassified future index entries stay visible with explicit facets.
+- Built all six `/species/[slug]` records as statically generated editorial pages: credited full-proportion portraits, common/scientific identity, qualified conservation summary and date availability, habitat/geographical context, eligible population evidence and scoped trends, threats, ecological significance, sound knowledge, conservation actions/outcomes, taxonomy, source register, evidence gaps, related records and previous/next narrative navigation. Metadata includes species/scientific names, descriptions, relative canonicals and Open Graph article descriptions; filtered explorer URLs use noindex/follow.
+- Added small client boundaries for the form, media errors and optional GSAP photo transitions. Server components retain scientific content/citations; the full provenance bundle is not imported by the client filter controls. Scoped 240 ms photo transitions clean up on revision/unmount and live motion/media preference changes. Text, controls, measurements and source links remain visible throughout. Filter commits preserve keyboard focus and history restores fields. A source-keyed image boundary recovers when moving from a failed portrait to a different species.
+- Preserved scientific and media data bytes. Existing eligible snow leopard/blue whale estimates keep all scope, period, method and uncertainty notes; the other four show estimate gaps. Formal assessment dates and recordings of the six selected species remain unavailable and explicitly labeled. No NPS humpback/ptarmigan/thrush clip is substituted as selected-species audio.
+- Added feature modules under `src/features/species/`, scoped `src/styles/species.css`, reusable conservation labels, a species segment error boundary using the installed Next 16.4 `retry` API, a useful missing-species route, six model tests and ten species browser scenarios. Rechecked existing photo licenses and retained creator/location/capture/context notes; no asset file or dependency was added. Six production review screenshots are in `docs/development/review/species-*.png`.
+
+### Exact local results (2026-10-09)
+
+All checks used the existing Node 24.21.0 / npm 11 runtime. Tests owned the local production server on port 3001; a separate screenshot server on port 3002 was stopped after review. No hosting or deployment was configured.
+
+| Check | Result |
+| --- | --- |
+| `npm run test:local` | **89 passed:** 43 Python data + 12 export contracts + 11 species research + 23 foundation/media/filter checks; TypeScript passed. |
+| Filter model coverage | All **8,192 multi-select combinations** matched an independent expected-membership table; search, URL corrections/round trips, sorting, unknown-record preservation and related navigation passed. |
+| `npm run build` | Passed after the final image lifecycle change; all six detail pages are generated statically. `/species` renders query-specific results on the local server. |
+| Full production browser regression | **45 passed** across routes, homepage, motion, soundscapes, species and WebGL. |
+| Final species production rerun | **10 passed** after the source-keyed portrait refinement; includes failed-photo-to-next-species recovery. |
+| Species route/filter inputs | All six detail routes, every individual facet, representative intersections/multi-select OR, both name fields, sort/history, keyboard focus, no-results/invalid values, no-JavaScript GET, pending results and live reduced-motion cleanup passed. |
+| Responsive/visual review | Every detail and the explorer reflow at **320, 390 and 768px** without horizontal overflow; desktop/mobile screenshots reviewed at 1440/390px. Photos preserve full source proportions and captions remain outside the image. |
+| Scientific preservation | No changes to `data/` or `public/` files in this stage. Export SHA-256 remains `36b87bf96cf579f6bcf5e9b97157573e897de62e65c7829bb9b3b460017d670c`. |
+
+### Remaining evidence and device gaps
+
+- All formal conservation assessment dates/latest-assessment metadata remain unverified. Displaying an authorized assessment date requires appropriate access and source verification; check dates are not substituted.
+- Held tiger/orangutan numerical estimates and unknown global hawksbill/forest-elephant totals remain excluded. There is no verified historical species curve to display.
+- No selected-species recording is cleared. Detail pages use cited sound descriptions and link to the independently credited NPS listening room with its separate species/location context.
+- Region and habitat tags are broad curated navigation labels, not exhaustive ranges or evidence of absence. Any changed source description needs a mapping review.
+- The hawksbill Commons direct rights reread failed; current search metadata repeats the public-domain dedication, and the already reviewed local acquisition/credit remains intact. No new rights or capture dates were invented.
+- Chromium local checks do not certify physical device, Safari/Firefox or screen-reader behavior. A formal accessibility audit remains outstanding.
+
+**Stop:** The Species Explorer and six detail pages are complete and locally verified. Continue only with the next explicitly requested stage.
+
+## Previous stage: immersive soundscapes and audio interaction
 
 ## Completed: immersive soundscapes and audio interaction
 

@@ -24,7 +24,9 @@ Research remains in `data/` and `docs/research/`. Application code is under `src
 The complete static homepage includes eight editorial chapters, seven individually
 licensed photographs, a sourced index figure and conservation field notes.
 Read the [static homepage handoff](docs/development/static-homepage.md) for media
-credits, integration hooks and verification. Audio remains unavailable.
+credits, integration hooks and verification. The [soundscape handoff](docs/development/soundscapes.md)
+documents the optional NPS listening room; recordings of the six selected species
+remain unavailable.
 The homepage now adds preference-aware GSAP/ScrollTrigger/Lenis motion, an
 explicit whale aperture, bounded image pinning and a reading margin. Read the
 [motion handoff](docs/development/motion-system.md) for lifecycle ownership,
@@ -32,4 +34,6 @@ native/reduced-motion fallbacks and local input checks.
 Optional mountain and underwater 3D studies now share one deferred renderer.
 Read the [immersive scene handoff](docs/development/immersive-scenes.md) for
 scientific boundaries, GPU budgets, recovery, tests and local measurements.
+The [species page handoff](docs/development/species-pages.md) covers URL filters,
+static species records, scientific limits, and local verification.
 No hosting or deployment is configured.
