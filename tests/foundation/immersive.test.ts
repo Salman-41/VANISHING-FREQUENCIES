@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { sceneBudget, sceneMix, particlePositions, ridgeHeight } from "../../src/features/immersive/policy";
+import { sceneBudget, sceneMix, elapsedProgress, particlePositions, ridgeHeight } from "../../src/features/immersive/policy";
 
 test("3D pixel budgets cap desktop, mobile and explicit lighter rendering", () => {
   for (const [w, h] of [[1440, 900], [390, 844], [320, 140], [3840, 2160]]) {
@@ -20,6 +20,8 @@ test("scene dissolve is bounded and does not transform scientific measurements",
   assert.equal(sceneMix("mountain", 1), 1);
   assert.equal(sceneMix("ocean", 0), 1);
   assert.equal(sceneMix("ocean", 0.5), 1);
+  assert.equal(elapsedProgress(100, 400, 600), 0.5);
+  assert.equal(elapsedProgress(100, 3000, 1800), 1); // A stalled frame settles, never stretches the pulse.
 });
 test("interpretive geometry and particles are deterministic, finite and bounded", () => {
   assert.deepEqual(particlePositions(80), particlePositions(80));

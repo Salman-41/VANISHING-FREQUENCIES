@@ -14,6 +14,7 @@ export function sceneBudget(width: number, height: number, dpr: number, light: b
 }
 
 export const clamp01 = (value: number) => Math.min(1, Math.max(0, value));
+export const elapsedProgress = (start: number, now: number, durationMs: number) => clamp01((now - start) / durationMs);
 export function sceneMix(kind: SceneKind, progress: number) {
   // The mountain dissolves on exit; the ocean receives the same underwater state.
   return kind === "mountain"

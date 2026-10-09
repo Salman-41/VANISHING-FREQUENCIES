@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useEffectEvent, useMemo, useRef, type RefObject } from "react";
+import { useEffect, useEffectEvent, useMemo, useRef, useState, type RefObject } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei/core/PerspectiveCamera";
 import { InstancedMesh, Matrix4, Vector3, Quaternion, type ShaderMaterial, type PerspectiveCamera as Camera } from "three";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { sceneBudget, sceneMix, particlePositions, ridgeHeight, type SceneKind, type Quality } from "./policy";
+import { sceneBudget, sceneMix, elapsedProgress, particlePositions, ridgeHeight, type SceneKind, type Quality } from "./policy";
 import * as shader from "./shaders";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -18,11 +18,12 @@ type Props = {
 };
 
 export default function Renderer(props: Props) {
+  const [dpr, setDpr] = useState(0.75);
   // Canvas is entirely optional and contained by an outer React error boundary.
-  return <Canvas frameloop="demand" dpr={1} performance={{ min: 0.5 }}
+  return <Canvas frameloop="demand" dpr={dpr} resize={{ scroll: false, debounce: { resize: 100 } }}
     gl={{ antialias: false, alpha: false, powerPreference: "low-power", stencil: false }}
     fallback="The photograph is available without WebGL.">
-    <Environment {...props} />
+    <Environment {...props} setDpr={setDpr} />
   </Canvas>;
 }
 
@@ -46,8 +47,8 @@ function terrainBuffers(segments: number, rows: number) {
   return { vertices, normals, indices };
 }
 
-function Environment({ kind, quality, frame, commands, onReady, onFailure }: Props) {
-  const { gl, size, invalidate, setDpr, setFrameloop } = useThree();
+function Environment({ kind, quality, frame, commands, onReady, onFailure, setDpr }: Props & { setDpr: (value: number) => void }) {
+  const { gl, size, invalidate, setFrameloop } = useThree();
   const camera = useRef<Camera>(null);
   const ridges = useRef<InstancedMesh>(null);
   const terrainMaterial = useRef<ShaderMaterial>(null);
@@ -60,6 +61,12 @@ function Environment({ kind, quality, frame, commands, onReady, onFailure }: Pro
   const hints = navigator as Navigator & { deviceMemory?: number };
   const constrained = quality === "light" || (hints.deviceMemory ?? 8) <= 4 || navigator.hardwareConcurrency <= 4;
   const budget = sceneBudget(size.width, size.height, devicePixelRatio, constrained);
+  const software = useMemo(() => {
+    const context = gl.getContext();
+    const debug = context.getExtension("WEBGL_debug_renderer_info");
+    return debug ? /swiftshader|llvmpipe|softpipe|software/i.test(String(context.getParameter(debug.UNMASKED_RENDERER_WEBGL))) : false;
+  }, [gl]);
+  const targetDpr = software ? Math.max(0.5, Math.min(0.75, budget.dpr, Math.sqrt(300_000 / Math.max(1, size.width * size.height)))) : budget.dpr;
   const geometry = useMemo(() => terrainBuffers(budget.segments, budget.rows), [budget.segments, budget.rows]);
   const particles = useMemo(() => particlePositions(budget.particles), [budget.particles]);
   const uniforms = useMemo(() => ({
@@ -68,10 +75,10 @@ function Environment({ kind, quality, frame, commands, onReady, onFailure }: Pro
   }), [kind]);
 
   useEffect(() => {
-    setDpr(budget.dpr); stats.current.dpr = budget.dpr;
+    setDpr(targetDpr); stats.current.dpr = targetDpr;
     frame.dataset.sceneQuality = budget.particles === 80 ? "light" : "balanced";
     return () => { delete frame.dataset.sceneQuality; };
-  }, [budget.dpr, budget.particles, frame, setDpr]);
+  }, [targetDpr, budget.particles, frame, setDpr]);
 
   useEffect(() => {
     const mesh = ridges.current;
@@ -136,11 +143,23 @@ function Environment({ kind, quality, frame, commands, onReady, onFailure }: Pro
     const context = gsap.context(() => {});
     context.add("transition", (next: boolean) => {
       preview = next; dissolve?.kill();
-      dissolve = gsap.to(state, { mix: next ? kind === "mountain" ? 1 : 0 : sceneMix(kind, state.progress), duration: 0.6, ease: "power2.inOut", onUpdate: invalidate });
+      const start = performance.now(), from = state.mix;
+      const target = next ? kind === "mountain" ? 1 : 0 : sceneMix(kind, state.progress);
+      const ease = gsap.parseEase("power2.inOut");
+      dissolve = gsap.to({ tick: 0 }, { tick: 1, duration: 0.6, ease: "none", onUpdate: () => {
+        const progress = elapsedProgress(start, performance.now(), 600);
+        state.mix = from + (target - from) * ease(progress);
+        invalidate(); if (progress === 1) dissolve?.kill();
+      }, onComplete: () => { state.mix = target; invalidate(); } });
     });
     context.add("pulse", () => {
       pulse?.kill(); state.pulse = 0; state.strength = 1;
-      pulse = gsap.to(state, { pulse: 1, strength: 0, duration: 1.8, ease: "none", onUpdate: invalidate });
+      const start = performance.now();
+      pulse = gsap.to({ tick: 0 }, { tick: 1, duration: 1.8, ease: "none", onUpdate: () => {
+        state.pulse = elapsedProgress(start, performance.now(), 1800);
+        state.strength = 1 - state.pulse;
+        invalidate(); if (state.pulse === 1) pulse?.kill();
+      }, onComplete: () => { state.pulse = 1; state.strength = 0; invalidate(); } });
     });
     commands.current = { transition: (value) => context.transition(value), pulse: () => context.pulse() };
     invalidate();
