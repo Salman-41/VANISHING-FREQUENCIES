@@ -1,8 +1,49 @@
 # Project status
 
-**Stage:** Species Explorer and static detail pages implemented and locally verified
+**Stage:** Biodiversity Observatory implemented; final browser regression in progress
 
 **Updated:** 2026-10-09
+
+## Completed: Biodiversity Observatory
+
+- Replaced the `/data` foundation with the complete editorial Observatory: interpretation preface, edition/scope controls, annual evidence with a source margin, regional comparisons, ecosystem coverage notes, exact source tables, scientific methodology, licensed downloads and a separate endpoint register. The established visual tokens/layout and other routes remain intact.
+- Implemented native GET and enhanced URL selection for edition, scope, actual annual series and inclusive published-year windows. Apply/Reset, preserved focus/history, a written pending state, invalid-query corrections, single-year windows and no-observation states are included. Cropping never rebases the 1970 index. 2026 endpoints reject annual date/series controls with an explanation.
+- Annual views retain all **357** 2024 observations: global, five regions, freshwater; **1970–2020**. D3 linear scales/array utilities produce zero-based charts containing the baseline and all source bounds. Regional panels share a scale and period within that edition. Pointer/touch and keyboard/year controls inspect actual records; nulls and missing years break graphic connectors. No smoothing or intermediate observations are generated.
+- Endpoint views retain all **nine** 2026 announcement summaries for **1970–2022**, with global/region/system groups, direct signed labels and a shared proportional-change scale. They have no annual curve, inferred intervals, headcount interpretation or connection to 2024 observations. Comparisons explicitly preserve differing monitoring coverage and pre-baseline context.
+- Added the small TypeScript/Zod interaction contract, scoped feature modules and Observatory styles. Interval bounds, kind/level, original measurement units, periods, publication/access/verification dates, source editions and row provenance remain available. Confidence levels are unverified where the source metadata does not supply them; they are not assumed to be 95%.
+- Accessible SVG titles/descriptions, full-precision tables in named keyboard scroll regions, native disclosures, year stepping, tooltip descriptions/Escape/hover persistence, compact layouts and no-JavaScript forms/tables provide a complete reading path. Unsafe geometry gets a chart-specific written error; failed checked-data loading reaches a route error boundary with Next 16.4 `retry`. No replacement numbers or dummy plots are used.
+- Optional chart motion calls the existing GSAP utility and fades the already exact wrapper over **160 ms**. Mark geometry, values, axes and dates are never tweened. Scoped contexts and listeners clean up on preference changes, route/unmount and interrupted imports; OS/user reduced motion/data and lighter media disable it. No extra scroll controller, pin, audio, canvas or RAF loop was added.
+- Created five deterministic static aggregate files under `public/data-downloads/`: edition-specific JSON/CSV plus citation/reuse notes, totaling **1,523,459 bytes**. JSON preserves full records/provenance; CSV preserves context, original fields and `provenance_json`. Files download only on request; display filters do not alter their complete products. The exporter validates the existing successful export/report, allowlists datasets and checks published-trend redistribution rights. `data:check-observatory` detects stale/missing outputs. No underlying LPD, restricted assessment/BirdLife product, species research bundle or media is redistributed.
+- Added [Observatory implementation/methodology notes](development/data-observatory.md), dedicated visualization validation and browser tests, export/check scripts and the README handoff. No dependency, hosted service, deployment or data acquisition was added. The official WWF-UK announcement was reread and agrees with the pinned endpoints. The policy's direct online reread failed; the previously acquired hashed policy was inspected locally and the new online reread remains unverified.
+
+### Exact local results (2026-10-09)
+
+All commands used Node **24.21.0** / npm **11**. Playwright owns the local production server on **3001**. The existing user development server on **3000** was retained. A second attempted dev start exited because that server already owned the development directory; no user process was stopped.
+
+| Check | Result |
+| --- | --- |
+| `npm run test:local` | **105 passed:** 43 Python data + 12 export contracts + 11 species research + 23 foundation + 16 visualization checks; TypeScript and five-file download freshness check passed. |
+| `npm run test:visualizations` after CSV line-ending normalization | **16 passed**; independent Python CSV parsing reproduces exported values/dates/full provenance, and deterministic download bytes match. |
+| Exact source verification | All **357 annual values/bound pairs** and **nine endpoints** matched independent raw CSV parsing. Processed-to-chart/table/download values are exact; raw Python/JS conversion allows only up to eight scaled machine epsilons for binary floating-point parsing. |
+| Selection coverage | All **9,282** supported annual series/inclusive-range combinations select exactly their published source years, retain the baseline, and round-trip through URL state. |
+| `npm run build` | Passed after the final pointer refinement; `/data` renders query-specific evidence on the local server. All 15 framework pages generate and the six species details remain SSG. |
+| Targeted production route checks | **16 passed** after the SVG-title hydration fix: ten Observatory + six foundation scenarios. A later persistent-tooltip check found a decorative-marker hit target, which was refined and is under final full regression. |
+| Final full production regression | **In progress** after the decorative marker/crosshair were made transparent to pointer events. |
+| Responsive review | Browser checks at **320, 390 and 768px**, touch, reduced motion and native no-JavaScript forms/tables passed in the targeted run; final production screenshots pending. |
+| Scientific preservation | Existing raw/processed/source data and image/audio files are unchanged. Export SHA-256 remains `36b87bf96cf579f6bcf5e9b97157573e897de62e65c7829bb9b3b460017d670c`. New data file: frontend interaction schema only. |
+
+### Remaining evidence and device gaps
+
+- Official annual 2026 results/bounds and the full current technical-method review remain unacquired. Endpoints cannot supply intervening observations.
+- No terrestrial/marine annual 2024 series is present in the pinned OWID product; the UI states this explicitly.
+- Annual source bounds' confidence level remains unverified in acquired metadata. Endpoint bounds were not supplied. No invented interval is shown.
+- All earlier underlying LPD/IUCN/BirdLife access restrictions, held species method questions and missing assessment dates remain. The Observatory does not resolve or bypass them.
+- New online policy access was unsuccessful; retained acquisition evidence is used for the previously reviewed published-trend permission. No new agreement was accepted or authorization inferred.
+- Local Chromium and touch emulation do not certify Safari/Firefox, physical mobile hardware or screen-reader behavior. Formal scientific/accessibility review remains separate.
+
+**Completion:** Final production regression and screenshot review are still being recorded. This stage has no hosting or deployment work.
+
+## Previous stage: Species Explorer and species detail pages
 
 ## Completed: Species Explorer and species detail pages
 

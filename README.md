@@ -36,4 +36,6 @@ Read the [immersive scene handoff](docs/development/immersive-scenes.md) for
 scientific boundaries, GPU budgets, recovery, tests and local measurements.
 The [species page handoff](docs/development/species-pages.md) covers URL filters,
 static species records, scientific limits, and local verification.
+The [Data Observatory handoff](docs/development/data-observatory.md) documents
+separate-edition D3 views, exact-record controls, licensed downloads and visualization checks.
 No hosting or deployment is configured.
