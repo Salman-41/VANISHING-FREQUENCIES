@@ -70,12 +70,14 @@ export function MediaFigure({
   className = "",
   preload = false,
   interactiveAperture = false,
+  immersiveScene,
   sizes = "(min-width: 1024px) 65vw, 100vw",
 }: {
   id: string;
   className?: string;
   preload?: boolean;
   interactiveAperture?: boolean;
+  immersiveScene?: "mountain" | "ocean";
   sizes?: string;
 }) {
   const a = homepageAsset(id);
@@ -97,6 +99,9 @@ export function MediaFigure({
         <span className="scene-mask scene-mask-top" aria-hidden="true" />
         <span className="scene-mask scene-mask-bottom" aria-hidden="true" />
       </div>
+      {immersiveScene && (
+        <div data-immersive-controls={immersiveScene} />
+      )}
       {interactiveAperture && (
         <button
           type="button"
@@ -110,6 +115,7 @@ export function MediaFigure({
       )}
       <figcaption>
         <span>
+          {immersiveScene ? "Photograph · " : ""}
           {a.location} · {a.captureDate ?? "Capture date unverified"}
           {a.setting === "rehabilitation-site"
             ? " · Rehabilitation-site context"

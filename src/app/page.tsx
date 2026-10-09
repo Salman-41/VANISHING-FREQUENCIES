@@ -108,6 +108,7 @@ export default async function Home() {
         <MediaFigure
           id="himalaya"
           className="mountain-landscape"
+          immersiveScene="mountain"
           sizes="(min-width: 1680px) 1560px, 100vw"
         />
         <div className="mountain-spread">
@@ -152,6 +153,7 @@ export default async function Home() {
           <MediaFigure
             id="blue-whale"
             className="ocean-portrait"
+            immersiveScene="ocean"
             interactiveAperture
             sizes="(min-width: 1024px) 65vw, 100vw"
           />

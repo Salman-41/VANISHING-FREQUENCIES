@@ -2,6 +2,7 @@
 @import "../styles/tokens.css";
 @import "../styles/homepage.css";
 @import "../styles/motion.css";
+@import "../styles/immersive.css";
 @theme inline {
   --color-obsidian: #0b0d0d;
   --color-ivory: #eceae4;

@@ -11,6 +11,7 @@ import {
 import { usePreferences } from "@/features/preferences/provider";
 import { chapters } from "@/lib/site";
 import Link from "next/link";
+import { ImmersiveScenes } from "@/features/immersive/experience";
 
 type ControllerProps = { root: RefObject<HTMLDivElement | null> };
 /** Server-rendered children stay visible; only the disposable enhancement is deferred. */
@@ -76,6 +77,7 @@ export function HomepageMotion({ children }: { children: ReactNode }) {
       <span className="reading-line" hidden aria-hidden="true">
         <span className="reading-fill" />
       </span>
+      <ImmersiveScenes root={root} allowed={enabled} />
       {enabled && Controller ? <Controller root={root} /> : null}
     </div>
   );

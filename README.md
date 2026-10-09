@@ -29,4 +29,7 @@ The homepage now adds preference-aware GSAP/ScrollTrigger/Lenis motion, an
 explicit whale aperture, bounded image pinning and a reading margin. Read the
 [motion handoff](docs/development/motion-system.md) for lifecycle ownership,
 native/reduced-motion fallbacks and local input checks.
+Optional mountain and underwater 3D studies now share one deferred renderer.
+Read the [immersive scene handoff](docs/development/immersive-scenes.md) for
+scientific boundaries, GPU budgets, recovery, tests and local measurements.
 No hosting or deployment is configured.

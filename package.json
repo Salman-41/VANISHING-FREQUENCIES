@@ -20,7 +20,9 @@
     "test:browser": "playwright test",
     "test:local": "npm run typecheck && npm test && npm run test:foundation",
     "check:dependencies": "npm ls --all",
-    "test:browser:production": "npm run build && playwright test --config=playwright.production.config.ts"
+    "test:browser:production": "npm run build && playwright test --config=playwright.production.config.ts",
+    "test:scenes": "playwright test tests/browser/immersive.spec.ts",
+    "measure:scenes": "node scripts/measure-scenes.mjs"
   },
   "dependencies": {
     "zod": "4.6.5",
