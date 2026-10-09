@@ -69,17 +69,23 @@ export function MediaFigure({
   id,
   className = "",
   preload = false,
+  interactiveAperture = false,
   sizes = "(min-width: 1024px) 65vw, 100vw",
 }: {
   id: string;
   className?: string;
   preload?: boolean;
+  interactiveAperture?: boolean;
   sizes?: string;
 }) {
   const a = homepageAsset(id);
   return (
     <figure className={`media-figure ${className}`} data-media={id}>
-      <div className="media-aperture" data-scene-layer="photograph">
+      <div
+        className="media-aperture"
+        data-scene-layer="photograph"
+        id={interactiveAperture ? "whale-aperture" : undefined}
+      >
         <Image
           src={a.localPath}
           alt={a.alt}
@@ -88,7 +94,20 @@ export function MediaFigure({
           sizes={sizes}
           preload={preload}
         />
+        <span className="scene-mask scene-mask-top" aria-hidden="true" />
+        <span className="scene-mask scene-mask-bottom" aria-hidden="true" />
       </div>
+      {interactiveAperture && (
+        <button
+          type="button"
+          className="control aperture-control"
+          hidden
+          aria-expanded="true"
+          aria-controls="whale-aperture"
+        >
+          Close the listening aperture
+        </button>
+      )}
       <figcaption>
         <span>
           {a.location} · {a.captureDate ?? "Capture date unverified"}

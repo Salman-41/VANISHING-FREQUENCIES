@@ -14,6 +14,7 @@ import {
 import { StaticIndexChart } from "@/features/homepage/index-chart";
 import { SpeciesRows } from "@/features/homepage/species-rows";
 import { ConservationNotes } from "@/features/homepage/conservation-notes";
+import { HomepageMotion } from "@/features/motion/boundary";
 export const metadata: Metadata = {
   title: TAGLINE,
   description:
@@ -25,7 +26,7 @@ export default async function Home() {
   const whale = speciesBySlug(data, "blue-whale")!;
   const elephant = speciesBySlug(data, "african-forest-elephant")!;
   return (
-    <div className="documentary">
+    <HomepageMotion>
       <section
         id="opening"
         tabIndex={-1}
@@ -151,6 +152,7 @@ export default async function Home() {
           <MediaFigure
             id="blue-whale"
             className="ocean-portrait"
+            interactiveAperture
             sizes="(min-width: 1024px) 65vw, 100vw"
           />
           <div className="ocean-margin">
@@ -391,6 +393,6 @@ export default async function Home() {
           </a>
         </div>
       </Chapter>
-    </div>
+    </HomepageMotion>
   );
 }

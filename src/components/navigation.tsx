@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { chapters, siteRoutes } from "@/lib/site";
+import { loadMotionTools } from "@/features/motion/runtime";
+import { usePreferences } from "@/features/preferences/provider";
 
 export function Navigation() {
   const pathname = usePathname();
@@ -11,6 +13,52 @@ export function Navigation() {
   const opener = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
   const pendingFocus = useRef(false);
+  const preferences = usePreferences();
+  useEffect(() => {
+    let cancelled = false;
+    let revert: (() => void) | undefined;
+    if (
+      preferences.readWithoutMotion ||
+      preferences.lighterMedia ||
+      !matchMedia("(min-width: 1024px) and (pointer: fine)").matches
+    )
+      return;
+    void loadMotionTools().then((tools) => {
+      if (
+        cancelled ||
+        !tools ||
+        document.documentElement.dataset.motion === "reduced"
+      )
+        return;
+      const ctx = tools.gsap.context(() => {
+        const mm = tools.gsap.matchMedia();
+        mm.add(
+          "(prefers-reduced-motion: no-preference) and (min-width: 1024px) and (pointer: fine)",
+          () => {
+            if (open && dialog.current?.open)
+              tools.gsap.fromTo(
+                dialog.current,
+                { opacity: 0.92 },
+                { opacity: 1, duration: 0.16, ease: "power2.out" },
+              );
+            // Navigation commits immediately; only the stationary header rule acknowledges a new page.
+            if (!open)
+              tools.gsap.fromTo(
+                ".site-header",
+                { borderBottomColor: "#a4a197" },
+                { borderBottomColor: "#51544e", duration: 0.16 },
+              );
+          },
+        );
+        return () => mm.revert();
+      });
+      revert = () => ctx.revert();
+    });
+    return () => {
+      cancelled = true;
+      revert?.();
+    };
+  }, [open, pathname, preferences.readWithoutMotion, preferences.lighterMedia]);
   useEffect(() => {
     if (!pendingFocus.current) return;
     pendingFocus.current = false;

@@ -1,19 +1,22 @@
-/** Opt-in enhancement only. Call after preference checks; dispose returned scope on route exit. */
+/** Opt-in enhancement only. Feature callers own every instance and its cleanup. */
 export async function loadMotionTools() {
-  if (
+  const unavailable = () =>
     typeof window === "undefined" ||
     matchMedia("(prefers-reduced-motion: reduce)").matches ||
-    document.documentElement.dataset.motion === "reduced"
-  )
-    return null;
+    matchMedia("(prefers-reduced-data: reduce)").matches ||
+    document.documentElement.dataset.motion === "reduced" ||
+    document.documentElement.dataset.media === "lighter";
+  if (unavailable()) return null;
+  const modules = await Promise.all([
+    import("gsap"),
+    import("gsap/ScrollTrigger"),
+    import("@gsap/react"),
+    import("lenis"),
+  ]).catch(() => null);
+  if (!modules || unavailable()) return null;
   const [{ gsap }, { ScrollTrigger }, { useGSAP }, { default: Lenis }] =
-    await Promise.all([
-      import("gsap"),
-      import("gsap/ScrollTrigger"),
-      import("@gsap/react"),
-      import("lenis"),
-    ]);
+    modules;
   gsap.registerPlugin(ScrollTrigger, useGSAP);
-  // No Lenis instance/global ticker starts here. Feature callers own lifecycle and preference changes.
+  // Registration starts no scroll controller or global ticker.
   return { gsap, ScrollTrigger, Lenis };
 }

@@ -25,4 +25,8 @@ The complete static homepage includes eight editorial chapters, seven individual
 licensed photographs, a sourced index figure and conservation field notes.
 Read the [static homepage handoff](docs/development/static-homepage.md) for media
 credits, integration hooks and verification. Audio remains unavailable.
+The homepage now adds preference-aware GSAP/ScrollTrigger/Lenis motion, an
+explicit whale aperture, bounded image pinning and a reading margin. Read the
+[motion handoff](docs/development/motion-system.md) for lifecycle ownership,
+native/reduced-motion fallbacks and local input checks.
 No hosting or deployment is configured.
