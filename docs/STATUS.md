@@ -19,8 +19,8 @@
 | `npm run typecheck` | Passed with no TypeScript errors. |
 | `npm run build` | Passed; all 15 Next.js pages generated, `/soundscapes` statically prerendered. |
 | `npm run test:local` | 83 passed: 43 Python data, 12 export contracts, 11 species, 17 foundation/media/audio. |
-| `npx playwright test --config=playwright.production.config.ts` | 34 passed, including 3 soundscape browser cases plus existing route/homepage/motion/3D coverage. |
-| Soundscape browser observations | No MP3 request before Play; two local layers requested after Play; cross-habitat loading, mute/volume/keyboard, hidden-tab pause, 390px reduced-motion controls, and HTTP 503 written fallback passed. |
+| `npx playwright test --config=playwright.production.config.ts` | 35 passed, including 4 soundscape browser cases plus existing route/homepage/motion/3D coverage. |
+| Soundscape browser observations | No MP3 request before Play; two local layers requested after Play; cross-habitat loading, mute/volume/keyboard, hidden-tab pause, 390px reduced-motion controls, HTTP 503 written fallback, and active AudioContext closure on route exit passed. |
 | Visual review | Desktop 1440px and mobile 390px screenshots reviewed; no horizontal overflow. Existing 320px route suite also passed. |
 
 ### Remaining evidence and device gaps
