@@ -85,6 +85,17 @@ Research checked **2026-10-08**. “Not verified” means the relevant page or t
 
 ## Wildlife sound archives
 
+### National Park Service Natural Sounds and Yellowstone sound libraries
+
+- **Publisher / URL:** U.S. National Park Service; [Natural Sounds gallery](https://www.nps.gov/subjects/sound/gallery.htm), [Yellowstone Sound Library](https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm).
+- **Data:** Short natural sound recordings and archive descriptions, including wildlife and habitat events in U.S. national parks. Exact capture dates are item-specific and often absent.
+- **Date / coverage:** Gallery last updated 2025-09-03; six selected recordings verified 2026-10-09. Coverage is park and recording specific, not representative of global or Himalayan ecology.
+- **Acquisition:** Download linked MP3s from item pages. Six files are locally acquired with original/download hashes and credits in [audio-assets.json](../../data/sources/audio-assets.json).
+- **Rights / citation:** Both NPS library pages state linked files are public domain, downloadable and request appropriate NPS credit. Credit the National Park Service and link the individual item page. Yellowstone wind also credits NPS/Peter Comley. Commercial use is permitted by the public-domain notice; rights of other linked libraries are separate.
+- **Reliability / limits:** Authoritative provenance for the described U.S. park sounds. The selected layered playback is an explicitly artistic composition of separate clips. Recording levels are not calibrated for comparison; no acoustic trend or abundance follows.
+- **Species-level population trends?** No.
+- **Access:** Public download, no authentication. Unknown capture dates stay unknown; no inferred soundscape reconstruction.
+
 ### xeno-canto
 
 - **Publisher / URL:** xeno-canto community archive; [site](https://xeno-canto.org/), [API](https://xeno-canto.org/explore/api), [terms](https://xeno-canto.org/about/terms).

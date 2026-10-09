@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageIntro, Note } from "@/components/editorial";
+import { PageIntro } from "@/components/editorial";
 import { Claim } from "@/features/research/evidence";
 import { getResearch } from "@/features/research/server";
+import { SoundscapeExperience } from "@/features/audio/soundscape-experience";
 import { orderedSpecies } from "@/features/research/selectors";
 export const metadata: Metadata = { title: "Soundscapes" };
 export default async function Soundscapes() {
@@ -10,15 +11,14 @@ export default async function Soundscapes() {
   return (
     <>
       <PageIntro eyebrow="Soundscapes" title="A place has more than one voice.">
-        <p>Sound knowledge is available even when a recording is not.</p>
+        <p>Listen to six credited National Park Service recordings as three optional habitat studies. Each blend combines independent clips and is an artistic composition, not a measured ecological reconstruction.</p>
       </PageIntro>
-      <Note title="No cleared recordings">
-        <p>
-          No wildlife recording has been acquired or cleared for playback. The
-          research descriptions below are not audio transcripts. Unavailable
-          sound never means an animal or habitat is silent.
-        </p>
-      </Note>
+      <SoundscapeExperience />
+      <section className="section" aria-labelledby="species-sound-heading">
+        <p className="eyebrow">Species research / separate from the listening room</p>
+        <h2 id="species-sound-heading">What the selected species sound like</h2>
+        <p>The park recordings above feature a hermit thrush, ptarmigan, and humpback whale. They are not recordings of the documentary’s six selected species. The research below describes those species using cited sources.</p>
+      </section>
       {orderedSpecies(data).map((s) => (
         <section key={s.id} className="section">
           <h2>{s.commonName}</h2>

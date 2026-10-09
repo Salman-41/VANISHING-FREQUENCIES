@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from "react";
 import { useStore } from "zustand";
+import { AudioProvider } from "@/features/audio/provider";
 import {
   createPreferenceStore,
   parsePreferences,
@@ -58,7 +59,7 @@ export function SiteProviders({ children }: { children: ReactNode }) {
   }, [store]);
   return (
     <PreferenceContext.Provider value={store}>
-      {children}
+      <AudioProvider>{children}</AudioProvider>
     </PreferenceContext.Provider>
   );
 }

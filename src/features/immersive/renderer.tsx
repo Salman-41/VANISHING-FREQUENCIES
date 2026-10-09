@@ -20,7 +20,7 @@ type Props = {
 export default function Renderer(props: Props) {
   const [dpr, setDpr] = useState(0.75);
   // Canvas is entirely optional and contained by an outer React error boundary.
-  return <Canvas frameloop="demand" dpr={dpr} resize={{ scroll: false, debounce: { resize: 100 } }}
+  return <Canvas frameloop="demand" dpr={dpr} resize={{ scroll: false, debounce: { scroll: 0, resize: 100 } }}
     gl={{ antialias: false, alpha: false, powerPreference: "low-power", stencil: false }}
     fallback="The photograph is available without WebGL.">
     <Environment {...props} setDpr={setDpr} />

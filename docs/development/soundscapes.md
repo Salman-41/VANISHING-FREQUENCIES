@@ -1,0 +1,22 @@
+# Soundscapes: source, meaning, and playback
+
+Verified 2026-10-09. The local listening room uses six National Park Service recordings from the [NPS Natural Sounds gallery](https://www.nps.gov/subjects/sound/gallery.htm) and [Yellowstone Sound Library](https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm). Both publisher pages explicitly say their linked sound files are public domain and request National Park Service credit. No account or API key is required. Commercial reuse is permitted under those public-domain notices; NPS credit is provided on the page. The catalog at `data/sources/audio-assets.json` records each item page, original MP3 URL, rights page, place, creator, capture date if known, retrieval date, hashes, processing, duration, and waveform method. Original acquisition bytes are in `data/raw/audio/`; player files are in `public/audio/`.
+
+| Habitat | Ambient layer | Wildlife layer | Limits |
+| --- | --- | --- | --- |
+| Forest | [Muir Woods stream](https://www.nps.gov/subjects/sound/sounds-stream.htm), California | [Yosemite hermit thrush](https://www.nps.gov/subjects/sound/sounds-hermit-thrush.htm), California | Separate locations; no joint event or capture date known. |
+| Mountain | [Yellowstone Lower Geyser Basin wind](https://www.nps.gov/yell/learn/photosmultimedia/sounds-soundscapes.htm), Wyoming; NPS/Peter Comley, 2015-03-21 | [Denali ptarmigan](https://www.nps.gov/subjects/sound/sounds-ptarmigan.htm), Alaska | North American recordings, not Himalayan snow leopard audio. |
+| Ocean | [Olympic coast surf and gulls](https://www.nps.gov/subjects/sound/sounds-ocean.htm), Washington | [Glacier Bay humpback whale](https://www.nps.gov/subjects/sound/sounds-humpback-whale.htm), Alaska | Surf is coastal surface audio; whale is humpback, not blue whale. |
+
+The habitat blends are **artistic compositions** of independent archival clips, never a measured single-site soundscape, ecological time series, or historical reconstruction. Clips loop at their native playback rate so that listeners can compare optional layers. No frequency, sound pressure, abundance, acoustic diversity, historical decline, or species population statistic is inferred from these recordings. The waveform is the maximum absolute PCM amplitude in each of 72 equal-duration bins, decoded from each local MP3 to mono at 8 kHz. It is relative visual guidance, not calibrated dB or a scientific spectrogram. The animated meter reads the actual Web Audio analyser during playback and has no scientific scale.
+
+The Yellowstone wind original was 7,191,575 bytes at 192 kb/s; the public derivative is its first 45 seconds at 64 kb/s MP3, retaining 44.1 kHz stereo. This cut and transcode is explicit in the ledger and UI. All other public files are byte-for-byte copies. Six public files total approximately 0.83 MB. The player fetches and decodes only selected layers on explicit Play or while switching a playing scene; it never preloads audio or uses a microphone. Up to six decoded buffers can be cached for the session. `AudioContext`, `AnalyserNode`, two looping sources, and gain ramps are owned by one app provider. Context suspension, aborts, source disconnects, stale request protection, error states, and close on teardown are implemented in `src/features/audio/engine.ts`.
+
+An inactive tab pauses and does not auto resume; leaving `/soundscapes` stops playback. Volume and mute remain independent controls, and all audio is optional. The visible text, credits and independently sourced species descriptions work without audio. The client component renders useful HTML before hydration and with JavaScript disabled. Reduced motion/data preferences stop live meter animation while keeping recording information and controls available.
+
+## Acquisition or review still needed
+
+- None of these clips is a snow leopard or blue whale recording. Obtain item-level rights and verified location/species identity before adding those calls. An accelerated NOAA blue whale recording would require both rights review and a prominent playback-rate disclosure.
+- NPS item pages other than Yellowstone wind omit capture date. They display “Not reported”; the gallery page update date is not substituted.
+- The NPS rockfall item has conflicting place cues between page and MP3 filename; it was not acquired or included.
+- Browser decoding and autoplay behavior vary across devices. MP3 is widely supported; the player reports fetch/decode errors and retains full text content if playback fails.

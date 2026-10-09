@@ -1,8 +1,38 @@
 # Project status
 
-**Stage:** Homepage motion system implemented and verified
+**Stage:** Immersive soundscapes implemented and locally verified
 
 **Updated:** 2026-10-09
+
+## Completed: immersive soundscapes and audio interaction
+
+- Built `/soundscapes` as a responsive editorial listening room with forest, mountain and coastal ocean studies. Each uses a separately credited NPS ambient clip and wildlife clip. Layer switches, mute, volume, a real clip-derived relative-amplitude waveform, accessible seek, keyboard/touch controls and text-only use are available. The scene blend is always labeled an **artistic composition of recordings from different places/times**, never a measured soundscape or population/acoustic trend.
+- Acquired six NPS MP3 recordings from official item pages. The NPS Natural Sounds gallery and Yellowstone Sound Library explicitly declare their linked audio public domain and request NPS credit. `data/sources/audio-assets.json` contains item/rights links, creator, park, known or unknown capture date, acquisition date, original/local hashes and sizes, durations, transformations, and waveform method. Source bytes are in `data/raw/audio/`; public playback copies are in `public/audio/`. The 7.19 MB Yellowstone original was cut to a documented 45-second 64 kb/s MP3 (360,280 bytes); the other five public files preserve original bytes. Total playback files are approximately 0.83 MB, and only selected layers load after explicit Play.
+- Added a single app-scoped Web Audio manager. It creates no `AudioContext`, media request or playback before a user gesture. Gain ramps handle layer/habitat crossfades and master mute/volume; stale fetches abort; decoded buffers are session-cached; sources disconnect on exit; route change and inactive tab halt playback. Hidden-tab pause preserves position and requires explicit Resume. Audio errors leave all source notes and species research readable. Reduced motion/data preferences suppress the live audio meter.
+- The selected wildlife recordings are hermit thrush, ptarmigan and **humpback whale**. They are not snow leopard or blue whale recordings; Olympic surf is a **coastal surface** recording. Species sound research remains separately cited below the listening room. Unknown NPS capture dates are displayed as “Not reported.”
+- Added [soundscape acquisition and interaction notes](development/soundscapes.md), a source-catalog entry, updated rights register, receipt/hash tests and browser interaction/error tests. No Howler dependency, hosting service or external audio API was needed.
+
+### Exact local results (2026-10-09)
+
+| Check | Result |
+| --- | --- |
+| `npm run typecheck` | Passed with no TypeScript errors. |
+| `npm run build` | Passed; all 15 Next.js pages generated, `/soundscapes` statically prerendered. |
+| `npm run test:local` | 83 passed: 43 Python data, 12 export contracts, 11 species, 17 foundation/media/audio. |
+| `npx playwright test --config=playwright.production.config.ts` | 34 passed, including 3 soundscape browser cases plus existing route/homepage/motion/3D coverage. |
+| Soundscape browser observations | No MP3 request before Play; two local layers requested after Play; cross-habitat loading, mute/volume/keyboard, hidden-tab pause, 390px reduced-motion controls, and HTTP 503 written fallback passed. |
+| Visual review | Desktop 1440px and mobile 390px screenshots reviewed; no horizontal overflow. Existing 320px route suite also passed. |
+
+### Remaining evidence and device gaps
+
+- None of the newly cleared clips supplies snow leopard, blue whale or other selected-species audio. A future item needs verified species identity, exact recording rights, location/setting, and any speed transformation disclosure before use. NOAA blue whale candidates are still held for item-level review. The NPS rockfall page/filename location conflict remains unresolved and that clip was excluded.
+- Most NPS item pages do not state capture date. This is an archival metadata gap, not a reason to infer timing. Clip gain, amplitude bins and the analyser meter are uncalibrated and must not be used as ecological statistics.
+- Physical mobile audio, Safari/Firefox decoding and screen-reader listening checks remain outstanding. Chromium local production checks establish functionality in the tested environment, not universal device support.
+- The preceding optional WebGL stage is implemented in [immersive scene notes](development/immersive-scenes.md); its production browser cases passed in this suite. A late software-renderer DPR adjustment now typechecks and builds, but its earlier performance observation predates that adjustment. Physical GPU and fresh constrained-device measurements remain open.
+
+**Stop:** This local audio stage is complete. Continue only with the next requested stage.
+
+## Previous stage: homepage motion system
 
 ## Completed: homepage motion system
 

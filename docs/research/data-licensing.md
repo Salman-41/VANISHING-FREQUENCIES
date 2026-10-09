@@ -17,6 +17,7 @@ Checked 2026-10-08. This is an operational rights register, not legal advice. A 
 | Wikimedia Commons | File-by-file free licenses/public domain; Commons disclaims warranty of rights metadata. | Verify file page, author, source, license, attribution, modifications, share-alike, and non-copyright rights. |
 | iNaturalist | Observation and each media item may have distinct contributor-selected licenses; NC content cannot be used commercially. | Check asset-level license and creator, not just observation license. Follow API terms and credit requirements. |
 | USFWS media | Some U.S. government-created files are public domain; third-party content can be present. | Verify item-level rights note, photographer/agency credit, and any likeness/privacy restrictions. |
+| NPS Natural Sounds gallery / Yellowstone Sound Library | Both official library pages explicitly identify their linked sound files as public domain, permit downloading/reuse, and request appropriate National Park Service credit. | Six item-page recordings were acquired on 2026-10-09. See [audio receipt and processing ledger](../../data/sources/audio-assets.json) and [soundscape method](../development/soundscapes.md). Do not extend this clearance to outside or third-party audio libraries. |
 
 ## Per-asset license record
 

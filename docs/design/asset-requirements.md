@@ -1,6 +1,6 @@
 # Asset requirements and acquisition plan
 
-**Blueprint v1 · 2026-10-08.** This is a production brief, not a cleared asset library. **All current wildlife image/audio candidates are unacquired and uncleared.** No downloads, commissions, permissions requests, or external messages were made in this design stage. Candidate metadata is in [species research](../../data/processed/species.json) and [species citations](../../data/sources/species-citations.json).
+**Blueprint v1 · 2026-10-08.** This is a production brief, not a cleared asset library. At the time of this design stage, all wildlife image/audio candidates were unacquired and uncleared. Candidate metadata is in [species research](../../data/processed/species.json) and [species citations](../../data/sources/species-citations.json). Later stages acquired seven homepage photographs and six separate NPS park recordings; the latter are itemized in the [audio ledger](../../data/sources/audio-assets.json) and are not recordings of the selected documentary species.
 
 ## 1. Asset ledger and clearance gates
 
