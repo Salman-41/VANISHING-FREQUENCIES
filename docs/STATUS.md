@@ -1,6 +1,6 @@
 # Project status
 
-**Stage:** Biodiversity Observatory implemented; final browser regression in progress
+**Stage:** Biodiversity Observatory implemented and locally verified
 
 **Updated:** 2026-10-09
 
@@ -27,9 +27,9 @@ All commands used Node **24.21.0** / npm **11**. Playwright owns the local produ
 | Exact source verification | All **357 annual values/bound pairs** and **nine endpoints** matched independent raw CSV parsing. Processed-to-chart/table/download values are exact; raw Python/JS conversion allows only up to eight scaled machine epsilons for binary floating-point parsing. |
 | Selection coverage | All **9,282** supported annual series/inclusive-range combinations select exactly their published source years, retain the baseline, and round-trip through URL state. |
 | `npm run build` | Passed after the final pointer refinement; `/data` renders query-specific evidence on the local server. All 15 framework pages generate and the six species details remain SSG. |
-| Targeted production route checks | **16 passed** after the SVG-title hydration fix: ten Observatory + six foundation scenarios. A later persistent-tooltip check found a decorative-marker hit target, which was refined and is under final full regression. |
-| Final full production regression | **In progress** after the decorative marker/crosshair were made transparent to pointer events. |
-| Responsive review | Browser checks at **320, 390 and 768px**, touch, reduced motion and native no-JavaScript forms/tables passed in the targeted run; final production screenshots pending. |
+| Targeted production route checks | **16 passed** after the SVG-title hydration fix: ten Observatory + six foundation scenarios. A later persistent-tooltip check found a decorative-marker hit target; the refinement and hover persistence passed in the final full suite. |
+| Final full production regression | **55 passed in 5.4 minutes**, including all ten Observatory scenarios and all existing foundation/homepage/motion/audio/species/WebGL checks; no hydration errors. |
+| Responsive/visual review | **320, 390 and 768px** reflow, touch, reduced motion and native no-JavaScript forms/tables passed. Six production screenshots reviewed at **1440/390px**: overview, annual plot/evidence, regional panels, ecosystem endpoints and both mobile products. Screenshot run reported zero page/console errors, zero remote requests and no horizontal overflow. |
 | Scientific preservation | Existing raw/processed/source data and image/audio files are unchanged. Export SHA-256 remains `36b87bf96cf579f6bcf5e9b97157573e897de62e65c7829bb9b3b460017d670c`. New data file: frontend interaction schema only. |
 
 ### Remaining evidence and device gaps
@@ -41,7 +41,7 @@ All commands used Node **24.21.0** / npm **11**. Playwright owns the local produ
 - New online policy access was unsuccessful; retained acquisition evidence is used for the previously reviewed published-trend permission. No new agreement was accepted or authorization inferred.
 - Local Chromium and touch emulation do not certify Safari/Firefox, physical mobile hardware or screen-reader behavior. Formal scientific/accessibility review remains separate.
 
-**Completion:** Final production regression and screenshot review are still being recorded. This stage has no hosting or deployment work.
+**Stop:** The Data Observatory is functional and locally verified. The production test server and screenshot server on 3002 were stopped; the user development server remains available. Generated development type imports were restored and a final TypeScript/download-freshness check passed. No hosting or deployment work was performed. Continue only with a new explicitly requested stage.
 
 ## Previous stage: Species Explorer and species detail pages
 
