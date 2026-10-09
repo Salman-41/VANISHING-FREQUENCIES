@@ -11,6 +11,7 @@ import type {
   SpeciesRecord,
 } from "../../../data/schemas/species.schema";
 import { resolveReferences } from "./selectors";
+import { conservationLabels } from "./labels";
 
 export function SourceReferences({
   data,
@@ -71,17 +72,6 @@ export function Claim({
     </div>
   );
 }
-const categories: Record<ConservationStatus["category"], string> = {
-  LC: "Least Concern",
-  NT: "Near Threatened",
-  VU: "Vulnerable",
-  EN: "Endangered",
-  CR: "Critically Endangered",
-  EW: "Extinct in the Wild",
-  EX: "Extinct",
-  DD: "Data Deficient",
-  NE: "Not Evaluated",
-};
 export function Status({
   data,
   status,
@@ -92,7 +82,7 @@ export function Status({
   return (
     <div>
       <p>
-        <strong>{categories[status.category]}</strong> —{" "}
+        <strong>{conservationLabels[status.category]}</strong> —{" "}
         {status.system === "IUCN-global"
           ? "IUCN global category"
           : status.system}
@@ -103,9 +93,10 @@ export function Status({
         .
       </p>
       <p className="meta">
-        {status.assessmentYear === null
-          ? "Formal assessment date is unverified; the latest assessment has not been confirmed."
-          : `Assessment year: ${status.assessmentYear}.`}{" "}
+        {status.assessmentDate ? <span>Assessment date: <time dateTime={status.assessmentDate}>{status.assessmentDate}</time>.</span>
+          : status.assessmentYear === null
+            ? "Formal assessment date is unverified; the latest assessment has not been confirmed."
+            : `Assessment year: ${status.assessmentYear}.`}{" "}
         Verification date below is not an assessment date.
       </p>
       <SourceReferences

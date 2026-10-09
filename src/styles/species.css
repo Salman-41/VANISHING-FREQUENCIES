@@ -1,0 +1,665 @@
+/* The species reading path is complete before hydration. Motion affects photographs only. */
+.species-explorer-page .page-intro {
+  max-width:70rem
+}
+.species-explorer-page .page-intro h1 {
+  max-width:13ch
+}
+.species-explorer-page .page-intro .lead {
+  max-width:50rem
+}
+.species-filters {
+  border-top:1px solid var(--color-border);
+  padding-top:2rem;
+  margin-top:1rem
+}
+.species-search-row {
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:var(--grid-gap)
+}
+.species-search-row>label {
+  display:flex;
+  flex-direction:column;
+  gap:.7rem;
+  font-size:.875rem;
+  color:var(--color-muted)
+}
+.species-search-row input,.species-search-row select {
+  min-width:0;
+  width:100%;
+  min-height:52px;
+  border:1px solid var(--color-border);
+  padding:.7rem 1rem;
+  color:var(--color-text);
+  background:#141918;
+  border-radius:0;
+  font-size:1rem
+}
+.species-search-row input::placeholder {
+  color:#aaa89f
+}
+.species-filter-groups {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:var(--grid-gap);
+  margin-block:1.5rem
+}
+.species-filter-groups details {
+  min-width:0;
+  border-block:1px solid #62655e
+}
+.species-filter-groups summary {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.75rem;
+  min-height:56px;
+  padding:.9rem .2rem;
+  font-size:.9rem
+}
+.species-filter-groups summary:after {
+  content:"+";
+  color:var(--color-accent);
+  font-size:1.2rem
+}
+.species-filter-groups details[open] summary:after {
+  content:"−"
+}
+.species-filter-groups summary span {
+  margin-left:auto;
+  font-size:.73rem;
+  color:var(--color-muted);
+  white-space:nowrap
+}
+.species-filter-groups fieldset {
+  border:0;
+  padding:0;
+  margin:0 0 .7rem
+}
+.species-filter-groups label {
+  display:flex;
+  align-items:center;
+  gap:.7rem;
+  min-height:48px;
+  padding:.55rem .2rem;
+  font-size:.9rem;
+  cursor:pointer
+}
+.species-filter-groups label input {
+  accent-color:var(--color-accent);
+  width:20px;
+  height:20px;
+  flex:none
+}
+.species-filter-groups label small {
+  font-size:.8125rem;
+  color:var(--color-muted)
+}
+.species-filter-actions {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.75rem
+}
+.species-filter-actions p {
+  margin:0 0 0 auto;
+  max-width:36ch;
+  font-size:.82rem;
+  color:var(--color-muted)
+}
+.species-filter-actions .action-primary {
+  font-weight:600
+}
+.species-filter-actions button[aria-disabled="true"] {
+  opacity:.65
+}
+.species-result-summary {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  flex-wrap:wrap;
+  gap:1rem;
+  padding-block:2rem;
+  border-bottom:1px solid var(--color-border);
+  margin-top:2rem
+}
+.species-result-summary p {
+  margin:0;
+  font-size:.85rem
+}
+.species-result-summary p:first-child {
+  font-size:1.15rem
+}
+.species-result-summary span {
+  color:var(--color-muted);
+  font-size:.875rem
+}
+.species-filter-warning {
+  padding:1.5rem;
+  background:#24372d;
+  margin-top:2rem
+}
+.species-filter-warning h2 {
+  font-size:1.3rem
+}
+.species-no-results {
+  padding-block:clamp(3rem,8vw,8rem)
+}
+.species-no-results h2 {
+  font-size:var(--text-page)
+}
+.explorer-records {
+  list-style:none;
+  padding:0;
+  margin:0
+}
+.explorer-card {
+  display:grid;
+  grid-template-columns:1fr 1.2fr 1fr;
+  gap:clamp(1.5rem,3vw,3rem);
+  padding-block:clamp(2.5rem,5vw,5rem);
+  border-bottom:1px solid #62655e;
+  min-width:0
+}
+.explorer-card>* {
+  min-width:0
+}
+.explorer-identity h2 {
+  font-size:var(--text-species-row);
+  line-height:1;
+  max-width:12ch;
+  margin-block:.4rem .8rem
+}
+.explorer-identity h2 a {
+  display:inline-block;
+  padding-block:.15rem;
+  text-decoration:none
+}
+.explorer-identity h2 a:hover {
+  text-decoration:underline
+}
+.explorer-scientific {
+  font-size:1.1rem;
+  color:var(--color-muted);
+  margin-bottom:2rem
+}
+.explorer-category {
+  font-size:1rem;
+  margin-bottom:.5rem
+}
+.explorer-category span {
+  color:var(--color-accent)
+}
+.explorer-card .doc-evidence {
+  font-size:.875rem;
+  line-height:1.6;
+  margin-block:.7rem 1.1rem;
+  color:var(--color-muted)
+}
+.explorer-card .doc-evidence p {
+  margin-bottom:0
+}
+.explorer-card .doc-evidence details summary {
+  min-height:44px
+}
+.explorer-context .eyebrow {
+  margin-bottom:.7rem
+}
+.explorer-context .doc-claim {
+  margin-bottom:1.8rem
+}
+.explorer-context .doc-claim>p {
+  font-size:1.1rem;
+  line-height:1.5
+}
+.species-photo {
+  min-width:0;
+  margin:0
+}
+.species-photo-frame {
+  overflow:hidden;
+  background:#18241e;
+  aspect-ratio:4/3;
+  display:grid;
+  place-items:center
+}
+.species-photo-frame img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block
+}
+.species-photo figcaption {
+  display:flex;
+  flex-direction:column;
+  gap:.4rem;
+  color:var(--color-muted);
+  font-size:.875rem;
+  line-height:1.6;
+  margin-top:.85rem
+}
+.species-photo figcaption a {
+  overflow-wrap:anywhere
+}
+.species-photo-error,.species-photo-missing {
+  padding:1.5rem;
+  font-size:.9rem;
+  color:var(--color-muted);
+  background:#18241e
+}
+.species-photo-error {
+  margin:0;
+  max-width:100%
+}
+.species-record-link {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  min-height:48px;
+  border-bottom:1px solid var(--color-border);
+  text-decoration:none;
+  font-size:.9rem;
+  padding:.5rem 0
+}
+.species-record-link:hover {
+  color:var(--color-accent)
+}
+.species-scope {
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:clamp(2rem,8vw,8rem);
+  padding-block:clamp(4rem,8vw,8rem)
+}
+.species-scope h2 {
+  font-size:clamp(2.4rem,4vw,4rem);
+  max-width:11ch
+}
+.species-scope p {
+  font-size:1rem
+}
+.species-scope .actions {
+  gap:1.5rem
+}
+.species-visually-hidden {
+  position:absolute;
+  width:1px;
+  height:1px;
+  clip-path:inset(50%);
+  overflow:hidden;
+  white-space:nowrap
+}
+.species-breadcrumb {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.75rem;
+  padding-block:2rem;
+  font-size:.82rem;
+  color:var(--color-muted)
+}
+.species-breadcrumb a {
+  display:inline-flex;
+  align-items:center;
+  min-height:44px
+}
+.species-hero {
+  display:grid;
+  grid-template-columns:5fr 7fr;
+  gap:clamp(2rem,5vw,5rem);
+  padding-block:1rem 3rem
+}
+.species-hero-identity {
+  min-width:0
+}
+.species-hero h1 {
+  font-size:clamp(3rem,5.4vw,5.5rem);
+  line-height:.94;
+  letter-spacing:-.035em;
+  max-width:12ch;
+  margin-block:.5rem 1.2rem
+}
+.species-hero-scientific {
+  font-size:clamp(1.2rem,2vw,1.6rem);
+  color:var(--color-muted);
+  margin-bottom:2rem
+}
+.species-hero-status {
+  font-size:1rem
+}
+.species-hero .source-disclosure {
+  font-size:.875rem
+}
+.species-photo-hero .species-photo-frame {
+  aspect-ratio:4/3;
+  max-height:42rem
+}
+.species-detail-blue-whale .species-photo-hero .species-photo-frame {
+  aspect-ratio:3/2
+}
+.species-section-index {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem 1.5rem;
+  border-block:1px solid var(--color-border);
+  padding-block:.8rem
+}
+.species-section-index a {
+  display:flex;
+  align-items:center;
+  min-height:44px;
+  text-decoration:none;
+  font-size:.85rem
+}
+.species-section-index a:hover {
+  text-decoration:underline
+}
+.species-section {
+  display:grid;
+  grid-template-columns:1fr 1.8fr;
+  gap:clamp(2rem,8vw,8rem);
+  border-bottom:1px solid #62655e;
+  padding-block:clamp(4rem,8vw,8rem);
+  scroll-margin-top:2rem
+}
+.species-section>header {
+  min-width:0
+}
+.species-section>header h2 {
+  font-size:clamp(2.4rem,4vw,4rem);
+  line-height:1.04;
+  max-width:12ch
+}
+.species-section-content {
+  min-width:0
+}
+.species-section-content h3 {
+  font-size:1.5rem;
+  margin-top:2rem
+}
+.species-section-content h3:first-child {
+  margin-top:0
+}
+.species-section-content .claim {
+  margin-bottom:2rem
+}
+.species-section-content .note {
+  padding:1.5rem;
+  margin-top:0;
+  background:#141918
+}
+.species-context-note {
+  font-size:.95rem;
+  padding-left:1rem;
+  border-left:2px solid var(--color-stone);
+  color:#c9c7bf
+}
+.species-section-content .measurement {
+  margin-top:0;
+  padding-top:0;
+  border-top:0
+}
+.species-section-content .measurement-value {
+  font-size:clamp(3rem,5vw,4.5rem)
+}
+.species-section-content .source-disclosure {
+  font-size:.875rem
+}
+.species-trend {
+  padding-top:2rem;
+  margin-top:2rem;
+  border-top:1px solid #62655e
+}
+.species-trend .eyebrow {
+  color:#c9c7bf
+}
+.species-conservation-section {
+  background:#24372d;
+  padding-inline:clamp(1.25rem,3vw,3rem);
+  margin-inline:calc(clamp(1.25rem,3vw,3rem)*-1)
+}
+.species-conservation-section .note {
+  background:transparent
+}
+.species-conservation-section .source-disclosure {
+  color:#c7c6bf
+}
+.species-evidence-gaps {
+  padding-left:1.25rem
+}
+.species-evidence-gaps li {
+  margin-bottom:.7rem;
+  font-size:.95rem
+}
+.species-taxonomy {
+  border-block:1px solid #62655e;
+  padding-block:.7rem;
+  margin-block:2rem
+}
+.species-taxonomy summary {
+  min-height:48px
+}
+.species-reference-list {
+  padding-left:1.3rem;
+  font-size:1rem
+}
+.species-reference-list li {
+  padding-block:1rem;
+  border-bottom:1px solid #62655e;
+  overflow-wrap:anywhere
+}
+.species-reference-list .meta {
+  margin-block:.5rem;
+  font-size:.875rem
+}
+.species-reference-list li>a:last-child {
+  font-size:.875rem;
+  display:inline-block;
+  min-height:44px;
+  padding-block:.5rem
+}
+.species-related {
+  padding-block:clamp(4rem,8vw,8rem)
+}
+.species-related>header {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 2rem;
+  margin-bottom:2rem
+}
+.species-related>header .eyebrow {
+  grid-column:1/-1
+}
+.species-related>header h2 {
+  font-size:clamp(2.6rem,5vw,5rem);
+  max-width:12ch
+}
+.species-related>header p:last-child {
+  align-self:end;
+  max-width:38ch;
+  color:var(--color-muted);
+  font-size:1rem
+}
+.species-related-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(1.5rem,4vw,4rem)
+}
+.species-related-grid article {
+  min-width:0
+}
+.species-related-grid .species-photo-frame {
+  aspect-ratio:3/2
+}
+.species-related-grid article>.eyebrow {
+  margin-top:2rem
+}
+.species-related-grid h3 {
+  font-size:clamp(1.8rem,3vw,3rem);
+  margin-bottom:.7rem
+}
+.species-related-grid h3 a {
+  display:inline-block;
+  min-height:48px;
+  text-decoration:none
+}
+.species-related-grid h3 a:hover {
+  text-decoration:underline
+}
+.species-related-grid .doc-evidence {
+  font-size:.875rem;
+  color:var(--color-muted)
+}
+.species-previous-next {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+  border-top:1px solid var(--color-border);
+  padding-block:2rem 4rem
+}
+.species-previous-next>a {
+  font-size:clamp(1.3rem,2vw,2rem);
+  min-height:48px;
+  text-decoration:none
+}
+.species-previous-next>a>span:first-child {
+  display:block;
+  font-size:.8125rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--color-muted);
+  margin-bottom:.75rem
+}
+.species-previous-next>a:last-child {
+  text-align:right
+}
+.species-previous-next>a:hover {
+  text-decoration:underline
+}
+@media(max-width:1099px) {
+  .explorer-card {
+    grid-template-columns:1fr 1.2fr
+  }
+  .explorer-context {
+    grid-column:1/-1;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem 2rem
+  }
+  .explorer-context>.eyebrow {
+    display:none
+  }
+  .explorer-context .doc-claim {
+    margin:0
+  }
+  .explorer-context .species-record-link {
+    grid-column:1/-1
+  }
+  .species-filter-groups {
+    grid-template-columns:1fr 1fr
+  }
+  .species-section {
+    gap:3rem
+  }
+  .species-filter-actions p {
+    margin:0;
+    max-width:none;
+    flex-basis:100%
+  }
+}
+@media(max-width:899px) {
+  .species-hero {
+    grid-template-columns:1fr
+  }
+  .species-hero h1 {
+    max-width:16ch
+  }
+  .species-photo-hero .species-photo-frame {
+    max-height:none
+  }
+  .species-section {
+    grid-template-columns:1fr;
+    gap:1.5rem
+  }
+  .species-section>header h2 {
+    max-width:19ch
+  }
+  .species-section-content {
+    max-width:65ch
+  }
+  .species-scope {
+    grid-template-columns:1fr;
+    gap:1rem
+  }
+  .species-scope h2 {
+    max-width:16ch
+  }
+  .species-hero-status {
+    max-width:60ch
+  }
+}
+@media(max-width:699px) {
+  .species-search-row,.species-filter-groups,.explorer-card,.explorer-context,.species-related-grid,.species-related>header {
+    grid-template-columns:1fr
+  }
+  .species-filter-groups {
+    gap:0
+  }
+  .species-filter-groups details {
+    border-top:0
+  }
+  .species-filter-groups details:first-child {
+    border-top:1px solid #62655e
+  }
+  .species-result-summary {
+    align-items:flex-start;
+    flex-direction:column
+  }
+  .species-result-summary span {
+    display:block;
+    margin-top:.35rem
+  }
+  .explorer-identity h2 {
+    max-width:16ch
+  }
+  .explorer-scientific {
+    margin-bottom:1rem
+  }
+  .explorer-context {
+    grid-column:auto;
+    gap:1rem
+  }
+  .explorer-context>.eyebrow {
+    display:block;
+    margin:0
+  }
+  .explorer-context .species-record-link {
+    grid-column:auto
+  }
+  .species-related>header p:last-child {
+    max-width:100%
+  }
+  .species-previous-next {
+    gap:1rem
+  }
+  .species-conservation-section {
+    margin-inline:0;
+    padding-inline:1rem
+  }
+  .species-section-index {
+    gap:.3rem 1rem
+  }
+  .species-hero h1 {
+    font-size:clamp(2.6rem,11vw,4rem)
+  }
+  .species-breadcrumb {
+    padding-block:1rem
+  }
+  .species-filter-actions .action {
+    flex:1
+  }
+  .species-search-row>label {
+    margin-bottom:.8rem
+  }
+}
