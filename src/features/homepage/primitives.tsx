@@ -68,14 +68,14 @@ export function TextLink({
 export function MediaFigure({
   id,
   className = "",
-  preload = false,
+  highPriority = false,
   interactiveAperture = false,
   immersiveScene,
   sizes = "(min-width: 1024px) 65vw, 100vw",
 }: {
   id: string;
   className?: string;
-  preload?: boolean;
+  highPriority?: boolean;
   interactiveAperture?: boolean;
   immersiveScene?: "mountain" | "ocean";
   sizes?: string;
@@ -94,7 +94,8 @@ export function MediaFigure({
           width={a.width}
           height={a.height}
           sizes={sizes}
-          preload={preload}
+          loading={highPriority ? "eager" : "lazy"}
+          fetchPriority={highPriority ? "high" : "auto"}
         />
         <span className="scene-mask scene-mask-top" aria-hidden="true" />
         <span className="scene-mask scene-mask-bottom" aria-hidden="true" />

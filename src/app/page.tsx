@@ -46,7 +46,7 @@ export default async function Home() {
         <MediaFigure
           id="himalaya"
           className="opening-aperture"
-          preload
+          highPriority
           sizes="(min-width: 1680px) 1560px, 100vw"
         />
         <WaveformMotif />

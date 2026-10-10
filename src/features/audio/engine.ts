@@ -145,7 +145,7 @@ export class AudioEngine {
     const enabled = this.snapshot.enabled.includes(id) ? this.snapshot.enabled.filter((item) => item !== id) : [...this.snapshot.enabled, id];
     const wasPlaying = this.snapshot.status === "playing" || this.snapshot.status === "loading";
     this.publish({ enabled });
-    if (wasPlaying) void this.play(this.position());
+    if (wasPlaying) void this.play(this.elapsed());
   };
   setVolume = (value: number) => {
     const volume = Math.max(0, Math.min(1, value));
@@ -159,12 +159,14 @@ export class AudioEngine {
     if (this.context && this.master)
       this.master.gain.setTargetAtTime(muted ? 0 : this.snapshot.volume, this.context.currentTime, 0.08);
   };
-  position = (period = this.snapshot.duration) => {
-    if (!this.context || this.snapshot.status !== "playing") return this.offset % period;
-    return (this.offset + this.context.currentTime - this.startedAt) % period;
-  };
-  seek = (seconds: number) => {
-    const at = Math.max(0, Math.min(this.snapshot.duration, seconds));
+  // Keep one unwrapped composition clock; each independent recording loops at its own length.
+  private elapsed = () => this.offset + (this.context && this.snapshot.status === "playing"
+    ? this.context.currentTime - this.startedAt : 0);
+  position = (period = this.snapshot.duration) => this.elapsed() % period;
+  seek = (seconds: number, clipId: string) => {
+    const clip = audioCatalog.clips.find((entry) => entry.id === clipId && entry.habitat === this.snapshot.habitat);
+    if (!clip || !Number.isFinite(seconds)) return;
+    const at = Math.max(0, Math.min(clip.durationSeconds, seconds));
     this.offset = at;
     if (this.snapshot.status === "playing") void this.play(at);
   };
@@ -193,7 +195,7 @@ export class AudioEngine {
   };
   pause = () => {
     if (this.snapshot.status !== "playing" && this.snapshot.status !== "loading") return;
-    const at = this.position();
+    const at = this.elapsed();
     this.stop("paused");
     this.offset = at;
   };

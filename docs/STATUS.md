@@ -1,5 +1,37 @@
 # Project status
 
+**Stage:** Final creative and technical review complete
+
+**Updated:** 2026-10-10
+
+## Completed: independent final review and focused improvements
+
+- Reviewed the original identity, storyboard, research/data boundaries, design/motion system, implementation and earlier local QA. Inspected actual production pages and activated WebGL in Chromium; preserved the established homepage, stack, scientific values and assets.
+- Created [final creative audit](review/final-creative-audit.md), [final technical audit](review/final-technical-audit.md), and [ten prioritized improvements](review/final-improvements.md), covering all 20 requested categories. Readiness: coherent and usable for local demonstration; not yet confidently award-ready or universally production-verified.
+- Fixed independent audio timing: seek follows the selected recording's duration, pause and layer changes preserve an unwrapped composition clock, and the waveform resets/synchronizes correctly. Position polling runs only during playback. Added finite-input/recording validation, three unit regressions and one multi-step browser regression.
+- Matched transport instructions to “Sound on,” explained independent loop seeking, and reconciled the methodology's obsolete blanket media-clearance statement with the existing item-specific asset ledgers. No new restricted data/media was acquired.
+- Fresh results: standalone TypeScript passed; foundation **26/26**; visualization **16/16**; Zod validated **366 index records, six species, two population records and six stories**. Production motion/WebGL/audio regression **23/23 in 1.4 minutes**. After final idle-timer refinement, rebuilt successfully and passed all five soundscape tests plus sensory accessibility: **6/6 in 16.2 seconds**, including three enlarged-habitat axe scans with zero reported violations. Final build: `uAmLXIW28bKaALj_o6EjJ`; 17/17 static generation tasks completed.
+- New light-scene snapshot: **three draw calls, three geometries, zero textures, 9,218 triangles, 80 particles, DPR 0.62** at 1440×1000 in local Chromium. This is not a hardware frame-rate benchmark.
+- Earlier Lighthouse values remain historical evidence, not newly measured final-build scores: Performance **76–81**, LCP **1.7–2.0 s**, CLS **0–0.002**, TBT **680–1,010 ms**. No performance gain is claimed for the audio correction; INP remains unmeasured. Full command/results and test scope are in the technical audit.
+- Remaining priorities: main-thread/JavaScript budgets; a cleared selected-species Listening Aperture; refined light-scene art direction; physical-device and assistive-technology checks; loop listening review; supported lint tooling; current source/rights verification and documented evidence gaps. Major architecture/design changes were not improvised during review.
+
+**Stop:** Final local audit and verified corrections are complete. No Awwwards submission, hosting, deployment or cloud configuration. Review-owned servers were stopped; the user's development server was retained.
+
+**Stage:** Local QA complete
+
+**Updated:** 2026-10-10
+
+## Completed: local quality assurance
+
+- Read the project rules, status, data/design requirements, QA coverage and installed Next.js 16.4 guides relevant to the image/icon changes. All checks used a local production server; the user's development server on port 3000 remained untouched.
+- Ran TypeScript, the complete local data/unit/contract/foundation/visualization suite, both data validators, the production build and the full 78-test production Playwright suite. The full browser suite passed; after the QA fixes, informational routes passed 8/8, soundscape passed 4/4, and homepage/motion passed 18/18.
+- Checked 14 intended routes, six selected-species details, 76 same-origin links and 36 rendered images. All links/resources returned successfully, all images decoded with text alternatives, the new app icon returned 200, and no page errors were found.
+- Ran four local mobile Lighthouse audits. Final scores were 76–81 Performance, 100 Accessibility and 100 Best Practices. Latest sampled LCP was 1.7–2.0 s and CLS 0–0.002; INP remains unmeasured in this local lab.
+- Fixed the missing app icon/browser 404, soundscape button accessible-name mismatch, and low priority discovery for the homepage's LCP image. The homepage follow-up Lighthouse sample measured 2.0 s LCP after `fetchPriority="high"` was applied.
+- ESLint remains an outstanding toolchain gap: the repository has no lint script/config. The installed system ESLint is too old, while adding Next's current ESLint stack hits a peer-range conflict with TypeScript 7.0.2. This and measured performance/mobile limitations are documented in [QA reports](qa/test-report.md), [performance report](qa/performance-report.md), and [known issues](qa/known-issues.md).
+
+**Stop:** Local QA is complete. No hosting, deployment, or cloud work was performed.
+
 **Stage:** Responsive and accessibility implementation audit complete
 
 **Updated:** 2026-10-10

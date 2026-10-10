@@ -196,7 +196,7 @@ test("audio touch targets and live reduced sensory preferences keep playback con
   }
   await report("axe-enlarged-habitats", habitatAudits);
   expect(habitatAudits.filter(result => result.violations.length)).toEqual([]);
-  await page.getByRole("button", { name: "Play soundscape" }).click();
+  await page.getByRole("button", { name: "Sound on ↗" }).click();
   await expect.poll(() => page.evaluate(() => (window as unknown as { vfSamples: number }).vfSamples)).toBeGreaterThan(0);
   await page.getByRole("checkbox", { name: "Read without motion", exact: true }).check();
   await expect(page.locator("html")).toHaveAttribute("data-motion", "reduced");
@@ -211,7 +211,7 @@ test("audio touch targets and live reduced sensory preferences keep playback con
   const lighterSamples = await page.evaluate(() => (window as unknown as { vfSamples: number }).vfSamples);
   await page.waitForTimeout(350);
   expect(await page.evaluate(() => (window as unknown as { vfSamples: number }).vfSamples)).toBe(lighterSamples);
-  await expect(page.getByRole("button", { name: "Stop soundscape" })).toBeEnabled();
+  await expect(page.getByRole("button", { name: "Stop audio" })).toBeEnabled();
 });
 
 test("all routes retain semantic reading paths with JavaScript disabled", async ({ browser, baseURL }) => {
@@ -227,7 +227,7 @@ test("all routes retain semantic reading paths with JavaScript disabled", async 
       expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(320);
     }
     await page.goto(`${baseURL}/soundscapes`);
-    await expect(page.getByRole("button", { name: "Play soundscape" })).not.toBeVisible();
+    await expect(page.getByRole("button", { name: "Sound on ↗" })).not.toBeVisible();
     await expect(page.getByText("Audio controls require JavaScript", { exact: false })).toBeVisible();
     expect(await page.locator("main").ariaSnapshot()).toContain("Audio controls require JavaScript");
     await page.goto(`${baseURL}/data`);

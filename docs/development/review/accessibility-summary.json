@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-10T06:57:18.387Z",
-  "buildId": "Tsam_SASQOvzU-0mVQfo-",
+  "date": "2026-10-10T07:35:15.509Z",
+  "buildId": "MTXIi0g4r7tguNmMliauT",
   "tool": "@axe-core/playwright 4.13.0",
   "tags": [
     "wcag2a",
@@ -2402,6 +2402,15 @@
                 ".si11ja_habitatButton:nth-child(3) > strong"
               ],
               "html": "<strong>Edge of the ocean</strong>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_habitatButton:nth-child(3) > small"
+              ],
+              "html": "<small>Olympic coast &amp; Glacier Bay · USA</small>",
               "reasons": [
                 "Element's background color could not be determined because it is overlapped by another element"
               ]

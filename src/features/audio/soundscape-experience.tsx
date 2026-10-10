@@ -25,11 +25,18 @@ export function SoundscapeExperience() {
   const isPlaying = state.status === "playing";
 
   useEffect(() => {
+    // Reflect stop, seek, focus changes and paused positions as well as active playback.
+    const syncPosition = () => setPosition(engine.position(focus.durationSeconds));
+    syncPosition();
+    if (!isPlaying) return;
+    const timer = window.setInterval(syncPosition, 250);
+    return () => window.clearInterval(timer);
+  }, [engine, focus.durationSeconds, isPlaying]);
+
+  useEffect(() => {
     if (!isPlaying) return;
     let frame = 0;
     let last = 0;
-    // Playback position remains readable without running a visual frame loop.
-    const positionTimer = window.setInterval(() => setPosition(engine.position(focus.durationSeconds)), 250);
     const update = (now: number) => {
       frame = requestAnimationFrame(update);
       if (now - last < 90) return;
@@ -49,7 +56,6 @@ export function SoundscapeExperience() {
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-motion", "data-media"] });
     syncVisuals();
     return () => {
-      window.clearInterval(positionTimer);
       observer.disconnect();
       cancelAnimationFrame(frame);
       visualRef.current?.style.setProperty("--energy", "0");
@@ -89,10 +95,10 @@ export function SoundscapeExperience() {
           <div>
             <p className="eyebrow">Playback / explicit consent</p>
             <h3 aria-live="polite" aria-atomic="true">{isPlaying ? "Listening now" : state.status === "loading" ? "Preparing recordings" : state.status === "paused" ? "Listening paused" : "Listen when ready"}</h3>
-            <p className={styles.micro}>Locally cached MP3s begin only after you press Play. Independent clips loop at their original speed; the blend is an artistic composition, not one measured soundscape.</p>
+            <p className={styles.micro}>Locally cached MP3s begin only after you choose Sound on. Independent clips loop at their original speed; the blend is an artistic composition, not one measured soundscape.</p>
           </div>
           <div className={styles.transportControls}>
-            <button type="button" className={styles.playButton} disabled={state.status === "loading" || state.enabled.length === 0} onClick={() => isPlaying ? engine.stop("idle") : void engine.start()} aria-label={isPlaying ? "Stop soundscape" : state.status === "paused" ? "Resume soundscape" : "Play soundscape"}>
+            <button type="button" className={styles.playButton} disabled={state.status === "loading" || state.enabled.length === 0} onClick={() => isPlaying ? engine.stop("idle") : void engine.start()} aria-label={isPlaying ? "Stop audio" : state.status === "loading" ? "Loading…" : state.status === "paused" ? "Resume audio ↗" : "Sound on ↗"}>
               {isPlaying ? "Stop audio" : state.status === "loading" ? "Loading…" : state.status === "paused" ? "Resume audio ↗" : "Sound on ↗"}
             </button>
             <button type="button" className={styles.secondaryButton} onClick={engine.toggleMute} aria-pressed={state.muted}>{state.muted ? "Unmute" : "Mute"}</button>
@@ -104,7 +110,8 @@ export function SoundscapeExperience() {
         <div className={styles.waveformPanel}>
           <div className={styles.waveformHeader}><span>Waveform / {focus.title}</span><span>relative amplitude · not calibrated sound level</span></div>
           <div className={styles.waveform} aria-hidden="true">{focus.waveformPeaks.map((peak, index) => <span key={index} style={{ "--peak": Math.max(0.08, peak) } as CSSProperties} />)}</div>
-          <label className={styles.seek}>Seek within looping recording <input type="range" min="0" max={Math.floor(focus.durationSeconds * 10)} value={Math.min(Math.floor(position * 10), Math.floor(focus.durationSeconds * 10))} onChange={(event) => { const seconds = Number(event.target.value) / 10; setPosition(seconds); engine.seek(seconds); }} aria-valuetext={`${timestamp(position)} of ${timestamp(focus.durationSeconds)}`} /></label>
+          <label className={styles.seek}>Seek within looping recording <input type="range" min="0" max={Math.floor(focus.durationSeconds * 10)} value={Math.min(Math.floor(position * 10), Math.floor(focus.durationSeconds * 10))} onChange={(event) => { const seconds = Number(event.target.value) / 10; setPosition(seconds); engine.seek(seconds, focus.id); }} aria-valuetext={`${timestamp(position)} of ${timestamp(focus.durationSeconds)}`} /></label>
+          <p className={styles.micro}>Seeking moves the composition clock. Each enabled layer loops at its own length.</p>
           <div className={styles.time}><span>{timestamp(position)}</span><span>{timestamp(focus.durationSeconds)}</span></div>
         </div>
         <div className={styles.layers}>
