@@ -1,0 +1,2450 @@
+{
+  "date": "2026-10-10T06:57:18.387Z",
+  "buildId": "Tsam_SASQOvzU-0mVQfo-",
+  "tool": "@axe-core/playwright 4.13.0",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "browserTests": {
+    "startTime": "2026-10-10T06:51:21.054Z",
+    "duration": 356745.188,
+    "expected": 78,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "scanCount": 41,
+  "automatedViolations": 0,
+  "reflow": {
+    "views": 18,
+    "widths": [
+      320,
+      375,
+      430,
+      768,
+      1024,
+      1440,
+      1920
+    ],
+    "combinations": 126
+  },
+  "textSpacing": {
+    "views": 18,
+    "profiles": [
+      "320px with text spacing",
+      "320px with text spacing and 200% root text size",
+      "768px with text spacing and 200% root text size"
+    ],
+    "combinations": 54
+  },
+  "qualification": "Automated results and Chromium interaction/reading checks do not certify WCAG conformance or physical assistive-technology compatibility. Incomplete results remain explicit; manual dispositions and device limits are in docs/development/responsive-accessibility.md.",
+  "scans": [
+    {
+      "report": "axe-1440.json",
+      "view": "/",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                "li:nth-child(1) > a[href$=\"#snow-leopard\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#blue-whale\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#trends\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#soundscapes\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#species-at-risk\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#conservation\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#closing\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#snow-leopard > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#blue-whale > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#trends > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"318\"]"
+              ],
+              "html": "<text x=\"46\" y=\"318\" text-anchor=\"end\">0.00</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"246.80470364245937\"]"
+              ],
+              "html": "<text x=\"46\" y=\"246.80470364245937\" text-anchor=\"end\">0.25</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"175.60940728491877\"]"
+              ],
+              "html": "<text x=\"46\" y=\"175.60940728491877\" text-anchor=\"end\">0.50</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"104.41411092737812\"]"
+              ],
+              "html": "<text x=\"46\" y=\"104.41411092737812\" text-anchor=\"end\">0.75</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"33.2188145698375\"]"
+              ],
+              "html": "<text x=\"46\" y=\"33.2188145698375\" text-anchor=\"end\">1.00</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[x=\"58\"]"
+              ],
+              "html": "<text data-axis-year=\"1970\" x=\"58\" y=\"344\" text-anchor=\"start\">1970</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[data-axis-year=\"1980\"]"
+              ],
+              "html": "<text data-axis-year=\"1980\" x=\"254\" y=\"344\" text-anchor=\"middle\">1980</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[data-axis-year=\"1990\"]"
+              ],
+              "html": "<text data-axis-year=\"1990\" x=\"450\" y=\"344\" text-anchor=\"middle\">1990</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[data-axis-year=\"2000\"]"
+              ],
+              "html": "<text data-axis-year=\"2000\" x=\"646\" y=\"344\" text-anchor=\"middle\">2000</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[data-axis-year=\"2010\"]"
+              ],
+              "html": "<text data-axis-year=\"2010\" x=\"842\" y=\"344\" text-anchor=\"middle\">2010</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[x=\"1038\"]"
+              ],
+              "html": "<text data-axis-year=\"2020\" x=\"1038\" y=\"344\" text-anchor=\"end\">2020</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "#soundscapes > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#species-at-risk > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#conservation > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#closing > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#opening\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/species",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                "article[data-species-id=\"snow-leopard\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"blue-whale\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"tiger\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"bornean-orangutan\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"hawksbill-turtle\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"african-forest-elephant\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/species/snow-leopard",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/species/blue-whale",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/species/tiger",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/species/bornean-orangutan",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/species/hawksbill-turtle",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/species/african-forest-elephant",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/soundscapes",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                ".si11ja_sceneCopy > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">03<!-- --> / <!-- -->ocean</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > h2"
+              ],
+              "html": "<h2>Edge of the ocean<span class=\"si11ja_period\">.</span></h2>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > p:nth-child(3)"
+              ],
+              "html": "<p>Coastal surf and a humpback whale call from different parks. The surf was recorded at the surface; the whale is not a blue whale.</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/data",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                "text[y=\"314\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"314\" text-anchor=\"end\">0.00</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"253.1157465632066\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"253.1157465632066\" text-anchor=\"end\">0.20</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"192.23149312641326\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"192.23149312641326\" text-anchor=\"end\">0.40</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"131.34723968961993\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"131.34723968961993\" text-anchor=\"end\">0.60</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"70.46298625282654\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"70.46298625282654\" text-anchor=\"end\">0.80</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"9.578732816033188\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"9.578732816033188\" text-anchor=\"end\">1.00</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "g[transform=\"translate(52,18)\"] > text[data-axis-year=\"1970\"][x=\"0\"][text-anchor=\"start\"]"
+              ],
+              "html": "<text data-axis-year=\"1970\" class=\"observatory-axis\" x=\"0\" y=\"335\" text-anchor=\"start\">1970</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[data-axis-year=\"1980\"]"
+              ],
+              "html": "<text data-axis-year=\"1980\" class=\"observatory-axis\" x=\"132\" y=\"335\" text-anchor=\"middle\">1980</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[data-axis-year=\"1990\"]"
+              ],
+              "html": "<text data-axis-year=\"1990\" class=\"observatory-axis\" x=\"264\" y=\"335\" text-anchor=\"middle\">1990</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[data-axis-year=\"2000\"]"
+              ],
+              "html": "<text data-axis-year=\"2000\" class=\"observatory-axis\" x=\"396\" y=\"335\" text-anchor=\"middle\">2000</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[data-axis-year=\"2010\"]"
+              ],
+              "html": "<text data-axis-year=\"2010\" class=\"observatory-axis\" x=\"528\" y=\"335\" text-anchor=\"middle\">2010</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[x=\"660\"]"
+              ],
+              "html": "<text data-axis-year=\"2020\" class=\"observatory-axis\" x=\"660\" y=\"335\" text-anchor=\"end\">2020</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[x=\"382\"]"
+              ],
+              "html": "<text class=\"observatory-axis-title\" x=\"382\" y=\"369\" text-anchor=\"middle\">Published year</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/about",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/sources",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/credits",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/privacy",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-1440.json",
+      "view": "/audit-missing-page",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                "li:nth-child(1) > a[href$=\"#snow-leopard\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#blue-whale\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#trends\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#soundscapes\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#species-at-risk\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#conservation\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#closing\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#snow-leopard > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#blue-whale > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#trends > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"218\"]"
+              ],
+              "html": "<text x=\"32\" y=\"218\" text-anchor=\"end\">0.00</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"171.35480583471477\"]"
+              ],
+              "html": "<text x=\"32\" y=\"171.35480583471477\" text-anchor=\"end\">0.25</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"124.70961166942953\"]"
+              ],
+              "html": "<text x=\"32\" y=\"124.70961166942953\" text-anchor=\"end\">0.50</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"78.06441750414427\"]"
+              ],
+              "html": "<text x=\"32\" y=\"78.06441750414427\" text-anchor=\"end\">0.75</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"31.41922333885905\"]"
+              ],
+              "html": "<text x=\"32\" y=\"31.41922333885905\" text-anchor=\"end\">1.00</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[x=\"44\"]"
+              ],
+              "html": "<text data-axis-year=\"1970\" x=\"44\" y=\"244\" text-anchor=\"start\">1970</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[data-axis-year=\"1995\"]"
+              ],
+              "html": "<text data-axis-year=\"1995\" x=\"179\" y=\"244\" text-anchor=\"middle\">1995</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[x=\"314\"]"
+              ],
+              "html": "<text data-axis-year=\"2020\" x=\"314\" y=\"244\" text-anchor=\"end\">2020</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "#soundscapes > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#species-at-risk > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#conservation > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "#closing > .chapter-register > a[href$=\"#chapter-index\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"#opening\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">↑</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/species",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                "article[data-species-id=\"snow-leopard\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"blue-whale\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"tiger\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"bornean-orangutan\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"hawksbill-turtle\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"african-forest-elephant\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/species/snow-leopard",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/species/blue-whale",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/species/tiger",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/species/bornean-orangutan",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/species/hawksbill-turtle",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/species/african-forest-elephant",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/soundscapes",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                ".si11ja_sceneCopy > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">03<!-- --> / <!-- -->ocean</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > h2"
+              ],
+              "html": "<h2>Edge of the ocean<span class=\"si11ja_period\">.</span></h2>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > p:nth-child(3)"
+              ],
+              "html": "<p>Coastal surf and a humpback whale call from different parks. The surf was recorded at the surface; the whale is not a blue whale.</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/data",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                "text[y=\"192\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"192\" text-anchor=\"end\">0.00</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"155.07664630284788\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"155.07664630284788\" text-anchor=\"end\">0.20</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"118.15329260569578\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"118.15329260569578\" text-anchor=\"end\">0.40</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"81.22993890854369\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"81.22993890854369\" text-anchor=\"end\">0.60</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"44.30658521139158\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"44.30658521139158\" text-anchor=\"end\">0.80</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[y=\"7.3832315142394815\"]"
+              ],
+              "html": "<text class=\"observatory-axis\" x=\"-8\" y=\"7.3832315142394815\" text-anchor=\"end\">1.00</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "g[transform=\"translate(38,18)\"] > text[data-axis-year=\"1970\"][x=\"0\"][text-anchor=\"start\"]"
+              ],
+              "html": "<text data-axis-year=\"1970\" class=\"observatory-axis\" x=\"0\" y=\"213\" text-anchor=\"start\">1970</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[data-axis-year=\"1995\"]"
+              ],
+              "html": "<text data-axis-year=\"1995\" class=\"observatory-axis\" x=\"124\" y=\"213\" text-anchor=\"middle\">1995</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[x=\"248\"]"
+              ],
+              "html": "<text data-axis-year=\"2020\" class=\"observatory-axis\" x=\"248\" y=\"213\" text-anchor=\"end\">2020</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            },
+            {
+              "targets": [
+                "text[x=\"162\"]"
+              ],
+              "html": "<text class=\"observatory-axis-title\" x=\"162\" y=\"247\" text-anchor=\"middle\">Published year</text>",
+              "reasons": [
+                "Element's background color could not be determined because element contains an image node"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/about",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/sources",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/credits",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/privacy",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-375.json",
+      "view": "/audit-missing-page",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-enlarged-habitats.json",
+      "view": "Under the canopy",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                ".si11ja_habitatButton:nth-child(3) > small"
+              ],
+              "html": "<small>Olympic coast &amp; Glacier Bay · USA</small>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">01<!-- --> / <!-- -->forest</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > h2"
+              ],
+              "html": "<h2>Under the canopy<span class=\"si11ja_period\">.</span></h2>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > p:nth-child(3)"
+              ],
+              "html": "<p>Water at Muir Woods and a hermit thrush at Yosemite. These recordings were made at different places and times.</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-enlarged-habitats.json",
+      "view": "Above the tree line",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                ".si11ja_sceneCopy > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">02<!-- --> / <!-- -->mountain</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > h2"
+              ],
+              "html": "<h2>Above the tree line<span class=\"si11ja_period\">.</span></h2>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > p:nth-child(3)"
+              ],
+              "html": "<p>Wind at Yellowstone and a ptarmigan at Denali. This is a North American mountain study, not Himalayan field audio.</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_transport > div:nth-child(1) > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">Playback / explicit consent</p>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-enlarged-habitats.json",
+      "view": "Edge of the ocean",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                ".si11ja_sceneCopy > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">03<!-- --> / <!-- -->ocean</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > h2"
+              ],
+              "html": "<h2>Edge of the ocean<span class=\"si11ja_period\">.</span></h2>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > p:nth-child(3)"
+              ],
+              "html": "<p>Coastal surf and a humpback whale call from different parks. The surf was recorded at the surface; the whale is not a blue whale.</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-interactions.json",
+      "view": "menu-320",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                "#navigation-title"
+              ],
+              "html": "<h2 id=\"navigation-title\">Explore the documentary</h2>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "button[autofocus=\"\"]"
+              ],
+              "html": "<button autofocus=\"\" class=\"control\" type=\"button\">Close menu</button>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-grid > div:nth-child(1) > h3"
+              ],
+              "html": "<h3 class=\"eyebrow\">Pages</h3>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[aria-current=\"page\"]"
+              ],
+              "html": "<a aria-current=\"page\" href=\"/\">Documentary</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(2) > a[href$=\"species\"]"
+              ],
+              "html": "<a href=\"/species\">Species Explorer</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(3) > a[href$=\"soundscapes\"]"
+              ],
+              "html": "<a href=\"/soundscapes\">Soundscapes</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(4) > a[href$=\"data\"]"
+              ],
+              "html": "<a href=\"/data\">Data Observatory</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(5) > a[href$=\"about\"]"
+              ],
+              "html": "<a href=\"/about\">About</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(6) > a[href$=\"sources\"]"
+              ],
+              "html": "<a href=\"/sources\">Sources</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(7) > a[href$=\"credits\"]"
+              ],
+              "html": "<a href=\"/credits\">Credits</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-grid > div:nth-child(2) > h3"
+              ],
+              "html": "<h3 class=\"eyebrow\">Documentary chapters</h3>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#opening\"]"
+              ],
+              "html": "<a href=\"/#opening\"><span class=\"chapter-number\">00</span> <!-- -->— <!-- -->The World Is Getting Quieter.</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#opening\"] > .chapter-number"
+              ],
+              "html": "<span class=\"chapter-number\">00</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#snow-leopard\"]"
+              ],
+              "html": "<a href=\"/#snow-leopard\"><span class=\"chapter-number\">01</span> <!-- -->— <!-- -->A life at the edge of sight.</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#snow-leopard\"] > .chapter-number"
+              ],
+              "html": "<span class=\"chapter-number\">01</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#blue-whale\"]"
+              ],
+              "html": "<a href=\"/#blue-whale\"><span class=\"chapter-number\">02</span> <!-- -->— <!-- -->Below the surface.</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#blue-whale\"] > .chapter-number"
+              ],
+              "html": "<span class=\"chapter-number\">02</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#trends\"]"
+              ],
+              "html": "<a href=\"/#trends\"><span class=\"chapter-number\">03</span> <!-- -->— <!-- -->Read the change. Keep the context.</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#trends\"] > .chapter-number"
+              ],
+              "html": "<span class=\"chapter-number\">03</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#soundscapes\"]"
+              ],
+              "html": "<a href=\"/#soundscapes\"><span class=\"chapter-number\">04</span> <!-- -->— <!-- -->A place has more than one voice.</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#soundscapes\"] > .chapter-number"
+              ],
+              "html": "<span class=\"chapter-number\">04</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-interactions.json",
+      "view": "filters-320",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                "article[data-species-id=\"snow-leopard\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"blue-whale\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"tiger\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"bornean-orangutan\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"hawksbill-turtle\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"african-forest-elephant\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-interactions.json",
+      "view": "endpoints-320",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-interactions.json",
+      "view": "forest-320",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                ".si11ja_habitatButton:nth-child(3) > span"
+              ],
+              "html": "<span>03</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_habitatButton:nth-child(3) > strong"
+              ],
+              "html": "<strong>Edge of the ocean</strong>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_habitatButton:nth-child(3) > small"
+              ],
+              "html": "<small>Olympic coast &amp; Glacier Bay · USA</small>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">01<!-- --> / <!-- -->forest</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > h2"
+              ],
+              "html": "<h2>Under the canopy<span class=\"si11ja_period\">.</span></h2>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > p:nth-child(3)"
+              ],
+              "html": "<p>Water at Muir Woods and a hermit thrush at Yosemite. These recordings were made at different places and times.</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-interactions.json",
+      "view": "menu-1440",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(2) > a[href$=\"species\"]"
+              ],
+              "html": "<a href=\"/species\">Species Explorer</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(3) > a[href$=\"soundscapes\"]"
+              ],
+              "html": "<a href=\"/soundscapes\">Soundscapes</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(4) > a[href$=\"data\"]"
+              ],
+              "html": "<a href=\"/data\">Data Observatory</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(5) > a[href$=\"about\"]"
+              ],
+              "html": "<a href=\"/about\">About</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(6) > a[href$=\"sources\"]"
+              ],
+              "html": "<a href=\"/sources\">Sources</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".menu-pages > li:nth-child(7) > a[href$=\"credits\"]"
+              ],
+              "html": "<a href=\"/credits\">Credits</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#blue-whale\"]"
+              ],
+              "html": "<a href=\"/#blue-whale\"><span class=\"chapter-number\">02</span> <!-- -->— <!-- -->Below the surface.</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#blue-whale\"] > .chapter-number"
+              ],
+              "html": "<span class=\"chapter-number\">02</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#trends\"]"
+              ],
+              "html": "<a href=\"/#trends\"><span class=\"chapter-number\">03</span> <!-- -->— <!-- -->Read the change. Keep the context.</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#trends\"] > .chapter-number"
+              ],
+              "html": "<span class=\"chapter-number\">03</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#soundscapes\"]"
+              ],
+              "html": "<a href=\"/#soundscapes\"><span class=\"chapter-number\">04</span> <!-- -->— <!-- -->A place has more than one voice.</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#soundscapes\"] > .chapter-number"
+              ],
+              "html": "<span class=\"chapter-number\">04</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#species-at-risk\"]"
+              ],
+              "html": "<a href=\"/#species-at-risk\"><span class=\"chapter-number\">05</span> <!-- -->— <!-- -->Six lives. Different pressures.</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#species-at-risk\"] > .chapter-number"
+              ],
+              "html": "<span class=\"chapter-number\">05</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#conservation\"]"
+              ],
+              "html": "<a href=\"/#conservation\"><span class=\"chapter-number\">06</span> <!-- -->— <!-- -->Change is possible. It happens in places.</a>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                "a[href$=\"/#conservation\"] > .chapter-number"
+              ],
+              "html": "<span class=\"chapter-number\">06</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-interactions.json",
+      "view": "filters-1440",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                "article[data-species-id=\"snow-leopard\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"blue-whale\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"tiger\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"bornean-orangutan\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"hawksbill-turtle\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            },
+            {
+              "targets": [
+                "article[data-species-id=\"african-forest-elephant\"] > .explorer-identity > .explorer-category > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">◦</span>",
+              "reasons": [
+                "Element content contains only non-text characters"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-interactions.json",
+      "view": "endpoints-1440",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "axe-interactions.json",
+      "view": "forest-1440",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": [
+            {
+              "targets": [
+                ".menu-opener"
+              ],
+              "html": "<button class=\"control menu-opener\" type=\"button\" aria-haspopup=\"dialog\" aria-controls=\"site-navigation\" aria-expanded=\"false\">Menu<svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M0 3h18M0 11h18\" fill=\"none\" stroke=\"currentColor\"></path></svg></button>",
+              "reasons": [
+                "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-navigation\""
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "targets": [
+                ".si11ja_habitatButton:nth-child(1) > span"
+              ],
+              "html": "<span>01</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_habitatButton:nth-child(1) > strong"
+              ],
+              "html": "<strong>Under the canopy</strong>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_habitatButton:nth-child(1) > small"
+              ],
+              "html": "<small>California · two separate parks</small>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_habitatButton:nth-child(2) > span"
+              ],
+              "html": "<span>02</span>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_habitatButton:nth-child(3) > strong"
+              ],
+              "html": "<strong>Edge of the ocean</strong>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">01<!-- --> / <!-- -->forest</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > h2"
+              ],
+              "html": "<h2>Under the canopy<span class=\"si11ja_period\">.</span></h2>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_sceneCopy > p:nth-child(3)"
+              ],
+              "html": "<p>Water at Muir Woods and a hermit thrush at Yosemite. These recordings were made at different places and times.</p>",
+              "reasons": [
+                "Element's background color could not be determined due to a pseudo element"
+              ]
+            },
+            {
+              "targets": [
+                ".si11ja_transport > div:nth-child(1) > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">Playback / explicit consent</p>",
+              "reasons": [
+                "Element's background color could not be determined because it is overlapped by another element"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

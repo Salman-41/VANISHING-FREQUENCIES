@@ -16,7 +16,7 @@ export function EndpointChart({ records }: { records: EndpointRecord[] }) {
   const point = records.find(r => r.id === active);
   return <div className="observatory-endpoints" onPointerLeave={e => { if (e.pointerType === "mouse") setActive(null); }}>
     <p className="observatory-plot-header">Index change (%) · {records[0]!.period.startYear}–{records[0]!.period.endYear}<span>0 = no index change</span></p>
-    <div className="observatory-endpoint-axis" aria-hidden="true">{[-100, -50, 0, ...(x.domain()[1]! > 0 ? [x.domain()[1]!] : [])].map(t => <span key={t} style={{ left: `${x(t)}%` }}>{t}%</span>)}</div>
+    <div className="observatory-endpoint-axis" aria-hidden="true">{[-100, -50, 0, ...(x.domain()[1]! > 0 ? [x.domain()[1]!] : [])].map(t => <span key={t} data-axis-tick={t} style={{ left: `${x(t)}%` }}>{t}%</span>)}</div>
     <ChartMotion revision={records.map(r => r.id).join("-")}>
       <ul className="observatory-endpoint-rows">{records.map(r => <li key={r.id} data-record-id={r.id} data-value={r.value}>
         <div className="observatory-endpoint-label"><h3>{label(r)}</h3><p>{r.value === null ? "Not reported" : `${r.value > 0 ? "+" : ""}${r.value}%`}</p></div>

@@ -25,6 +25,11 @@ test("compact chart year labels stay distinct without removing observations", as
     for (const route of ["/", "/data", "/data?start=2019&end=2020", "/data?start=2020&end=2020"]) {
       await page.goto(route);
       await settle(page);
+      if (route === "/") await expect(page.locator(".index-plot-mobile .chart-point")).toHaveCount(51);
+      else {
+        const records = await page.locator("#selected-observations tbody tr").count();
+        await expect(page.locator(".observatory-svg-compact .observatory-point")).toHaveCount(records);
+      }
       const collisions = await page.locator("svg:visible").evaluateAll(charts => charts.flatMap(chart => {
         const ticks = Array.from(chart.querySelectorAll("[data-axis-year]")).map(el => ({ year: el.textContent, box: el.getBoundingClientRect() }));
         return ticks.flatMap((tick, index) => index && ticks[index - 1]!.box.right + 4 > tick.box.left
@@ -32,6 +37,18 @@ test("compact chart year labels stay distinct without removing observations", as
       }));
       expect(collisions, `${route} at ${width}px`).toEqual([]);
     }
+    await page.goto("/data?edition=2026&scope=ecosystem");
+    await settle(page);
+    await expect(page.locator('.observatory-endpoint-axis [data-axis-tick="0"]')).toHaveText("0%");
+    await page.addStyleTag({ content: "html{font-size:200%!important}" });
+    const ticks = await page.locator(".observatory-endpoint-axis span:visible").evaluateAll(nodes => nodes.map(node => {
+      const box = node.getBoundingClientRect();
+      return { left: box.left, right: box.right, wrap: getComputedStyle(node).whiteSpace };
+    }));
+    expect(ticks).toHaveLength(2);
+    expect(ticks.every(tick => tick.wrap === "nowrap")).toBe(true);
+    expect(ticks[0]!.right + 4).toBeLessThan(ticks[1]!.left);
+    expect(ticks[1]!.right).toBeLessThanOrEqual(width);
   }
 });
 
@@ -109,7 +126,7 @@ test("text spacing and 200 percent type enlargement keep reading and controls av
   const failures = [];
   for (const profile of [{ width: 320, enlarged: false }, { width: 320, enlarged: true }, { width: 768, enlarged: true }]) {
     await page.setViewportSize({ width: profile.width, height: 900 });
-    for (const route of routes) {
+    for (const route of views) {
       await page.goto(route);
       await settle(page);
       await page.addStyleTag({ content: `html { ${profile.enlarged ? "font-size: 200% !important;" : ""} } * { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; } p { margin-bottom: 2em !important; }` });

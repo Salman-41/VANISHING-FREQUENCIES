@@ -1,5 +1,65 @@
 # Project status
 
+**Stage:** Responsive and accessibility implementation audit complete
+
+**Updated:** 2026-10-10
+
+## Completed: responsive design and accessibility pass
+
+- Inspected existing rules, scientific/design specifications, routes, motion, audio, chart and scene implementations before editing. Read the installed Next.js 16.4 CSS and server/client guides; used the verification and React review skills for local checks.
+- Preserved the editorial palette/type, cinematic compositions, scientific values, citations, asset files and core architecture. Reviewed all primary routes, all six species details, privacy/404 and interactive/empty/failed-media states.
+- Fixed text-enlargement overflow through shrinkable grid tracks, long-text wrapping, link wrapping and evidence-column typography. The normal grid proportions remain intact. Added narrow full-width Observatory scope/series controls.
+- Fixed crowded compact chart year labels and a split endpoint `0%` label. Compact annual labels use actual source years; narrow endpoint axes retain −100% and zero. Observations, intervals, signed geometry, editions, dates, inspector values and data tables remain unchanged.
+- Enlarged audio slider hit areas to 44 px; volume controls wrap; waveform buttons have recording-specific accessible names; habitats have a named group; playback status announces politely. Added a contrast-safe reading surface under soundscape copy, including enlarged mountain/forest/ocean states.
+- Cancelled audio visual RAF work for live reduced-motion or lighter-media preferences while a separate 250 ms timer preserves playback-position reading. Timer/observer/frame cleanup is verified. Standalone navigation/chart fades now import only GSAP core; the homepage retains its existing scroll libraries and experiences.
+- Moved fallback navigation/audio explanations into ordinary HTML so they appear in Chromium’s accessibility tree. No-script CSS hides inoperable controls while archive descriptions, source links and Credits remain available. Updated two older tests that depended on the former `noscript` nesting.
+- Added fullscreen-menu safe-area padding/overscroll containment; verified its native modal naming/state, short-screen link visibility, Tab wrapping, Escape, opener restoration and new-route main focus. Existing keyboard/touch scroll alternatives, source disclosures, accessible tables, reduced motion and WebGL failure recovery remain operational.
+- Added [dedicated audit scenarios](../tests/browser/accessibility.spec.ts), [reproducible mobile observations/screenshots](../scripts/audit-responsive.mjs), [audit summary generation](../scripts/summarize-accessibility.mjs), and the [audit handoff](development/responsive-accessibility.md). Added only the development dependency `@axe-core/playwright@4.13.0`; its existing Playwright peer requirement was checked before installation. The lockfile adds that package and `axe-core@4.13.0` without changing existing dependency versions.
+
+### Exact final local results
+
+Node **24.21.0**, npm **11** for installation, Next **16.4.0**, Playwright **1.64.0**, Chromium **156.0.8078.4**. Production build ID: `Tsam_SASQOvzU-0mVQfo-`. Tests owned production port **3001**; the separate observation server used **3002**. The user development server on **3000** was retained.
+
+Installation: `npm exec --yes --package=npm@11.19.0 -- npm install --save-dev --save-exact @axe-core/playwright@4.13.0 --strict-peer-deps --engine-strict`, using Node 24 on PATH. Installation completed with zero reported vulnerabilities; the new tool is not shipped in the frontend.
+
+| Check | Result |
+| --- | --- |
+| `npm run build` | Passed; all existing routes and six static species details generated |
+| `npm run typecheck` | Passed, including the final audit/test additions |
+| `npm run test:local` | **105 passed:** 43 Python data + 12 contracts + 11 species research + 23 foundation + 16 visualizations; five download files remained current |
+| `PLAYWRIGHT_JSON_OUTPUT_FILE=test-results/responsive-final.json node node_modules/@playwright/test/cli.js test --config=playwright.production.config.ts --reporter=list,json` | **78 passed in 5.9 minutes**, 0 failures/skips/flaky outcomes; full production regression, including 15 dedicated audit scenarios |
+| Normal responsive matrix | **126 passed combinations:** 18 views × 320/375/430/768/1024/1440/1920 px; no horizontal page/text/control overflow or recorded page errors |
+| Text-spacing/reflow matrix | **54 passed combinations:** 18 views × spacing overrides at 320 px, spacing plus 200% root font size at 320 px, and spacing plus 200% at 768 px |
+| Axe WCAG-tagged scans | **41 scans, 0 reported violations:** 30 route scans + 8 opened interactive states + 3 enlarged sound habitats; incomplete ARIA/contrast findings retained and manually reviewed |
+| Keyboard, sensory and no-script paths | Passed: short-screen modal focus, forced-colors outline, named audio controls, stopped reduced-sensory sampling, continuing seek position, semantic no-script navigation/audio explanation and reading paths on all routes |
+| Mobile WebGL constraints | Passed with emulated touch/4× CPU slowdown and light SwiftShader rendering: ≤1 DPR, 80 particles, ≤9,220 terrain triangles; existing three-call/three-geometry/no-texture budget, context recovery and cleanup checks passed |
+| `npm run report:accessibility` | Passed; [retained summary](development/review/accessibility-summary.json) contains all 41 scans, exact incomplete findings and final regression statistics |
+| `npm run measure:responsive -- http://127.0.0.1:3002` | Completed four isolated cold-load observations and **21 visually reviewed screenshots**; [profile/raw results](development/review/responsive-performance.json) retained |
+| Scientific/asset preservation | No changes under `data/` or `public/`; processed export SHA-256 remains `36b87bf96cf579f6bcf5e9b97157573e897de62e65c7829bb9b3b460017d670c` |
+| `git diff --check` | Passed |
+
+The final run followed correction of two stale no-script test selectors. An earlier final-run attempt ended with SIGTERM; its owned orphan test server was stopped before retry. Neither attempt is counted as a successful final run.
+
+### Constrained mobile observations and remaining limits
+
+One fresh local context per route; 375×812, DPR2, 4× CPU slowdown, 200,000 B/s download, 93,750 B/s upload, 150 ms latency, cache disabled. Observation waits for fonts, initial native homepage-controller readiness, network idle and another 1.5 seconds. These are single lab observations, not physical-device/field guarantees.
+
+| Route | Last LCP candidate | Non-input shift sum | Encoded JS bodies | All encoded bodies | Longest startup task |
+| --- | --- | --- | --- | --- | --- |
+| `/` | 1.056 s | 0 | 240,259 B | 545,699 B | 325 ms |
+| `/species` | 0.764 s | 0 | 224,198 B | 518,357 B | 312 ms |
+| `/soundscapes` | 0.840 s | 0 | 190,459 B | 422,269 B | 297 ms |
+| `/data` | 0.716 s | 0.002836 | 229,059 B | 378,637 B | 357 ms |
+
+- Sampled LCP/shift/body-size results are below the 2.5 s / 0.1 / 1.2 MB targets. Body sizes omit transport overhead; the recorded shift sum is not a full field-session CLS measurement. No initial audio request, canvas or external resource was observed.
+- Initial encoded JavaScript still exceeds a 200,000 B ceiling on the homepage by **40,259 B**, Explorer by **24,198 B**, and Observatory by **29,059 B**. Startup tasks up to **357 ms** remain under the constrained profile. No INP pass, sustained GPU-frame-rate claim or complete performance-budget signoff is made.
+- WCAG 2.2 AA remains the target. Automated scans, palette/overlay calculations and Chromium reading/interaction checks do not establish formal conformance. Physical VoiceOver/Safari, NVDA/Chrome/Firefox, TalkBack, switch input, real browser zoom, battery/thermal/memory pressure and cross-browser testing remain unverified.
+- Existing scientific authorization, assessment-date/population-history, source-method and selected-species-recording gaps remain unchanged. No missing evidence was replaced or editions combined. External publisher/rights pages were not comprehensively revalidated in this implementation audit.
+
+**Stop:** Responsive/accessibility implementation audit is complete with the documented device and performance limits. Temporary audit servers were stopped; no hosting/deployment or next project stage was performed.
+
+## Previous stage: supporting information pages
+
 **Stage:** Supporting information pages and content audit complete
 
 **Updated:** 2026-10-10

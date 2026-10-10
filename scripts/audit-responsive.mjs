@@ -1,6 +1,6 @@
 // Local production observations. Emulation is not physical-device certification.
 import { chromium } from "@playwright/test";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 
 const base = process.argv[2] ?? "http://127.0.0.1:3002";
 if (!["localhost", "127.0.0.1"].includes(new URL(base).hostname)) throw new Error("Local URL required");
@@ -12,6 +12,10 @@ try {
   for (const route of ["/", "/species", "/soundscapes", "/data"]) {
     const context = await browser.newContext({ viewport: { width: 375, height: 812 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
     const page = await context.newPage();
+    const encodings = new Set();
+    page.on("response", response => {
+      if (new URL(response.url()).pathname.endsWith(".js")) encodings.add(response.headers()["content-encoding"] ?? "identity");
+    });
     const cdp = await context.newCDPSession(page);
     await cdp.send("Network.enable");
     await cdp.send("Network.setCacheDisabled", { cacheDisabled: true });
@@ -31,6 +35,8 @@ try {
     });
     await page.goto(`${base}${route}`);
     await page.evaluate(() => document.fonts.ready);
+    if (route === "/") await page.waitForFunction(() => document.querySelector(".documentary")?.dataset.scrollController === "native");
+    await page.waitForLoadState("networkidle");
     await page.waitForTimeout(1500);
     observations.push(await page.evaluate(route => {
       const nav = performance.getEntriesByType("navigation")[0];
@@ -44,6 +50,7 @@ try {
         audioRequested: resources.some(item => item.name.includes("/audio/")), canvases: document.querySelectorAll("canvas").length,
         width: innerWidth, scrollWidth: document.documentElement.scrollWidth };
     }, route));
+    observations.at(-1).javascriptContentEncodings = [...encodings];
     await context.close();
   }
   const page = await browser.newPage();
@@ -56,6 +63,11 @@ try {
     { name: "species-768", width: 768, route: "/species/blue-whale", target: ".species-hero" },
     { name: "sound-320", width: 320, route: "/soundscapes", target: "[aria-label='Choose a habitat']" },
     { name: "sound-1440", width: 1440, route: "/soundscapes", target: "[aria-label='Choose a habitat']" },
+    { name: "sound-scene-320", width: 320, route: "/soundscapes", target: "section[aria-labelledby='soundscape-heading'] > div:nth-of-type(3)" },
+    { name: "sound-scene-1440", width: 1440, route: "/soundscapes", target: "section[aria-labelledby='soundscape-heading'] > div:nth-of-type(3)" },
+    { name: "sound-console-320", width: 320, route: "/soundscapes", target: "section[aria-labelledby='soundscape-heading'] > div:nth-of-type(4)" },
+    { name: "sound-console-1440", width: 1440, route: "/soundscapes", target: "section[aria-labelledby='soundscape-heading'] > div:nth-of-type(4)" },
+    { name: "data-controls-320", width: 320, route: "/data", target: ".observatory-fields" },
     { name: "chart-375", width: 375, route: "/data", target: ".observatory-chart-motion" },
     { name: "chart-1440", width: 1440, route: "/data", target: ".observatory-chart-motion" },
     { name: "endpoint-375", width: 375, route: "/data?edition=2026&scope=ecosystem", target: ".observatory-endpoint-rows" },
@@ -69,8 +81,8 @@ try {
     await page.waitForTimeout(150);
     await page.screenshot({ path: `${directory}/responsive-${capture.name}.jpg`, type: "jpeg", quality: 80 });
   }
-  const report = { date: new Date().toISOString(), browser: browser.version(), build: "local production", profile: { viewport: "375×812", dpr: 2, cpuSlowdown: 4, downloadBytesPerSecond: 200000, uploadBytesPerSecond: 93750, latencyMs: 150, cache: "disabled, fresh context per route" },
-    method: "One cold local navigation per route, observations through load plus 1.5 seconds and font readiness. Encoded resource-body sizes from Resource Timing; not total network overhead. LCP is the last candidate during this sample; CLS is summed non-input shifts, not the field-session window metric. Long tasks are main-thread tasks above 50ms. No physical GPU, battery, field percentile or bandwidth guarantee.", observations, screenshots: captures.map(capture => `responsive-${capture.name}.jpg`) };
+  const report = { date: new Date().toISOString(), browser: browser.version(), build: "local production", buildId: (await readFile(".next/BUILD_ID", "utf8")).trim(), profile: { viewport: "375×812", dpr: 2, cpuSlowdown: 4, downloadBytesPerSecond: 200000, uploadBytesPerSecond: 93750, latencyMs: 150, cache: "disabled, fresh context per route" },
+    method: "One cold local navigation per route, through font readiness, initial homepage native-controller readiness, network idle and another 1.5 seconds. Encoded resource-body sizes from Resource Timing; not total network overhead. LCP is the last candidate during this sample; CLS is summed non-input shifts, not the field-session window metric. Long tasks are main-thread tasks above 50ms. No physical GPU, battery, field percentile or bandwidth guarantee.", observations, screenshots: captures.map(capture => `responsive-${capture.name}.jpg`) };
   await writeFile(`${directory}/responsive-performance.json`, JSON.stringify(report, null, 2) + "\n");
   console.log(JSON.stringify(observations.map(({ route, lcp, cls, longTasks, javascriptEncodedBytes, totalEncodedBytes, loadMs, audioRequested, canvases }) => ({ route, lcp, cls, longestTaskMs: Math.max(0, ...longTasks), javascriptEncodedBytes, totalEncodedBytes, loadMs, audioRequested, canvases })), null, 2));
 } finally { await browser.close(); }

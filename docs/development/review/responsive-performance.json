@@ -1,7 +1,8 @@
 {
-  "date": "2026-10-10T06:34:33.538Z",
+  "date": "2026-10-10T06:51:19.917Z",
   "browser": "156.0.8078.4",
   "build": "local production",
+  "buildId": "Tsam_SASQOvzU-0mVQfo-",
   "profile": {
     "viewport": "375×812",
     "dpr": 2,
@@ -11,25 +12,26 @@
     "latencyMs": 150,
     "cache": "disabled, fresh context per route"
   },
-  "method": "One cold local navigation per route, observations through load plus 1.5 seconds and font readiness. Encoded resource-body sizes from Resource Timing; not total network overhead. LCP is the last candidate during this sample; CLS is summed non-input shifts, not the field-session window metric. Long tasks are main-thread tasks above 50ms. No physical GPU, battery, field percentile or bandwidth guarantee.",
+  "method": "One cold local navigation per route, through font readiness, initial homepage native-controller readiness, network idle and another 1.5 seconds. Encoded resource-body sizes from Resource Timing; not total network overhead. LCP is the last candidate during this sample; CLS is summed non-input shifts, not the field-session window metric. Long tasks are main-thread tasks above 50ms. No physical GPU, battery, field percentile or bandwidth guarantee.",
   "observations": [
     {
       "route": "/",
-      "lcp": 1100,
+      "lcp": 1056,
       "cls": 0,
       "longTasks": [
-        292,
-        545,
-        92,
-        286,
-        182,
-        64,
-        90
+        276,
+        325,
+        135,
+        169,
+        55,
+        125,
+        89,
+        99
       ],
-      "loadMs": 2923.8000000002794,
-      "domContentLoadedMs": 624.1000000000931,
-      "javascriptEncodedBytes": 212814,
-      "totalEncodedBytes": 498335,
+      "loadMs": 2591.9000000003725,
+      "domContentLoadedMs": 619.5,
+      "javascriptEncodedBytes": 240259,
+      "totalEncodedBytes": 545699,
       "resources": [
         {
           "url": "/_next/static/media/archivo_latin_standard_normal-s.p.1h4hl0m83hjjz.woff2",
@@ -56,12 +58,12 @@
           "encodedBytes": 73475
         },
         {
-          "url": "/_next/static/chunks/0-z0csd2n2nb-.js",
-          "encodedBytes": 46346
-        },
-        {
           "url": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
           "encodedBytes": 3940
+        },
+        {
+          "url": "/_next/static/chunks/0-z0csd2n2nb-.js",
+          "encodedBytes": 46346
         },
         {
           "url": "/_next/static/chunks/26gxdpetz81p7.js",
@@ -89,57 +91,65 @@
         },
         {
           "url": "/",
-          "encodedBytes": 243
+          "encodedBytes": 242
         },
         {
           "url": "/credits",
-          "encodedBytes": 261
+          "encodedBytes": 259
         },
         {
           "url": "/sources",
-          "encodedBytes": 262
+          "encodedBytes": 260
         },
         {
           "url": "/_next/static/chunks/0ll_sn8-cabqk.js",
           "encodedBytes": 8224
         },
         {
+          "url": "/_next/static/chunks/394ceu8hxos50.js",
+          "encodedBytes": 27445
+        },
+        {
           "url": "/_next/static/chunks/0icqp5p40c_j3.js",
           "encodedBytes": 17483
         },
         {
-          "url": "/sources",
-          "encodedBytes": 10131
+          "url": "/",
+          "encodedBytes": 19930
         },
         {
           "url": "/credits",
-          "encodedBytes": 6199
+          "encodedBytes": 6195
+        },
+        {
+          "url": "/sources",
+          "encodedBytes": 10129
         }
       ],
       "externalRequests": [],
       "audioRequested": false,
       "canvases": 0,
       "width": 375,
-      "scrollWidth": 375
+      "scrollWidth": 375,
+      "javascriptContentEncodings": [
+        "identity",
+        "gzip"
+      ]
     },
     {
       "route": "/species",
-      "lcp": 2104,
+      "lcp": 764,
       "cls": 0,
       "longTasks": [
-        234,
-        62,
-        540,
-        308,
-        76,
-        77,
-        56,
-        69
+        164,
+        312,
+        155,
+        52
       ],
-      "loadMs": 4216.100000000093,
-      "domContentLoadedMs": 2099.3000000002794,
-      "javascriptEncodedBytes": 215159,
-      "totalEncodedBytes": 509324,
+      "loadMs": 2820.300000000745,
+      "domContentLoadedMs": 544.4000000003725,
+      "javascriptEncodedBytes": 224198,
+      "totalEncodedBytes": 518357,
       "resources": [
         {
           "url": "/_next/static/media/archivo_latin_standard_normal-s.p.1h4hl0m83hjjz.woff2",
@@ -207,7 +217,7 @@
         },
         {
           "url": "/",
-          "encodedBytes": 243
+          "encodedBytes": 242
         },
         {
           "url": "/_next/static/chunks/26i45r6rn3etc.js",
@@ -219,30 +229,37 @@
         },
         {
           "url": "/",
-          "encodedBytes": 19932
+          "encodedBytes": 19930
+        },
+        {
+          "url": "/_next/static/chunks/2baosnpixc6mn.js",
+          "encodedBytes": 9039
         }
       ],
       "externalRequests": [],
       "audioRequested": false,
       "canvases": 0,
       "width": 375,
-      "scrollWidth": 375
+      "scrollWidth": 375,
+      "javascriptContentEncodings": [
+        "identity",
+        "gzip"
+      ]
     },
     {
       "route": "/soundscapes",
-      "lcp": 928,
+      "lcp": 840,
       "cls": 0,
       "longTasks": [
-        66,
-        219,
-        539,
-        68,
-        168
+        53,
+        142,
+        297,
+        155
       ],
-      "loadMs": 2618.7000000001863,
-      "domContentLoadedMs": 592.8999999999069,
+      "loadMs": 2436.4000000003725,
+      "domContentLoadedMs": 575.8000000007451,
       "javascriptEncodedBytes": 190459,
-      "totalEncodedBytes": 422274,
+      "totalEncodedBytes": 422269,
       "resources": [
         {
           "url": "/_next/static/media/archivo_latin_standard_normal-s.p.1h4hl0m83hjjz.woff2",
@@ -302,11 +319,11 @@
         },
         {
           "url": "/",
-          "encodedBytes": 243
+          "encodedBytes": 242
         },
         {
           "url": "/",
-          "encodedBytes": 19932
+          "encodedBytes": 19930
         },
         {
           "url": "/_next/static/chunks/2baosnpixc6mn.js",
@@ -317,25 +334,28 @@
       "audioRequested": false,
       "canvases": 0,
       "width": 375,
-      "scrollWidth": 375
+      "scrollWidth": 375,
+      "javascriptContentEncodings": [
+        "identity",
+        "gzip"
+      ]
     },
     {
       "route": "/data",
-      "lcp": 720,
+      "lcp": 716,
       "cls": 0.0028363608374384237,
       "longTasks": [
-        134,
-        592,
-        61,
-        210,
-        51,
-        101,
-        94
+        115,
+        357,
+        75,
+        159,
+        74,
+        54
       ],
-      "loadMs": 2483.4000000003725,
-      "domContentLoadedMs": 532.5,
-      "javascriptEncodedBytes": 229051,
-      "totalEncodedBytes": 378546,
+      "loadMs": 2228.600000000559,
+      "domContentLoadedMs": 550.6000000005588,
+      "javascriptEncodedBytes": 229059,
+      "totalEncodedBytes": 378637,
       "resources": [
         {
           "url": "/_next/static/media/archivo_latin_standard_normal-s.p.1h4hl0m83hjjz.woff2",
@@ -346,8 +366,8 @@
           "encodedBytes": 9100
         },
         {
-          "url": "/_next/static/chunks/119s0ijm_849h.css",
-          "encodedBytes": 2600
+          "url": "/_next/static/chunks/2di3h_7oayqik.css",
+          "encodedBytes": 2676
         },
         {
           "url": "/_next/static/chunks/2_xf99yxhp4od.js",
@@ -378,8 +398,8 @@
           "encodedBytes": 36155
         },
         {
-          "url": "/_next/static/chunks/2kckd6t01s8ix.js",
-          "encodedBytes": 13249
+          "url": "/_next/static/chunks/41mdfjfczahzp.js",
+          "encodedBytes": 13257
         },
         {
           "url": "/_next/static/chunks/1e7lhxk-cmchg.js",
@@ -403,11 +423,11 @@
         },
         {
           "url": "/",
-          "encodedBytes": 243
+          "encodedBytes": 242
         },
         {
           "url": "/",
-          "encodedBytes": 19932
+          "encodedBytes": 19930
         },
         {
           "url": "/_next/static/chunks/2baosnpixc6mn.js",
@@ -418,7 +438,11 @@
       "audioRequested": false,
       "canvases": 0,
       "width": 375,
-      "scrollWidth": 375
+      "scrollWidth": 375,
+      "javascriptContentEncodings": [
+        "identity",
+        "gzip"
+      ]
     }
   ],
   "screenshots": [
@@ -435,6 +459,11 @@
     "responsive-species-768.jpg",
     "responsive-sound-320.jpg",
     "responsive-sound-1440.jpg",
+    "responsive-sound-scene-320.jpg",
+    "responsive-sound-scene-1440.jpg",
+    "responsive-sound-console-320.jpg",
+    "responsive-sound-console-1440.jpg",
+    "responsive-data-controls-320.jpg",
     "responsive-chart-375.jpg",
     "responsive-chart-1440.jpg",
     "responsive-endpoint-375.jpg"

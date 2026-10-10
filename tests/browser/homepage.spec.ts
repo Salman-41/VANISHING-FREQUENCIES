@@ -104,7 +104,7 @@ test("homepage remains complete without JavaScript, including native evidence di
     page.locator("#home-snow-corrals .inference-limit"),
   ).toBeVisible();
   await expect(
-    page.locator("noscript").getByRole("link", { name: "Species Explorer" }),
+    page.getByRole("navigation", { name: "Main navigation", exact: true }).getByRole("link", { name: "Species Explorer" }),
   ).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(
     390,

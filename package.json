@@ -27,7 +27,8 @@
     "data:check-observatory": "node --import tsx scripts/export-observatory.ts --check",
     "test:visualizations": "node --import tsx --test tests/visualizations/*.test.ts",
     "test:accessibility": "playwright test --config=playwright.production.config.ts tests/browser/accessibility.spec.ts",
-    "measure:responsive": "node scripts/audit-responsive.mjs"
+    "measure:responsive": "node scripts/audit-responsive.mjs",
+    "report:accessibility": "node scripts/summarize-accessibility.mjs"
   },
   "dependencies": {
     "zod": "4.6.5",

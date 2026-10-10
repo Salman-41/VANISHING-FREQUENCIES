@@ -149,7 +149,7 @@ test("essential evidence and navigation remain readable without JavaScript", asy
     "718 individuals",
   );
   await expect(
-    page.locator("noscript").getByRole("link", { name: "Species Explorer" }),
+    page.getByRole("navigation", { name: "Main navigation", exact: true }).getByRole("link", { name: "Species Explorer" }),
   ).toBeVisible();
   await context.close();
 });
