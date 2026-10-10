@@ -3,7 +3,7 @@
 .observatory .page-intro h1 { max-width: 16ch; }
 .observatory .page-intro .lead { max-width: 44ch; }
 .observatory-premise { border-top: 1px solid var(--color-border); padding-block: 2.5rem 3.5rem; }
-.observatory-premise > div { display: grid; grid-template-columns: 1fr 1.35fr; gap: 5rem; margin-block: 2rem; }
+.observatory-premise > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 5rem; margin-block: 2rem; }
 .observatory-premise h2 { font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem); letter-spacing: -.035em; }
 .observatory-premise strong { font-weight: 500; }
 .observatory-premise > .meta { margin: 0; }
@@ -15,7 +15,7 @@
 .observatory-editions label > span { font-size: 1.5rem; line-height: 1.3; }
 .observatory-editions small { display: block; font-size: .875rem; color: var(--color-muted); margin-top: .4rem; }
 .observatory-editions input { width: 20px; height: 20px; flex: 0 0 auto; accent-color: var(--color-ivory); margin: .35rem 0 0; }
-.observatory-fields { display: grid; grid-template-columns: 1fr 1.4fr 1fr 1fr; gap: 1rem; margin-block: 2rem 1.5rem; }
+.observatory-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; margin-block: 2rem 1.5rem; }
 .observatory-fields label, .observatory-inspect label { display: flex; flex-direction: column; gap: .5rem; min-width: 0; font-size: 1rem; }
 .observatory select { min-height: 48px; width: 100%; border: 1px solid var(--color-border); border-radius: 0; padding: .65rem 2rem .65rem .75rem; background: var(--color-background); color: var(--color-text); font-size: 1rem; }
 .observatory-apply { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; }
@@ -111,7 +111,7 @@
 .observatory-endpoint-rows li > p.meta { margin-bottom: 0; }
 .observatory-methods, .observatory-downloads, .observatory-register { padding-block: 4rem; border-top: 1px solid var(--color-border); }
 .observatory-methods h2, .observatory-downloads h2, .observatory-register h2 { font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem); max-width: 19ch; margin-bottom: 2rem; }
-.observatory-method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 5rem; margin-top: 3rem; }
+.observatory-method-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem 5rem; margin-top: 3rem; }
 .observatory-method-grid article h3 { margin-bottom: 1rem; }
 .observatory-method-links { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-top: 1.5rem; }
 .observatory-method-links a { display: inline-block; min-height: 44px; }
@@ -126,13 +126,13 @@
 @media (max-width: 1100px) {
   .observatory-evidence-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
   .observatory-provenance { padding: 1.5rem 0 0; border-left: 0; border-top: 1px solid var(--color-border); }
-  .observatory-provenance dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 2rem; }
+  .observatory-provenance dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem 2rem; }
   .observatory-provenance dl > div { margin: 0; }
   .observatory-premise > div, .observatory-method-grid { gap: 2rem; }
 }
 @media (max-width: 700px) {
   .observatory-premise > div, .observatory-method-grid { grid-template-columns: 1fr; gap: 1rem; }
-  .observatory-fields { grid-template-columns: 1fr 1fr; }
+  .observatory-fields { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .observatory-apply p { margin: 1rem 0 0; }
   .observatory-study { padding-top: 3rem; }
   .observatory-provenance dl { grid-template-columns: 1fr; }

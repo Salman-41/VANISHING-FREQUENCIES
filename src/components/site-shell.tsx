@@ -21,15 +21,16 @@ export function SiteHeader() {
         <Navigation />
       </div>
       <noscript>
-        <style>{".menu-opener,.preferences{display:none}"}</style>
-        <nav className="no-js-nav" aria-label="Main navigation">
-          {siteRoutes.map((r) => (
-            <Link key={r.href} href={r.href} className="action">
-              {r.label}
-            </Link>
-          ))}
-        </nav>
+        <style>{".menu-opener,.preferences{display:none}.no-js-nav{display:flex}"}</style>
       </noscript>
+      {/* Keep fallback links in the ordinary accessibility tree. */}
+      <nav className="no-js-nav" aria-label="Main navigation">
+        {siteRoutes.map((r) => (
+          <Link key={r.href} href={r.href} className="action">
+            {r.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }

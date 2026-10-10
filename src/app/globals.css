@@ -24,6 +24,8 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-body);
   line-height: 1.6;
+  /* Preserve full names, citations and controls when text is enlarged. */
+  overflow-wrap: anywhere;
 }
 body:has(dialog[open]) {
   overflow: hidden;
@@ -435,7 +437,9 @@ input[type="checkbox"] {
 .menu-scroll {
   height: 100%;
   overflow: auto;
-  padding-bottom: 2rem;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: max(2rem, env(safe-area-inset-bottom, 0px));
+  overscroll-behavior: contain;
 }
 .menu-top {
   display: flex;
@@ -479,7 +483,7 @@ input[type="checkbox"] {
 }
 .no-js-nav {
   padding-block: 1rem;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: .75rem;
 }
@@ -488,14 +492,14 @@ input[type="checkbox"] {
     display: inline-flex;
   }
   .species-card {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 2rem;
   }
   .facts {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
   .menu-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 }
 @media (min-width: 1024px) {

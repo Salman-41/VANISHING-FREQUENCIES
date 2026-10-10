@@ -47,7 +47,7 @@ test("layer, volume, mute and waveform controls work by keyboard at mobile width
   await expect(volume).toHaveValue("64");
   await page.getByRole("checkbox", { name: /Humpback whale/ }).uncheck();
   await expect(page.getByRole("checkbox", { name: /Humpback whale/ })).not.toBeChecked();
-  await page.getByRole("button", { name: "View waveform" }).last().click();
+  await page.getByRole("button", { name: "View waveform for Humpback whale" }).click();
   await expect(page.getByText("Waveform / Humpback whale")).toBeVisible();
   await expect(page.getByRole("slider", { name: /Seek within looping recording/ })).toBeVisible();
 });

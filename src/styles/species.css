@@ -15,7 +15,7 @@
 }
 .species-search-row {
   display:grid;
-  grid-template-columns:2fr 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap:var(--grid-gap)
 }
 .species-search-row>label {
@@ -156,7 +156,7 @@
 }
 .explorer-card {
   display:grid;
-  grid-template-columns:1fr 1.2fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
   gap:clamp(1.5rem,3vw,3rem);
   padding-block:clamp(2.5rem,5vw,5rem);
   border-bottom:1px solid #62655e;
@@ -268,7 +268,7 @@
 }
 .species-scope {
   display:grid;
-  grid-template-columns:1fr 1.5fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
   gap:clamp(2rem,8vw,8rem);
   padding-block:clamp(4rem,8vw,8rem)
 }
@@ -306,7 +306,7 @@
 }
 .species-hero {
   display:grid;
-  grid-template-columns:5fr 7fr;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap:clamp(2rem,5vw,5rem);
   padding-block:1rem 3rem
 }
@@ -357,7 +357,7 @@
 }
 .species-section {
   display:grid;
-  grid-template-columns:1fr 1.8fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr);
   gap:clamp(2rem,8vw,8rem);
   border-bottom:1px solid #62655e;
   padding-block:clamp(4rem,8vw,8rem);
@@ -464,7 +464,7 @@
 }
 .species-related>header {
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap:0 2rem;
   margin-bottom:2rem
 }
@@ -483,7 +483,7 @@
 }
 .species-related-grid {
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap:clamp(1.5rem,4vw,4rem)
 }
 .species-related-grid article {
@@ -513,7 +513,7 @@
 }
 .species-previous-next {
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap:2rem;
   border-top:1px solid var(--color-border);
   padding-block:2rem 4rem
@@ -544,7 +544,7 @@
   .explorer-context {
     grid-column:1/-1;
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap:1rem 2rem
   }
   .explorer-context>.eyebrow {

@@ -28,23 +28,29 @@ export function SoundscapeExperience() {
     if (!isPlaying) return;
     let frame = 0;
     let last = 0;
-    let lastPosition = 0;
+    // Playback position remains readable without running a visual frame loop.
+    const positionTimer = window.setInterval(() => setPosition(engine.position(focus.durationSeconds)), 250);
     const update = (now: number) => {
       frame = requestAnimationFrame(update);
       if (now - last < 90) return;
       last = now;
-      if (now - lastPosition >= 250) {
-        lastPosition = now;
-        setPosition(engine.position(focus.durationSeconds));
-      }
-      if (document.documentElement.dataset.motion === "reduced" || document.documentElement.dataset.media === "lighter") return;
       const values = engine.sample();
       if (!values || !visualRef.current) return;
       const energy = values.slice(1, 48).reduce((sum, value) => sum + value, 0) / (47 * 255);
       visualRef.current.style.setProperty("--energy", String(Math.min(1, energy * 2.4)));
     };
-    frame = requestAnimationFrame(update);
+    const syncVisuals = () => {
+      cancelAnimationFrame(frame);
+      visualRef.current?.style.setProperty("--energy", "0");
+      if (document.documentElement.dataset.motion !== "reduced" && document.documentElement.dataset.media !== "lighter")
+        frame = requestAnimationFrame(update);
+    };
+    const observer = new MutationObserver(syncVisuals);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-motion", "data-media"] });
+    syncVisuals();
     return () => {
+      window.clearInterval(positionTimer);
+      observer.disconnect();
       cancelAnimationFrame(frame);
       visualRef.current?.style.setProperty("--energy", "0");
     };
@@ -62,7 +68,7 @@ export function SoundscapeExperience() {
         <p className="eyebrow" id="soundscape-heading">Listening room / field archive</p>
         <p>01 — 03 / independent recordings</p>
       </div>
-      <div className={styles.selector} aria-label="Choose a habitat">
+      <div className={styles.selector} role="group" aria-label="Choose a habitat">
         {habitats.map((habitat) => (
           <button key={habitat.id} type="button" aria-pressed={habitat.id === state.habitat} onClick={() => chooseHabitat(habitat.id)} className={styles.habitatButton}>
             <span>{habitat.number}</span><strong>{habitat.title}</strong><small>{habitat.place}</small>
@@ -82,7 +88,7 @@ export function SoundscapeExperience() {
         <div className={styles.transport}>
           <div>
             <p className="eyebrow">Playback / explicit consent</p>
-            <h3>{isPlaying ? "Listening now" : state.status === "loading" ? "Preparing recordings" : state.status === "paused" ? "Listening paused" : "Listen when ready"}</h3>
+            <h3 aria-live="polite" aria-atomic="true">{isPlaying ? "Listening now" : state.status === "loading" ? "Preparing recordings" : state.status === "paused" ? "Listening paused" : "Listen when ready"}</h3>
             <p className={styles.micro}>Locally cached MP3s begin only after you press Play. Independent clips loop at their original speed; the blend is an artistic composition, not one measured soundscape.</p>
           </div>
           <div className={styles.transportControls}>
@@ -106,7 +112,7 @@ export function SoundscapeExperience() {
           {clips.map((clip) => (
             <div className={styles.layer} key={clip.id}>
               <label><input type="checkbox" checked={state.enabled.includes(clip.id)} onChange={() => engine.toggleLayer(clip.id)} /><span><b>{clip.title}</b><small>{clip.kind} · {clip.place}</small></span></label>
-              <button type="button" aria-pressed={focus.id === clip.id} onClick={() => setFocusId(clip.id)}>View waveform</button>
+              <button type="button" aria-label={`View waveform for ${clip.title}`} aria-pressed={focus.id === clip.id} onClick={() => setFocusId(clip.id)}>View waveform</button>
             </div>
           ))}
         </div>
@@ -122,7 +128,10 @@ export function SoundscapeExperience() {
           </article>
         ))}</div>
       </div>
-      <noscript><p>The archive descriptions and sources remain available. Audio controls require JavaScript and an explicit play action.</p></noscript>
+      <noscript>
+        <style>{`.${styles.selector},.${styles.transportControls},.${styles.seek},.${styles.layer} button,.${styles.layer} input{display:none}`}</style>
+      </noscript>
+      <p className={styles.micro}>Audio controls require JavaScript and an explicit play action. Archive descriptions and the full recording register in <a href="/credits">Credits</a> remain available without sound.</p>
     </section>
   );
 }
