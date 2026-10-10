@@ -48,6 +48,9 @@ export function SiteFooter() {
                 <Link href={r.href}>{r.label}</Link>
               </li>
             ))}
+            <li>
+              <Link href="/privacy">Privacy</Link>
+            </li>
           </ul>
         </nav>
         <PreferenceControls />

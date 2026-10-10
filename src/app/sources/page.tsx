@@ -1,18 +1,35 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/editorial";
 import { getResearch } from "@/features/research/server";
-export const metadata: Metadata = { title: "Sources" };
+export const metadata: Metadata = {
+  title: "Sources",
+  description:
+    "Source citations, verification dates, reuse terms, and limits for the evidence used in VANISHING FREQUENCIES.",
+  alternates: { canonical: "/sources" },
+};
 export default async function Sources() {
   const data = await getResearch();
   return (
     <>
       <PageIntro eyebrow="Sources" title="Follow the evidence.">
         <p>
-          The source register for the validated documentary bundle. A page-read
-          verification is not a reuse license or a guarantee of scientific
-          certainty.
+          Trace claims and published values to their references, publishers,
+          publication dates, review locations, and verification dates. A
+          source-page review is not a reuse license or a guarantee of scientific
+          certainty. Each claim also links to the reference used for it.
         </p>
       </PageIntro>
+      <section className="section" aria-labelledby="reading-sources">
+        <h2 id="reading-sources">Reading this register</h2>
+        <p>
+          Publication date and our access date are shown separately. “Page
+          read” means the cited public page or document was reviewed; it does
+          not mean that restricted underlying records were downloaded. Reuse
+          terms are source-specific. The Living Planet Index measures average
+          relative change in monitored populations, not the percentage of
+          animals lost. GBIF occurrence counts are not population estimates.
+        </p>
+      </section>
       <ul className="citation-list">
         {data.citations.map((c) => (
           <li key={c.id} id={c.id}>
@@ -20,7 +37,9 @@ export default async function Sources() {
               {c.id} · {c.type.replaceAll("-", " ")}
             </p>
             <h2>
-              <a href={c.url}>{c.title}</a>
+              <a href={c.url} rel="noreferrer">
+                {c.title}
+              </a>
             </h2>
             <p>
               {c.publisher}
@@ -77,6 +96,20 @@ export default async function Sources() {
             </a>
           </article>
         ))}
+      </section>
+      <section className="section">
+        <h2>Methods and data notes</h2>
+        <p>
+          The Observatory preserves source editions, units, boundaries, gaps,
+          and provenance. Review the <a href="/data">Biodiversity Observatory</a>
+          and its methodology alongside the original records. Current source
+          restrictions and unresolved access needs are listed above rather than
+          treated as available evidence.
+        </p>
+        <div className="actions">
+          <a className="action" href="/about">About the documentary</a>
+          <a className="action" href="/credits">Media and data credits</a>
+        </div>
       </section>
     </>
   );

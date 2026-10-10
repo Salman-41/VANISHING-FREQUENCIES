@@ -1,5 +1,38 @@
 # Project status
 
+**Stage:** Supporting information pages and content audit complete
+
+**Updated:** 2026-10-10
+
+## Completed: supporting pages and editorial content audit
+
+- Reviewed the existing project rules, research/source register, media ledgers, soundscape implementation, design/page blueprint, and current app behavior before editing. Read the installed Next.js 16 metadata, page, and not-found guidance before making route changes.
+- Clarified `/about` around the project's creative premise and evidence boundaries. It explicitly states that the Living Planet Index is average relative change in monitored vertebrate populations, not the percentage of animals lost; occurrence counts are not abundance; unknown values are not filled by interpolation; and visual/sound scenes are illustrative rather than scientific measurements.
+- Improved `/sources` with guidance on publication versus access dates, the meaning of page-read verification, source-specific reuse rights, LPI interpretation, and GBIF limits. Existing citation IDs, publisher names, dates, locators, reuse notes, access blockers, and source URLs remain rendered from the validated research bundle.
+- Reconciled `/credits` with the current media: seven individually licensed photographs, six locally used NPS recordings with item and rights links, local Archivo font/license, and LPI dataset attributions. Credit records describe capture-date gaps, the Yellowstone wind excerpt/transcode, and separate-location sound blends. They do not claim selected-species calls or external 3D wildlife models.
+- Added `/privacy` based on observed application code: no app analytics, ad/social embeds, accounts, forms, or cookie handling; two optional reading preferences stored in versioned browser local storage; user-started local audio fetch/playback; no microphone request or audio upload by the app. External publisher links lead to those publishers' own privacy practices.
+- Expanded the root 404 with paths to the Documentary, Species Explorer, Data Observatory, Soundscapes, and Sources. Next.js supplies the 404 `noindex` metadata. Added a Privacy link to the existing footer navigation.
+- Corrected the homepage's Asian elephant sound note: no recording of that selected species is cleared; separately licensed NPS recordings are available in the listening room. Updated the page blueprint's stale media-state note to match current implementation while retaining the no-selected-species-audio limit.
+- Added [informational route browser checks](../tests/browser/informational-pages.spec.ts) for metadata/headings, citation and media entries, privacy behavior, 404 status, local internal links, and responsive overflow.
+
+### Exact local verification
+
+Commands used Node **24.21.0** and the installed Next **16.4.0** application. Checks ran against the local production build/server; no hosted service was used.
+
+| Check | Result |
+| --- | --- |
+| `npm run typecheck` | Passed |
+| `npm run build` | Passed; `/about`, `/credits`, `/privacy`, `/sources` prerendered; framework 404 generated |
+| `node node_modules/@playwright/test/cli.js test --config=playwright.production.config.ts tests/browser/informational-pages.spec.ts` | **8 passed**; 1440, 390 and 320 px checks, media/citation records, privacy, 404, internal local links, and descriptive alt text on documentary/species imagery |
+
+### Remaining limits
+
+- Browser verification used local Chromium viewport emulation. Physical mobile devices, Safari/Firefox, screen-reader certification, and a formal accessibility audit remain unverified.
+- Local internal route/resource responses were checked. The browser suite does not retest every external publisher URL; current rights and research limits remain those recorded in the source and media ledgers.
+- Existing scientific evidence gaps remain unchanged, including restricted IUCN/LPD access and selected-species assessment/population limits. No scientific data or asset ledger was added or modified in this stage.
+
+**Stop:** Supporting information pages and content checks are complete. No deployment or hosting work was performed.
+
 **Stage:** Biodiversity Observatory implemented and locally verified
 
 **Updated:** 2026-10-09
