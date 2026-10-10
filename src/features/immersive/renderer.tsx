@@ -85,7 +85,9 @@ function Environment({ kind, quality, frame, commands, onReady, onFailure, setDp
     if (!mesh) return;
     const matrix = new Matrix4(), rotation = new Quaternion();
     for (let i = 0; i < 3; i++) {
-      matrix.compose(new Vector3(i === 1 ? -9 : 0, i * 0.1, -i * 20), rotation, new Vector3(1.6 + i * 0.25, 1 + i * 0.18, 1));
+      rotation.setFromAxisAngle(new Vector3(0, 1, 0), [0, -0.22, 0.17][i]!);
+      matrix.compose(new Vector3([0, -12, 9][i]!, i * 1.1, -i * 24), rotation,
+        new Vector3(1.35 + i * 0.25, 1.15 + i * 0.28, 1));
       mesh.setMatrixAt(i, matrix);
     }
     mesh.instanceMatrix.needsUpdate = true;
@@ -183,8 +185,8 @@ function Environment({ kind, quality, frame, commands, onReady, onFailure, setDp
     sample.last = now; sample.frames++;
     const mobile = size.width < 768;
     const travel = (state.progress - 0.5) * (mobile ? 1 : 2.4);
-    camera.current?.position.set(travel * 0.6, 7 - state.mix * 3.4, 19 - travel * 0.8);
-    camera.current?.lookAt(travel * 0.2, 2 - state.mix * 5.2, -9);
+    camera.current?.position.set(travel * 0.45, 6.5 - state.mix * 2.9, 19 - travel * 0.6);
+    camera.current?.lookAt(travel * 0.15, 2.5 - state.mix * 5.7, -9);
     // R3F reconciles uniform props; mutate the live material instances, not constructor inputs.
     for (const material of [terrainMaterial.current, skyMaterial.current, dustMaterial.current]) {
       if (!material) continue;

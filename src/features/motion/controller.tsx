@@ -280,7 +280,7 @@ export function MotionController({
                 toggleActions: "play none none none",
               },
             });
-            if (title && desktop)
+            if (title && desktop && chapter.id !== "opening")
               entrance.from(title, {
                 y: duration.entry,
                 duration: duration.content,
@@ -375,31 +375,30 @@ export function MotionController({
               el.querySelector<HTMLButtonElement>(".aperture-control")!;
             button.hidden = false;
             let expanded = true;
-            const aperture = gsap
-              .timeline({ paused: true })
-              .fromTo(
-                masks,
-                {
-                  display: "block",
-                  scaleY: () =>
-                    Math.max(0, (ocean.clientHeight - 96) / ocean.clientHeight),
-                },
-                { scaleY: 0, duration: duration.scene, ease: "power3.out" },
-              )
-              .progress(1);
+            let aperture: gsap.core.Tween | undefined;
+            gsap.set(masks, { display: "block", scaleY: 0 });
             const toggle = safe(() => {
               expanded = !expanded;
               button.setAttribute("aria-expanded", String(expanded));
               button.textContent = expanded
                 ? "Close the listening aperture"
                 : "Open the listening aperture";
-              expanded ? aperture.play() : aperture.reverse();
+              aperture?.kill();
+              // Each direction settles softly; reversing an ease-out caused an abrupt close.
+              // Starting at the live scale also preserves continuity on rapid reactivation.
+              aperture = gsap.to(masks, {
+                scaleY: expanded ? 0 : Math.max(0, (ocean.clientHeight - 96) / ocean.clientHeight),
+                duration: duration.scene,
+                ease: "power3.out",
+                overwrite: true,
+              });
             });
             listen(button, "click", toggle);
             // A resized image always returns to its accessible fully open state.
             const resize = safe(() => {
               expanded = true;
-              aperture.progress(1).pause();
+              aperture?.kill();
+              gsap.set(masks, { scaleY: 0 });
               button.setAttribute("aria-expanded", "true");
               button.textContent = "Close the listening aperture";
             });

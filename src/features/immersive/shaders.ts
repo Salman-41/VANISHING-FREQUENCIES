@@ -1,15 +1,35 @@
 // Original interpretive shaders. No elevation, acoustic, or population data enters these programs.
+// Both draws share a screen-space atmosphere so the transition has no horizon seam.
+const atmosphere = /* glsl */ `
+vec3 mountainAir(float y) {
+  return mix(vec3(0.115, 0.128, 0.125), vec3(0.009, 0.020, 0.029), smoothstep(0.1, 1.0, y));
+}
+vec3 oceanWater(float y) {
+  return mix(vec3(0.002, 0.009, 0.016), vec3(0.022, 0.075, 0.091), pow(y, 1.65));
+}
+float waterline(vec2 uv, float progress) {
+  float level = progress * 1.24 - 0.12;
+  float ripple = sin(uv.x * 9.0 + progress * 2.0) * 0.008;
+  return smoothstep(uv.y - 0.10, uv.y + 0.10, level + ripple);
+}
+`;
 export const terrainVertex = /* glsl */ `
 uniform float uMix;
 varying vec3 vWorld;
 varying vec3 vNormal;
 varying float vDepth;
+varying float vHeight;
 void main() {
   vec4 p = instanceMatrix * vec4(position, 1.0);
+  vHeight = position.y;
   p.y = p.y * (1.0 - uMix * 0.86) - uMix * 5.0;
   vec4 world = modelMatrix * p;
   vWorld = world.xyz;
-  vNormal = normalize(normalMatrix * normal);
+  mat3 basis = mat3(modelMatrix * instanceMatrix);
+  vec3 scaleSquared = vec3(dot(basis[0], basis[0]), dot(basis[1], basis[1]), dot(basis[2], basis[2]));
+  vec3 surfaceNormal = normal;
+  surfaceNormal.y /= 1.0 - uMix * 0.86;
+  vNormal = normalize(basis * (surfaceNormal / scaleSquared));
   vec4 view = viewMatrix * world;
   vDepth = -view.z;
   gl_Position = projectionMatrix * view;
@@ -21,28 +41,35 @@ uniform float uTravel;
 uniform float uPulse;
 uniform float uPulseStrength;
 uniform float uHeight;
+uniform float uAspect;
 varying vec3 vWorld;
 varying vec3 vNormal;
 varying float vDepth;
+varying float vHeight;
+${atmosphere}
 void main() {
-  float light = 0.25 + 0.75 * max(dot(normalize(vNormal), normalize(vec3(-0.6, 0.8, 0.3))), 0.0);
-  float height = vWorld.y + uMix * 5.0;
-  float snow = smoothstep(3.2, 5.5, height) * smoothstep(0.2, 0.8, vNormal.y);
-  vec3 rock = mix(vec3(0.034, 0.053, 0.048), vec3(0.50, 0.54, 0.50), snow) * light;
-  float band = abs(fract(height * 2.3) - 0.5);
-  float contour = 1.0 - smoothstep(0.0, max(fwidth(height * 2.3) * 1.3, 0.025), band);
-  rock += contour * 0.024 * (1.0 - snow);
+  vec3 face = normalize(cross(dFdx(vWorld), dFdy(vWorld)));
+  vec3 n = normalize(mix(normalize(vNormal), face, 0.65));
+  float light = max(dot(n, normalize(vec3(-0.65, 0.55, 0.4))), 0.0);
+  float snow = smoothstep(2.8, 5.0, vHeight + n.x * 0.55) * smoothstep(0.35, 0.75, n.y);
+  vec3 stone = mix(vec3(0.006, 0.012, 0.016), vec3(0.075, 0.066, 0.054), light);
+  vec3 ice = mix(vec3(0.07, 0.11, 0.15), vec3(0.62, 0.59, 0.49), light);
+  vec3 rock = mix(stone, ice, snow);
+  rock *= mix(0.3, 1.0, smoothstep(0.3, 2.4, vHeight));
+  float band = abs(fract(vHeight * 1.8) - 0.5);
+  float contour = 1.0 - smoothstep(0.0, max(fwidth(vHeight * 1.8) * 1.2, 0.025), band);
+  rock += contour * 0.007 * (1.0 - snow) * (1.0 - smoothstep(12.0, 45.0, vDepth));
   vec2 uv = vWorld.xz * 0.35;
   float wave = sin(uv.x + sin(uv.y * 1.7 + uTravel)) + sin(uv.y - uv.x * 0.7 - uTravel);
   float caustic = pow(max(0.0, 1.0 - abs(wave)), 7.0);
-  vec3 sea = vec3(0.018, 0.085, 0.095) * (0.7 + light) + caustic * vec3(0.024, 0.075, 0.075);
+  vec3 sea = vec3(0.006, 0.033, 0.043) * (0.6 + light) + caustic * vec3(0.012, 0.035, 0.036);
   float ring = 1.0 - smoothstep(0.0, 0.25, abs(length(vWorld.xz - vec2(0.0, -8.0)) - uPulse * 26.0));
   sea += ring * uPulseStrength * vec3(0.08, 0.18, 0.18);
-  float screenY = gl_FragCoord.y / max(1.0, uHeight);
-  vec3 seaFog = mix(vec3(0.003, 0.015, 0.023), vec3(0.028, 0.11, 0.13), screenY);
-  vec3 fogColor = mix(vec3(0.15, 0.20, 0.18), seaFog, uMix);
-  float fog = 1.0 - exp(-max(0.0, vDepth - 9.0) * mix(0.027, 0.15, uMix));
-  gl_FragColor = vec4(mix(mix(rock, sea, uMix), fogColor, fog), 1.0);
+  vec2 screen = gl_FragCoord.xy / vec2(max(1.0, uHeight * uAspect), max(1.0, uHeight));
+  float submerged = waterline(screen, uMix);
+  vec3 fogColor = mix(mountainAir(screen.y), oceanWater(screen.y), submerged);
+  float fog = 1.0 - exp(-max(0.0, vDepth - 12.0) * mix(0.038, 0.18, submerged));
+  gl_FragColor = vec4(mix(mix(rock, sea, submerged), fogColor, fog), 1.0);
   #include <tonemapping_fragment>
   #include <colorspace_fragment>
 }`;
@@ -58,17 +85,20 @@ uniform float uPulse;
 uniform float uPulseStrength;
 uniform float uAspect;
 varying vec2 vUv;
+${atmosphere}
 void main() {
-  vec3 mountain = mix(vec3(0.17, 0.22, 0.20), vec3(0.012, 0.029, 0.033), smoothstep(0.1, 1.0, vUv.y));
-  float shaft = pow(max(0.0, sin((vUv.x + vUv.y * 0.17) * 24.0 + uTravel * 0.25)), 12.0);
-  vec3 ocean = mix(vec3(0.003, 0.015, 0.023), vec3(0.028, 0.11, 0.13), vUv.y);
-  ocean += shaft * smoothstep(0.15, 1.0, vUv.y) * vec3(0.011, 0.024, 0.023);
+  vec3 mountain = mountainAir(vUv.y);
+  float rayPosition = vUv.x + (1.0 - vUv.y) * 0.24;
+  float window = exp(-pow((rayPosition - 0.67) * 3.2, 2.0));
+  float shaft = pow(max(0.0, sin(rayPosition * 31.0 + uTravel * 0.12)), 10.0);
+  vec3 ocean = oceanWater(vUv.y);
+  ocean += (0.35 + shaft * 0.65) * window * pow(vUv.y, 2.5) * vec3(0.012, 0.028, 0.031);
   vec2 radial = (vUv - vec2(0.5, 0.52)) * vec2(uAspect, 1.0);
   float ring = 1.0 - smoothstep(0.0, 0.008, abs(length(radial) - uPulse * 1.2));
   ocean += ring * uPulseStrength * vec3(0.055, 0.12, 0.12);
   // A feathered horizontal waterline carries the editorial aperture into the next environment.
-  float waterline = smoothstep(vUv.y - 0.16, vUv.y + 0.16, uMix * 1.32 - 0.16);
-  gl_FragColor = vec4(mix(mountain, ocean, waterline), 1.0);
+  float submerged = waterline(vUv, uMix);
+  gl_FragColor = vec4(mix(mountain, ocean, submerged), 1.0);
   #include <tonemapping_fragment>
   #include <colorspace_fragment>
 }`;

@@ -24,7 +24,7 @@ export default async function SpeciesExplorer({ searchParams }: Props) {
   const { filters, warnings } = parseFilters(query, options);
   const results = filterSpecies(index, filters);
   return <div className="species-explorer-page">
-    <PageIntro eyebrow="Species Explorer / the selected collection" title="Six lives. Different pressures.">
+    <PageIntro eyebrow="Species Explorer / the selected collection" title={"Six lives.\nDifferent pressures."}>
       <p>From high mountains to tropical forests and the open ocean. Find a species by name, habitat, or the scope of its documented distribution.</p>
     </PageIntro>
     <SpeciesExplorerControls filters={filters} options={options} warnings={warnings} count={results.length} total={all.length}>

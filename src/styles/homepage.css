@@ -25,8 +25,8 @@
   letter-spacing: 0.11em;
 }
 .doc-opening {
-  padding-top: clamp(2.5rem, 5vw, 5rem);
-  padding-bottom: 5rem;
+  padding-top: clamp(2rem, 3.3vw, 3rem);
+  padding-bottom: 3.5rem;
 }
 .opening-register,
 .chapter-register {
@@ -44,7 +44,7 @@
   letter-spacing: -0.055em;
   line-height: 0.96;
   max-width: none;
-  margin: 2.5rem 0 3rem;
+  margin: 2rem 0 2rem;
 }
 .media-figure {
   margin: 0;
@@ -82,12 +82,12 @@
   object-position: 50% 42%;
 }
 .waveform-motif {
-  margin: 1.5rem 0 2.5rem;
+  margin: 1rem 0 1.5rem;
 }
 .waveform-motif svg {
   display: block;
   width: 100%;
-  height: 72px;
+  height: 48px;
   stroke: var(--color-stone);
   stroke-width: 1;
 }
@@ -184,13 +184,13 @@
 }
 .doc-chapter {
   border-top: 1px solid var(--doc-rule);
-  padding-block: clamp(4.5rem, 10vw, 9rem);
+  padding-block: clamp(3rem, 6vw, 5rem) clamp(3.5rem, 7vw, 6rem);
   scroll-margin-top: 2rem;
 }
 .chapter-register {
   border-bottom: 1px solid var(--doc-rule);
   padding-bottom: 1.25rem;
-  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: clamp(2rem, 3.5vw, 3rem);
   color: var(--color-stone);
   font-size: 0.75rem;
   letter-spacing: 0.08em;

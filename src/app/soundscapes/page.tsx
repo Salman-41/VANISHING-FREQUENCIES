@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "Soundscapes" };
 export default async function Soundscapes() {
   const data = await getResearch();
   return (
-    <>
+    <div className="soundscapes-page">
       <PageIntro eyebrow="Soundscapes" title="A place has more than one voice.">
         <p>Listen to six credited National Park Service recordings as three optional habitat studies. Each blend combines independent clips and is an artistic composition, not a measured ecological reconstruction.</p>
       </PageIntro>
@@ -34,6 +34,6 @@ export default async function Soundscapes() {
           </Link>
         </section>
       ))}
-    </>
+    </div>
   );
 }

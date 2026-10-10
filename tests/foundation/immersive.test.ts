@@ -20,6 +20,15 @@ test("scene dissolve is bounded and does not transform scientific measurements",
   assert.equal(sceneMix("mountain", 1), 1);
   assert.equal(sceneMix("ocean", 0), 1);
   assert.equal(sceneMix("ocean", 0.5), 1);
+  // A chapter boundary starts and settles without an abrupt velocity change.
+  assert.ok(sceneMix("mountain", 0.8201) < 0.00001);
+  assert.ok(1 - sceneMix("mountain", 0.9899) < 0.00001);
+  let previous = 0;
+  for (let progress = 0; progress <= 1; progress += 0.001) {
+    const mix = sceneMix("mountain", progress);
+    assert.ok(mix >= previous);
+    previous = mix;
+  }
   assert.equal(elapsedProgress(100, 400, 600), 0.5);
   assert.equal(elapsedProgress(100, 3000, 1800), 1); // A stalled frame settles, never stretches the pulse.
 });

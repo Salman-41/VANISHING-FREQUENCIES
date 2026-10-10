@@ -199,6 +199,22 @@ em {
 .page-intro {
   padding-block: var(--space-16) var(--space-10);
 }
+.soundscapes-page .page-intro {
+  padding-block: clamp(2rem, 4vw, 3rem) 1.5rem;
+}
+.soundscapes-page .page-intro h1 {
+  max-width: 22ch;
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 1100px) {
+  .soundscapes-page .page-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+    gap: 0 8%;
+  }
+  .soundscapes-page .page-intro > .eyebrow { grid-column: 1 / -1; }
+  .soundscapes-page .page-intro .lead { align-self: end; font-size: 1.25rem; }
+}
 .title-species {
   font-size: var(--text-species);
   font-stretch: 95%;

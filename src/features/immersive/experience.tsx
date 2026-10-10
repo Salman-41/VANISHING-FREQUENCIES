@@ -114,7 +114,7 @@ export function ImmersiveScenes({ root, allowed }: { root: RefObject<HTMLDivElem
     ))}
     {slots.filter((slot) => slot.kind === active).map((slot) => createPortal(
       <SceneBoundary key={`${attempt}:${quality}`} onFailure={fail}>
-        <div className="immersive-layer" aria-hidden="true">
+        <div className={`immersive-layer${status === "ready" ? " is-ready" : ""}`} aria-hidden="true">
           <Renderer kind={slot.kind} quality={quality} frame={slot.frame} commands={commands}
             onReady={() => setStatus("ready")} onFailure={fail} />
           <span className="immersive-label">Interpretive environment / {slot.kind === "mountain" ? "01 → 02" : "02"}</span>

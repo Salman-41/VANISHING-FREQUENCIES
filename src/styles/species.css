@@ -1,9 +1,11 @@
 /* The species reading path is complete before hydration. Motion affects photographs only. */
 .species-explorer-page .page-intro {
-  max-width:70rem
+  padding-block:clamp(2rem,4vw,3rem) 2rem
 }
 .species-explorer-page .page-intro h1 {
-  max-width:13ch
+  max-width:20ch;
+  white-space:pre-line;
+  margin-bottom:1rem
 }
 .species-explorer-page .page-intro .lead {
   max-width:50rem
@@ -120,9 +122,9 @@
   align-items:flex-end;
   flex-wrap:wrap;
   gap:1rem;
-  padding-block:2rem;
+  padding-block:1.5rem;
   border-bottom:1px solid var(--color-border);
-  margin-top:2rem
+  margin-top:1.5rem
 }
 .species-result-summary p {
   margin:0;
@@ -164,6 +166,27 @@
 }
 .explorer-card>* {
   min-width:0
+}
+.explorer-records>li:first-child .explorer-card {
+  padding-top:2rem
+}
+@media(min-width:1100px) {
+  .species-explorer-page .page-intro {
+    display:grid;
+    grid-template-columns:minmax(0,7fr) minmax(0,4fr);
+    gap:0 8%
+  }
+  .species-explorer-page .page-intro>.eyebrow {
+    grid-column:1/-1
+  }
+  .species-explorer-page .page-intro>.lead {
+    align-self:end;
+    padding-bottom:1rem;
+    font-size:1.25rem
+  }
+  .species-explorer-page .page-intro>.lead p {
+    margin-bottom:0
+  }
 }
 .explorer-identity h2 {
   font-size:var(--text-species-row);

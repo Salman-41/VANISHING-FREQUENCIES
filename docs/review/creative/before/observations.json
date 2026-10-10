@@ -1,0 +1,270 @@
+{
+  "date": "2026-10-10T16:47:36.990Z",
+  "browser": "156.0.8078.4",
+  "method": "Production, SwiftShader, DPR1, 8 emulated cores; 1440x1000 desktop and 375x812 touch. Unthrottled CPU. A 1.8 s pulse measures browser rAF cadence, not isolated GPU cost or hardware FPS.",
+  "observations": [
+    {
+      "profile": "desktop",
+      "route": "species",
+      "layout": {
+        "title": 175,
+        "firstPortrait": 1037,
+        "filters": 563,
+        "habitatSelector": null,
+        "transport": null,
+        "height": 5294
+      }
+    },
+    {
+      "profile": "desktop",
+      "route": "soundscapes",
+      "layout": {
+        "title": 175,
+        "firstPortrait": null,
+        "filters": null,
+        "habitatSelector": 580,
+        "transport": 1576,
+        "height": 6777
+      }
+    },
+    {
+      "profile": "desktop",
+      "route": "home",
+      "layout": {
+        "height": 17496,
+        "chapters": [
+          {
+            "id": "opening",
+            "top": 89,
+            "height": 1344
+          },
+          {
+            "id": "snow-leopard",
+            "top": 1433,
+            "height": 2765
+          },
+          {
+            "id": "blue-whale",
+            "top": 4198,
+            "height": 2462
+          },
+          {
+            "id": "trends",
+            "top": 6660,
+            "height": 1976
+          },
+          {
+            "id": "soundscapes",
+            "top": 8636,
+            "height": 1408
+          },
+          {
+            "id": "species-at-risk",
+            "top": 10044,
+            "height": 3839
+          },
+          {
+            "id": "conservation",
+            "top": 13883,
+            "height": 1933
+          },
+          {
+            "id": "closing",
+            "top": 15816,
+            "height": 1300
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "quality": "balanced",
+          "terrain": {
+            "sceneLayer": "photograph",
+            "immersive": "active",
+            "sceneQuality": "balanced",
+            "sceneDpr": "0.62",
+            "sceneFrames": "4",
+            "sceneMix": "0.000",
+            "sceneProgress": "0.561",
+            "sceneDrawCalls": "3",
+            "sceneTriangles": "36866",
+            "scenePoints": "240",
+            "sceneTextures": "0",
+            "sceneGeometries": "3"
+          },
+          "cadence": {
+            "medianMs": 16.69999999999891,
+            "p95Ms": 50,
+            "frames": 92,
+            "counters": {
+              "sceneLayer": "photograph",
+              "immersive": "active",
+              "sceneQuality": "balanced",
+              "sceneDpr": "0.50",
+              "sceneFrames": "69",
+              "sceneMix": "1.000",
+              "sceneProgress": "0.561",
+              "sceneDrawCalls": "3",
+              "sceneTriangles": "36866",
+              "scenePoints": "240",
+              "sceneTextures": "0",
+              "sceneGeometries": "3"
+            }
+          },
+          "idleFrames": 0
+        },
+        {
+          "quality": "light",
+          "terrain": {
+            "sceneLayer": "photograph",
+            "immersive": "active",
+            "sceneQuality": "light",
+            "sceneDpr": "0.62",
+            "sceneFrames": "4",
+            "sceneMix": "0.000",
+            "sceneProgress": "0.561",
+            "sceneDrawCalls": "3",
+            "sceneTriangles": "9218",
+            "scenePoints": "80",
+            "sceneTextures": "0",
+            "sceneGeometries": "3"
+          },
+          "cadence": {
+            "medianMs": 16.700000000000728,
+            "p95Ms": 83.29999999999927,
+            "frames": 80,
+            "counters": {
+              "sceneLayer": "photograph",
+              "immersive": "active",
+              "sceneQuality": "light",
+              "sceneDpr": "0.50",
+              "sceneFrames": "63",
+              "sceneMix": "1.000",
+              "sceneProgress": "0.561",
+              "sceneDrawCalls": "3",
+              "sceneTriangles": "9218",
+              "scenePoints": "80",
+              "sceneTextures": "0",
+              "sceneGeometries": "3"
+            }
+          },
+          "idleFrames": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "profile": "mobile",
+      "route": "species",
+      "layout": {
+        "title": 198,
+        "firstPortrait": 1717,
+        "filters": 503,
+        "habitatSelector": null,
+        "transport": null,
+        "height": 10228
+      }
+    },
+    {
+      "profile": "mobile",
+      "route": "soundscapes",
+      "layout": {
+        "title": 175,
+        "firstPortrait": null,
+        "filters": null,
+        "habitatSelector": 585,
+        "transport": 1571,
+        "height": 8247
+      }
+    },
+    {
+      "profile": "mobile",
+      "route": "home",
+      "layout": {
+        "height": 23520,
+        "chapters": [
+          {
+            "id": "opening",
+            "top": 89,
+            "height": 1406
+          },
+          {
+            "id": "snow-leopard",
+            "top": 1495,
+            "height": 3039
+          },
+          {
+            "id": "blue-whale",
+            "top": 4533,
+            "height": 2563
+          },
+          {
+            "id": "trends",
+            "top": 7097,
+            "height": 1917
+          },
+          {
+            "id": "soundscapes",
+            "top": 9014,
+            "height": 1811
+          },
+          {
+            "id": "species-at-risk",
+            "top": 10825,
+            "height": 7667
+          },
+          {
+            "id": "conservation",
+            "top": 18493,
+            "height": 3177
+          },
+          {
+            "id": "closing",
+            "top": 21670,
+            "height": 1269
+          }
+        ]
+      },
+      "scenes": [
+        {
+          "quality": "light",
+          "terrain": {
+            "sceneLayer": "photograph",
+            "immersive": "active",
+            "sceneQuality": "light",
+            "sceneDpr": "0.75",
+            "sceneFrames": "4",
+            "sceneMix": "0.000",
+            "sceneProgress": "0.665",
+            "sceneDrawCalls": "3",
+            "sceneTriangles": "9218",
+            "scenePoints": "80",
+            "sceneTextures": "0",
+            "sceneGeometries": "3"
+          },
+          "cadence": {
+            "medianMs": 16.69999999999891,
+            "p95Ms": 16.700000000000728,
+            "frames": 109,
+            "counters": {
+              "sceneLayer": "photograph",
+              "immersive": "active",
+              "sceneQuality": "light",
+              "sceneDpr": "0.50",
+              "sceneFrames": "76",
+              "sceneMix": "1.000",
+              "sceneProgress": "0.665",
+              "sceneDrawCalls": "3",
+              "sceneTriangles": "9218",
+              "scenePoints": "80",
+              "sceneTextures": "0",
+              "sceneGeometries": "3"
+            }
+          },
+          "idleFrames": 0
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

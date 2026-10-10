@@ -68,6 +68,28 @@ test("aperture is reversible, fixed scale, keyboard operable and interruptible",
   ).toBe(true);
 });
 
+test("aperture settles after a rapid reversal and returns fully open on resize", async ({ page }) => {
+  await desktop(page);
+  await page.locator('.reading-margin a[href="#blue-whale"]').click();
+  const button = page.locator(".aperture-control");
+  const masks = page.locator(".ocean-portrait .scene-mask");
+  const openingHeight = () => page.locator(".ocean-portrait .media-aperture").evaluate(frame => {
+    const top = frame.querySelector(".scene-mask-top")!.getBoundingClientRect();
+    const bottom = frame.querySelector(".scene-mask-bottom")!.getBoundingClientRect();
+    return bottom.top - top.bottom;
+  });
+  await button.click();
+  await expect.poll(openingHeight).toBeCloseTo(96, 0);
+  await button.press("Enter");
+  await page.waitForTimeout(100);
+  await button.press("Enter");
+  await expect(button).toHaveAttribute("aria-expanded", "false");
+  await expect.poll(openingHeight).toBeCloseTo(96, 0);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await expect(button).toHaveAttribute("aria-expanded", "true");
+  await expect.poll(() => masks.evaluateAll(nodes => nodes.every(node => node.getBoundingClientRect().height < 0.5))).toBe(true);
+});
+
 test("repeated preferences, route exits and history restore dispose the scroll owner", async ({
   page,
 }) => {

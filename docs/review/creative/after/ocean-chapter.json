@@ -1,0 +1,38 @@
+[
+  {
+    "mobile": false,
+    "counters": {
+      "sceneLayer": "photograph",
+      "immersive": "active",
+      "sceneQuality": "light",
+      "sceneDpr": "0.74",
+      "sceneFrames": "4",
+      "sceneMix": "1.000",
+      "sceneProgress": "0.555",
+      "sceneDrawCalls": "3",
+      "sceneTriangles": "9218",
+      "scenePoints": "80",
+      "sceneTextures": "0",
+      "sceneGeometries": "3"
+    },
+    "errors": []
+  },
+  {
+    "mobile": true,
+    "counters": {
+      "sceneLayer": "photograph",
+      "immersive": "active",
+      "sceneQuality": "light",
+      "sceneDpr": "0.75",
+      "sceneFrames": "4",
+      "sceneMix": "1.000",
+      "sceneProgress": "0.676",
+      "sceneDrawCalls": "3",
+      "sceneTriangles": "9218",
+      "scenePoints": "80",
+      "sceneTextures": "0",
+      "sceneGeometries": "3"
+    },
+    "errors": []
+  }
+]
