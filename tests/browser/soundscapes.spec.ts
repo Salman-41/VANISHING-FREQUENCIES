@@ -121,3 +121,24 @@ test("independent loop clocks survive seeking, layer changes, pause and stop", a
   const forestPair = await page.evaluate(() => (window as unknown as { vfStarts: number[] }).vfStarts.slice(-2));
   expect(forestPair[1]).toBe(6);
 });
+
+test("audio code loads on a late listening-room visit and preferences survive navigation", async ({ page }) => {
+  const scripts: Promise<string>[] = [];
+  page.on("response", response => {
+    if (new URL(response.url()).pathname.endsWith(".js")) scripts.push(response.text());
+  });
+  await page.goto("/about");
+  await page.waitForLoadState("networkidle");
+  expect((await Promise.all(scripts)).some(text => text.includes("ocean-humpback"))).toBe(false);
+  await page.getByRole("link", { name: "Soundscapes", exact: true }).first().click();
+  await expect(page.getByRole("button", { name: "Sound on ↗" })).toBeVisible();
+  await page.getByRole("button", { name: /Under the canopy/ }).click();
+  await page.getByRole("slider", { name: "Soundscape volume" }).fill("32");
+  await page.getByRole("button", { name: "Sound on ↗" }).click();
+  await expect(page.getByRole("button", { name: "Stop audio" })).toBeVisible();
+  await page.getByRole("link", { name: "About", exact: true }).first().click();
+  await page.getByRole("link", { name: "Soundscapes", exact: true }).first().click();
+  await expect(page.getByRole("heading", { name: "Under the canopy." })).toBeVisible();
+  await expect(page.getByRole("slider", { name: "Soundscape volume" })).toHaveValue("32");
+  await expect(page.getByRole("button", { name: "Sound on ↗" })).toBeVisible();
+});

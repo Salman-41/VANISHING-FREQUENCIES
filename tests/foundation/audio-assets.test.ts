@@ -22,3 +22,33 @@ test("public domain audio catalog is source-complete and local files match recei
   assert.equal(audioCatalog.clips.find((clip) => clip.id === "mountain-wind")?.capturedOn, "2015-03-21");
   assert.ok(audioCatalog.clips.filter((clip) => clip.capturedOn === null).length === 5);
 });
+
+test("audio catalog rejects malformed provenance, unsafe playback fields and invalid layer membership", async () => {
+  const { AudioCatalogSchema } = await import("../../src/features/audio/catalog");
+  type Catalog = typeof audioCatalog;
+  const mutations: ((data: Catalog) => void)[] = [
+    data => { Object.assign(data, { unknown: true }); },
+    data => { Object.assign(data.clips[0]!, { unknown: true }); },
+    data => { data.clips[0]!.id = data.clips[1]!.id; },
+    data => { data.clips[0]!.kind = "wildlife"; },
+    data => { data.clips[0]!.habitat = "ocean"; },
+    data => { data.clips[0]!.durationSeconds = 0; },
+    data => { data.clips[0]!.durationSeconds = Infinity; },
+    data => { data.clips[0]!.sourceBytes = 1.5; },
+    data => { data.clips[0]!.localBytes = -1; },
+    data => { data.clips[0]!.sourceSha256 = "bad-hash"; },
+    data => { data.clips[0]!.localPath = "/audio/../secret.mp3"; },
+    data => { data.clips[0]!.sourcePage = "not-a-url"; },
+    data => { data.clips[0]!.creator = ""; },
+    data => { data.clips[0]!.capturedOn = "2026-02-30"; },
+    data => { data.clips[0]!.waveformPeaks.pop(); },
+    data => { data.clips[0]!.waveformPeaks[0] = 1.1; },
+    data => { data.clips.pop(); },
+  ];
+  for (const mutate of mutations) {
+    const data = structuredClone(audioCatalog);
+    mutate(data);
+    assert.equal(AudioCatalogSchema.safeParse(data).success, false);
+  }
+  assert.deepEqual(AudioCatalogSchema.parse(audioCatalog), audioCatalog);
+});

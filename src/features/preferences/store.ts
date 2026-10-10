@@ -1,12 +1,6 @@
 import { createStore } from "zustand/vanilla";
-import { z } from "zod";
-
-export const PreferencesSchema = z.strictObject({
-  version: z.literal(1),
-  readWithoutMotion: z.boolean(),
-  lighterMedia: z.boolean(),
-});
-export type Preferences = z.infer<typeof PreferencesSchema>;
+import type { Preferences } from "./contract";
+export type { Preferences } from "./contract";
 export const defaults: Preferences = {
   version: 1,
   readWithoutMotion: false,
@@ -16,7 +10,14 @@ export const preferenceKey = "vf.preferences.v1";
 
 export function parsePreferences(value: string | null): Preferences {
   try {
-    return PreferencesSchema.parse(JSON.parse(value ?? "null"));
+    const input: unknown = JSON.parse(value ?? "null");
+    // Keep the exact strict contract without importing a schema runtime into every route.
+    if (typeof input !== "object" || input === null || Array.isArray(input)) return { ...defaults };
+    const stored = input as Record<string, unknown>;
+    if (Object.keys(stored).length !== 3 || stored.version !== 1 ||
+      typeof stored.readWithoutMotion !== "boolean" || typeof stored.lighterMedia !== "boolean")
+      return { ...defaults };
+    return { version: 1, readWithoutMotion: stored.readWithoutMotion, lighterMedia: stored.lighterMedia };
   } catch {
     return { ...defaults };
   }

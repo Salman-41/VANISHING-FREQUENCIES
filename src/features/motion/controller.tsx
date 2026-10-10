@@ -4,10 +4,10 @@ import { useEffect, useState, type RefObject } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import Lenis from "lenis";
 import { motionTokens as duration, pinTravel } from "./policy";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
+type LenisConstructor = typeof import("lenis").default;
 
 export function MotionController({
   root,
@@ -15,6 +15,22 @@ export function MotionController({
   root: RefObject<HTMLDivElement | null>;
 }) {
   const [viewport, setViewport] = useState("");
+  const [LenisClass, setLenisClass] = useState<LenisConstructor | null>(null);
+  useEffect(() => {
+    const media = matchMedia("(min-width: 1024px) and (min-height: 800px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)");
+    let cancelled = false;
+    let generation = 0;
+    const sync = () => {
+      const run = ++generation;
+      if (!media.matches) { setLenisClass(null); return; }
+      void import("lenis").then(module => {
+        if (!cancelled && run === generation) setLenisClass(() => module.default);
+      }).catch(() => { /* Native scrolling remains functional if enhancement cannot load. */ });
+    };
+    sync();
+    media.addEventListener("change", sync);
+    return () => { cancelled = true; ++generation; media.removeEventListener("change", sync); };
+  }, []);
   useEffect(() => {
     let timer = 0;
     const resize = () => {
@@ -144,8 +160,8 @@ export function MotionController({
           updatePosition();
           // Native root scroll: no scrollerProxy, transformed wrapper, normalizeScroll, or second RAF.
           const lenis =
-            desktop && pointer
-              ? new Lenis({
+            desktop && pointer && LenisClass
+              ? new LenisClass({
                   autoRaf: false,
                   smoothWheel: true,
                   lerp: 0.16,
@@ -489,7 +505,7 @@ export function MotionController({
       );
       return () => mm.revert();
     },
-    { scope: root, dependencies: [viewport], revertOnUpdate: true },
+    { scope: root, dependencies: [viewport, LenisClass], revertOnUpdate: true },
   );
   return null;
 }

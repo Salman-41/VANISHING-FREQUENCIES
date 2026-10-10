@@ -1,5 +1,25 @@
 # Project status
 
+**Stage:** Targeted performance optimization complete
+
+**Updated:** 2026-10-10
+
+## Completed: measured startup optimization
+
+- Read the rules, status, final technical/improvement audits, QA performance report and installed Next 16.4 server/client, lazy-loading and ESLint guides before changing application code. Profiled original production JavaScript/CPU work and repeated the original baseline to resolve deferred-chunk and timing variability.
+- Deferred audio engine/catalogue ownership to the first Soundscapes use while retaining the persistent provider, volume/habitat/layer state, consent, visibility pause and route cleanup. Kept catalogue validation through Zod Mini; scientific schemas/server validation remain unchanged.
+- Added a strict lightweight browser reader for the three preference fields, retained its Zod reference contract and equivalence tests, and avoided publishing unchanged defaults during hydration. Deferred Lenis to eligible desktop viewports; mobile retains the existing native-scroll enhancements, GSAP and ScrollTrigger behavior. WebGL remains explicitly activated/lazy loaded.
+- Confirmed the intended **African forest elephant (Loxodonta cyclotis)** in the processed dataset and corrected the homepage's inconsistent Asian-elephant recording note. Design, imagery/fonts, renderer/shaders, scientific values and sources were not changed.
+- Mobile startup encoded JavaScript, complete repeat original → optimized: **homepage 240,296 → 199,578 B; Explorer 224,235 → 188,316 B; Observatory 229,096 → 193,177 B; Soundscapes 190,557 → 176,334 B**. All sampled routes are below 200,000 B; homepage headroom is only 422 B. Retained load inventories and CPU profiles in [performance evidence](review/performance/).
+- Identical-setting local Lighthouse repeat: Performance **68→75 / 53→73 / 80→79 / 78→82**, respectively; TBT **1,588→1,006 / 1,958→1,473 / 765→791 / 876→668 ms**. Accessibility/Best Practices were 100 throughout; CLS unchanged. Observatory blocking did not improve consistently. Its first optimized sample had 3.11 s LCP / score 66; the repeat had 1.91 s / 79. Both runs and substantial host variability are retained; no guaranteed timing or INP pass is claimed.
+- Final build **Lxt6luEThH1_5qGDhm-EA** passed compilation, TypeScript and 17/17 static generation tasks. Standalone typecheck passed, foundation assertions **28/28**, visualizations **16/16**, and processed-data Zod validation passed (**366 index records, six species, two population records, six stories**). Full production browser regression **80/80 passed in 7.0 minutes**, with no failures/skips/flaky outcomes, including late audio activation/state persistence, accessibility, native/Lenis scrolling and WebGL cleanup/recovery. Environment-related incomplete attempts and retries are recorded in the report.
+- Investigated current ESLint peer metadata without installing/forcing dependencies or downgrading the stack. The latest TypeScript parser 8.71.1 declares TypeScript <6.1 while this project uses 7.0.2; a supported complete lint gate remains unresolved. No package manifest/lockfile changes.
+- Created [performance optimization report](review/performance-optimization.md), reproducible startup/summary scripts and retained measurements. Scientific bundle SHA-256 remains **36b87bf96cf579f6bcf5e9b97157573e897de62e65c7829bb9b3b460017d670c**.
+
+**Remaining:** Tight homepage byte headroom; high/variable blocking and Observatory layout timing; unmeasured INP and physical-device behavior; supported ESLint parser compatibility. Existing scientific/audio-rights gaps remain documented.
+
+**Stop:** Focused optimization and verification are complete. Review-owned local servers stopped; no hosting, deployment or next-stage redesign.
+
 **Stage:** Final creative and technical review complete
 
 **Updated:** 2026-10-10

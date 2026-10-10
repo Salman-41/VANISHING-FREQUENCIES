@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { audioCatalog, type Habitat } from "./catalog";
 import { useAudio } from "./provider";
+import { AudioEngine } from "./engine";
 import styles from "./soundscapes.module.css";
 
 const habitats: { id: Habitat; number: string; title: string; place: string; description: string }[] = [
@@ -13,9 +14,10 @@ const habitats: { id: Habitat; number: string; title: string; place: string; des
 function timestamp(seconds: number) {
   return `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, "0")}`;
 }
+const createEngine = () => new AudioEngine();
 
 export function SoundscapeExperience() {
-  const { engine, state } = useAudio();
+  const { engine, state } = useAudio(createEngine);
   const [focusId, setFocusId] = useState("ocean-surf");
   const [position, setPosition] = useState(0);
   const visualRef = useRef<HTMLDivElement>(null);

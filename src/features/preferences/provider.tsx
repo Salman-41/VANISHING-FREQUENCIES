@@ -22,7 +22,11 @@ export function SiteProviders({ children }: { children: ReactNode }) {
   const [store] = useState(createPreferenceStore);
   useEffect(() => {
     try {
-      store.setState(parsePreferences(localStorage.getItem(preferenceKey)));
+      const saved = parsePreferences(localStorage.getItem(preferenceKey));
+      const current = store.getState();
+      // Fresh/default visits should not notify every preference consumer a second time.
+      if (saved.readWithoutMotion !== current.readWithoutMotion || saved.lighterMedia !== current.lighterMedia)
+        store.setState(saved);
     } catch {
       /* Storage is optional. */
     }

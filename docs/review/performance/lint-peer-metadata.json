@@ -1,0 +1,21 @@
+{
+  "checkedOn": "2026-10-10",
+  "method": "Read-only npm view calls, no installation or peer overrides",
+  "projectTypeScript": "7.0.2",
+  "eslint": {
+    "version": "9.39.5",
+    "nodeRange": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  },
+  "eslintConfigNext": {
+    "version": "16.4.0",
+    "eslintPeer": ">=9.0.0",
+    "typeScriptPeer": ">=3.3.1",
+    "typeScriptEslintDependency": "^8.56.0"
+  },
+  "typeScriptEslintParser": {
+    "latestVersion": "8.71.1",
+    "eslintPeer": "^8.57.0 || ^9.0.0 || ^10.0.0",
+    "typeScriptPeer": ">=4.8.4 <6.1.0"
+  },
+  "outcome": "The parser does not declare support for the project's TypeScript 7.0.2; a complete supported Next/TypeScript lint configuration remains blocked by compatibility. No manifest or lockfile changes."
+}

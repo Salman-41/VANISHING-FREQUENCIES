@@ -1,0 +1,1270 @@
+{
+  "date": "2026-10-10",
+  "before": [
+    {
+      "route": "/",
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-10T16:27:59.934Z",
+      "settings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices"
+        ],
+        "skipAudits": null
+      },
+      "benchmarkIndex": 1015.5,
+      "performance": 68,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "lcpMs": 2439.387,
+      "cls": 0.001616075773906148,
+      "tbtMs": 1588.3929999999982,
+      "mainThread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 2410.931999999972
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 1483.0009999999893
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 1141.8670000000004
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 222.65200000000002
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 190.21499999999807
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 124.45099999999998
+        },
+        {
+          "group": "garbageCollection",
+          "groupLabel": "Garbage Collection",
+          "duration": 21.192000000000004
+        }
+      ],
+      "scriptExecution": [
+        {
+          "url": "http://127.0.0.1:3002/",
+          "total": 1522.0680000000002,
+          "scripting": 29.94200000000002,
+          "scriptParseCompile": 43.381
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "total": 1128.841,
+          "scripting": 957.3690000000001,
+          "scriptParseCompile": 63.888
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0icqp5p40c_j3.js",
+          "total": 941.555999999999,
+          "scripting": 296.3059999999992,
+          "scriptParseCompile": 9.117
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0-z0csd2n2nb-.js",
+          "total": 918.5170000000016,
+          "scripting": 800.5710000000016,
+          "scriptParseCompile": 44.913
+        },
+        {
+          "url": "Unattributable",
+          "total": 629.9779999999955,
+          "scripting": 26.495,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/394ceu8hxos50.js",
+          "total": 276.2779999999996,
+          "scripting": 197.63999999999965,
+          "scriptParseCompile": 6.929
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0xwz5psm8hy8x.js",
+          "total": 63.51500000000001,
+          "scripting": 58.07900000000001,
+          "scriptParseCompile": 0.609
+        }
+      ],
+      "unusedJs": [
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "totalBytes": 73541,
+          "wastedBytes": 28040,
+          "wastedPercent": 38.12766428610973
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2422qi4z9-sxk.js",
+          "totalBytes": 36233,
+          "wastedBytes": 21284,
+          "wastedPercent": 58.74089111393286
+        }
+      ],
+      "consoleErrors": [],
+      "rawReport": "/tmp/vf-perf-before-repeat/home.json"
+    },
+    {
+      "route": "/species",
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-10T16:28:34.949Z",
+      "settings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices"
+        ],
+        "skipAudits": null
+      },
+      "benchmarkIndex": 436.5,
+      "performance": 53,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "lcpMs": 3723.235,
+      "cls": 0,
+      "tbtMs": 1958.0869999999982,
+      "mainThread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 2322.9450000000015
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 2237.7429999999995
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 1621.2930000000028
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 242.53499999999997
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 200.52399999999997
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 195.79799999999992
+        },
+        {
+          "group": "garbageCollection",
+          "groupLabel": "Garbage Collection",
+          "duration": 7.818
+        }
+      ],
+      "scriptExecution": [
+        {
+          "url": "http://127.0.0.1:3002/species",
+          "total": 2735.673,
+          "scripting": 63.427,
+          "scriptParseCompile": 30.650000000000002
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "total": 1432.1869999999967,
+          "scripting": 1113.9989999999966,
+          "scriptParseCompile": 47.872
+        },
+        {
+          "url": "Unattributable",
+          "total": 1159.2649999999908,
+          "scripting": 33.842,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2_xf99yxhp4od.js",
+          "total": 772.5059999999993,
+          "scripting": 678.3679999999993,
+          "scriptParseCompile": 2.86
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/394ceu8hxos50.js",
+          "total": 328.36799999999994,
+          "scripting": 203.4539999999999,
+          "scriptParseCompile": 15.828999999999999
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0-z0csd2n2nb-.js",
+          "total": 159.887,
+          "scripting": 109.05100000000002,
+          "scriptParseCompile": 38.391999999999996
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0xwz5psm8hy8x.js",
+          "total": 93.787,
+          "scripting": 74.74600000000001,
+          "scriptParseCompile": 4.372000000000001
+        }
+      ],
+      "unusedJs": [
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "totalBytes": 73541,
+          "wastedBytes": 27956,
+          "wastedPercent": 38.01395968810019
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2422qi4z9-sxk.js",
+          "totalBytes": 36233,
+          "wastedBytes": 21284,
+          "wastedPercent": 58.74089111393286
+        }
+      ],
+      "consoleErrors": [],
+      "rawReport": "/tmp/vf-perf-before-repeat/species.json"
+    },
+    {
+      "route": "/data",
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-10T16:29:11.027Z",
+      "settings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices"
+        ],
+        "skipAudits": null
+      },
+      "benchmarkIndex": 1044.5,
+      "performance": 80,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "lcpMs": 1831.766,
+      "cls": 0,
+      "tbtMs": 765.2909999999997,
+      "mainThread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 1373.4469999999983
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 679.249999999997
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 384.86899999999997
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 176.09400000000002
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 77.80300000000004
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 72.954
+        },
+        {
+          "group": "garbageCollection",
+          "groupLabel": "Garbage Collection",
+          "duration": 43.05400000000001
+        }
+      ],
+      "scriptExecution": [
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "total": 815.8249999999992,
+          "scripting": 708.5259999999993,
+          "scriptParseCompile": 57.242000000000004
+        },
+        {
+          "url": "http://127.0.0.1:3002/data",
+          "total": 658.1940000000001,
+          "scripting": 26.150000000000002,
+          "scriptParseCompile": 29.251
+        },
+        {
+          "url": "Unattributable",
+          "total": 508.86799999999795,
+          "scripting": 20.115,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0-z0csd2n2nb-.js",
+          "total": 468.53399999999954,
+          "scripting": 406.2749999999996,
+          "scriptParseCompile": 24.900000000000002
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/394ceu8hxos50.js",
+          "total": 186.44500000000005,
+          "scripting": 122.87599999999999,
+          "scriptParseCompile": 10.013000000000002
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0xwz5psm8hy8x.js",
+          "total": 62.478999999999985,
+          "scripting": 55.43099999999998,
+          "scriptParseCompile": 0.8220000000000001
+        }
+      ],
+      "unusedJs": [
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "totalBytes": 73541,
+          "wastedBytes": 28188,
+          "wastedPercent": 38.32909602715283
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2422qi4z9-sxk.js",
+          "totalBytes": 36233,
+          "wastedBytes": 21284,
+          "wastedPercent": 58.74089111393286
+        }
+      ],
+      "consoleErrors": [],
+      "rawReport": "/tmp/vf-perf-before-repeat/data.json"
+    },
+    {
+      "route": "/soundscapes",
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-10T16:29:39.583Z",
+      "settings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices"
+        ],
+        "skipAudits": null
+      },
+      "benchmarkIndex": 908,
+      "performance": 78,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "lcpMs": 1836.997,
+      "cls": 0,
+      "tbtMs": 876.3079999997617,
+      "mainThread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 1293.4989999999998
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 624.1579999999971
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 435.791
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 174.31300000000002
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 89.37000000000002
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 46.573
+        },
+        {
+          "group": "garbageCollection",
+          "groupLabel": "Garbage Collection",
+          "duration": 18.105000000000008
+        }
+      ],
+      "scriptExecution": [
+        {
+          "url": "http://127.0.0.1:3002/soundscapes",
+          "total": 657.464,
+          "scripting": 28.345,
+          "scriptParseCompile": 13.419
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "total": 652.5270000000004,
+          "scripting": 578.4090000000003,
+          "scriptParseCompile": 44.349
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0-z0csd2n2nb-.js",
+          "total": 648.0149999999995,
+          "scripting": 550.3109999999995,
+          "scriptParseCompile": 48.826
+        },
+        {
+          "url": "Unattributable",
+          "total": 504.2739999999975,
+          "scripting": 17.019000000000002,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0xwz5psm8hy8x.js",
+          "total": 74.315,
+          "scripting": 67.691,
+          "scriptParseCompile": 1.112
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2422qi4z9-sxk.js",
+          "total": 58.392,
+          "scripting": 12.141,
+          "scriptParseCompile": 39.898
+        }
+      ],
+      "unusedJs": [
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "totalBytes": 73541,
+          "wastedBytes": 28454,
+          "wastedPercent": 38.69150281706336
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2422qi4z9-sxk.js",
+          "totalBytes": 36233,
+          "wastedBytes": 21418,
+          "wastedPercent": 59.11212118761272
+        }
+      ],
+      "consoleErrors": [],
+      "rawReport": "/tmp/vf-perf-before-repeat/soundscapes.json"
+    }
+  ],
+  "after": [
+    {
+      "route": "/",
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-10T16:31:25.014Z",
+      "settings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices"
+        ],
+        "skipAudits": null
+      },
+      "benchmarkIndex": 957,
+      "performance": 75,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "lcpMs": 2209.454,
+      "cls": 0.001616075773906148,
+      "tbtMs": 1005.8069999999993,
+      "mainThread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 1738.9650000000045
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 1203.542999999993
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 888.1699999999998
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 172.4309999999984
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 170.43499999999997
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 116.07799999999999
+        },
+        {
+          "group": "garbageCollection",
+          "groupLabel": "Garbage Collection",
+          "duration": 20.047000000000004
+        }
+      ],
+      "scriptExecution": [
+        {
+          "url": "http://127.0.0.1:3002/",
+          "total": 1192.4749999999997,
+          "scripting": 32.982,
+          "scriptParseCompile": 30.568999999999996
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "total": 922.7899999999988,
+          "scripting": 737.5189999999989,
+          "scriptParseCompile": 77.883
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0icqp5p40c_j3.js",
+          "total": 708.6539999999981,
+          "scripting": 218.38899999999987,
+          "scriptParseCompile": 6.555000000000001
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0-z0csd2n2nb-.js",
+          "total": 561.4949999999995,
+          "scripting": 475.74199999999945,
+          "scriptParseCompile": 25.801
+        },
+        {
+          "url": "Unattributable",
+          "total": 557.8879999999969,
+          "scripting": 21.815,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/394ceu8hxos50.js",
+          "total": 229.34199999999998,
+          "scripting": 154.531,
+          "scriptParseCompile": 9.565999999999999
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0xwz5psm8hy8x.js",
+          "total": 72.81899999999999,
+          "scripting": 65.47399999999999,
+          "scriptParseCompile": 0.46
+        }
+      ],
+      "unusedJs": [
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "totalBytes": 73541,
+          "wastedBytes": 28298,
+          "wastedPercent": 38.47942457807928
+        }
+      ],
+      "consoleErrors": [],
+      "rawReport": "/tmp/vf-perf-after-repeat/home.json"
+    },
+    {
+      "route": "/species",
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-10T16:31:57.380Z",
+      "settings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices"
+        ],
+        "skipAudits": null
+      },
+      "benchmarkIndex": 647.5,
+      "performance": 73,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "lcpMs": 1833.281,
+      "cls": 0,
+      "tbtMs": 1472.5799999999977,
+      "mainThread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 2047.2399999999982
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 988.4659999999967
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 669.4279999999994
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 170.71899999999994
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 167.92599999999996
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 55.66600000000002
+        }
+      ],
+      "scriptExecution": [
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "total": 1023.9709999999984,
+          "scripting": 789.4339999999984,
+          "scriptParseCompile": 61.991
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0-z0csd2n2nb-.js",
+          "total": 935.5899999999995,
+          "scripting": 817.6769999999995,
+          "scriptParseCompile": 31.156999999999996
+        },
+        {
+          "url": "http://127.0.0.1:3002/species",
+          "total": 890.383,
+          "scripting": 31.864000000000008,
+          "scriptParseCompile": 18.645000000000003
+        },
+        {
+          "url": "Unattributable",
+          "total": 635.0349999999972,
+          "scripting": 20.874000000000002,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/394ceu8hxos50.js",
+          "total": 339.19199999999995,
+          "scripting": 192.79099999999994,
+          "scriptParseCompile": 17.103
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0xwz5psm8hy8x.js",
+          "total": 152.46200000000005,
+          "scripting": 135.81400000000005,
+          "scriptParseCompile": 6.125
+        }
+      ],
+      "unusedJs": [
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "totalBytes": 73541,
+          "wastedBytes": 28279,
+          "wastedPercent": 38.45302126318569
+        }
+      ],
+      "consoleErrors": [],
+      "rawReport": "/tmp/vf-perf-after-repeat/species.json"
+    },
+    {
+      "route": "/data",
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-10T16:32:28.144Z",
+      "settings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices"
+        ],
+        "skipAudits": null
+      },
+      "benchmarkIndex": 991.5,
+      "performance": 79,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "lcpMs": 1913.444,
+      "cls": 0,
+      "tbtMs": 791.4730000000004,
+      "mainThread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 1501.3300000000006
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 707.295999999999
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 449.1039999999999
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 227.26100000000002
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 96.346
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 86.47000000000001
+        },
+        {
+          "group": "garbageCollection",
+          "groupLabel": "Garbage Collection",
+          "duration": 49.889
+        }
+      ],
+      "scriptExecution": [
+        {
+          "url": "http://127.0.0.1:3002/data",
+          "total": 763.9939999999999,
+          "scripting": 28.319999999999997,
+          "scriptParseCompile": 39.931000000000004
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "total": 706.116999999999,
+          "scripting": 581.159999999999,
+          "scriptParseCompile": 90.844
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0-z0csd2n2nb-.js",
+          "total": 621.9660000000001,
+          "scripting": 548.7970000000001,
+          "scriptParseCompile": 27.762
+        },
+        {
+          "url": "Unattributable",
+          "total": 528.1479999999988,
+          "scripting": 32.038,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/394ceu8hxos50.js",
+          "total": 299.66899999999976,
+          "scripting": 184.67699999999968,
+          "scriptParseCompile": 17.837999999999997
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0xwz5psm8hy8x.js",
+          "total": 88.71100000000001,
+          "scripting": 83.15000000000002,
+          "scriptParseCompile": 1.079
+        }
+      ],
+      "unusedJs": [
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "totalBytes": 73541,
+          "wastedBytes": 29883,
+          "wastedPercent": 40.63470162124871
+        }
+      ],
+      "consoleErrors": [],
+      "rawReport": "/tmp/vf-perf-after-repeat/data.json"
+    },
+    {
+      "route": "/soundscapes",
+      "lighthouseVersion": "13.5.0",
+      "fetchTime": "2026-10-10T16:32:59.419Z",
+      "settings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices"
+        ],
+        "skipAudits": null
+      },
+      "benchmarkIndex": 976,
+      "performance": 82,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "lcpMs": 1777.749,
+      "cls": 0,
+      "tbtMs": 668.0739999999996,
+      "mainThread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 1044.8000000000004
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 441.93799999999857
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 424.456
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 126.33099999999999
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 90.72700000000002
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 23.726
+        },
+        {
+          "group": "garbageCollection",
+          "groupLabel": "Garbage Collection",
+          "duration": 15.112999999999992
+        }
+      ],
+      "scriptExecution": [
+        {
+          "url": "http://127.0.0.1:3002/soundscapes",
+          "total": 604.752,
+          "scripting": 15.555,
+          "scriptParseCompile": 9.682999999999998
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0-z0csd2n2nb-.js",
+          "total": 571.8059999999997,
+          "scripting": 507.2909999999997,
+          "scriptParseCompile": 30.441
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "total": 472.0839999999994,
+          "scripting": 394.8189999999994,
+          "scriptParseCompile": 47.333
+        },
+        {
+          "url": "Unattributable",
+          "total": 357.4299999999992,
+          "scripting": 23.099000000000004,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/0xwz5psm8hy8x.js",
+          "total": 73.82400000000003,
+          "scripting": 69.65600000000003,
+          "scriptParseCompile": 0.196
+        }
+      ],
+      "unusedJs": [
+        {
+          "url": "http://127.0.0.1:3002/_next/static/chunks/2ew3r4zn_o2ki.js",
+          "totalBytes": 73541,
+          "wastedBytes": 30150,
+          "wastedPercent": 40.99710841115923
+        }
+      ],
+      "consoleErrors": [],
+      "rawReport": "/tmp/vf-perf-after-repeat/soundscapes.json"
+    }
+  ]
+}

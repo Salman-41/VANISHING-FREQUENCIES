@@ -265,7 +265,7 @@ export default async function Home() {
               <span className="availability-mark" aria-hidden="true" />
               <p>Recording not yet available</p>
               <p className="meta">
-                No recording of the Asian elephant is cleared here. Other
+                No recording of the African forest elephant is cleared here. Other
                 National Park Service wildlife recordings are available as
                 separate examples in Soundscapes. Missing audio is not
                 evidence of silence.
