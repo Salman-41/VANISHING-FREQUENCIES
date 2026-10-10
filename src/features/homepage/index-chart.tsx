@@ -58,11 +58,12 @@ function IndexPlot({
         />
       ))}
       {(mobile
-        ? [1970, 1990, 2010, 2020]
+        ? [1970, 1995, 2020]
         : [1970, 1980, 1990, 2000, 2010, 2020]
       ).map((year) => (
         <text
           key={year}
+          data-axis-year={year}
           x={left + x(year)}
           y={height + top + 30}
           textAnchor={

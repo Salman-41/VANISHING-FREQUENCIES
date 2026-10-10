@@ -7,16 +7,9 @@ export async function loadMotionTools() {
     document.documentElement.dataset.motion === "reduced" ||
     document.documentElement.dataset.media === "lighter";
   if (unavailable()) return null;
-  const modules = await Promise.all([
-    import("gsap"),
-    import("gsap/ScrollTrigger"),
-    import("@gsap/react"),
-    import("lenis"),
-  ]).catch(() => null);
-  if (!modules || unavailable()) return null;
-  const [{ gsap }, { ScrollTrigger }, { useGSAP }, { default: Lenis }] =
-    modules;
-  gsap.registerPlugin(ScrollTrigger, useGSAP);
-  // Registration starts no scroll controller or global ticker.
-  return { gsap, ScrollTrigger, Lenis };
+  // Navigation and chart fades need only core GSAP. The homepage controller
+  // owns its ScrollTrigger, React hook and Lenis imports independently.
+  const module = await import("gsap").catch(() => null);
+  if (!module || unavailable()) return null;
+  return { gsap: module.gsap };
 }

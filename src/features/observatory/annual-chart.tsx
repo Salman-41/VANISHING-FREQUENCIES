@@ -31,6 +31,10 @@ export function AnnualChart({ series }: { series: AnnualSeries }) {
     const width = mobile ? 248 : 660, height = mobile ? 188 : 310;
     const left = mobile ? 38 : 52, top = 18;
     const g = mobile ? annualGeometry(series, width, height) : geometry;
+    // Three actual published-year labels fit the compact plot without collision.
+    const yearTicks = mobile
+      ? [...new Set([series.points[0]!.year, series.points[Math.floor((series.points.length - 1) / 2)]!.year, series.points.at(-1)!.year])]
+      : g.yearTicks;
     return <svg className={mobile ? "observatory-svg-compact" : "observatory-svg-wide"} data-variant={mobile ? "compact" : "wide"}
       viewBox={`0 0 ${mobile ? 304 : 742} ${height + 64}`} role="img" aria-labelledby={`${id}-${mobile}-title ${id}-${mobile}-desc`}
       aria-describedby={preview !== null && !dismissed ? `${id}-tip` : undefined}
@@ -50,7 +54,7 @@ export function AnnualChart({ series }: { series: AnnualSeries }) {
         {series.points.filter(p => p.value !== null).map(p => <circle key={p.id} data-record-id={p.id} data-value={p.value} className="observatory-point" cx={g.x(p.year)} cy={g.y(p.value!)} r={mobile ? 1.8 : 2.3} />)}
         <path className="observatory-crosshair" d={`M${g.x(point.year)} 0V${height}`} />
         {point.value !== null && <circle className="observatory-selected-point" cx={g.x(point.year)} cy={g.y(point.value)} r={mobile ? 4 : 5} />}
-        {g.yearTicks.map(t => <text key={t} className="observatory-axis" x={g.x(t)} y={height + 25} textAnchor={t === series.points[0]!.year ? "start" : t === series.points.at(-1)!.year ? "end" : "middle"}>{t}</text>)}
+        {yearTicks.map(t => <text key={t} data-axis-year={t} className="observatory-axis" x={g.x(t)} y={height + 25} textAnchor={t === series.points[0]!.year ? "start" : t === series.points.at(-1)!.year ? "end" : "middle"}>{t}</text>)}
       </g>
       <text className="observatory-axis-title" x={left + width / 2} y={height + 59} textAnchor="middle">Published year</text>
     </svg>;

@@ -19,6 +19,22 @@ async function settle(page: Page) {
   await expect(page.locator("main h1")).toHaveCount(1);
 }
 
+test("compact chart year labels stay distinct without removing observations", async ({ page }) => {
+  for (const width of [320, 375, 430]) {
+    await page.setViewportSize({ width, height: 900 });
+    for (const route of ["/", "/data", "/data?start=2019&end=2020", "/data?start=2020&end=2020"]) {
+      await page.goto(route);
+      await settle(page);
+      const collisions = await page.locator("svg:visible").evaluateAll(charts => charts.flatMap(chart => {
+        const ticks = Array.from(chart.querySelectorAll("[data-axis-year]")).map(el => ({ year: el.textContent, box: el.getBoundingClientRect() }));
+        return ticks.flatMap((tick, index) => index && ticks[index - 1]!.box.right + 4 > tick.box.left
+          ? [{ previous: ticks[index - 1]!.year, year: tick.year }] : []);
+      }));
+      expect(collisions, `${route} at ${width}px`).toEqual([]);
+    }
+  }
+});
+
 for (const width of widths) {
   test(`all routes reflow and preserve reading at ${width}px`, async ({ page }) => {
     test.setTimeout(120_000);
